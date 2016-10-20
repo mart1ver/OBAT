@@ -176,7 +176,7 @@
             maxPoints: maxPoints
           });
           map.addInteraction(draw);
-          console.log(geometry);
+
         }
       }
 
@@ -187,6 +187,7 @@
       typeSelect.onchange = function() {
         map.removeInteraction(draw);
         addInteraction();
+        console.log(draw);
       };
 
       addInteraction();
