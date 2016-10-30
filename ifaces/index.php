@@ -7,11 +7,15 @@ include "tete.php" ?>
 
 <br><br>
 <h2>Folio 1</h2>
+<input type="checkbox" id="pose" name="pose" checked>
 
-<label>Poser les points:<input type="checkbox" id="pose" name="pose" checked></label>
-
-
-
+<form class="form-inline">
+      <label>Geometry type &nbsp;</label>
+      <select id="type">
+        <option value="Point">Poser les points</option>
+        <option value="None">None</option>
+      </select>
+    </form>
 
     <div id="map" class="map" id="popup"></div>
 
