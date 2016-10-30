@@ -8,11 +8,7 @@ include "tete.php" ?>
 <br><br>
 <h2>Folio 1</h2>
 <input type="checkbox" name="my-checkbox" checked>
- <script>
-    $(function(argument) {
-      $('[type="checkbox"]').bootstrapSwitch();
-    })
-    </script>
+
 <form class="form-inline">
       <label>Geometry type &nbsp;</label>
       <select id="type">
