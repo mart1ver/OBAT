@@ -30,9 +30,8 @@ include "tete.php" ?>
             <th>Nom</th>
             <th>Commentaire</th>
             <th>Nombre de folios</th>
-            <th>Éditer</th>
             <th>Visible?</th>
-            
+            <th>Éditer</th>
           </tr>
         </thead>
         <tbody>
