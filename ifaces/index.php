@@ -7,7 +7,7 @@ include "tete.php" ?>
 
 <br><br>
 <h2>Folio 1</h2>
-<input type="checkbox" name="my-checkbox" checked>
+<input type="checkbox" id="pose" name="pose" checked>
 
 <form class="form-inline">
       <label>Geometry type &nbsp;</label>
@@ -107,10 +107,7 @@ var mousePositionControl = new ol.control.MousePosition({
         var value = typeSelect.value;
         if (value !== 'None') {
           var geometryFunction, maxPoints;
-          if (value === 'Square') {
-            value = 'Circle';
-            geometryFunction = ol.interaction.Draw.createRegularPolygon(4);
-          } else if (value === 'Box') {
+          if (value === 'Box') {
             value = 'LineString';
             maxPoints = 2;
             geometryFunction = function(coordinates, geometry) {
