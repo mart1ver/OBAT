@@ -1,6 +1,8 @@
-<?php include "tete.php" ?>
+<?php session_start(); 
 
+require_once('../moteur/dbconfig.php');
 
+include "tete.php" ?>
 
 
 <br><br>

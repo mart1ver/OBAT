@@ -3,6 +3,8 @@
 require_once('../moteur/dbconfig.php');
 
 include "tete.php" ?>
+<br><br>
+
     <div class="container">
         <h1>Gestion de la typologie des objets collectés</h1> 
          <div class="panel-heading">Gérez ici la typologie des différents objets collectés par la structure.</div>
