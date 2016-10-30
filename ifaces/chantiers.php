@@ -6,17 +6,17 @@ include "tete.php" ?>
 <br><br>
 
     <div class="container">
-        <h1>Gestion de la typologie des objets collectés</h1> 
-         <div class="panel-heading">Gérez ici la typologie des différents objets collectés par la structure.</div>
-         <p>Permet de créer son propre jeu de sept famille (ou plus) des objets collectés</p>
+        <h1>Édition de la liste des chantiers</h1> 
+         <div class="panel-heading">Ici vous pouvez ajouter et éditer les chantiers.</div>
+         <p>Vous pouvez aussi masquer les chantiers que vous ne souhaitez pas voir apparaitre dans les menus en ce momment</p>
 
       <div class="panel-body">
         <div class="row">
         	<form action="../moteur/types_dechets_post.php" method="post">
   <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="<?php echo $_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
-    <div class="col-md-2"><label for="commentaire">Description:</label> <input type="text" value ="<?php echo $_GET['description']?>" name="description" id="description" class="form-control " required ></div>
-    
-  <div class="col-md-1"><label for="couleur">Couleur:</label> <input type="color"        value ="<?php echo "#".$_GET['couleur']?>" name="couleur" id="couleur" class="form-control " required ></div>
+    <div class="col-md-2"><label for="Adresse">Adresse:</label> <input type="text" value ="<?php echo $_GET['adresse']?>" name="Adresse" id="Adresse" class="form-control " required ></div>
+    <div class="col-md-2"><label for="commentaire">commentaire:</label> <input type="text" value ="<?php echo $_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required ></div>
+  
   <div class="col-md-1"><br><button name="creer" class="btn btn-default">Créer!</button></div>
 </form>
 </div>
@@ -28,10 +28,10 @@ include "tete.php" ?>
             <th>#</th>
             <th>Date de création</th>
             <th>Nom</th>
-            <th>Description</th>
+            <th>Commentaire</th>
             <th>Nombre de folios</th>
             <th>Visible</th>
-            <th></th>
+            <th>Éditer</th>
             
           </tr>
         </thead>
@@ -49,9 +49,9 @@ include "tete.php" ?>
             <td><?php echo $donnees['id']?></td>
             <td><?php echo $donnees['timestamp']?></td>
             <td><?php echo $donnees['nom']?></td>
-            <td><?php echo $donnees['description']?></td>
-            <td><span class="badge" style="background-color:<?php echo$donnees['couleur']?>"><?php echo$donnees['couleur']?></span></td> 
-<td>
+            <td><?php echo $donnees['adresse']?></td>
+            <td><?php echo $donnees['commentaire']?></td>
+           
 <form action="../moteur/types_dechets_visible.php" method="post">
 
   <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
@@ -73,10 +73,11 @@ else // SINON
 }
  echo $donnees['visible']?> 
   </button>
+
 </form>
 </td>
 
-
+<td>BediterB</td>
 
 
 <td>

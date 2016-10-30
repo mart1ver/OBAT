@@ -9,14 +9,6 @@ include "tete.php" ?>
 <h2>Folio 1</h2>
 
 <label>Poser les points:<input type="checkbox" id="pose" name="pose" checked></label>
-<script type="text/javascript">
-"use strict";
-$("[name='pose']").bootstrapSwitch();
-$('input[name="pose"]').on('switchChange.bootstrapSwitch', function(event, state) {
-map.removeInteraction(draw);
-        addInteraction();
-});
-</script>
 
 
 
@@ -107,8 +99,8 @@ var mousePositionControl = new ol.control.MousePosition({
 
       var draw; // global so we can remove it later
       function addInteraction() {
-        var value = typeSelect.value;
-        if (document.getElementById('pose').state) {
+        
+        if (document.getElementById('pose').checked) {
           var geometryFunction, maxPoints;
          
           draw = new ol.interaction.Draw({
