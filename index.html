@@ -86,12 +86,32 @@
     </form>
 
     <div id="map" class="map" id="popup"></div>
+
+      <body>
+    <div id="map" class="map"></div>
+    <div id="mouse-position"></div>
+    
+      <label>Precision </label>
+      <input id="precision" type="number" min="0" max="12" value="4"/>
+    </form>
     <script>
+
+
+var mousePositionControl = new ol.control.MousePosition({
+        coordinateFormat: ol.coordinate.createStringXY(4),
+        projection: 'EPSG:4326',
+        // comment the following two lines to have the mouse position
+        // be placed within the map.
+        className: 'custom-mouse-position',
+        target: document.getElementById('mouse-position'),
+        undefinedHTML: '&nbsp;'
+      });
+
       // Map views always need a projection.  Here we just want to map image
       // coordinates directly to map coordinates, so we create a projection that uses
       // the image extent in pixels.
 
- var extent = [0, 0, 1024, 968];
+ var extent = [0, 0, 1024, 800];
       var projection = new ol.proj.Projection({
         code: 'EPSG:4326',
         units: 'pixels',
@@ -121,6 +141,11 @@
       });
 
       var map = new ol.Map({
+        controls: ol.control.defaults({
+          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+            collapsible: false
+          })
+        }).extend([mousePositionControl]),
         layers: [
           new ol.layer.Image({
             source: new ol.source.ImageStatic({
@@ -190,17 +215,18 @@
 
       addInteraction();
         
- // change mouse cursor when over marker
-      map.on('pointermove', function(e) {
-        if (e.dragging) {
-          $(element).popover('destroy');
-          return;
-        }
-        var pixel = map.getEventPixel(e.originalEvent);
-        var hit = map.hasFeatureAtPixel(pixel);
-        map.getTarget().style.cursor = hit ? 'pointer' : '';
+
+var projectionSelect = document.getElementById('projection');
+
+      projectionSelect.addEventListener('change', function(event) {
+        mousePositionControl.setProjection(ol.proj.get(event.target.value));
       });
-        
+
+      var precisionInput = document.getElementById('precision');
+      precisionInput.addEventListener('change', function(event) {
+        var format = ol.coordinate.createStringXY(event.target.valueAsNumber);
+        mousePositionControl.setCoordinateFormat(format);
+      });
     </script>
 
 
