@@ -150,9 +150,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
 var projectionSelect = document.getElementById('projection');
 
-      projectionSelect.addEventListener('change', function(event) {
-        mousePositionControl.setProjection(ol.proj.get(event.target.value));
-      });
+     
 
       var precisionInput = document.getElementById('precision');
       precisionInput.addEventListener('change', function(event) {
