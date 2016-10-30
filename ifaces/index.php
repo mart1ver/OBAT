@@ -82,7 +82,7 @@ var mousePositionControl = new ol.control.MousePosition({
           new ol.layer.Image({
             source: new ol.source.ImageStatic({
               attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
-              url: '../images/1.jpg',
+              url: '../images/folios/1.jpg',
               projection: projection,
               imageExtent: extent
             })
