@@ -51,7 +51,7 @@ include "tete.php" ?>
             <td><?php echo $donnees['adresse']?></td>
             <td><?php echo $donnees['commentaire']?></td>
         <td>   
-<form action="../moteur/types_dechets_visible.php" method="post">
+<form action="../moteur/chantier_visible.php" method="post">
 
   <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
   <input type="hidden"name ="visible" id ="visible" value="<?php if ($donnees['visible'] == "oui") 
