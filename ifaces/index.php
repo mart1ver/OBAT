@@ -104,8 +104,8 @@ var mousePositionControl = new ol.control.MousePosition({
 
       var draw; // global so we can remove it later
       function addInteraction() {
-        var value = pose.checked;
-        if (value !== false) {
+        var value = typeSelect.value;
+        if (value !== 'None') {
           var geometryFunction, maxPoints;
          
           draw = new ol.interaction.Draw({
@@ -122,7 +122,7 @@ var mousePositionControl = new ol.control.MousePosition({
       /**
        * Handle change event.
        */
-      pose.onchange = function() {
+      typeSelect.onchange = function() {
         map.removeInteraction(draw);
         addInteraction();
       };
