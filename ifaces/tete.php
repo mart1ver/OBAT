@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../images/favicon.ico">
-    <title>Obat.</title>
 
-
-
-  </head>
 
 
 <!DOCTYPE html>
