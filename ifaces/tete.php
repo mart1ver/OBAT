@@ -19,8 +19,9 @@
     <link href="../css/bootstrap-switch.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="http://openlayers.org/en/v3.18.2/css/ol.css" type="text/css">
-      <script src="http://openlayers.org/en/v3.18.2/build/ol.js" type="text/javascript"></script>
+
+     <link rel="stylesheet" href="../css/ol.css" type="text/css">
+      <script src="../js/ol.js" type="text/javascript"></script>
 
 
 
