@@ -130,6 +130,4 @@ else // SINON
   </div>
     </div><!-- /.container -->
    
-<?php include "pied.php";
-
-?>
+<?php include "pied.php";?>
