@@ -12,6 +12,7 @@ include "tete.php" ?>
 
 
 
+
     <div id="map" class="map" id="popup"></div>
 
       <body>
@@ -99,10 +100,10 @@ var mousePositionControl = new ol.control.MousePosition({
 
       var draw; // global so we can remove it later
       function addInteraction() {
-        
+        var value = typeSelect.value;
         if (document.getElementById('pose').checked) {
           var geometryFunction, maxPoints;
-         var value = "";
+         
           draw = new ol.interaction.Draw({
             source: source,
             type: /** @type {ol.geom.GeometryType} */ (value),
