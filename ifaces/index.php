@@ -6,9 +6,9 @@ include "tete.php" ?>
 
 
 <br><br>
-<h2>Folio 1</h2>
+<h2>Folio 1</h2><label>Poser des points
 <input type="checkbox" id="pose" name="pose" checked>
-
+</label>
 
     
       <select id="type"style="display: none;">
