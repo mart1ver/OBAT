@@ -9,11 +9,6 @@
     <title>Obat.</title>
 
 
-<!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-<!-- Custom styles for this template -->
-    <link href="../css/oressource.css" rel="stylesheet">
-    <link rel="stylesheet" href="../js/morris/morris.css">
 
   </head>
 
@@ -32,10 +27,10 @@
     <title>Obat.</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-switch.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-switch.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
      <link rel="stylesheet" href="http://openlayers.org/en/v3.18.2/css/ol.css" type="text/css">
       <script src="http://openlayers.org/en/v3.18.2/build/ol.js" type="text/javascript"></script>
 
