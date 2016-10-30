@@ -29,7 +29,7 @@ include "tete.php" ?>
             <th>Date de création</th>
             <th>Nom</th>
             <th>Description</th>
-            <th>Couleur</th>
+            <th>Nombre de folios</th>
             <th>Visible</th>
             <th></th>
             
@@ -38,7 +38,7 @@ include "tete.php" ?>
         <tbody>
         <?php 
             // On recupère tout le contenu de la table affectations
-            $reponse = $bdd->query('SELECT * FROM type_dechets');
+            $reponse = $bdd->query('SELECT * FROM chantiers');
  
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())
