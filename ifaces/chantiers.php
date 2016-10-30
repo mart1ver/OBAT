@@ -77,7 +77,7 @@ else // SINON
 </form>
 </td>
 
-<td>BediterB</td>
+
 
 
 <td>
