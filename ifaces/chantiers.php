@@ -30,8 +30,8 @@ include "tete.php" ?>
             <th>Nom</th>
             <th>Commentaire</th>
             <th>Nombre de folios</th>
-            <th>Visible</th>
             <th>Éditer</th>
+            <th>Visible?</th>
             
           </tr>
         </thead>
@@ -51,7 +51,7 @@ include "tete.php" ?>
             <td><?php echo $donnees['nom']?></td>
             <td><?php echo $donnees['adresse']?></td>
             <td><?php echo $donnees['commentaire']?></td>
-           
+        <td>   
 <form action="../moteur/types_dechets_visible.php" method="post">
 
   <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
