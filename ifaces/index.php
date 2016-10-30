@@ -102,7 +102,7 @@ var mousePositionControl = new ol.control.MousePosition({
         
         if (document.getElementById('pose').checked) {
           var geometryFunction, maxPoints;
-         
+         var value = "";
           draw = new ol.interaction.Draw({
             source: source,
             type: /** @type {ol.geom.GeometryType} */ (value),
