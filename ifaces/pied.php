@@ -1,4 +1,4 @@
-<script src="../js/jquery-2.0.3.min.js"></script>
+<script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 <div class="container">
   <footer>
