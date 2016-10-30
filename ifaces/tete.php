@@ -22,7 +22,9 @@
 
      <link rel="stylesheet" href="../css/ol.css" type="text/css">
       <script src="../js/ol.js" type="text/javascript"></script>
-
+<script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/bootstrap-switch.min.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
