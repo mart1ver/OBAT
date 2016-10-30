@@ -12,7 +12,10 @@ include "tete.php" ?>
 <script type="text/javascript">
 "use strict";
 $("[name='pose']").bootstrapSwitch();
-
+$('input[name="pose"]').on('switchChange.bootstrapSwitch', function(event, state) {
+map.removeInteraction(draw);
+        addInteraction();
+});
 </script>
 
 
@@ -105,7 +108,7 @@ var mousePositionControl = new ol.control.MousePosition({
       var draw; // global so we can remove it later
       function addInteraction() {
         var value = typeSelect.value;
-        if (document.getElementById('pose').checked) {
+        if (document.getElementById('pose').state) {
           var geometryFunction, maxPoints;
          
           draw = new ol.interaction.Draw({
