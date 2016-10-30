@@ -107,22 +107,7 @@ var mousePositionControl = new ol.control.MousePosition({
         var value = typeSelect.value;
         if (value !== 'None') {
           var geometryFunction, maxPoints;
-          if (value === 'Box') {
-            value = 'LineString';
-            maxPoints = 2;
-            geometryFunction = function(coordinates, geometry) {
-              if (!geometry) {
-                geometry = new ol.geom.Polygon(null);
-              }
-              var start = coordinates[0];
-              var end = coordinates[1];
-              geometry.setCoordinates([
-                [start, [start[0], end[1]], end, [end[0], start[1]], start]
-              ]);
-              return geometry;
-              console.log(coordinates[0]);
-            };
-          }
+         
           draw = new ol.interaction.Draw({
             source: source,
             type: /** @type {ol.geom.GeometryType} */ (value),
