@@ -12,7 +12,7 @@ require_once('../moteur/dbconfig.php');
 
       <div class="panel-body">
         <div class="row">
-          <form action="../moteur/modification_points_collecte_post.php" method="post">
+          <form action="../moteur/modification_chantier_post.php" method="post">
             <input type="hidden" name ="id" id="id" value="<?php echo $id?>">
 
   <div class="col-md-3"><label for="nom">Nom:</label><br><br> <input type="text"                 value ="<?php echo $_POST['nom'].$_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
@@ -51,7 +51,7 @@ require_once('../moteur/dbconfig.php');
   <!-- MAX_FILE_SIZE doit précéder le champ input de type file -->
   <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
   <!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->
-  <label for="userfile">Folios:</label>Choisisez un fichier: <input name="userfile" type="file" />
+  <label for="userfile">Folios:</label>Choisisez un fichier: <input name="userfile" type="file" required />
   
 
 
