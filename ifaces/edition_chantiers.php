@@ -28,7 +28,7 @@ require_once('../moteur/dbconfig.php');
 <div class="row">
   <h2>Folios:</h2>
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">
   ajouter un folio
 </button>
 
@@ -57,7 +57,7 @@ require_once('../moteur/dbconfig.php');
 
       </div>
       <div class="modal-footer">
-       <input type="submit" value="Envoyer le fichier" />
+       <input type="submit" class="btn btn-primary" value="Enregistrer le folio" />
 </form>
         <button type="button" class="btn btn-primary" data-dismiss="modal">Anuler</button>
       </div>
