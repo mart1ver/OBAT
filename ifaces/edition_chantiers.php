@@ -41,11 +41,11 @@ require_once('../moteur/dbconfig.php');
         <h4 class="modal-title" id="myModalLabel">Importer un folio</h4>
       </div>
       <div class="modal-body">
-       <form action="../moteur/import_folio_post.php" method="post">
-            <
+       
 
   
-  <form enctype="multipart/form-data" action="_URL_" method="post">
+  <form enctype="multipart/form-data" action="../moteur/import_folio_post.php" method="post">
+            <
     input type="hidden" name ="id" id="id" value="<?php echo $id?>">
     <label for="nom">Nom:</label><br><br> <input type="text"  name="nom" id="nom" class="form-control " required autofocus>
   <label for="commentaire">Commentaire:</label><br><br> <input type="text" name="commentaire" id="commentaire" class="form-control " required >
@@ -53,8 +53,7 @@ require_once('../moteur/dbconfig.php');
   <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
   <!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->
   Envoyez ce fichier : <input name="userfile" type="file" />
-  <input type="submit" value="Envoyer le fichier" />
-</form>
+  
 
 
       </div>
