@@ -2,11 +2,35 @@
 
 require_once('../moteur/dbconfig.php');
 
-include "tete.php" ?>
+include "tete.php" 
+// on extrait le nom du chantier
+           
+             $req = $bdd->prepare("SELECT * FROM chantiers WHERE id = :id_chantier ");
+    $req->execute(array('id_chantier' => $_GET["id"]));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+       
+            $nom_chantier = $donnees['nom'];
+          
+               
+
+           }
+              $req->closeCursor(); // Termine le traitement de la requête
+
+// on extrait le nom du folio et le nom du fichier à afficher 
+
+                ?>
+
+
+
 
 
 <br>
-Chantier N° <?php echo($_GET["id"]); ?>, Folio N°
+Chantier N° <?php echo($_GET["id"]); ?> :<?php echo($nom_chantier); ?>  , Folio N°
 <select>
 
 <?php 
