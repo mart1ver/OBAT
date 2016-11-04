@@ -46,8 +46,13 @@ require_once('../moteur/dbconfig.php');
 
   <label for="nom">Nom:</label><br><br> <input type="text" value ="<?php echo $_POST['nom'].$_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus>
   <label for="commentaire">Commentaire:</label><br><br> <input type="text" value ="<?php echo $_POST['commentaire'].$_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required >
-  import fichier
-
+  <form enctype="multipart/form-data" action="_URL_" method="post">
+  <!-- MAX_FILE_SIZE doit précéder le champ input de type file -->
+  <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+  <!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->
+  Envoyez ce fichier : <input name="userfile" type="file" />
+  <input type="submit" value="Envoyer le fichier" />
+</form>
 
 
       </div>
