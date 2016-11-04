@@ -40,7 +40,7 @@ if ($uploadOk == 0) {
 // puisque le fichier à bien été enregistré, on le référence en base
 
 
-    $req->closeCursor(); // Termine le traitement de la requête              
+              
 // Connexion à la base de données
             try
 {
