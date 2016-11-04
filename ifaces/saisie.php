@@ -72,7 +72,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 </select>: <?php echo($nom_folio); ?></p>
 
-<?php echo($nom_fichier_folio); ?>
+
 
 
 
