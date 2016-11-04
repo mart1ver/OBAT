@@ -50,6 +50,22 @@ include "tete.php" ?>
             <td><?php echo $donnees['nom']?></td>
             <td><?php echo $donnees['adresse']?></td>
             <td><?php echo $donnees['commentaire']?></td>
+        <td> 
+
+     <?php $req = $bdd->prepare("SELECT COUNT(id) FROM folios WHERE id_chantier = :id_chantier ");
+    $req->execute(array('id_chantier' => $donnees['id']));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees2 = $req->fetch())
+           {
+
+           ?>
+            
+            <?php echo $donnees2['COUNT(id)']?>
+             <?php }
+              $req->closeCursor(); // Termine le traitement de la requête
+                ?>   </td>
         <td>   
 <form action="../moteur/chantier_visible.php" method="post">
 

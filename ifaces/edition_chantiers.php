@@ -125,7 +125,7 @@ $id = $_POST['id'];
 
           </tr>
            <?php }
-              $reponse->closeCursor(); // Termine le traitement de la requête
+              $req->closeCursor(); // Termine le traitement de la requête
                 ?>
        </tbody>
         <tfoot>
