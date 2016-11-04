@@ -27,7 +27,38 @@ require_once('../moteur/dbconfig.php');
 </div>
 <div class="row">
   <h2>Folios:</h2>
-<button name="ajouter_folio" class="btn btn">Ajouer un folio</button>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  ajouter un folio
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Importer un folio</h4>
+      </div>
+      <div class="modal-body">
+       <form action="../moteur/import_folio_post.php" method="post">
+            <input type="hidden" name ="id" id="id" value="<?php echo $id?>">
+
+  <div class="col-md-3"><label for="nom">Nom:</label><br><br> <input type="text"                 value ="<?php echo $_POST['nom'].$_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
+  <div class="col-md-2"><label for="commentaire">Commentaire:</label><br><br> <input type="text" value ="<?php echo $_POST['commentaire'].$_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required ></div>
+  import fichier
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" >Sauvegarder</button>
+        </form>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Anuler</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
       </div>
      

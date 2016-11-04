@@ -62,12 +62,12 @@
            while ($donnees = $reponse->fetch())
            {
 
-           ?>
+?>
             <li><a href="#">chantier <?php echo $donnees['id']?>, <?php echo $donnees['nom']?></a></li>
 
 <?php }
               $reponse->closeCursor(); // Termine le traitement de la requête
-                ?>
+?>
               </ul>
             </li>
             <li><a href="saisie.php">Saisie</a></li>
