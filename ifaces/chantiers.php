@@ -14,7 +14,7 @@ include "tete.php" ?>
         <div class="row">
         	<form action="../moteur/chantiers_post.php" method="post">
   <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="<?php echo $_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
-    <div class="col-md-4"><label for="Adresse">Adresse:</label> <input type="text" value ="<?php echo $_GET['adresse']?>" name="Adresse" id="Adresse" class="form-control " required ></div>
+    <div class="col-md-4"><label for="Adresse">Adresse:</label> <input type="text" value ="<?php echo $_GET['adresse']?>" name="adresse" id="adresse" class="form-control " required ></div>
     <div class="col-md-2"><label for="commentaire">commentaire:</label> <input type="text" value ="<?php echo $_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required ></div>
   
   <div class="col-md-1"><br><button name="creer" class="btn btn-default">Créer!</button></div>
