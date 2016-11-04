@@ -6,7 +6,7 @@ include "tete.php" ?>
 
 
 <br><br>
-<h2>Chantier N° <?php echo($_GET["name"]); ?></h2>
+<h2>Chantier N° <?php echo($_GET["id"]); ?></h2>
 <h3>Folio N°</h3>
 
 <label>Poser des points
