@@ -60,7 +60,7 @@ if ($uploadOk == 0) {
     $req->closeCursor();
 
 // Redirection du visiteur vers la page de gestion des affectation
-    header('Location:../ifaces/edition.php?msg=Folio ajouté avec succes!');
+    header('Location:../ifaces/chantiers.php?msg=Folio ajouté avec succes!');
 
 
 
