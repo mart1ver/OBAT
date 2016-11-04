@@ -6,8 +6,7 @@ include "tete.php" ?>
 
 
 <br><br>
-<h2>Chantier N° <?php echo($_GET["id"]); ?></h2>
-<h3>Folio N°</h3>
+<h2>Chantier N° <?php echo($_GET["id"]); ?>, Folio N°<?php echo($_GET["fid"]); ?></h2>
 
 <label>Poser des points
 <input type="checkbox" id="pose" name="pose" checked>
