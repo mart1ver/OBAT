@@ -19,7 +19,7 @@
     $req->closeCursor(); // Termine le traitement de la requête
               if ($donnees['SUM(id)'] > 0) // SI le titre existe
 {
-    header("Location:../ifaces/edition_chantiers.php?err=Un chantier porte deja le meme nom!&nom=".$_POST['nom']."&lien=".$_POST['adresse']."&commentaire=".$_POST['commentaire']);
+    header("Location:../ifaces/chantiers.php?err=Un chantier porte deja le meme nom!&nom=".$_POST['nom']."&lien=".$_POST['adresse']."&commentaire=".$_POST['commentaire']);
     $req->closeCursor(); // Termine le traitement de la requête
 }
             else 
@@ -44,7 +44,7 @@
     $req->closeCursor();
 
 // Redirection du visiteur vers la page de gestion des affectation
-    header('Location:../ifaces/edition_chantiers.php?msg=Chantier ajouté avec succes!');
+    header('Location:../ifaces/chantiers.php?msg=Chantier ajouté avec succes!');
   }
 
 ?>
