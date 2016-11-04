@@ -16,7 +16,7 @@ catch(Exception $e)
 // mot de passe crypté md5 
 
 // Insertion du post à l'aide d'une requête préparée
-$req = $bdd->prepare('UPDATE chantiers SET nom = :nom, adresse = :adresse , commentaire = :commentaire,   WHERE id = :id');
+$req = $bdd->prepare('UPDATE chantiers SET nom = :nom, adresse = :adresse , commentaire = :commentaire   WHERE id = :id');
 $req->execute(array('nom' => $_POST['nom'],'adresse' => $_POST['adresse'],'commentaire' => $_POST['commentaire'],'id' => $_POST['id']));
 
   $req->closeCursor();
