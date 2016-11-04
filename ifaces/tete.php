@@ -54,11 +54,6 @@
                 <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chantier <span class="caret"></span></a>
               <ul class="dropdown-menu">
-
-
-                <li><a href="#">chantier 1</a></li>
-                <li><a href="#">chantier 2</a></li>
-                <li><a href="#">chantier 3</a></li>
 <?php 
             // On recupère tout le contenu de la table chantiers
             $reponse = $bdd->query('SELECT * FROM chantiers WHERE visible = "oui"');
@@ -73,10 +68,6 @@
 <?php }
               $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
-
-
-
-
               </ul>
             </li>
             <li><a href="saisie.php">Saisie</a></li>
