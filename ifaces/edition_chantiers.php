@@ -51,7 +51,7 @@ require_once('../moteur/dbconfig.php');
   <!-- MAX_FILE_SIZE doit précéder le champ input de type file -->
   <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
   <!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->
-  <label for="userfile">Folios:</label>Choisisez un fichier: <input name="userfile" type="file" required />
+  <label for="userfile">Folios:</label> <input name="userfile" type="file" required />
   
 
 
