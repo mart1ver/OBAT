@@ -84,7 +84,9 @@ else // SINON
 <form action="edition_chantiers.php" method="post">
 
 <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
+<input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>">
 <input type="hidden" name ="adresse" id="adresse" value="<?php echo $donnees['adresse']?>">
+<input type="hidden" name ="commentaire" id="commentaire" value="<?php echo $donnees['commentaire']?>">
   <button  class="btn btn-warning btn-sm" >Modifier</button>
 
 
@@ -112,7 +114,7 @@ else // SINON
             <th></th>
             <th></th>
             <th></th>
-            <th></th>
+           
             
           </tfoot>
         
