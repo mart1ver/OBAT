@@ -44,16 +44,16 @@ require_once('../moteur/dbconfig.php');
        <form action="../moteur/import_folio_post.php" method="post">
             <input type="hidden" name ="id" id="id" value="<?php echo $id?>">
 
-  <div class="col-md-3"><label for="nom">Nom:</label><br><br> <input type="text"                 value ="<?php echo $_POST['nom'].$_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
-  <div class="col-md-2"><label for="commentaire">Commentaire:</label><br><br> <input type="text" value ="<?php echo $_POST['commentaire'].$_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required ></div>
+  <label for="nom">Nom:</label><br><br> <input type="text" value ="<?php echo $_POST['nom'].$_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus>
+  <label for="commentaire">Commentaire:</label><br><br> <input type="text" value ="<?php echo $_POST['commentaire'].$_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required >
   import fichier
 
-
+<button type="button" class="btn btn-default" >Sauvegarder</button>
+        </form>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" >Sauvegarder</button>
-        </form>
+        
         <button type="button" class="btn btn-primary" data-dismiss="modal">Anuler</button>
       </div>
     </div>
