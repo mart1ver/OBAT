@@ -13,7 +13,7 @@ Chantier N° <?php echo($_GET["id"]); ?>, Folio N°
             // On recupère tout le contenu de la table chantiers
            
              $req = $bdd->prepare("SELECT * FROM folios WHERE id_chantier = :id_chantier ");
-    $req->execute(array('id_chantier' => $id));
+    $req->execute(array('id_chantier' => $_GET["id"]));
     
  
            // On affiche chaque entree une à une
