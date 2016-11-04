@@ -75,7 +75,6 @@ $id = $_POST['id'];
             <th>#</th>
             <th>Date de création</th>
             <th>Nom</th>
-            <th>Adresse</th>
             <th>Commentaire</th>
             <th>Éditer</th>
           </tr>

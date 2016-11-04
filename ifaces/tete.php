@@ -52,7 +52,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
                 <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chantier <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Saisie <span class="caret"></span></a>
               <ul class="dropdown-menu">
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -70,7 +70,7 @@
 ?>
               </ul>
             </li>
-            <li><a href="saisie.php">Saisie</a></li>
+            
             <li><a href="recherche.php">Recherche</a></li>
             <li class="dropdown navbar-right">
               <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuration <span class="caret"></span></a>
