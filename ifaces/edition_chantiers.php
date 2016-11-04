@@ -59,7 +59,7 @@ require_once('../moteur/dbconfig.php');
       <div class="modal-footer">
        <input type="submit" class="btn btn-primary" value="Enregistrer le folio" />
 </form>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Anuler</button>
+        <button type="button" class="btn btn" data-dismiss="modal">Anuler</button>
       </div>
     </div>
   </div>
