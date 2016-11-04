@@ -45,14 +45,13 @@ require_once('../moteur/dbconfig.php');
 
   
   <form enctype="multipart/form-data" action="../moteur/import_folio_post.php" method="post">
-            <
-    input type="hidden" name ="id" id="id" value="<?php echo $id?>">
-    <label for="nom">Nom:</label><br><br> <input type="text"  name="nom" id="nom" class="form-control " required autofocus>
-  <label for="commentaire">Commentaire:</label><br><br> <input type="text" name="commentaire" id="commentaire" class="form-control " required >
+            <input type="hidden" name ="id" id="id" value="<?php echo $id?>">
+    <label for="nom">Nom:</label><input type="text"  name="nom" id="nom" class="form-control " required autofocus>
+  <label for="commentaire">Commentaire:</label><input type="text" name="commentaire" id="commentaire" class="form-control " required >
   <!-- MAX_FILE_SIZE doit précéder le champ input de type file -->
   <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
   <!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->
-  Envoyez ce fichier : <input name="userfile" type="file" />
+  <label for="userfile">Folios:</label>Choisisez un fichier: <input name="userfile" type="file" />
   
 
 
