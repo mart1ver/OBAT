@@ -48,12 +48,12 @@ require_once('../moteur/dbconfig.php');
   <label for="commentaire">Commentaire:</label><br><br> <input type="text" value ="<?php echo $_POST['commentaire'].$_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required >
   import fichier
 
-<button type="button" type="submit" class="btn btn-default" >Sauvegarder</button>
-        </form>
+
 
       </div>
       <div class="modal-footer">
-        
+        <button type="button" type="submit" class="btn btn-default" >Sauvegarder</button>
+        </form>
         <button type="button" class="btn btn-primary" data-dismiss="modal">Anuler</button>
       </div>
     </div>
