@@ -1,7 +1,7 @@
 <?php session_start(); 
 
 require_once('../moteur/dbconfig.php');
-
+var $id = $_POST['id'];
 //Vérification des autorisations de l'utilisateur et des variables de session requisent pour l'affichage de cette page:
     include "tete.php" ?>
     <br><br>
