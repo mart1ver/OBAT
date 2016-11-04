@@ -5,14 +5,36 @@ require_once('../moteur/dbconfig.php');
 include "tete.php" ?>
 
 
-<br><br>
+<br>
 Chantier N° <?php echo($_GET["id"]); ?>, Folio N°
 <select>
-  <option value="volvo">1</option>
-  <option value="saab">2</option>
-  <option value="opel">3</option>
-  <option value="audi">4</option>
+
+<?php 
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM folios WHERE id_chantier = :id_chantier ");
+    $req->execute(array('id_chantier' => $id));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+            
+          
+                <option value="<?php echo $donnees['id']?>"><?php echo $donnees['id']?></option>
+
+ <?php }
+              $req->closeCursor(); // Termine le traitement de la requête
+                ?>
+
 </select>
+
+
+
+
+
 <br>
 <label>Poser des points
 <input type="checkbox" id="pose" name="pose" checked>
