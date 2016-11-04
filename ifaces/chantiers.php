@@ -12,7 +12,7 @@ include "tete.php" ?>
 
       <div class="panel-body">
         <div class="row">
-        	<form action="../moteur/chantiers.php" method="post">
+        	<form action="../moteur/chantiers_post.php" method="post">
   <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="<?php echo $_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
     <div class="col-md-4"><label for="Adresse">Adresse:</label> <input type="text" value ="<?php echo $_GET['adresse']?>" name="Adresse" id="Adresse" class="form-control " required ></div>
     <div class="col-md-2"><label for="commentaire">commentaire:</label> <input type="text" value ="<?php echo $_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required ></div>
@@ -54,7 +54,6 @@ include "tete.php" ?>
 <form action="../moteur/chantier_visible.php" method="post">
 
   <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
-  <input type="hidden" name ="adresse" id="adresse" value="<?php echo $donnees['adresse']?>">
   <input type="hidden"name ="visible" id ="visible" value="<?php if ($donnees['visible'] == "oui") 
 {echo "non";}
 else 
@@ -85,7 +84,7 @@ else // SINON
 <form action="editions_chantiers.php" method="post">
 
 <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
-
+<input type="hidden" name ="adresse" id="adresse" value="<?php echo $donnees['adresse']?>">
   <button  class="btn btn-warning btn-sm" >Modifier</button>
 
 
