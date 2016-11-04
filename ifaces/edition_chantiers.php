@@ -51,7 +51,7 @@ $id = $_POST['id'];
   <!-- MAX_FILE_SIZE doit précéder le champ input de type file -->
   <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
   <!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->
-  <label for="userfile">Folios:</label> <input name="userfile" type="file" required />
+  <label for="userfile">Folios:</label> <input name="fileToUpload" id="fileToUpload" type="file" required />
   
 
 
