@@ -36,7 +36,7 @@ include "tete.php" ?>
         </thead>
         <tbody>
         <?php 
-            // On recupère tout le contenu de la table affectations
+            // On recupère tout le contenu de la table chantiers
             $reponse = $bdd->query('SELECT * FROM chantiers');
  
            // On affiche chaque entree une à une
@@ -59,7 +59,7 @@ include "tete.php" ?>
 else 
 {echo "oui";}?>">
 <?php
-if ($donnees['visible'] == "oui") // SI on a pas de message d'erreur
+if ($donnees['visible'] == "oui") // SI visible == oui
 {?>
  <button  class="btn btn-info btn-sm " >
   <?php
