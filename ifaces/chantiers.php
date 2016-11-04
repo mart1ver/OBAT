@@ -28,6 +28,7 @@ include "tete.php" ?>
             <th>#</th>
             <th>Date de création</th>
             <th>Nom</th>
+            <th>Adresse</th>
             <th>Commentaire</th>
             <th>Nombre de folios</th>
             <th>Visible?</th>
