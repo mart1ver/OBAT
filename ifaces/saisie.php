@@ -64,7 +64,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
            ?>
             
           
-                <option value="<?php echo($donnees['id'].'"');if($donnees['id'] == $_GET["fid"] ){echo'selected="selected';} ?>"><?php echo $donnees['id']?></option>
+                <option value="<?php echo($donnees['id'].'"');if($donnees['id'] == $_GET["fid"] ){echo'selected="selected';} ?>"><a href="home.php"><?php echo $donnees['id']?></a></option>
 
  <?php }
               $req->closeCursor(); // Termine le traitement de la requête
