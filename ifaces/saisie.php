@@ -70,7 +70,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
               $req->closeCursor(); // Termine le traitement de la requête
                 ?>
 
-</select>: <?php echo($nom_folio); ?></p>
+</select>: <?php echo($nom_folio); ?>
 
 
 
@@ -78,11 +78,10 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 
 
-<br>
-<label>Poser des points
+<label>     Poser des points
 <input type="checkbox" id="pose" name="pose" checked>
 </label>
-
+</p>
     
       <select id="type"style="display: none;">
         <option value="Point">Poser les points</option>
