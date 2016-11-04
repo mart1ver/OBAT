@@ -31,7 +31,7 @@ include "tete.php" ;
            {
 
        
-            $nom_chantier = $donnees['nom'];
+            $nom_folio = $donnees['nom'];
           
                
 
@@ -45,7 +45,8 @@ include "tete.php" ;
 
 
 <br>
-Chantier N° <?php echo($_GET["id"]); ?> :<?php echo($nom_chantier); ?>  , Folio N°
+<p>
+Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio N°
 <select>
 
 <?php 
@@ -68,7 +69,7 @@ Chantier N° <?php echo($_GET["id"]); ?> :<?php echo($nom_chantier); ?>  , Folio
               $req->closeCursor(); // Termine le traitement de la requête
                 ?>
 
-</select>
+</select>: <?php echo($nom_chantier); ?></p>
 
 
 
