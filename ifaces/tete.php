@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+<?php require_once('../moteur/dbconfig.php'); ?>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,10 +54,30 @@
                 <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chantier <span class="caret"></span></a>
               <ul class="dropdown-menu">
+
+
                 <li><a href="#">chantier 1</a></li>
                 <li><a href="#">chantier 2</a></li>
                 <li><a href="#">chantier 3</a></li>
-                            </ul>
+<?php 
+            // On recupère tout le contenu de la table chantiers
+            $reponse = $bdd->query('SELECT * FROM chantiers WHERE visible = "oui"');
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $reponse->fetch())
+           {
+
+           ?>
+            <li><a href="#">chantier <?php echo $donnees['id']?>, <?php echo $donnees['nom']?></a></li>
+
+<?php }
+              $reponse->closeCursor(); // Termine le traitement de la requête
+                ?>
+
+
+
+
+              </ul>
             </li>
             <li><a href="saisie.php">Saisie</a></li>
             <li><a href="recherche.php">Recherche</a></li>

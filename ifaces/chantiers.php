@@ -81,7 +81,7 @@ else // SINON
 
 <td>
 
-<form action="editions_chantiers.php" method="post">
+<form action="edition_chantiers.php" method="post">
 
 <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
 <input type="hidden" name ="adresse" id="adresse" value="<?php echo $donnees['adresse']?>">
