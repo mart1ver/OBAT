@@ -32,6 +32,7 @@ include "tete.php" ;
 
        
             $nom_folio = $donnees['nom'];
+            $nom_fichier_folio = $donnees['nom_fichier'];
           
                
 
@@ -152,7 +153,7 @@ var mousePositionControl = new ol.control.MousePosition({
           new ol.layer.Image({
             source: new ol.source.ImageStatic({
               attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
-              url: '../images/folios/1.jpg',
+              url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
               projection: projection,
               imageExtent: extent
             })
