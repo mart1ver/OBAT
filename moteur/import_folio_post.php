@@ -2,7 +2,7 @@
 // Dans les versions de PHP antiéreures à 4.1.0, la variable $HTTP_POST_FILES
 // doit être utilisée à la place de la variable $_FILES.
 
-$uploaddir = '/var/www/html/obat/';
+$uploaddir = '/var/www/html/obat/images/folios';
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
 echo '<pre>';

@@ -49,7 +49,7 @@ $id = $_POST['id'];
     <label for="nom">Nom:</label><input type="text"  name="nom" id="nom" class="form-control " required autofocus>
   <label for="commentaire">Commentaire:</label><input type="text" name="commentaire" id="commentaire" class="form-control " required >
   <!-- MAX_FILE_SIZE doit précéder le champ input de type file -->
-  <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+  <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
   <!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->
   <label for="userfile">Folios:</label> <input name="userfile" type="file" required />
   
