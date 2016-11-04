@@ -78,7 +78,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 
 
-<label>     Poser des points
+<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poser des points
 <input type="checkbox" id="pose" name="pose" checked>
 </label>
 </p>
