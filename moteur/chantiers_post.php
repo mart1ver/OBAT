@@ -1,8 +1,6 @@
 <?php session_start();
 
-//Vérification des autorisations de l'utilisateur et des variables de session requises pour l'utilisation de cette requête:
- if (isset($_SESSION['id']) AND $_SESSION['systeme'] = "oressource" AND (strpos($_SESSION['niveau'], 'k') !== false))
-{
+
             try
 {
             // On se connecte à MySQL
@@ -14,13 +12,14 @@
             die('Erreur : '.$e->getMessage());
 }
             // Si tout va bien, on peut continuer
-    $req = $bdd->prepare("SELECT SUM(id) FROM localites WHERE nom = :nom ");//SELECT `titre_affectation` FROM affectations WHERE titre_affectation = "conssomables" LIMIT 1
+
+    $req = $bdd->prepare("SELECT SUM(id) FROM chantiers WHERE nom = :nom ");
     $req->execute(array('nom' => $_POST['nom']));
     $donnees = $req->fetch();
     $req->closeCursor(); // Termine le traitement de la requête
               if ($donnees['SUM(id)'] > 0) // SI le titre existe
 {
-    header("Location:../ifaces/edition_localites.php?err=Une localite porte deja le meme nom!&nom=".$_POST['nom']."&lien=".$_POST['lien']."&commentaire=".$_POST['commentaire']."&couleur=".substr($_POST['couleur'],1));
+    header("Location:../ifaces/edition_chantiers.php?err=Un chantier porte deja le meme nom!&nom=".$_POST['nom']."&lien=".$_POST['adresse']."&commentaire=".$_POST['commentaire']);
     $req->closeCursor(); // Termine le traitement de la requête
 }
             else 
@@ -40,17 +39,13 @@
 // mot de passe crypté md5 
 
 // Insertion du post à l'aide d'une requête préparée
-    $req = $bdd->prepare('INSERT INTO localites (nom, relation_openstreetmap, couleur, commentaire, visible) VALUES(?, ?, ?, ?, ?)');
-    $req->execute(array($_POST['nom'], $_POST['lien'] , $_POST['couleur'] , $_POST['commentaire'], "oui"));
+    $req = $bdd->prepare('INSERT INTO chantiers (nom, adresse, commentaire, visible) VALUES(?, ?, ?, ?, ?)');
+    $req->execute(array($_POST['nom'], $_POST['adresse'] , $_POST['commentaire'], "oui"));
     $req->closeCursor();
 
 // Redirection du visiteur vers la page de gestion des affectation
-    header('Location:../ifaces/edition_localites.php?msg=Localité enregistrée avec succes!');
+    header('Location:../ifaces/edition_chantiers.php?msg=Chantier ajouté avec succes!');
   }
-}
-else 
-{ 
-header('Location:../moteur/destroy.php');
-}
+
 ?>
 
