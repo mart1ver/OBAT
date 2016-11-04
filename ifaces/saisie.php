@@ -6,17 +6,14 @@ include "tete.php" ?>
 
 
 <br><br>
-Chantier N° <?php echo($_GET["id"]); ?>, Folio N°<div class="btn-group">
-  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    1
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">1</a>
-    <a class="dropdown-item" href="#">2</a>
-    <a class="dropdown-item" href="#">3</a>
-      </div>
-</div>
-
+Chantier N° <?php echo($_GET["id"]); ?>, Folio N°
+<select>
+  <option value="volvo">1</option>
+  <option value="saab">2</option>
+  <option value="opel">3</option>
+  <option value="audi">4</option>
+</select>
+<br>
 <label>Poser des points
 <input type="checkbox" id="pose" name="pose" checked>
 </label>
