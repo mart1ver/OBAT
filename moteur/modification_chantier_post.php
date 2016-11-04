@@ -17,7 +17,7 @@ catch(Exception $e)
 
 // Insertion du post à l'aide d'une requête préparée
 $req = $bdd->prepare('UPDATE chantiers SET nom = :nom, adresse = :adresse , commentaire = :commentaire,   WHERE id = :id');
-$req->execute(array('nom' => $_POST['nom'],'addresse' => $_POST['addresse'],'commentaire' => $_POST['commentaire'],'id' => $_POST['id']));
+$req->execute(array('nom' => $_POST['nom'],'addresse' => $_POST['adresse'],'commentaire' => $_POST['commentaire'],'id' => $_POST['id']));
 
   $req->closeCursor();
 
@@ -39,7 +39,7 @@ $req->execute(array('nom' => $_POST['nom'],'addresse' => $_POST['addresse'],'com
 
 
 // Redirection du visiteur vers la page de gestion des points de collecte
-header('Location:../ifaces/edition_chantiers.php');
+header('Location:../ifaces/chantiers.php');
 
 
 ?>
