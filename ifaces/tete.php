@@ -77,7 +77,7 @@
       </div><!--/.container -->
     </nav>
  
-
+<br><br>
 <?php
 
 // Afficher l'erreur si elle existe

@@ -39,7 +39,7 @@
 // mot de passe crypté md5 
 
 // Insertion du post à l'aide d'une requête préparée
-    $req = $bdd->prepare('INSERT INTO chantiers (nom, adresse, commentaire, visible) VALUES(?, ?, ?, ?, ?)');
+    $req = $bdd->prepare('INSERT INTO chantiers (nom, adresse, commentaire, visible) VALUES(?, ?, ?, ?)');
     $req->execute(array($_POST['nom'], $_POST['adresse'] , $_POST['commentaire'], "oui"));
     $req->closeCursor();
 
