@@ -22,6 +22,21 @@ include "tete.php" ;
               $req->closeCursor(); // Termine le traitement de la requête
 
 // on extrait le nom du folio et le nom du fichier à afficher 
+               $req = $bdd->prepare("SELECT * FROM folios WHERE id = :id_folio ");
+    $req->execute(array('id_folio' => $_GET["fid"]));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+       
+            $nom_chantier = $donnees['nom'];
+          
+               
+
+           }
+              $req->closeCursor(); // Termine le traitement de la requête
 
                 ?>
 
