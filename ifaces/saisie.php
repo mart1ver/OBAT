@@ -2,7 +2,7 @@
 
 require_once('../moteur/dbconfig.php');
 
-include "tete.php" 
+include "tete.php" ;
 // on extrait le nom du chantier
            
              $req = $bdd->prepare("SELECT * FROM chantiers WHERE id = :id_chantier ");
