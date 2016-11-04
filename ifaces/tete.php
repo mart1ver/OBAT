@@ -63,7 +63,7 @@
            {
 
 ?>
-            <li><a href="?id=<?php echo $donnees['id']?>">chantier <?php echo $donnees['id']?>, <?php echo $donnees['nom']?></a></li>
+            <li><a href="saisie.php?id=<?php echo $donnees['id']?>">chantier <?php echo $donnees['id']?>, <?php echo $donnees['nom']?></a></li>
 
 <?php }
               $reponse->closeCursor(); // Termine le traitement de la requête
