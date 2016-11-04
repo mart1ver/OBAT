@@ -47,7 +47,7 @@ include "tete.php" ;
 
 <br>
 <div class="alert alert-info" role="alert">
-<p>
+<p><b>
 Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio N°
 <select name="forma" onchange="location = this.value;">
 
@@ -71,7 +71,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
               $req->closeCursor(); // Termine le traitement de la requête
                 ?>
 
-</select>: <?php echo($nom_folio); ?>
+</select>: <?php echo($nom_folio); ?></b>
 
 
 
@@ -79,7 +79,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 
 
-<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poser des points
+<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poser des points
 <input type="checkbox" id="pose" name="pose" checked>
 </label>
 </p></div>
