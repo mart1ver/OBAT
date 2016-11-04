@@ -53,13 +53,14 @@ require_once('../moteur/dbconfig.php');
   <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
   <!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->
   Envoyez ce fichier : <input name="userfile" type="file" />
-  
+  <input  value="Envoyer le fichier" />
+</form>
 
 
       </div>
       <div class="modal-footer">
         <button type="button" type="submit" class="btn btn-default" >Sauvegarder</button>
-        </form>
+        
         <button type="button" class="btn btn-primary" data-dismiss="modal">Anuler</button>
       </div>
     </div>
