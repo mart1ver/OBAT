@@ -169,7 +169,7 @@ var mousePositionControl = new ol.control.MousePosition({
           projection: projection,
           center: ol.extent.getCenter(extent),
           
-          zoom: 2,
+          zoom: 3,
           maxZoom: 6
         })
       });
