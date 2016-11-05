@@ -108,7 +108,12 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <h4 class="modal-title" id="myModalLabel">Fait peter le spot!</h4>
       </div>
       <div class="modal-body">
-        <input id="coordos" </div>
+        <input type="hidden" id="coordos"> 
+        <input type="text" id="nom">
+      <br>
+      </div>
+        
+        
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
