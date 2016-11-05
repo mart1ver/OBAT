@@ -109,18 +109,18 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
       </div>
       <div class="modal-body">
         <input type="hidden" id="coordos"> 
-        localisation:<input type="text" ><input type="text" ><input type="text" ><input type="text" ><br>
-        Matériau:<input type="text" ><br>
-        Matériel:<input type="text" ><br>
-        Photo:<input type="text" ><br>
-        Description:<input type="text" ><br>
-        lLh:<input type="text" ><input type="text" ><input type="text" ><br>
-        Quantité:<input type="text" ><br>
-        Qualité:<input type="text" ><br>
-        Risque dépose:<input type="text" ><br>
-        Compléxité traitement:<input type="text" ><br>
-        Compléxité conditionnement et stockage:<input type="text" ><br>
-        Remarques:<input type="text" ><br>
+        <label for="bat">localisation:</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" ><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6"><br>
+        <label for="bat">Matériau:</label><input type="text" ><br>
+        <label for="bat">Matériel:</label><input type="text" ><br>
+        <label for="bat">Photo:</label><input type="text" ><br>
+        <label for="bat">Description:</label><input type="text" ><br>
+        <label for="bat">lLh:</label><input type="text" ><input type="text" ><input type="text" ><br>
+        <label for="bat">Quantité:</label><input type="text" ><input type="text" ><br>
+        <label for="bat">Qualité:</label><input type="text" ><input type="text" ><br>
+        <label for="bat">Risque dépose:</label><input type="text" ><input type="text" ><br>
+        <label for="bat">Compléxité traitement:</label></label><input type="text" ><input type="text" ><br>
+        <label for="bat">Compléxité conditionnement et stockage:</label><input type="text" ><input type="text" ><br>
+        <label for="bat">Remarques:</label><input type="text" ><br>
       
       </div>
         
