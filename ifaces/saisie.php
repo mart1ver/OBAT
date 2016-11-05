@@ -109,8 +109,19 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
       </div>
       <div class="modal-body">
         <input type="hidden" id="coordos"> 
-        <input type="text" id="nom">
-      <br>
+        localisation:<input type="text" ><br>
+        Matériau:<input type="text" ><input type="text" ><input type="text" ><input type="text" ><br>
+        Matériel:<input type="text" ><br>
+        Matériel:<input type="text" ><br>
+        Description:<input type="text" ><br>
+        lLh:<input type="text" ><input type="text" ><input type="text" ><br>
+        Quantité:<input type="text" ><br>
+        Qualité:<input type="text" ><br>
+        Risque dépose:<input type="text" ><br>
+        Compléxité traitement:<input type="text" ><br>
+        Compléxité conditionnement et stockage:<input type="text" >
+        Remarques:<input type="text" ><br>
+      
       </div>
         
         
