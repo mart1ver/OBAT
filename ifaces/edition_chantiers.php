@@ -21,7 +21,7 @@ $id = $_POST['id'];
    <div class="col-md-1"><br><br><button name="creer" class="btn btn-warning">Modifier</button></div>
 </form>
 <br><br>
-<a href="edition_points_collecte.php">
+<a href="chantiers.php">
 <button name="anuler" class="btn btn">Anuler</button>
 </a>
 </div>
