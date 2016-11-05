@@ -25,6 +25,7 @@ $id = $_POST['id'];
 <button name="anuler" class="btn btn">Anuler</button>
 </a>
 </div>
+<br><br>
 <div class="row">
   <h2>Folios:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <!-- Button trigger modal -->
