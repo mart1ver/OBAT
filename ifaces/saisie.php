@@ -116,10 +116,10 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <label for="bat">Description:</label><input type="text" ><br>
         <label for="bat">lLh:</label><input type="text" ><input type="text" ><input type="text" ><br>
         <label for="bat">Quantité:</label><input type="text" ><input type="text" ><br>
-        <label for="bat">Qualité:</label><input type="text" ><input type="text" ><br>
-        <label for="bat">Risque dépose:</label><input type="text" ><input type="text" ><br>
-        <label for="bat">Compléxité traitement:</label></label><input type="text" ><input type="text" ><br>
-        <label for="bat">Compléxité conditionnement et stockage:</label><input type="text" ><input type="text" ><br>
+        <label for="bat">Qualité:</label><input type="range" name="qualite" min="0" max="5" ><input type="text" ><br>
+        <label for="bat">Risque dépose:</label><input type="range" name="risque" min="0" max="5" ><input type="text" ><br>
+        <label for="bat">Compléxité traitement:</label></label><input type="range" name="tratement" min="0" max="5" ><input type="text" ><br>
+        <label for="bat">Compléxité conditionnement et stockage:</label><input type="range" name="stockage" min="0" max="5" ><input type="text" ><br>
         <label for="bat">Remarques:</label><input type="text" ><br>
       
       </div>
