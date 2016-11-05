@@ -52,7 +52,7 @@ include "tete.php" ;
 <br>
 <div class="alert alert-info" role="alert">
 <p><b>
-Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio N°
+Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio: 
 <select name="forma" onchange="location = this.value;">
 
 <?php 
@@ -73,7 +73,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
  <?php }?>
 
-</select> (<?php echo($_GET["id"]); ?>-<?php echo($donnees['id']); ?>)</b>
+</select> (<?php echo($_GET["id"]); ?>-<?php echo($_GET["fid"]); ?>)</b>
 
 <?php $req->closeCursor(); // Termine le traitement de la requête ?>
 
