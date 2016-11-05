@@ -112,14 +112,13 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         localisation:<input type="text" ><br>
         Matériau:<input type="text" ><input type="text" ><input type="text" ><input type="text" ><br>
         Matériel:<input type="text" ><br>
-        Matériel:<input type="text" ><br>
         Description:<input type="text" ><br>
         lLh:<input type="text" ><input type="text" ><input type="text" ><br>
         Quantité:<input type="text" ><br>
         Qualité:<input type="text" ><br>
         Risque dépose:<input type="text" ><br>
         Compléxité traitement:<input type="text" ><br>
-        Compléxité conditionnement et stockage:<input type="text" >
+        Compléxité conditionnement et stockage:<input type="text" ><br>
         Remarques:<input type="text" ><br>
       
       </div>
