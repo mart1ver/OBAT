@@ -210,7 +210,7 @@ var mousePositionControl = new ol.control.MousePosition({
       }
 
 function spot_add() {
-  document.getElementById('coordos').value = "ta race"
+  document.getElementById('coordos').value = document.getElementById('mouse-position').innerHTML;
   $('#myModal').modal();
 }
 
