@@ -93,16 +93,12 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
     <div id="map" class="map" id="popup" ></div>
       <body>
     <div id="map" class="map"></div>
-    <div id="mouse-position"></div>
     
-      <label>Precision </label>
+    
+      
       <input id="precision" type="number" min="0" max="12" value="4"/>
-    </form>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Fait peter le spot!
-</button>
-
+    
+    
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -112,8 +108,8 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <h4 class="modal-title" id="myModalLabel">Fait peter le spot!</h4>
       </div>
       <div class="modal-body">
-        ...
-      </div>
+        <div id="mouse-position"></div>
+              </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
@@ -215,7 +211,6 @@ var mousePositionControl = new ol.control.MousePosition({
       }
 
 function spot_add() {
-
   $('#myModal').modal();
 }
 
