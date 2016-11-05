@@ -221,9 +221,9 @@ alert("I am an alert box!");
 
 map.on("click", function(e) {
     map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
-        spot_add()
+       spot_add()
     })
-}
+});
       /**
        * Handle change event.
        */
