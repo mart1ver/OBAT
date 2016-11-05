@@ -26,11 +26,11 @@ $id = $_POST['id'];
 </a>
 </div>
 <div class="row">
-  <h2>Folios:</h2>
+  <h2>Folios:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">
   ajouter un folio
-</button>
+</button></h2>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
