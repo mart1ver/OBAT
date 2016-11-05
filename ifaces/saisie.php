@@ -38,7 +38,11 @@ include "tete.php" ;
 
            }
               $req->closeCursor(); // Termine le traitement de la requête
-
+// on determine la resolution de notre fichier folio
+              $fichier = "../images/folios/".$nom_fichier_folio;
+              $dimensions = getimagesize($fichier);
+              $LONG = $dimensions[0];
+              $LARG = $dimensions[1];
                 ?>
 
 
@@ -113,7 +117,7 @@ var mousePositionControl = new ol.control.MousePosition({
       // coordinates directly to map coordinates, so we create a projection that uses
       // the image extent in pixels.
 
- var extent = [0, 0, 1024, 800];
+ var extent = [0, 0, <?php echo($LARG); ?>, <?php echo($LONG); ?>];
       var projection = new ol.proj.Projection({
         code: 'EPSG:4326',
         units: 'pixels',
