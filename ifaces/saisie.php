@@ -125,7 +125,7 @@ var mousePositionControl = new ol.control.MousePosition({
         // comment the following two lines to have the mouse position
         // be placed within the map.
         className: 'custom-mouse-position',
-        id: 'mouse_pos'
+        
         target: document.getElementById('mouse-position'),
         undefinedHTML: '&nbsp;'
       });
