@@ -191,7 +191,7 @@ var mousePositionControl = new ol.control.MousePosition({
         }
       }
 
-
+function spot_add() {}
       /**
        * Handle change event.
        */
