@@ -117,7 +117,7 @@ var mousePositionControl = new ol.control.MousePosition({
       // coordinates directly to map coordinates, so we create a projection that uses
       // the image extent in pixels.
 
- var extent = [0, 0, <?php echo($LARG); ?>, <?php echo($LONG); ?>];
+ var extent = [0, 0, <?php echo($LONG); ?>, <?php echo($LARG); ?> ];
       var projection = new ol.proj.Projection({
         code: 'EPSG:4326',
         units: 'pixels',
