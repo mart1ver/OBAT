@@ -76,7 +76,7 @@
               <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuration <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Materiaux</a></li>
-                <li><a href="#">Materiels</a></li>
+                <li><a href="#">Objets/materiels</a></li>
                 <li><a href="#">Corps d'état</a></li>
                 <li><a href="#">Typologies</a></li>
                 <li><a href="#">Natures</a></li>
