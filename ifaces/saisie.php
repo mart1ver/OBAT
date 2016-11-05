@@ -210,13 +210,19 @@ var mousePositionControl = new ol.control.MousePosition({
             maxPoints: maxPoints
           });
           map.addInteraction(draw);
-          spot_add();
+          
         }
       }
 
 function spot_add() {
 alert("I am an alert box!");
   $('#myModal').modal(options);
+}
+
+map.on("click", function(e) {
+    map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
+        spot_add()
+    }
 }
       /**
        * Handle change event.
