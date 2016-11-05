@@ -215,7 +215,7 @@ var mousePositionControl = new ol.control.MousePosition({
       }
 
 function spot_add() {
-
+alert("I am an alert box!");
   $('#myModal').modal(options);
 }
       /**
