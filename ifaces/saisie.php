@@ -84,7 +84,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poser des points
 <input type="checkbox" id="pose" name="pose" checked>
 </label>
-</p></div>
+</p> <div id="mouse-position"></div></div>
     
       <select id="type"style="display: none;">
         <option value="Point">Poser les points</option>
@@ -93,7 +93,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
     <div id="map" class="map" id="popup" ></div>
       <body>
     <div id="map" class="map"></div>
-    <div id="mouse-position"></div>
+   
     
       
       <input id="precision" type="hidden" min="0" max="12" value="4"/>
