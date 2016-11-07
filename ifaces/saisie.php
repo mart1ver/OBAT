@@ -118,24 +118,24 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <label for="bat">Quantité: </label><input type="number" >
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="bat">Qualité:</label><input type="range"  style="width: 20px" name="qualite" min="0" max="5" ><input type="text" ><br>
+        <label for="bat">Qualité:</label><input type="range"  style="width: 200px" name="qualite" min="0" max="5" ><input type="text" ><br>
  </div>
 </div>        
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="bat">Risque dépose:</label><input type="range" style="width: 20px" name="risque" min="0" max="5" ><input type="text" ><br>
+        <label for="bat">Risque dépose:</label><input type="range" style="width: 200px" name="risque" min="0" max="5" ><input type="text" ><br>
  </div>
 </div>        
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="bat">Compléxité traitement:</label></label><input type="range" style="width: 20px" name="tratement" min="0" max="5" ><input type="text" ><br>
+        <label for="bat">Compléxité traitement:</label></label><input type="range" style="width: 200px" name="tratement" min="0" max="5" ><input type="text" ><br>
  </div>
 </div>
         
 
 <div class="panel panel-default">
   <div class="panel-body">
-    <label for="bat">Compléxité conditionnement et stockage:</label><input type="range" name="stockage" min="0" max="5" ><input type="text" ><br>
+    <label for="bat">Compléxité conditionnement et stockage:</label><input type="range" style="width: 200px" name="stockage" min="0" max="5" ><input type="text" ><br>
   </div>
 </div>
 
