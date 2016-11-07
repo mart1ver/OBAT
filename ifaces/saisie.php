@@ -109,14 +109,18 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
       </div>
       <div class="modal-body">
         <input type="hidden" id="coordos"> 
-        <label for="bat">localisation:</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" ><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6"><br><br>
-        <label for="bat">Corp de metier:</label><input type="text" ><br><br>
-        <label for="bat">Matériau:</label><input type="text" ><label for="bat">Matériel:</label><input type="text" ><br><br>
+        <label for="bat">localisation:</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" ><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6"><br>
+        <label for="bat">Corp de metier:</label><input type="text" ><br>
+        <label for="bat">Matériau:</label><input type="text" ><label for="bat">  Matériel:</label><input type="text" ><br>
         <label for="fileToUpload">Photo:</label><input name="fileToUpload" id="fileToUpload" type="file"  /><br>
-        <label for="bat">Description:</label><input type="text" size="30" ><br><br>
-        <label for="bat">Longueur:</label><input type="text" max length="6" size="6" placeholder="cm." ><label for="bat">Largeur:</label><input type="text" maxlength="6" size="6" placeholder="cm."><label for="bat">Hauteur:</label><input type="text" maxlength="6" size="6" placeholder="cm."><br><br>
-        <label for="bat">Quantité:</label><input type="number" ><br><br>
+        <label for="bat">Description:</label><input type="text" size="30" ><br>
+        <label for="bat">Longueur:</label><input type="text" max length="6" size="6" placeholder="cm." ><label for="bat">  Largeur:</label><input type="text" maxlength="6" size="6" placeholder="cm."><label for="bat">  Hauteur:</label><input type="text" maxlength="6" size="6" placeholder="cm."><br>
+        <label for="bat">Quantité:</label><input type="number" ><br>
+<div class="panel panel-default">
+  <div class="panel-body">
         <label for="bat">Qualité:</label><input type="range" size="20" name="qualite" min="0" max="5" ><input type="text" ><br>
+ </div>
+</div>        
 <div class="panel panel-default">
   <div class="panel-body">
         <label for="bat">Risque dépose:</label><input type="range" size="20" name="risque" min="0" max="5" ><input type="text" ><br>
@@ -131,7 +135,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 <div class="panel panel-default">
   <div class="panel-body">
-    <label for="bat">Compléxité conditionnement et stockage:</label><input type="range" name="stockage" min="0" max="5" ><input type="text" ><br><br>
+    <label for="bat">Compléxité conditionnement et stockage:</label><input type="range" name="stockage" min="0" max="5" ><input type="text" ><br>
   </div>
 </div>
 
