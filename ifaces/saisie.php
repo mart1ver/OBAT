@@ -96,7 +96,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
     <div id="mouse-position"></div>
     
       
-      <input id="precision" type="number" min="0" max="12" value="4"/>
+      <input id="precision" type="hidden" min="0" max="12" value="4"/>
     
     
 <!-- Modal -->
@@ -182,7 +182,7 @@ var mousePositionControl = new ol.control.MousePosition({
         source: source,
         style: new ol.style.Style({
           fill: new ol.style.Fill({
-            color: 'rgba(255, 255, 255, 0.2)'
+            color: 'rgba(255, 255, 0, 1.2)'
           }),
           stroke: new ol.style.Stroke({
             color: '#ffcc33',
