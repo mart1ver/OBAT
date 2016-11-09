@@ -39,7 +39,7 @@ require_once('../moteur/dbconfig.php');
         <tbody>
         <?php 
             // On recupère tout le contenu de la table affectations
-            $reponse = $bdd->query('SELECT * FROM corps');
+            $reponse = $bdd->query('SELECT * FROM natures');
  
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())
