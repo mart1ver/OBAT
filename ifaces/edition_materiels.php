@@ -22,7 +22,7 @@ require_once('../moteur/dbconfig.php');
   <br>
   </div>
   <br>
-  
+
   <div class="row">
     <div class="col-md-7">
   <label for="corp">corp d'état: </label>
@@ -42,7 +42,7 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option><?php echo($donnees['nom']);?></option>
+                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
@@ -68,7 +68,7 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option><?php echo($donnees['nom']);?></option>
+                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
@@ -90,7 +90,7 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option><?php echo($donnees['nom']);?></option>
+                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
