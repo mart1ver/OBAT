@@ -71,7 +71,29 @@
               </ul>
             </li>
             
-            <li><a href="recherche.php">Recherche</a></li>
+
+
+<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recherche <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+<?php 
+            // On recupère tout le contenu de la table chantiers
+            $reponse = $bdd->query('SELECT * FROM chantiers WHERE visible = "oui"');
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $reponse->fetch())
+           {
+
+?>
+            <li><a href="recherche.php.php?id=<?php echo $donnees['id']?>&fid=1">chantier <?php echo $donnees['id']?>, <?php echo $donnees['nom']?></a></li>
+
+<?php }
+              $reponse->closeCursor(); // Termine le traitement de la requête
+?>
+              </ul>
+            </li>
+
+           
             <li class="dropdown navbar-right">
               <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuration <span class="caret"></span></a>
               <ul class="dropdown-menu">
