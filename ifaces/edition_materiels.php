@@ -18,9 +18,11 @@ require_once('../moteur/dbconfig.php');
     <div class="col-md-2"><label for="description">Description:</label> <input type="text" value ="<?php echo $_GET['description']?>" name="description" id="description" class="form-control " required ></div>
     
   <div class="col-md-1"><label for="couleur">Couleur:</label> <input type="color"        value ="<?php echo "#".$_GET['couleur']?>" name="couleur" id="couleur" class="form-control " required ></div>
+
   <br>
-  
-    <div class="col-md-5">
+  </div>
+  <div class="row">
+    <div class="col-md-7">
   <label for="corp">corp d'état: </label>
 <select name="corp">
 
@@ -91,7 +93,7 @@ require_once('../moteur/dbconfig.php');
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 </select>
-
+</div>
 </div>
   <div class="col-md-1"><br>
     
@@ -101,7 +103,7 @@ require_once('../moteur/dbconfig.php');
 
     <button name="creer" class="btn btn-default">Créer!</button></div>
 </form>
-</div>
+
       </div>
       <!-- Table -->
       <table class="table">
