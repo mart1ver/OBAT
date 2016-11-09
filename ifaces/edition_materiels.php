@@ -26,7 +26,7 @@ require_once('../moteur/dbconfig.php');
   <div class="row">
     <div class="col-md-7">
   <label for="corp">corp d'état: </label>
-<select name="corp">
+<select name="corp" id="corp">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -52,7 +52,7 @@ require_once('../moteur/dbconfig.php');
 
 
 <label for="typologie">typologie: </label>
-<select name="typologie">
+<select name="typologie" id="typologie">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -74,7 +74,7 @@ require_once('../moteur/dbconfig.php');
   $req->closeCursor(); // Termine le traitement de la requête ?>
 </select>
 <label for="nature">nature: </label>
-  <select name="nature">
+  <select name="nature" id="nature">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
