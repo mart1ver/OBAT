@@ -43,8 +43,11 @@ $req->execute(array($_POST['nom'],  $_POST['couleur'] , $_POST['description'], "
   echo($_POST['typologie']);
   echo($_POST['nature']);
   echo($_POST['corp']);
+    echo("--");
   echo($_POST['nom']);
+  echo("--");
   echo($_POST['couleur']);
+  echo("--");
   echo($_POST['description']);
  }
 ?>
