@@ -4,8 +4,7 @@ $host='localhost';
 $base='obat';
 $user='root';
 $pass='lsdtmearbt';
-
-// Configuration interne de Oressource
+// Configuration interne de Obat
 try {
 	$bdd = new PDO("mysql:host=$host;dbname=$base;charset=utf8", $user, $pass);
 } catch (PDOException $e) {
