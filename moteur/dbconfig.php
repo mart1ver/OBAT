@@ -3,7 +3,7 @@
 $host='localhost';
 $base='obat';
 $user='root';
-$pass='mot_de_passe_a_changer';
+$pass='lsdtmearbt';
 
 // Configuration interne de Oressource
 try {
