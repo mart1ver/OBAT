@@ -20,7 +20,7 @@ require_once('../moteur/dbconfig.php');
   <div class="col-md-1"><label for="couleur">Couleur:</label> <input type="color"        value ="<?php echo "#".$_GET['couleur']?>" name="couleur" id="couleur" class="form-control " required ></div>
   <div class="col-md-1"><br>
     
-
+<label for="corp">corp d'état: </label>
 <select name="corp">
 
 <?php 
@@ -46,7 +46,7 @@ require_once('../moteur/dbconfig.php');
 
 
 
-
+<label for="typologie">typologie: </label>
 <select name="typologie">
 
 <?php 
@@ -68,6 +68,7 @@ require_once('../moteur/dbconfig.php');
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 </select>
+<label for="nature">nature: </label>
   <select name="nature">
 
 <?php 
