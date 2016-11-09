@@ -1,5 +1,4 @@
 <?php session_start();
-
          try
             {
             // On se connecte à MySQL
@@ -16,21 +15,14 @@
 $req->execute(array('nom' => $_POST['nom']));
 $donnees = $req->fetch();
 $req->closeCursor(); // Termine le traitement de la requête
-     
-
-
 if ($donnees['SUM(id)'] > 0) // SI le titre existe
-
 {
-header("Location:../ifaces/edition_natures.php?err=Une convention porte deja le meme nom!&nom=".$_POST['nom']."&description=".$_POST['description']."&couleur=".substr($_POST['couleur'],1));
+header("Location:../ifaces/edition_natures.php?err=Une nature porte deja le meme nom!&nom=".$_POST['nom']."&description=".$_POST['description']."&couleur=".substr($_POST['couleur'],1));
 $req->closeCursor(); // Termine le traitement de la requête
 }
-
 else 
 {
 $req->closeCursor(); // Termine le traitement de la requête
-                
-//martin vert
 // Connexion à la base de données
 try
 {
@@ -42,15 +34,11 @@ catch(Exception $e)
 }
  
 // Insertion du post à l'aide d'une requête préparée
-// mot de passe crypté md5 
-
-// Insertion du post à l'aide d'une requête préparée
 $req = $bdd->prepare('INSERT INTO natures (nom,  couleur, description, visible) VALUES(?, ?,  ?, ?)');
 $req->execute(array($_POST['nom'],  $_POST['couleur'] , $_POST['description'], "oui"));
   $req->closeCursor();
 
 // Redirection du visiteur vers la page de gestion des affectation
-header('Location:../ifaces/edition_natures.php?msg=Convention enregistrée avec succes!');
+header('Location:../ifaces/edition_natures.php?msg=Nature enregistrée avec succes!');
  }
-
 ?>
