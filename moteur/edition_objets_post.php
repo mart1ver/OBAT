@@ -35,7 +35,7 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 // Insertion du post à l'aide d'une requête préparée
-$req = $bdd->prepare('INSERT INTO objets (nom,  couleur, description, visible,id_typologie,id_nature,id_corp) VALUES(?,?,?,?, ?,  ?, ?)');
+$req = $bdd->prepare('INSERT INTO objets (nom,  couleur, description, visible, id_typologie, id_nature, id_corp) VALUES(?,?,?,?,?,?,?)');
 $req->execute(array($_POST['nom'],  $_POST['couleur'] , $_POST['description'], "oui", $_POST['typologie'], $_POST['nature'], $_POST['corp']));
   $req->closeCursor();
 // Redirection du visiteur vers la page de gestion des affectation
@@ -43,5 +43,8 @@ $req->execute(array($_POST['nom'],  $_POST['couleur'] , $_POST['description'], "
   echo($_POST['typologie']);
   echo($_POST['nature']);
   echo($_POST['corp']);
+  echo($_POST['nom']);
+  echo($_POST['couleur']);
+  echo($_POST['description']);
  }
 ?>
