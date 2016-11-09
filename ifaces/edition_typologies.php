@@ -8,9 +8,9 @@ require_once('../moteur/dbconfig.php');
 ?>
 
     <div class="container">
-        <h1>Gestion de la liste de corps d'état</h1> 
-         <div class="panel-heading">Gérez ici la liste de vos partenaires de réemploi.</div>
-         <p>Permet de différencier les materiaux et objets par corp d'état au  moment des recherches </p>
+                <h1>Gestion de la liste des typologies de materiaux et objets</h1> 
+         <div class="panel-heading">Gérez ici la liste de typologies de vos materiaux et d'objets.</div>
+         <p>Permet de différencier les materiaux et objets par typologie au moment des recherches </p>
       <div class="panel-body">
         <div class="row">
         	<form action="../moteur/edition_typologies_post.php" method="post">
@@ -39,7 +39,7 @@ require_once('../moteur/dbconfig.php');
         <tbody>
         <?php 
             // On recupère tout le contenu de la table affectations
-            $reponse = $bdd->query('SELECT * FROM corps');
+            $reponse = $bdd->query('SELECT * FROM typologies');
  
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())

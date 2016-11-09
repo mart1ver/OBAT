@@ -9,8 +9,8 @@ require_once('../moteur/dbconfig.php');
 
     <div class="container">
         <h1>Gestion de la liste de corps d'état</h1> 
-         <div class="panel-heading">Gérez ici la liste de vos partenaires de réemploi.</div>
-         <p>Permet de différencier les materiaux et objets par corp d'état au  moment des recherches </p>
+         <div class="panel-heading">Gérez ici la liste de vos corps d'état.</div>
+         <p>Permet de différencier les materiaux et objets par corp d'état au moment des recherches </p>
       <div class="panel-body">
         <div class="row">
         	<form action="../moteur/edition_corps_post.php" method="post">
