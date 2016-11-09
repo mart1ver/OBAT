@@ -8,7 +8,7 @@ require_once('../moteur/dbconfig.php');
 ?>
 
     <div class="container">
-        <h1>Gestion de la liste des natures de materiaux et objets</h1> 
+        <h1>Gestion de la materios</h1> 
          <div class="panel-heading">Gérez ici la liste de vos natures de materiaux et d'objets.</div>
          <p>Permet de différencier les materiaux et objets par nature au moment des recherches </p>
       <div class="panel-body">

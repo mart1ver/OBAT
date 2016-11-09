@@ -67,7 +67,7 @@ require_once('../moteur/dbconfig.php');
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
-
+</select>
   <select name="nature">
 
 <?php 
@@ -88,6 +88,9 @@ require_once('../moteur/dbconfig.php');
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
+</select>
+
+  
 
     <button name="creer" class="btn btn-default">Créer!</button></div>
 </form>
