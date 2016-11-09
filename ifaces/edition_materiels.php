@@ -21,6 +21,8 @@ require_once('../moteur/dbconfig.php');
 
   <br>
   </div>
+  <br>
+  
   <div class="row">
     <div class="col-md-7">
   <label for="corp">corp d'état: </label>
