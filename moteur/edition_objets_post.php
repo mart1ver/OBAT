@@ -39,6 +39,6 @@ $req = $bdd->prepare('INSERT INTO objets (nom,  couleur, description, visible,id
 $req->execute(array($_POST['nom'],  $_POST['couleur'] , $_POST['description'], "oui", $_POST['typologie'], $_POST['nature'], $_POST['corp']));
   $req->closeCursor();
 // Redirection du visiteur vers la page de gestion des affectation
-header('Location:../ifaces/edition_corps.php?msg=Objet enregistrée avec succes!');
+header('Location:../ifaces/edition_materiels.php?msg=Objet enregistrée avec succes!');
  }
 ?>
