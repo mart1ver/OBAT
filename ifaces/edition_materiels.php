@@ -37,7 +37,7 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option>><?php echo($donnees['nom']);?></option>
+                <option><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
@@ -63,7 +63,7 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option>><?php echo($donnees['nom']);?></option>
+                <option><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
@@ -84,13 +84,13 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option>><?php echo($donnees['nom']);?></option>
+                <option><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 </select>
 
-  
+
 
     <button name="creer" class="btn btn-default">Créer!</button></div>
 </form>
