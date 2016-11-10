@@ -148,34 +148,39 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="qualite">Qualité:</label><h1>5</h1><input type="range"  style="width: 200px" name="qualite" id="qualite" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
+        <label for="qualite">Qualité:</label> <b><font size="6">5</font></b><input type="range"  style="width: 200px" name="qualite" id="qualite" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
  </div>
 </div>
 </div>
-
 </div>
 
-
+<div class="row">
+  <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="risque">Risque dépose:</label><h1>5</h1><input type="range" style="width: 200px" name="risque" id="risque" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
+        <label for="risque">Risque dépose: </label><b><font size="6">5</font></b><input type="range" style="width: 200px" name="risque" id="risque" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
  </div>
 </div>  
-
-
+</div>
+</div>
+<div class="row">
+  <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="traitement">Compléxité traitement:</label><h1>5</h1><input type="range" style="width: 200px" name="traitement"  id="traitement" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
+        <label for="traitement">Compléxité traitement: </label><b><font size="6">5</font></b><input type="range" style="width: 200px" name="traitement"  id="traitement" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
  </div>
 </div>
-        
-
+   </div>
+</div>     
+<div class="row">
+  <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
-    <label for="stockage">Compléxité conditionnement et stockage:</label><h1>5</h1><input type="range" style="width: 200px" name="stockage" id="stockage" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
+    <label for="stockage">Compléxité conditionnement et stockage: </label><b><font size="6">5</font></b><input type="range" style="width: 200px" name="stockage" id="stockage" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
   </div>
 </div>
-
+</div>
+</div>
         <label for="bat">Remarques: </label><input type="text" size="50" ><br>
       
       </div>
