@@ -142,39 +142,37 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <label for="fileToUpload">Photo:</label><input name="fileToUpload" id="fileToUpload" type="file"  >
         <label for="description">Description: </label><input  name="description" id="description" type="text" size="50" ><br>
         <label for="bat">Longueur: </label><input type="text" max length="6" size="6" placeholder="cm." ><label for="bat">  Largeur: </label><input type="text" maxlength="6" size="6" placeholder="cm."><label for="bat">  Hauteur: </label><input type="text" maxlength="6" size="6" placeholder="cm."><br>
-        <label for="bat">Quantité: </label><input type="number" ><br>
+        <label for="bat">Quantité: </label><input type="number" min="0" ><br>
 
 <div class="row">
   <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="bat">Qualité:</label><input type="range"  style="width: 200px" name="qualite" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
+        <label for="qualite">Qualité:</label><h1>5</h1><input type="range"  style="width: 200px" name="qualite" id="qualite" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
  </div>
 </div>
 </div>
-<div class="col-md-2">
-  <h1>5</h1>
-</div>
+
 </div>
 
 
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="bat">Risque dépose:</label><input type="range" style="width: 200px" name="risque" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
+        <label for="risque">Risque dépose:</label><h1>5</h1><input type="range" style="width: 200px" name="risque" id="risque" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
  </div>
 </div>  
 
 
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="bat">Compléxité traitement:</label><input type="range" style="width: 200px" name="tratement" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
+        <label for="traitement">Compléxité traitement:</label><h1>5</h1><input type="range" style="width: 200px" name="traitement"  id="traitement" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
  </div>
 </div>
         
 
 <div class="panel panel-default">
   <div class="panel-body">
-    <label for="bat">Compléxité conditionnement et stockage:</label><input type="range" style="width: 200px" name="stockage" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
+    <label for="stockage">Compléxité conditionnement et stockage:</label><h1>5</h1><input type="range" style="width: 200px" name="stockage" id="stockage" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
   </div>
 </div>
 
