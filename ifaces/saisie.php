@@ -141,7 +141,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <label for="bat">Matériau: </label><input type="text" ><label for="bat">  Matériel: </label><input type="text" ><br>
         <label for="fileToUpload">Photo:</label><input name="fileToUpload" id="fileToUpload" type="file"  >
         <label for="description">Description: </label><input  name="description" id="description" type="text" size="50" ><br>
-        <label for="bat">Longueur: </label><input type="number" min="0"  size="6" placeholder="cm." ><label for="bat">  Largeur: </label><input type="number" min="0" size="6" placeholder="cm."><label for="bat">  Hauteur: </label><input type="text" type="number" min="0" size="6" placeholder="cm."><br>
+        <label for="bat">Longueur: </label><input type="number" min="0"  size="6" placeholder="cm." ><label for="bat">  Largeur: </label><input type="number" min="0" size="6" placeholder="cm."><label for="bat">  Hauteur: </label><input type="number" min="0" size="6" placeholder="cm."><br>
         <label for="bat">Quantité: </label><input type="number" min="0" ><br>
 
 <div class="row">
