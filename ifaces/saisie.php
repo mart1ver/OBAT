@@ -145,7 +145,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <label for="bat">Quantité: </label><input type="number" ><br>
 
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
         <label for="bat">Qualité:</label><input type="range"  style="width: 200px" name="qualite" min="0" max="5" ><label for="bat">commentaire: </label><input type="text" ><br>
