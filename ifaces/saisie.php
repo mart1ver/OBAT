@@ -110,7 +110,34 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
       <div class="modal-body">
         <input type="hidden" id="coordos"> 
         <label for="bat">localisation: </label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" ><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6"><br>
-        <label for="bat">Corp de metier: </label><input type="text" ><br>
+        
+        <label for="corp">Corp de metier: </label>
+<select name="corp" id="corp">
+
+<?php 
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM corps ");
+    $req->execute(array());
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+            
+          
+                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
+
+ <?php };
+  $req->closeCursor(); // Termine le traitement de la requête ?>
+
+</select>
+
+
+        <br>
+
         <label for="bat">Matériau: </label><input type="text" ><label for="bat">  Matériel: </label><input type="text" ><br>
         <label for="fileToUpload">Photo:</label><input name="fileToUpload" id="fileToUpload" type="file"  >
         <label for="description">Description: </label><input  name="description" id="description" type="text" size="50" ><br>
