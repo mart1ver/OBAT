@@ -181,14 +181,15 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 </div>
 </div>
 </div>
-        <label for="bat">Remarques: </label><input type="text" size="50" ><br>
+        <label for="bat">Remarques: </label><input type="text" size="50" >
       
       </div>
         
         
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Enregistrer</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        
       </div>
     </div>
   </div>
