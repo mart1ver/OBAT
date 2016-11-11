@@ -160,7 +160,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
-</select><label for="objet">  &nbspObjets:&nbsp </label><select data-placeholder="Choose a Country..." name="objet" id="objet" class="chosen-select"  tabindex="-1">
+</select><label for="objet">  &nbspObjets:&nbsp </label<select data-placeholder="Choose a Country..." class="chosen-select" style="width:350px;" tabindex="2">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
