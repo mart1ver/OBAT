@@ -109,7 +109,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
       </div>
       <div class="modal-body">
 
-        <form>
+        <form enctype="multipart/form-data" action="../moteur/saisie_post.php" method="post">
    <script type="text/javascript">
 $(function(){
     $(".chzn-select").chosen({
