@@ -149,7 +149,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="qualite">Qualité:</label> <b><font name="label_qualite" id="label_qualite" size="4">5</font></b><br><input  type="range"  style="width: 200px;"  name="qualite" id="qualite" min="0" max="5" onchange="updatenote(this.value)"><b>commentaire:&nbsp</b><input  type="text"  ><br>
+        <label for="qualite">Qualité:</label> <b><font name="label_qualite" id="label_qualite" size="4">5</font></b><br><input  type="range"  style="width: 200px;"  name="qualite" id="qualite" min="0" max="5" onchange="updatenote_qualite(this.value)"><b>commentaire:&nbsp</b><input  type="text"  ><br>
  </div>
 </div>
 </div>
@@ -159,7 +159,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="risque">Risque dépose: </label> <b><font size="4">5</font></b><input type="range" style="width: 200px" name="risque" id="risque" min="0" max="5" onchange="updatenote(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
+        <label for="risque">Risque dépose: </label> <b><font name="label_risque" id="label_risque" size="4">5</font></b><input type="range" style="width: 200px" name="risque" id="risque" min="0" max="5" onchange="updatenote_risque(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
  </div>
 </div>  
 </div>
@@ -168,7 +168,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="traitement">Compléxité traitement: </label> <b><font size="4">5</font></b><input type="range" style="width: 200px" name="traitement"  id="traitement" min="0" max="5" onchange="updatenote(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
+        <label for="traitement">Compléxité traitement: </label> <b><font name="label_traitement" id="label_traitement" size="4">5</font></b><input type="range" style="width: 200px" name="traitement"  id="traitement" min="0" max="5" onchange="updatenote_traitement(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
  </div>
 </div>
    </div>
@@ -177,7 +177,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
-    <label for="stockage">Compléxité conditionnement et stockage: </label> <b><font size="4">5</font></b><input type="range" style="width: 200px" name="stockage" id="stockage" min="0" max="5" onchange="updatenote(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
+    <label for="stockage">Compléxité conditionnement et stockage: </label> <b><font name="label_stockage" id="label_stockage" size="4">5</font></b><input type="range" style="width: 200px" name="stockage" id="stockage" min="0" max="5" onchange="updatenote_stockage(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
   </div>
 </div>
 </div>
@@ -197,11 +197,22 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   </div>
 </div>
 <script>
-    function updatenote(slideAmount) {
+    function updatenote_qualite(slideAmount) {
         var label_qualite = document.getElementById("label_qualite");
         label_qualite.innerHTML = slideAmount;
     }
-
+function updatenote_risque(slideAmount) {
+        var label_risque = document.getElementById("label_risque");
+        label_risque.innerHTML = slideAmount;
+    }
+    function updatenote_traitement(slideAmount) {
+        var label_traitement = document.getElementById("label_traitement");
+        label_traitement.innerHTML = slideAmount;
+    }
+    function updatenote_stockage(slideAmount) {
+        var label_stockage = document.getElementById("label_stockage");
+        label_stockage.innerHTML = slideAmount;
+    }
 
 
 var mousePositionControl = new ol.control.MousePosition({
