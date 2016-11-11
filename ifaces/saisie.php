@@ -105,9 +105,10 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Fait peter le spot!</h4>
+        <h4 class="modal-title" id="myModalLabel">Déposer un point!</h4>
       </div>
       <div class="modal-body">
+        <form>
         <input type="hidden" id="coordos"> 
         <label for="bat">localisation:&nbsp</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" ><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6"><br>
         
@@ -141,7 +142,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <label for="bat">Matériau:&nbsp </label><input type="text" ><label for="bat">  &nbspMatériel:&nbsp </label><input type="text" ><br>
         <label for="fileToUpload">Photo:</label><input name="fileToUpload" id="fileToUpload" type="file"  ><br>
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" ><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="1" ><br>
-        <label for="bat">Longueur:&nbsp</label><input type="number" style="width: 50Px;" min="0"  size="3" placeholder="cm." ><label for="bat">&nbspLargeur:&nbsp</label><input type="number" style="width: 50Px;" min="0" size="3" placeholder="cm."><label for="bat"> &nbspHauteur:&nbsp</label><input type="number" style="width: 50Px;" min="0" size="3" placeholder="cm."><br>
+        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  size="3" placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0" size="3" placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0" size="3" placeholder="cm."><br>
         
 
 <div class="row">
@@ -188,6 +189,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Enregistrer</button>
+      </form>
         <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
         
       </div>
