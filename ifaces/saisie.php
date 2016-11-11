@@ -187,6 +187,20 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  size="3" placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0" size="3" placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0" size="3" placeholder="cm."><br><br>
         
 
+<script type="text/javascript">
+$(function(){
+    $(".chzn-select").chosen();
+});
+</script>
+
+<select class="chzn-select" multiple="true" name="faculty">
+        <option value="AC">A</option>
+        <option value="AD">B</option>
+        <option value="AM">C</option>
+        <option value="AP">D</option>
+</select>
+
+
 <div class="row">
   <div class="col-md-11">
 <div class="panel panel-default">
