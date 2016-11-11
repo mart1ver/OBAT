@@ -112,8 +112,8 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <input type="hidden" id="coordos"> 
         <label for="bat">localisation:&nbsp</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" ><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6"><br>
         
-        <label for="corp">Corp de metier: </label>
-<select name="corp" id="corp">
+        <label for="corps">Corps de metier: </label>
+<select name="corps" id="corps">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -139,7 +139,49 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
         <br>
 
-        <label for="bat">Matériau:&nbsp </label><input type="text" ><label for="bat">  &nbspMatériel:&nbsp </label><input type="text" ><br>
+        <label for="materiaux">Matériaux:&nbsp </label><select name="materiaux" id="materiaux">
+
+<?php 
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM materiaux ");
+    $req->execute(array());
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+            
+          
+                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
+
+ <?php };
+  $req->closeCursor(); // Termine le traitement de la requête ?>
+
+</select><label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet">
+
+<?php 
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM objets ");
+    $req->execute(array());
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+            
+          
+                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
+
+ <?php };
+  $req->closeCursor(); // Termine le traitement de la requête ?>
+
+</select><br>
         <label for="fileToUpload">Photo:</label><input name="fileToUpload" id="fileToUpload" type="file"  ><br>
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" ><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="1" ><br>
         <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  size="3" placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0" size="3" placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0" size="3" placeholder="cm."><br>
