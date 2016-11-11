@@ -5,7 +5,11 @@
     
 </footer> 
 </div>  
-
+<script>
+$('#myModal').on('shown.bs.modal', function () {
+  $('.chzn-select', this).chosen();
+});
+</script>
   </body>
 </html>
 
