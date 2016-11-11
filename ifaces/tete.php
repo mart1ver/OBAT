@@ -104,7 +104,7 @@ $(function(){
               <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuration <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="edition_materiaux.php">Materiaux</a></li>
-                <li><a href="edition_materiels.php">Objets/materiels</a></li>
+                <li><a href="edition_materiels.php">Objets</a></li>
                 <li><a href="edition_corps.php">Corps d'état</a></li>
                 <li><a href="edition_typologies.php">Typologies</a></li>
                 <li><a href="edition_natures.php">Natures</a></li>
