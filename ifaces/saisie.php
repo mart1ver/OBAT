@@ -160,7 +160,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
-</select><label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet">
+</select><label for="objet">  &nbspObjets:&nbsp </label><select data-placeholder="Choose a Country..." name="objet" id="objet" class="chosen-select" style="width: 350px; display: none;" tabindex="-1">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -379,7 +379,7 @@ var projectionSelect = document.getElementById('projection');
         mousePositionControl.setCoordinateFormat(format);
       });
     </script>
-
+ <script src="../chosen.jquery.js" type="text/javascript"></script>
 
 <?php include "pied.php";?>
 
