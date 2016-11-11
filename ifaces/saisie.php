@@ -172,7 +172,7 @@ $(function(){
 
 </select>
 
-<label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet"  data-placeholder="Your Favorite Types of Bear" multiple class="chosen-select" style="width:350px;">
+<label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet"  data-placeholder="Your Favorite Types of Bear" multiple class="chzn-select" style="width:350px;">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
