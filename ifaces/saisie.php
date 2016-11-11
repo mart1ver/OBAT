@@ -205,11 +205,7 @@ $('#myModal').on('shown.bs.modal', function () {
 
 
 
-<script language="javascript" type="text/javascript">
-            document.getElementById("objet_chosen").style.width = 400;
-        
-    
-</script>
+
 
 
 <div class="row">
