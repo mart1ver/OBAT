@@ -53,7 +53,7 @@ include "tete.php" ;
 <div class="alert alert-info" role="alert">
 <p><b>
 Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio: 
-<select name="forma" onchange="location = this.value;">
+<select class="chzn-select" name="forma" onchange="location = this.value;">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
