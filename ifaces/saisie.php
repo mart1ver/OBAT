@@ -246,7 +246,7 @@ var mousePositionControl = new ol.control.MousePosition({
             color: 'rgba(255, 255, 0, 1.2)'
           }),
           stroke: new ol.style.Stroke({
-            color: '#ffcc33',
+            color: '#ccff33',
             width: 2
           }),
           image: new ol.style.Circle({
