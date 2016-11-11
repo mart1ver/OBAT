@@ -250,7 +250,7 @@ var mousePositionControl = new ol.control.MousePosition({
             width: 2
           }),
           image: new ol.style.Circle({
-            radius: 4,
+            radius: 10,
             fill: new ol.style.Fill({
               color: '#ffcc33'
             })
