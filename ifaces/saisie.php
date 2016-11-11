@@ -118,11 +118,8 @@ $(function(){
    
   });
 });
-
-$('#myModal').on('shown.bs.modal', function () {
-  $('.chzn-select', this).chosen();
-});
 </script>
+
         <input type="hidden" id="coordos"> 
         <label for="bat">localisation:&nbsp</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" ><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6"><br>
         
