@@ -20,7 +20,7 @@
     <link href="../css/bootstrap-switch.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../chosen.css">
      <link rel="stylesheet" href="../css/ol.css" type="text/css">
       <script src="../js/ol.js" type="text/javascript"></script>
 <script src="../js/jquery-3.1.1.min.js"></script>

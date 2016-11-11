@@ -160,7 +160,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
-</select><label for="objet">  &nbspObjets:&nbsp </label><select data-placeholder="Choose a Country..." name="objet" id="objet" class="chosen-select" style="width: 350px; display: none;" tabindex="-1">
+</select><label for="objet">  &nbspObjets:&nbsp </label><select data-placeholder="Choose a Country..." name="objet" id="objet" class="chosen-select"  tabindex="-1">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -380,6 +380,17 @@ var projectionSelect = document.getElementById('projection');
       });
     </script>
  <script src="../chosen.jquery.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
 
 <?php include "pied.php";?>
 
