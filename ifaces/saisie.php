@@ -115,7 +115,7 @@ $(function(){
     $(".chzn-select").chosen({
     disable_search_threshold: 10,
     no_results_text: "Oops, nothing found!",
-    width: "95%"
+    width: "30px"
   });
 });
 </script>
