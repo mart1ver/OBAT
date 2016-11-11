@@ -191,6 +191,12 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
+    
+ <label for="flying">Flying Skill Level</label>
+  <input name="flevel" id="flying" type="range" min="0" max="100" value="0"> 
+  <output for="flying" name="level">0</output>/100
+
+
         <label for="qualite">Qualité:</label> <b><font name="label_qualite" id="label_qualite" size="4">0</font><font size="4">/5</font></b><br><input  type="range"  style="width: 200px;"  name="qualite" id="qualite" value="0" min="0" max="5" onchange="updatenote_qualite(this.value)"><b>commentaire:&nbsp</b><input  type="text"  ><br>
  </div>
 </div>
