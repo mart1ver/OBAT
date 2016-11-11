@@ -112,7 +112,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <form>
    <script type="text/javascript">
 $(function(){
-    $(".chzn-select").chosen(width: "100px",);
+    $(".chzn-select").chosen();
 });
 </script>
         <input type="hidden" id="coordos"> 
@@ -197,12 +197,11 @@ $(function(){
 
 
 
-<select class="chzn-select" multiple="true" name="faculty">
-        <option value="AC">A</option>
-        <option value="AD">B</option>
-        <option value="AM">C</option>
-        <option value="AP">D</option>
-</select>
+<script language="javascript" type="text/javascript">
+            var e1 = document.getElementById("objet_chosen");
+        e1.style.width = 400;
+    
+</script>
 
 
 <div class="row">
