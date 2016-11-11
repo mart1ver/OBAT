@@ -109,7 +109,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
       </div>
       <div class="modal-body">
 
-        <form enctype="multipart/form-data" action="../moteur/saisie_post.php" method="post">
+        <form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/saisie_post.php" method="post">
    <script type="text/javascript">
 $(function(){
     $(".chzn-select").chosen({
@@ -244,13 +244,14 @@ $(function(){
 </div>
 <label for="fileToUpload">Photo:</label><input name="fileToUpload" id="fileToUpload" type="file"  ><br>
         <label for="remarques">Remarques:&nbsp</label><input name="remarques"  id="remarques" type="text" size="50" >
-      
+      </form>
       </div>
         
         
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Enregistrer</button>
-      </form>
+        <button type="button" class="btn btn-primary" onclick="myFunction(document.getElementById("formspot").submit();)">Enregistrer</button>
+      
+      
         <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
         
       </div>
