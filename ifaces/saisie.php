@@ -379,7 +379,7 @@ var projectionSelect = document.getElementById('projection');
         mousePositionControl.setCoordinateFormat(format);
       });
     </script>
- <script src="../chosen.jquery.js" type="text/javascript"></script>
+ <script src="../js/chosen.jquery.js" type="text/javascript"></script>
  <script type="text/javascript">
     var config = {
       '.chosen-select'           : {},
