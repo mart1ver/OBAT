@@ -149,7 +149,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="qualite">Qualité:</label> <b><font name="label_qualite" id="label_qualite" size="4">5</font></b><br><input  type="range"  style="width: 200px;"  name="qualite" id="qualite" value="0" min="0" max="5" onchange="updatenote_qualite(this.value)"><b>commentaire:&nbsp</b><input  type="text"  ><br>
+        <label for="qualite">Qualité:</label> <b><font name="label_qualite" id="label_qualite" size="4">0</font><font size="4">/5</font></b><br><input  type="range"  style="width: 200px;"  name="qualite" id="qualite" value="0" min="0" max="5" onchange="updatenote_qualite(this.value)"><b>commentaire:&nbsp</b><input  type="text"  ><br>
  </div>
 </div>
 </div>
@@ -159,7 +159,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="risque">Risque dépose: </label> <b><font name="label_risque" id="label_risque" size="4">5</font></b><input type="range" style="width: 200px" name="risque" id="risque" value="0" min="0" max="5" onchange="updatenote_risque(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
+        <label for="risque">Risque dépose: </label> <b><font name="label_risque" id="label_risque" size="4">0</font><font size="4">/5</font></b><input type="range" style="width: 200px" name="risque" id="risque" value="0" min="0" max="5" onchange="updatenote_risque(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
  </div>
 </div>  
 </div>
@@ -168,7 +168,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="traitement">Compléxité traitement: </label> <b><font name="label_traitement" id="label_traitement" size="4">5</font></b><input type="range" style="width: 200px" name="traitement"  id="traitement" value="0" min="0" max="5" onchange="updatenote_traitement(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
+        <label for="traitement">Compléxité traitement: </label> <b><font name="label_traitement" id="label_traitement" size="4">0</font><font size="4">/5</font></b><input type="range" style="width: 200px" name="traitement"  id="traitement" value="0" min="0" max="5" onchange="updatenote_traitement(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
  </div>
 </div>
    </div>
@@ -177,7 +177,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
-    <label for="stockage">Compléxité conditionnement et stockage: </label> <b><font name="label_stockage" id="label_stockage" size="4">5</font></b><input type="range" style="width: 200px" name="stockage" id="stockage" value="0" min="0" max="5" onchange="updatenote_stockage(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
+    <label for="stockage">Compléxité conditionnement et stockage: </label> <b><font name="label_stockage" id="label_stockage" size="4">0</font><font size="4">/5</font></b><input type="range" style="width: 200px" name="stockage" id="stockage" value="0" min="0" max="5" onchange="updatenote_stockage(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
   </div>
 </div>
 </div>
