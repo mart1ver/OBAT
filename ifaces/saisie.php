@@ -191,7 +191,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   <div class="col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="qualite">Qualité:</label> <b><font name="label_qualite" id="label_qualite" size="4">0</font><font size="4">/5</font></b><input  type="range"  style="width: 200px;display: inline"  name="qualite" id="qualite" value="0" min="0" max="5" onchange="updatenote_qualite(this.value)"><br><b>commentaire:&nbsp</b><input  type="text"  ><br>
+        <label for="qualite">Qualité:</label> <input  type="range"  style="width: 200px;display: inline"  name="qualite" id="qualite" value="0" min="0" max="5" onchange="updatenote_qualite(this.value)"><br><b>commentaire:&nbsp</b><input  type="text"  > <b><font name="label_qualite" id="label_qualite" size="4">0</font><font size="4">/5</font></b><br>
  </div>
 </div>
 </div>
