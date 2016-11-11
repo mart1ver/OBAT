@@ -168,7 +168,7 @@ $(function(){
 
 </select>
 
-<label for="objet">  &nbspObjets:&nbsp </label><select data-placeholder="Choose a Country..." name="objet" id="objet" class="chzn-select"  tabindex="-1">
+<label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet" class="chzn-select span7" >
 
 <?php 
             // On recupère tout le contenu de la table chantiers
