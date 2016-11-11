@@ -249,11 +249,15 @@ $(function(){
         
         
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" onclick="myFunction(document.getElementById("formspot").submit();)">Enregistrer</button>
+        <button type="button" class="btn btn-primary" id ="submitForm" >Enregistrer</button>
       
       
         <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-        
+        <script>
+          $("#submitForm").on('click', function() {
+        $("#formspot").submit();
+    });
+  </script>
       </div>
     </div>
   </div>
