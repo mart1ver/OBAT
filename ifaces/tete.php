@@ -25,11 +25,7 @@
       <script src="../js/ol.js" type="text/javascript"></script>
 <script src="../js/jquery-3.1.1.min.js"></script>
 <script src="../js/chosen.jquery.js" type="text/javascript"></script>
-<script>
-    jQuery(document).ready(function(){
-      jQuery(".chosen").data("placeholder","Select Frameworks...").chosen();
-    });
-  </script>
+
     <script src="../js/bootstrap.min.js"></script>
      <script src="../js/bootstrap-switch.min.js"></script>
 
