@@ -9,6 +9,11 @@
 $('#myModal').on('shown.bs.modal', function () {
   $('.chzn-select', this).chosen('destroy').chosen();
 });
+
+
+
+
+
 </script>
   </body>
 </html>
