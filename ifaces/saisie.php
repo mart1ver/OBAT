@@ -114,9 +114,13 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 $(function(){
     $(".chzn-select").chosen({
     disable_search_threshold: 10,
-    no_results_text: "Oops, nothing found!",
-    width: "30px"
+    no_results_text: "Oops, nothing found!"
+   
   });
+});
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('.chzn-select', this).chosen();
 });
 </script>
         <input type="hidden" id="coordos"> 
