@@ -155,7 +155,7 @@ $(function(){
 <?php 
             // On recupère tout le contenu de la table chantiers
            
-             $req = $bdd->prepare("SELECT * FROM materiaux ");
+             $req = $bdd->prepare("SELECT * FROM materiaux WHERE visible = 'oui' ");
     $req->execute(array());
     
  
@@ -178,7 +178,7 @@ $(function(){
 <?php 
             // On recupère tout le contenu de la table chantiers
            
-             $req = $bdd->prepare("SELECT * FROM objets ");
+             $req = $bdd->prepare("SELECT * FROM objets WHERE visible = 'oui' ");
     $req->execute(array());
     
  
