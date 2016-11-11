@@ -168,7 +168,7 @@ $(function(){
 
 </select>
 
-<label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet" class="chzn-select span7" >
+<label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet" class="chzn-select"  style="width: 50Px;" >
 
 <?php 
             // On recupère tout le contenu de la table chantiers
