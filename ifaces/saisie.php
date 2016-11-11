@@ -160,7 +160,9 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
-</select><label for="objet">  &nbspObjets:&nbsp </label><select data-placeholder="Choose a Country..." name="objet" id="objet" class="chzn-select"  tabindex="-1">
+</select>
+
+<label for="objet">  &nbspObjets:&nbsp </label><select data-placeholder="Choose a Country..." name="objet" id="objet" class="chzn-select"  tabindex="-1">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -187,11 +189,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  size="3" placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0" size="3" placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0" size="3" placeholder="cm."><br><br>
         
 
-<script type="text/javascript">
-$(function(){
-    $(".chzn-select").chosen();
-});
-</script>
+
 
 <select class="chzn-select" multiple="true" name="faculty">
         <option value="AC">A</option>

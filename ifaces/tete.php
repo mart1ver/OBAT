@@ -25,7 +25,11 @@
       <script src="../js/ol.js" type="text/javascript"></script>
 <script src="../js/jquery-3.1.1.min.js"></script>
 <script src="../js/chosen.jquery.js" type="text/javascript"></script>
-
+<script type="text/javascript">
+$(function(){
+    $(".chzn-select").chosen();
+});
+</script>
     <script src="../js/bootstrap.min.js"></script>
      <script src="../js/bootstrap-switch.min.js"></script>
 
