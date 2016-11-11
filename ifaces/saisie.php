@@ -184,7 +184,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 </select><br>
         <label for="fileToUpload">Photo:</label><input name="fileToUpload" id="fileToUpload" type="file"  ><br>
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" ><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="1" ><br>
-        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  size="3" placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0" size="3" placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0" size="3" placeholder="cm."><br>
+        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  size="3" placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0" size="3" placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0" size="3" placeholder="cm."><br><br>
         
 
 <div class="row">
@@ -198,28 +198,28 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 </div>
 
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="risque">Risque dépose: </label> <b><font name="label_risque" id="label_risque" size="4">0</font><font size="4">/5</font></b><input type="range" style="width: 200px" name="risque" id="risque" value="0" min="0" max="5" onchange="updatenote_risque(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
+        <label for="risque">Risque dépose: </label> <input type="range" style="width: 200px" name="risque" id="risque" value="0" min="0" max="5" onchange="updatenote_risque(this.value)"><b>&nbsp<font name="label_risque" id="label_risque" size="4">0</font><font size="4">/5</font></b><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
  </div>
 </div>  
 </div>
 </div>
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="traitement">Compléxité traitement: </label> <b><font name="label_traitement" id="label_traitement" size="4">0</font><font size="4">/5</font></b><input type="range" style="width: 200px" name="traitement"  id="traitement" value="0" min="0" max="5" onchange="updatenote_traitement(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
+        <label for="traitement">Compléxité traitement: </label><input type="range" style="width: 200px" name="traitement"  id="traitement" value="0" min="0" max="5" onchange="updatenote_traitement(this.value)"><b>&nbsp<font name="label_traitement" id="label_traitement" size="4">0</font><font size="4">/5</font></b><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
  </div>
 </div>
    </div>
 </div>     
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
-    <label for="stockage">Compléxité conditionnement et stockage: </label> <b><font name="label_stockage" id="label_stockage" size="4">0</font><font size="4">/5</font></b><input type="range" style="width: 200px" name="stockage" id="stockage" value="0" min="0" max="5" onchange="updatenote_stockage(this.value)"><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
+    <label for="stockage">Compléxité conditionnement et stockage: </label> <input type="range" style="width: 200px" name="stockage" id="stockage" value="0" min="0" max="5" onchange="updatenote_stockage(this.value)"><b>&nbsp<font name="label_stockage" id="label_stockage" size="4">0</font><font size="4">/5</font></b><label for="bat">commentaire:&nbsp</label><input type="text" ><br>
   </div>
 </div>
 </div>
