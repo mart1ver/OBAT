@@ -302,21 +302,21 @@ var source = new ol.source.Vector({wrapX: false});
       rome.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
           color: '#8959A8',
-          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
+          src: '../images/images/dot.png'
         }))
       }));
 
       london.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
           color: '#4271AE',
-          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
+          src: '../images/images/dot.png'
         }))
       }));
 
       madrid.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
           color: [113, 140, 0],
-          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
+          src: '../images/images/dot.png'
         }))
       }));
 
@@ -338,7 +338,8 @@ var source = new ol.source.Vector({wrapX: false});
               attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
               url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
               projection: projection,
-              imageExtent: extent
+              imageExtent: extent,
+              crossOrigin: ''
             })
           })
 
@@ -350,8 +351,7 @@ var source = new ol.source.Vector({wrapX: false});
         }).extend([mousePositionControl]),
        
 
-        layers: [folioLayer,vectorLayer
-        ],
+        layers: [folioLayer,vectorLayer],
 
         target: document.getElementById('map'),
         logo: false,
