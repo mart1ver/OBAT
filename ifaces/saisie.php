@@ -345,6 +345,7 @@ var mousePositionControl = new ol.control.MousePosition({
           }),
 
       var rasterLayer = new ol.layer.Tile({
+
         source: new ol.source.TileJSON({
           url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
           crossOrigin: ''
@@ -357,11 +358,19 @@ var mousePositionControl = new ol.control.MousePosition({
 
 
       var map = new ol.Map({
-        layers: [rasterLayer, folioLayer],
+        controls: ol.control.defaults({
+          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+            collapsible: false
+          })
+        }).extend([mousePositionControl]),
+        layers: [folioLayer, vectoroLayer],
         target: document.getElementById('map'),
-        view: new ol.View({
-          center: ol.proj.fromLonLat([2.896372, 44.60240]),
-          zoom: 3
+         view: new ol.View({
+          projection: projection,
+          center: ol.extent.getCenter(extent),
+          
+          zoom: 2,
+          maxZoom: 6
         })
       });
 
