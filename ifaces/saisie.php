@@ -281,58 +281,14 @@ var mousePositionControl = new ol.control.MousePosition({
         units: 'pixels',
         extent: extent
       });
+v
     
 var source = new ol.source.Vector({wrapX: false});
 
 
+
 var rome = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([12.5, 41.9]))
-      });
-
-      var london = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([-0.12755, 51.507222]))
-      });
-
-      var madrid = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([-3.683333, 40.4]))
-      });
-
-      rome.setStyle(new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: '#8959A8',
-          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
-        }))
-      }));
-
-      london.setStyle(new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: '#4271AE',
-          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
-        }))
-      }));
-
-      madrid.setStyle(new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: [113, 140, 0],
-          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
-        }))
-      }));
-
-
-      var vectorSource = new ol.source.Vector({
-        features: [rome, london, madrid]
-      });
-
-
-      var vectorLayer = new ol.layer.Vector({
-        source: source,vectorSource
-      });
-
-
-
-
-
-      
+    
 
       var vector = new ol.layer.Vector({
         source: source,
@@ -353,13 +309,8 @@ var rome = new ol.Feature({
         })
       });
 
-      var map = new ol.Map({
-        controls: ol.control.defaults({
-          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
-            collapsible: false
-          })
-        }).extend([mousePositionControl]),
-        layers: [
+
+      var folioLayer = 
           new ol.layer.Image({
             source: new ol.source.ImageStatic({
               attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
@@ -367,7 +318,15 @@ var rome = new ol.Feature({
               projection: projection,
               imageExtent: extent
             })
-          }),vectorLayer
+          }),vector
+
+      var map = new ol.Map({
+        controls: ol.control.defaults({
+          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+            collapsible: false
+          })
+        }).extend([mousePositionControl]),
+        layers: [folioLayer
         ],
 
         target: document.getElementById('map'),
