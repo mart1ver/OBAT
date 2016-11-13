@@ -367,7 +367,7 @@ map.on("click", function(e) {
 });
   
 
-      addInteraction();
+     
         
 
       var projectionSelect = document.getElementById('projection');
