@@ -344,14 +344,6 @@ var mousePositionControl = new ol.control.MousePosition({
             })
           }),
 
-      var rasterLayer = new ol.layer.Tile({
-
-        source: new ol.source.TileJSON({
-          url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
-          crossOrigin: ''
-        extent: extent
-        })
-      });
 
 
 
