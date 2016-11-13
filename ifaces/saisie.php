@@ -342,7 +342,7 @@ var mousePositionControl = new ol.control.MousePosition({
               projection: projection,
               imageExtent: extent
             })
-          })
+          });
 
 
 
