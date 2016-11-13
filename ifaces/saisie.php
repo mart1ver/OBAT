@@ -123,35 +123,13 @@ $(function(){
         <input type="hidden" id="coordos"> 
         <label for="bat">localisation:&nbsp</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" ><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6"><br>
         
-        <label for="corps">Corps de metier: </label>
-<select name="corps" id="corps">
-
-<?php 
-            // On recupère tout le contenu de la table chantiers
-           
-             $req = $bdd->prepare("SELECT * FROM corps ");
-    $req->execute(array());
-    
- 
-           // On affiche chaque entree une à une
-           while ($donnees = $req->fetch())
-           {
-
-           ?>
-            
-          
-                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
-
- <?php };
-  $req->closeCursor(); // Termine le traitement de la requête ?>
-
-</select>
 
 
-        <br>
 
-        <label for="materiaux">Matériaux:&nbsp </label><select name="materiaux" id="materiaux">
+        
 
+        <label for="materiaux">Matériaux:&nbsp </label><select name="materiaux" id="materiaux"  onchange="document.getElementById("objet").disabled = true; document.getElementById("objet").value = "";"> 
+<option value="">-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
            
@@ -173,8 +151,8 @@ $(function(){
 
 </select>
 
-<label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet" >
-
+<label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById("materiaux").disabled = true; document.getElementById("materiaux").value = "";">
+<option value="">-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
            
