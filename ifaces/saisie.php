@@ -286,7 +286,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
 
 
-
+var source = new ol.source.Vector({wrapX: false});
 
 
 
