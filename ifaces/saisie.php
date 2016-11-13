@@ -350,7 +350,7 @@ var source = new ol.source.Vector({wrapX: false});
         }).extend([mousePositionControl]),
        
 
-        layers: [folioLayer
+        layers: [folioLayer,vectorLayer
         ],
 
         target: document.getElementById('map'),
