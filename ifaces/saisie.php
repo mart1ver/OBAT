@@ -301,21 +301,21 @@ var source = new ol.source.Vector({wrapX: false});
 
       rome.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: '#8959A8',
+      
           src: '../images/images/dot.png'
         }))
       }));
 
       london.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: '#4271AE',
+        
           src: '../images/images/dot.png'
         }))
       }));
 
       madrid.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: [113, 140, 0],
+          
           src: '../images/images/dot.png'
         }))
       }));
