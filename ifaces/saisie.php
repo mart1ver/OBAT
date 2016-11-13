@@ -367,7 +367,7 @@ var rome = new ol.Feature({
               projection: projection,
               imageExtent: extent
             })
-          }),vector,vectorLayer
+          }),vectorLayer
         ],
 
         target: 'map',
