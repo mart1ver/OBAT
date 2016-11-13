@@ -355,7 +355,7 @@ var mousePositionControl = new ol.control.MousePosition({
             collapsible: false
           })
         }).extend([mousePositionControl]),
-        layers: [folioLayer, vectoroLayer],
+        layers: [folioLayer, vectorLayer],
         target: document.getElementById('map'),
          view: new ol.View({
           projection: projection,
