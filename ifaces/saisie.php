@@ -289,8 +289,6 @@ var source = new ol.source.Vector({wrapX: false});
 
     
 
-      });
-
 
       var folioLayer = 
           new ol.layer.Image({
