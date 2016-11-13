@@ -287,7 +287,6 @@ var source = new ol.source.Vector({wrapX: false});
 
 
 
-var rome = new ol.Feature({
     
 
       var vector = new ol.layer.Vector({
