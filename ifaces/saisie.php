@@ -369,7 +369,12 @@ var source = new ol.source.Vector({wrapX: false});
           maxZoom: 6
         })
       });
-
+map.on("click", function(e) {
+    map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
+       spot_add()
+    })
+});
+  
 var typeSelect = document.getElementById('type');
 
       var draw; // global so we can remove it later
@@ -402,12 +407,7 @@ function spot_add() {
   $('#myModal').modal();
 }
 
-map.on("click", function(e) {
-    map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
-       spot_add()
-    })
-});
-  
+
 
      
         
