@@ -33,7 +33,7 @@ if (isset($_POST['materiaux'])) {
     $req->closeCursor();
 
 // Redirection du visiteur vers la page de gestion des affectation
-    header('Location:../ifaces/saisie.php');
+   // header('Location:../ifaces/saisie.php');
   
 
 ?>
