@@ -369,11 +369,14 @@ var source = new ol.source.Vector({wrapX: false});
           maxZoom: 6
         })
       });
-map.on("click", function(e) {
-    map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
-       spot_add()
-    })
+
+         $(map.getViewport()).on("click", function(e) {
+    map.forEachFeatureAtPixel(map.getEventPixel(e), function (feature, layer) {
+      spot_add()  //do something
+    });
 });
+
+
   
 var typeSelect = document.getElementById('type');
 
