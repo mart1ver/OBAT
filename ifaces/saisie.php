@@ -282,7 +282,7 @@ var mousePositionControl = new ol.control.MousePosition({
         extent: extent
       });
     
-
+var source = new ol.source.Vector({wrapX: false});
 
 
 var rome = new ol.Feature({
@@ -325,14 +325,14 @@ var rome = new ol.Feature({
 
 
       var vectorLayer = new ol.layer.Vector({
-        source: vectorSource
+        source: source,vectorSource
       });
 
 
 
 
 
-      var source = new ol.source.Vector({wrapX: false});
+      
 
       var vector = new ol.layer.Vector({
         source: source,
@@ -370,7 +370,7 @@ var rome = new ol.Feature({
           }),vectorLayer
         ],
 
-        target: 'map',
+        target: document.getElementById('map'),
         logo: false,
         view: new ol.View({
           projection: projection,
