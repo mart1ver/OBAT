@@ -289,23 +289,6 @@ var source = new ol.source.Vector({wrapX: false});
 
     
 
-      var vector = new ol.layer.Vector({
-        source: source,
-        style: new ol.style.Style({
-          fill: new ol.style.Fill({
-            color: 'rgba(40, 255, 0, 1.2)'
-          }),
-          stroke: new ol.style.Stroke({
-            color: '#ccff33',
-            width: 2
-          }),
-          image: new ol.style.Circle({
-            radius: 10,
-            fill: new ol.style.Fill({
-              color: '#ffcc33'
-            })
-          })
-        })
       });
 
 
@@ -318,6 +301,8 @@ var source = new ol.source.Vector({wrapX: false});
               imageExtent: extent
             })
           }),vector
+
+
 
       var map = new ol.Map({
         controls: ol.control.defaults({
@@ -341,22 +326,7 @@ var source = new ol.source.Vector({wrapX: false});
 
       var typeSelect = document.getElementById('type');
 
-      var draw; // global so we can remove it later
-      function addInteraction() {
-        var value = typeSelect.value;
-        if (document.getElementById('pose').checked) {
-          var geometryFunction, maxPoints;
-         
-          draw = new ol.interaction.Draw({
-            source: source,
-            type: /** @type {ol.geom.GeometryType} */ (value),
-            geometryFunction: geometryFunction,
-            maxPoints: maxPoints
-          });
-          map.addInteraction(draw);
-          
-        }
-      }
+
 
 function spot_add() {
   document.getElementById('coordos').value = document.getElementsByClassName('custom-mouse-position')[0].innerText;
@@ -368,15 +338,7 @@ map.on("click", function(e) {
        spot_add()
     })
 });
-      /**
-       * Handle change event.
-       */
-      pose.onchange = function() {
-        map.removeInteraction(draw);
-        addInteraction();
-      };
-
-      addInteraction();
+   
         
 
 var projectionSelect = document.getElementById('projection');
