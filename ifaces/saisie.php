@@ -326,6 +326,7 @@ var source = new ol.source.Vector({wrapX: false});
       });
 
       var vectorLayer = new ol.layer.Vector({
+        extent: extent,
         source: vectorSource
       });
 
