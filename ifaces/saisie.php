@@ -283,12 +283,15 @@ var mousePositionControl = new ol.control.MousePosition({
       });
 
     
-var source = new ol.source.Vector({wrapX: false});
 
 
 
-    var rome = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([600, 300]))
+
+
+
+
+  var rome = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([12.5, 41.9]))
       });
 
       var london = new ol.Feature({
@@ -301,22 +304,22 @@ var source = new ol.source.Vector({wrapX: false});
 
       rome.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-      
-          src: '../images/folios/dot.png'
+          color: '#8959A8',
+          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
         }))
       }));
 
       london.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-        
-          src: '../images/folios/dot.png'
+          color: '#4271AE',
+          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
         }))
       }));
 
       madrid.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          
-          src: '../images/folios/dot.png'
+          color: [113, 140, 0],
+          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
         }))
       }));
 
@@ -326,63 +329,31 @@ var source = new ol.source.Vector({wrapX: false});
       });
 
       var vectorLayer = new ol.layer.Vector({
-        extent: extent,
         source: vectorSource
       });
 
-    
-
-
-      var folioLayer = 
-          new ol.layer.Image({
-            source: new ol.source.ImageStatic({
-              attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
-              url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
-              projection: projection,
-              imageExtent: extent,
-              crossOrigin: ''
-            })
-          })
-
-      var map = new ol.Map({
-        controls: ol.control.defaults({
-          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
-            collapsible: false
-          })
-        }).extend([mousePositionControl]),
-       
-
-        layers: [folioLayer,vectorLayer],
-
-        target: document.getElementById('map'),
-        logo: false,
-        view: new ol.View({
-          projection: projection,
-          center: ol.extent.getCenter(extent),
-          
-          zoom: 2,
-          maxZoom: 6
+      var rasterLayer = new ol.layer.Tile({
+        source: new ol.source.TileJSON({
+          url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
+          crossOrigin: ''
         })
       });
 
-      var typeSelect = document.getElementById('type');
+      var map = new ol.Map({
+        layers: [rasterLayer, vectorLayer],
+        target: document.getElementById('map'),
+        view: new ol.View({
+          center: ol.proj.fromLonLat([2.896372, 44.60240]),
+          zoom: 3
+        })
+      });
 
-      var draw; // global so we can remove it later
-      function addInteraction() {
-        var value = typeSelect.value;
-        if (document.getElementById('pose').checked) {
-          var geometryFunction, maxPoints;
-         
-          draw = new ol.interaction.Draw({
-            source: source,
-            type: /** @type {ol.geom.GeometryType} */ (value),
-            geometryFunction: geometryFunction,
-            maxPoints: maxPoints
-          });
-          map.addInteraction(draw);
-          
-        }
-      }
+
+
+
+
+
+
 
 function spot_add() {
   document.getElementById('coordos').value = document.getElementsByClassName('custom-mouse-position')[0].innerText;
