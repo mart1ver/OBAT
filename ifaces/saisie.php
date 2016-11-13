@@ -289,11 +289,7 @@ function spot_add() {
   $('#myModal').modal();
 }
 
-map.on("click", function(e) {
-    map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
-       spot_add()
-    })
-});
+
   
 
      
@@ -358,7 +354,11 @@ map.on("click", function(e) {
         })
       });
 
-
+map.on("click", function(e) {
+    map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
+       spot_add()
+    })
+});
 
      
         
