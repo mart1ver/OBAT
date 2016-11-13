@@ -289,6 +289,8 @@ var source = new ol.source.Vector({wrapX: false});
 
     
 
+    
+
 
       var folioLayer = 
           new ol.layer.Image({
@@ -299,8 +301,6 @@ var source = new ol.source.Vector({wrapX: false});
               imageExtent: extent
             })
           }),vector
-
-
 
       var map = new ol.Map({
         controls: ol.control.defaults({
@@ -324,7 +324,22 @@ var source = new ol.source.Vector({wrapX: false});
 
       var typeSelect = document.getElementById('type');
 
-
+      var draw; // global so we can remove it later
+      function addInteraction() {
+        var value = typeSelect.value;
+        if (document.getElementById('pose').checked) {
+          var geometryFunction, maxPoints;
+         
+          draw = new ol.interaction.Draw({
+            source: source,
+            type: /** @type {ol.geom.GeometryType} */ (value),
+            geometryFunction: geometryFunction,
+            maxPoints: maxPoints
+          });
+          map.addInteraction(draw);
+          
+        }
+      }
 
 function spot_add() {
   document.getElementById('coordos').value = document.getElementsByClassName('custom-mouse-position')[0].innerText;
@@ -336,7 +351,15 @@ map.on("click", function(e) {
        spot_add()
     })
 });
-   
+      /**
+       * Handle change event.
+       */
+      pose.onchange = function() {
+        map.removeInteraction(draw);
+        addInteraction();
+      };
+
+      addInteraction();
         
 
 var projectionSelect = document.getElementById('projection');
