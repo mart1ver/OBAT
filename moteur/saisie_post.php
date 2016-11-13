@@ -46,7 +46,7 @@ for($x = 0; $x < $arrlength; $x++) {
 
 
 // Redirection du visiteur vers la page de saisie
- header( "Location:../ifaces/saisie.php?id=".$_POST['cid'];"&fid=".$_POST['fid']);
+ header( "Location:../ifaces/saisie.php?id=".$_POST['cid']."&fid=".$_POST['fid']);
   
 
 ?>
