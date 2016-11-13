@@ -329,18 +329,35 @@ var mousePositionControl = new ol.control.MousePosition({
       });
 
       var vectorLayer = new ol.layer.Vector({
-        source: vectorSource
+        source: vectorSource,
+        extent: extent
       });
+
+
+   var folioLayer = 
+          new ol.layer.Image({
+            source: new ol.source.ImageStatic({
+              attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
+              url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
+              projection: projection,
+              imageExtent: extent
+            })
+          }),
 
       var rasterLayer = new ol.layer.Tile({
         source: new ol.source.TileJSON({
           url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
           crossOrigin: ''
+        extent: extent
         })
       });
 
+
+
+
+
       var map = new ol.Map({
-        layers: [rasterLayer, vectorLayer],
+        layers: [rasterLayer, folioLayer],
         target: document.getElementById('map'),
         view: new ol.View({
           center: ol.proj.fromLonLat([2.896372, 44.60240]),
