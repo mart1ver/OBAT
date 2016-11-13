@@ -129,7 +129,7 @@ $(function(){
         
 
         <label for="materiaux">Matériaux:&nbsp </label><select name="materiaux" id="materiaux"  onchange="document.getElementById('objet').disabled = true; document.getElementById('objet').value = '';"> 
-<option value="">-</option>
+<option value="0" selected="selected">-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
            
@@ -152,7 +152,7 @@ $(function(){
 </select>
 
 <label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
-<option value="">-</option>
+<option value="0" selected="selected">-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
            
