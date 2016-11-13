@@ -370,6 +370,26 @@ var mousePositionControl = new ol.control.MousePosition({
         })
       });
 
+var typeSelect = document.getElementById('type');
+
+      var draw; // global so we can remove it later
+      function addInteraction() {
+        var value = typeSelect.value;
+        if (document.getElementById('pose').checked) {
+          var geometryFunction, maxPoints;
+         
+          draw = new ol.interaction.Draw({
+            source: source,
+            type: /** @type {ol.geom.GeometryType} */ (value),
+            geometryFunction: geometryFunction,
+            maxPoints: maxPoints
+          });
+          map.addInteraction(draw);
+          
+        }
+      }
+
+
 
 
 
