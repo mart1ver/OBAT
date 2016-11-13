@@ -304,21 +304,21 @@ var mousePositionControl = new ol.control.MousePosition({
 
       rome.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: '#8959A8',
+          
           src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
         }))
       }));
 
       london.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: '#4271AE',
+          
           src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
         }))
       }));
 
       madrid.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: [113, 140, 0],
+          
           src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
         }))
       }));
