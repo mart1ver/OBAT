@@ -15,11 +15,11 @@
  
 // Insertion du post à l'aide d'une requête préparée
 // mot de passe crypté md5 
-$objet = 0
+$objet = 0;
 if (isset($_POST['objet'])) {
    $objet = $_POST['objet'];
 }
-$materiaux = 0
+$materiaux = 0;
 if (isset($_POST['materiaux'])) {
    $materiaux = $_POST['materiaux'];
 }
