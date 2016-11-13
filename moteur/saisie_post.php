@@ -31,7 +31,7 @@ if (isset($_POST['materiaux'])) {
     $req->execute(array($_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c1'],$_POST['c2'],$_POST['c3'],$_POST['c4']));
    
     $req->closeCursor();
-
+echo array($_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c1'],$_POST['c2'],$_POST['c3'],$_POST['c4']);
 // Redirection du visiteur vers la page de gestion des affectation
    // header('Location:../ifaces/saisie.php');
   
