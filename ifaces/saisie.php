@@ -351,13 +351,7 @@ map.on("click", function(e) {
        spot_add()
     })
 });
-      /**
-       * Handle change event.
-       */
-      pose.onchange = function() {
-        map.removeInteraction(draw);
-        addInteraction();
-      };
+  
 
       addInteraction();
         
