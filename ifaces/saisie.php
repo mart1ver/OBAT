@@ -287,7 +287,47 @@ var source = new ol.source.Vector({wrapX: false});
 
 
 
-    
+    var rome = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([12.5, 41.9]))
+      });
+
+      var london = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([-0.12755, 51.507222]))
+      });
+
+      var madrid = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([-3.683333, 40.4]))
+      });
+
+      rome.setStyle(new ol.style.Style({
+        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+          color: '#8959A8',
+          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
+        }))
+      }));
+
+      london.setStyle(new ol.style.Style({
+        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+          color: '#4271AE',
+          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
+        }))
+      }));
+
+      madrid.setStyle(new ol.style.Style({
+        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+          color: [113, 140, 0],
+          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
+        }))
+      }));
+
+
+      var vectorSource = new ol.source.Vector({
+        features: [rome, london, madrid]
+      });
+
+      var vectorLayer = new ol.layer.Vector({
+        source: vectorSource
+      });
 
     
 
@@ -300,7 +340,7 @@ var source = new ol.source.Vector({wrapX: false});
               projection: projection,
               imageExtent: extent
             })
-          }),vector
+          }),vectorLayer
 
       var map = new ol.Map({
         controls: ol.control.defaults({
@@ -308,6 +348,8 @@ var source = new ol.source.Vector({wrapX: false});
             collapsible: false
           })
         }).extend([mousePositionControl]),
+       
+
         layers: [folioLayer
         ],
 
@@ -356,7 +398,7 @@ map.on("click", function(e) {
       addInteraction();
         
 
-var projectionSelect = document.getElementById('projection');
+      var projectionSelect = document.getElementById('projection');
 
      
 
