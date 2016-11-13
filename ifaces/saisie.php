@@ -281,7 +281,7 @@ var mousePositionControl = new ol.control.MousePosition({
         units: 'pixels',
         extent: extent
       });
-v
+
     
 var source = new ol.source.Vector({wrapX: false});
 
