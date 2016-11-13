@@ -288,7 +288,7 @@ var source = new ol.source.Vector({wrapX: false});
 
 
     var rome = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([12.5, 41.9]))
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([600, 300]))
       });
 
       var london = new ol.Feature({
@@ -340,7 +340,7 @@ var source = new ol.source.Vector({wrapX: false});
               projection: projection,
               imageExtent: extent
             })
-          }),vectorLayer
+          })
 
       var map = new ol.Map({
         controls: ol.control.defaults({
