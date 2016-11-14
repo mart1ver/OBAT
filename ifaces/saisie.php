@@ -327,12 +327,14 @@ var mousePositionControl = new ol.control.MousePosition({
         source: vectorSource
       });
 
-      var rasterLayer = new ol.layer.Tile({
-        source: new ol.source.TileJSON({
-          url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
-          crossOrigin: ''
-        })
-      });
+      var rasterLayer =  new ol.layer.Image({
+            source: new ol.source.ImageStatic({
+              attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
+              url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
+              projection: projection,
+              imageExtent: extent
+            })
+          });
 
       var map = new ol.Map({
         layers: [rasterLayer, vectorLayer],
