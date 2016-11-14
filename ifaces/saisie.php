@@ -328,7 +328,7 @@ var mousePositionControl = new ol.control.MousePosition({
       
        
       });
-
+/**
       var rasterLayer =  new ol.layer.Image({
             source: new ol.source.ImageStatic({
               attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
@@ -337,6 +337,13 @@ var mousePositionControl = new ol.control.MousePosition({
               imageExtent: extent
             })
           });
+*/
+      var rasterLayer = new ol.layer.Tile({
+        source: new ol.source.TileJSON({
+          url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
+          crossOrigin: ''
+        })
+      });
 
       var map = new ol.Map({
          controls: ol.control.defaults({
@@ -345,7 +352,7 @@ var mousePositionControl = new ol.control.MousePosition({
           })
         }).extend([mousePositionControl]),
        
-        layers: [rasterLayer],
+        layers: [rasterLayer,vectorLayer],
         target: document.getElementById('map'),
         logo: false,
          view: new ol.View({
