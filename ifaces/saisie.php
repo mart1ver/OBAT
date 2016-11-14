@@ -304,22 +304,22 @@ var source = new ol.source.Vector({wrapX: false});
 
       rome.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          
-          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
+          color: '#8959A8',
+          src: 'dot.png'
         }))
       }));
 
       london.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          
-          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
+          color: '#8959A8',
+          src: 'dot.png'
         }))
       }));
 
       madrid.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          
-          src: 'https://openlayers.org/en/v3.19.1/examples/data/dot.png'
+          color: '#8959A8',
+          src: 'dot.png'
         }))
       }));
 
