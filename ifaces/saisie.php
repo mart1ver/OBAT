@@ -324,8 +324,8 @@ var mousePositionControl = new ol.control.MousePosition({
       });
 
       var vectorLayer = new ol.layer.Vector({
-        source: vectorSource,
-        extent: extent
+        source: vectorSource
+       
       });
 
       var rasterLayer =  new ol.layer.Image({
@@ -338,11 +338,21 @@ var mousePositionControl = new ol.control.MousePosition({
           });
 
       var map = new ol.Map({
+         controls: ol.control.defaults({
+          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+            collapsible: false
+          })
+        }).extend([mousePositionControl]),
+       
         layers: [rasterLayer, vectorLayer],
         target: document.getElementById('map'),
+        logo: false,
         view: new ol.View({
-          center: ol.proj.fromLonLat([2.896372, 44.60240]),
-          zoom: 3
+          projection: projection,
+          center: ol.extent.getCenter(extent),
+          
+          zoom: 2,
+          maxZoom: 6
         })
       });
    
