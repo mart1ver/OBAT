@@ -328,7 +328,7 @@ var mousePositionControl = new ol.control.MousePosition({
        
        
       });
-/**
+
       var rasterLayer =  new ol.layer.Image({
             source: new ol.source.ImageStatic({
               attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
@@ -337,7 +337,7 @@ var mousePositionControl = new ol.control.MousePosition({
               imageExtent: extent
             })
           });
-*/
+
   
 
       var map = new ol.Map({
@@ -347,14 +347,7 @@ var mousePositionControl = new ol.control.MousePosition({
           })
         }).extend([mousePositionControl]),
        
-        layers: [          new ol.layer.Image({
-            source: new ol.source.ImageStatic({
-              attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
-              url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
-              projection: projection,
-              imageExtent: extent
-            })
-          }),vectorLayer],
+        layers: [rasterLayer,vectorLayer],
         target: document.getElementById('map'),
         logo: false,
         view: new ol.View({
