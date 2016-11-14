@@ -338,7 +338,7 @@ var mousePositionControl = new ol.control.MousePosition({
             })
           });
 */
-      var rasterLayer = new  new ol.layer.Image({
+      var rasterLayer = new ol.layer.Image({
       source: new ol.source.ImageStatic({
         attributions: [
           new ol.Attribution({
@@ -348,7 +348,7 @@ var mousePositionControl = new ol.control.MousePosition({
         url: 'http://imgs.xkcd.com/comics/online_communities.png',
         projection: projection,
         imageExtent: extent
-   
+
           
         })
       });
