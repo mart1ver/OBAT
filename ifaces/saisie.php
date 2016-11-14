@@ -348,8 +348,7 @@ var mousePositionControl = new ol.control.MousePosition({
         url: 'http://imgs.xkcd.com/comics/online_communities.png',
         projection: projection,
         imageExtent: extent
-      })
-    })
+   
           
         })
       });
