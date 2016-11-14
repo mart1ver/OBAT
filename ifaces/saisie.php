@@ -325,7 +325,8 @@ var mousePositionControl = new ol.control.MousePosition({
 
       var vectorLayer = new ol.layer.Vector({
         source: vectorSource,
-      extent: extent
+        projection: projection,
+        extent: extent
        
       });
 
@@ -333,7 +334,7 @@ var mousePositionControl = new ol.control.MousePosition({
             source: new ol.source.ImageStatic({
               attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
               url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
-              
+              projection: projection,
               imageExtent: extent
             })
           });
@@ -368,7 +369,7 @@ function spot_add() {
      
         
 
-      var projectionSelect = document.getElementById('projection');
+      
 
      
 
