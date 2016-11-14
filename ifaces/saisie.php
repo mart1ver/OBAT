@@ -90,7 +90,8 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <option value="Point">Poser les points</option>
         <option value="None">None</option>
       </select>
- 
+  
+  
     <div id="map" class="map"></div>
    
     
