@@ -345,7 +345,7 @@ var mousePositionControl = new ol.control.MousePosition({
           })
         }).extend([mousePositionControl]),
        
-        layers: [rasterLayer, vectorLayer],
+        layers: [rasterLayer],
         target: document.getElementById('map'),
         logo: false,
          view: new ol.View({
