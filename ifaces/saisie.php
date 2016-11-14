@@ -325,7 +325,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
       var vectorLayer = new ol.layer.Vector({
         source: vectorSource,
-        extent: extent,
+        extent: extent
        
       });
 
@@ -346,7 +346,7 @@ var mousePositionControl = new ol.control.MousePosition({
             collapsible: false
           })
         }).extend([mousePositionControl]),
-       
+       renderer: 'canvas', // Force the renderer to be used
         layers: [rasterLayer,vectorLayer],
         target: document.getElementById('map'),
         logo: false,
