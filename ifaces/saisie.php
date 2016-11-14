@@ -325,7 +325,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
       var vectorLayer = new ol.layer.Vector({
         source: vectorSource,
-
+        
        
       });
 
@@ -349,7 +349,7 @@ var mousePositionControl = new ol.control.MousePosition({
         target: document.getElementById('map'),
         logo: false,
          view: new ol.View({
-          
+          center: ol.extent.getCenter(extent),
           zoom: 3
         })
       });
