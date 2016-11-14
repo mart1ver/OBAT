@@ -275,7 +275,7 @@ var mousePositionControl = new ol.control.MousePosition({
       // coordinates directly to map coordinates, so we create a projection that uses
       // the image extent in pixels.
 
- var extent = [0, 0, <?php echo($LONG); ?>, <?php echo($LARG); ?> ];
+      var extent = [0, 0, <?php echo($LONG); ?>, <?php echo($LARG); ?> ];
       var projection = new ol.proj.Projection({
         code: 'EPSG:4326',
         units: 'pixels',
@@ -290,11 +290,11 @@ var mousePositionControl = new ol.control.MousePosition({
       });
 
       var london = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([-0.12755, 51.507222]))
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([0.2755, 51.507222]))
       });
 
       var madrid = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([-3.683333, 40.4]))
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([3.683333, 40.4]))
       });
 
       rome.setStyle(new ol.style.Style({
@@ -355,7 +355,7 @@ var mousePositionControl = new ol.control.MousePosition({
           })
         }).extend([mousePositionControl]),
        
-        layers: [rasterLayer],
+        layers: [rasterLayer,vectorLayer],
         target: document.getElementById('map'),
         logo: false,
          view: new ol.View({
