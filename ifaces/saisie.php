@@ -260,124 +260,24 @@ function updatenote_risque(slideAmount) {
         label_stockage.innerHTML = slideAmount;
     }
 
-
-var mousePositionControl = new ol.control.MousePosition({
-        coordinateFormat: ol.coordinate.createStringXY(4),
-        projection: 'EPSG:4326',
-        // comment the following two lines to have the mouse position
-        // be placed within the map.
-        className: 'custom-mouse-position',
-        target: document.getElementById('mouse-position'),
-        undefinedHTML: '&nbsp;'
-      });
-
-      // Map views always need a projection.  Here we just want to map image
-      // coordinates directly to map coordinates, so we create a projection that uses
-      // the image extent in pixels.
-
- var extent = [0, 0, <?php echo($LONG); ?>, <?php echo($LARG); ?> ];
-      var projection = new ol.proj.Projection({
-        code: 'EPSG:4326',
-        units: 'pixels',
-        extent: extent
-      });
-
-    
-
-
-      var rome = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([12.5, 41.9]))
-      });
-
-      var london = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([-0.12755, 51.507222]))
-      });
-
-      var madrid = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([-3.683333, 40.4]))
-      });
-
-      rome.setStyle(new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-           color: '#8959A8',
-          src: 'dot.png'
-        }))
-      }));
-
-      london.setStyle(new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: '#4271AE',
-          src: 'dot.png'
-        }))
-      }));
- color: '#4271AE',
-      madrid.setStyle(new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-         color: '#4271AE',
-          src: 'dot.png'
-        }))
-      }));
-
-
-      var vectorSource = new ol.source.Vector({
-        features: [rome, london, madrid]
-      });
-
-      var vectorLayer = new ol.layer.Vector({
-        source: vectorSource,
-        projection: projection,
-        extent: extent
-       
-      });
-
-      var rasterLayer =  new ol.layer.Image({
-            source: new ol.source.ImageStatic({
-              attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
-              url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
-              projection: projection,
-              imageExtent: extent
-            })
-          });
-
-      var map = new ol.Map({
-         controls: ol.control.defaults({
-          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
-            collapsible: false
-          })
-        }).extend([mousePositionControl]),
-       
-        layers: [rasterLayer, vectorLayer],
-        target: document.getElementById('map'),
-        logo: false,
-         view: new ol.View({
-          center: ol.extent.getCenter(extent),
-          zoom: 3
-        })
-      });
-   
-
-
-
-
 function spot_add() {
   document.getElementById('coordos').value = document.getElementsByClassName('custom-mouse-position')[0].innerText;
   $('#myModal').modal();
 }
 
-
+var mymap = L.map('map').setView([51.505, -0.09], 13);
 
      
-        
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'your.mapbox.project.id',
+    accessToken: 'your.mapbox.public.access.token'
+}).addTo(mymap);
+
 
       
 
-     
-
-      var precisionInput = document.getElementById('precision');
-      precisionInput.addEventListener('change', function(event) {
-        var format = ol.coordinate.createStringXY(event.target.valueAsNumber);
-        mousePositionControl.setCoordinateFormat(format);
-      });
     </script>
   
 
