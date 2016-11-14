@@ -339,8 +339,9 @@ var mousePositionControl = new ol.control.MousePosition({
           });
 */
       var rasterLayer = new ol.layer.Tile({
-        source: new ol.source.TileJSON({
-          url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
+        source: new ol.source.ImageStatic({
+         attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
+              url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
           imageExtent: extent,
           
         })
