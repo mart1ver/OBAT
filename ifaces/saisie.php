@@ -325,7 +325,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
       var vectorLayer = new ol.layer.Vector({
         source: vectorSource,
-      
+      wrapX: false // <--- its there
        
       });
 /**
@@ -344,6 +344,7 @@ var mousePositionControl = new ol.control.MousePosition({
               url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
                projection: projection,
           imageExtent: extent,
+          wrapX: false // <--- its there
           
         })
       });
