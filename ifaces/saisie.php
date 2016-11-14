@@ -343,13 +343,10 @@ var mousePositionControl = new ol.control.MousePosition({
        
         layers: [rasterLayer, vectorLayer],
         target: document.getElementById('map'),
-        logo: false,
-        view: new ol.View({
-          projection: projection,
-          center: ol.extent.getCenter(extent),
-          
-          zoom: 2,
-          maxZoom: 6
+        
+       view: new ol.View({
+          center: ol.proj.fromLonLat([2.896372, 44.60240]),
+          zoom: 3
         })
       });
    
