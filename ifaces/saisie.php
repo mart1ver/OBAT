@@ -370,11 +370,7 @@ var source = new ol.source.Vector({wrapX: false});
         })
       });
 
-         $(map.getViewport()).on("click", function(e) {
-    map.forEachFeatureAtPixel(map.getEventPixel(e), function (feature, layer) {
-      spot_add()  //do something
-    });
-});
+   
 
 
   
@@ -402,7 +398,11 @@ var typeSelect = document.getElementById('type');
 
 
 
-
+      $(map.getViewport()).on("click", function(e) {
+    map.forEachFeatureAtPixel(map.getEventPixel(e), function (feature, layer) {
+      spot_add()  //do something
+    });
+});
 
 
 function spot_add() {
