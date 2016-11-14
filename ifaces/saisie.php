@@ -286,11 +286,11 @@ var mousePositionControl = new ol.control.MousePosition({
 
 
       var rome = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([96, 75]))
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([12.5, 41.9]))
       });
 
       var london = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([75,96]))
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([-0.12755, 51.507222]))
       });
 
       var madrid = new ol.Feature({
@@ -305,7 +305,7 @@ var mousePositionControl = new ol.control.MousePosition({
       }));
 
       london.setStyle(new ol.style.Style({
-    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
           color: '#4271AE',
           src: 'dot.png'
         }))
