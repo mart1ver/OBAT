@@ -341,7 +341,7 @@ var mousePositionControl = new ol.control.MousePosition({
       var rasterLayer = new ol.layer.Tile({
         source: new ol.source.ImageStatic({
           url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
-          crossOrigin: ''
+          
         })
       });
 
