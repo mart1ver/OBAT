@@ -357,9 +357,12 @@ var mousePositionControl = new ol.control.MousePosition({
           }),vectorLayer],
         target: document.getElementById('map'),
         logo: false,
-         view: new ol.View({
+        view: new ol.View({
+          projection: projection,
           center: ol.extent.getCenter(extent),
-          zoom: 0
+          
+          zoom: 2,
+          maxZoom: 6
         })
       });
    
