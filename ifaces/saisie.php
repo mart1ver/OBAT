@@ -325,7 +325,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
       var vectorLayer = new ol.layer.Vector({
         source: vectorSource,
-       
+        extent: extent,
        
       });
 
