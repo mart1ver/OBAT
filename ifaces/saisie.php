@@ -342,7 +342,7 @@ var mousePositionControl = new ol.control.MousePosition({
         source: new ol.source.TileJSON({
           url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
           imageExtent: extent,
-          projection: projection
+          
         })
       });
 
