@@ -329,7 +329,7 @@ var mousePositionControl = new ol.control.MousePosition({
        
       });
 
-      var rasterLayer =  new ol.layer.Tile({
+      var rasterLayer =  new ol.layer.TileImage({
             source: new ol.source.TileImage({
               attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
               url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
