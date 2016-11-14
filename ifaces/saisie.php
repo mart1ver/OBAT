@@ -349,7 +349,7 @@ var mousePositionControl = new ol.control.MousePosition({
         target: document.getElementById('map'),
         logo: false,
          view: new ol.View({
-          center: ol.proj.fromLonLat([1268, 522]),
+          
           zoom: 3
         })
       });
