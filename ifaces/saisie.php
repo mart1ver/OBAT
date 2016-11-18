@@ -404,7 +404,7 @@ var mousePositionControl = new ol.control.MousePosition({
             collapsible: false
           })
         }).extend([mousePositionControl]),
-
+        interactions : ol.interaction.defaults({doubleClickZoom :false}),
         layers: [
           mapLayer,
           vectorLayer
