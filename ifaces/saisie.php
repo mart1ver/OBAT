@@ -92,7 +92,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
       </select>
     <div id="map" class="map" id="popup" ></div>
       <body>
-    <div id="map" class="map"></div>
+    <div id="map" class="map" onclick="spot_add()"></div>
    
     
       
@@ -369,13 +369,6 @@ function spot_add() {
 }
 
 
-map.on("click", function(e) {
-    map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
-       spot_add()
-    })
-});
-     
-        
 
       
 
