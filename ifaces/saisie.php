@@ -332,7 +332,7 @@ var mousePositionControl = new ol.control.MousePosition({
                   html: '&copy; markin verk'
                 })
               ],
-              url: '1.jpg',
+              url: '../image/folios/1.jpg',
               projection: projection,
               imageExtent: extent
             })
