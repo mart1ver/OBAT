@@ -369,9 +369,9 @@ function spot_add() {
 }
 
 $(map.getViewport()).on("click", function(e) {
-    map.forEachFeatureAtPixel(map.getEventPixel(e), function (feature, layer) {
+   
         spot_add()
-    });
+   
 });
 
       
