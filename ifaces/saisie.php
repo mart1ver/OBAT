@@ -276,89 +276,82 @@ var mousePositionControl = new ol.control.MousePosition({
       // the image extent in pixels.
 
       var extent = [0, 0, <?php echo($LONG); ?>, <?php echo($LARG); ?> ];
+      
+
       var projection = new ol.proj.Projection({
-        code: 'EPSG:4326',
+        code: 'xkcd-image',
         units: 'pixels',
         extent: extent
       });
 
-    
-
-
+// ,php while1
       var rome = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([12.5, 41.9]))
+        geometry: new ol.geom.Point([200, 200]),
+
       });
 
-      var london = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([0.2755, 51.507222]))
+          var paris = new ol.Feature({
+        geometry: new ol.geom.Point([200, 500]),
+
       });
 
-      var madrid = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([3.683333, 40.4]))
-      });
+// ,php while2
 
-      rome.setStyle(new ol.style.Style({
+
+       rome.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-           color: '#8959A8',
+          color: [200, 230, 230],
+          src: 'cross.png'
+        }))
+      }));
+     
+       paris.setStyle(new ol.style.Style({
+        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+          color: [113, 140, 0],
           src: 'dot.png'
         }))
       }));
-
-      london.setStyle(new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: '#4271AE',
-          src: 'dot.png'
-        }))
-      }));
- color: '#4271AE',
-      madrid.setStyle(new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-         color: '#4271AE',
-          src: 'dot.png'
-        }))
-      }));
-
-
+// ,php while3
       var vectorSource = new ol.source.Vector({
-        features: [rome, london, madrid]
+        features: [rome,paris]
+        // ,projection: projection
       });
+
+
+
 
       var vectorLayer = new ol.layer.Vector({
-        source: vectorSource,
-        extent: extent
-       
+        source: vectorSource
       });
 
-      var rasterLayer =  new ol.layer.Image({
-            source: new ol.source.imageStatic({
-              attributions: '<a href="http://www.emancipo.tk">© Martin VERT</a>',
-              url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
+
+      var mapLayer = new ol.layer.Image({
+            source: new ol.source.ImageStatic({
+              attributions: [
+                new ol.Attribution({
+                  html: '&copy; markin verk'
+                })
+              ],
+              url: '1.jpg',
               projection: projection,
               imageExtent: extent
             })
           });
 
-  
 
       var map = new ol.Map({
-         controls: ol.control.defaults({
-          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
-            collapsible: false
-          })
-        }).extend([mousePositionControl]),
-       renderer: 'canvas', // Force the renderer to be used
-        layers: [rasterLayer,vectorLayer],
-        target: document.getElementById('map'),
-        logo: false,
+        layers: [
+          mapLayer,
+          vectorLayer
+        ],
+        target: 'map',
         view: new ol.View({
           projection: projection,
           center: ol.extent.getCenter(extent),
-          
           zoom: 2,
-          maxZoom: 6
+         
         })
       });
-   
 
 
 
