@@ -333,7 +333,7 @@ var mousePositionControl = new ol.control.MousePosition({
        <?php echo("a".$donnees['id']);?>.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
           color: [200, 230, 230],
-          src: 'cross.png'
+          src: '<?php if($donnees['id_objets'] == 0 ) {echo("cross.jpg")}else{echo("dot.jpg"};?>'
         }))
       }));
 
