@@ -329,10 +329,10 @@ var mousePositionControl = new ol.control.MousePosition({
             source: new ol.source.ImageStatic({
               attributions: [
                 new ol.Attribution({
-                  html: '&copy; markin verk'
+                  html: '<a href="http://www.emancipo.tk">© Martin VERT</a>'
                 })
               ],
-              url: '../images/folios/1.jpg',
+              url: '<?php echo("../images/folios/".$nom_fichier_folio); ?>',
               projection: projection,
               imageExtent: extent
             })
@@ -345,12 +345,13 @@ var mousePositionControl = new ol.control.MousePosition({
             collapsible: false
           })
         }).extend([mousePositionControl]),
-        
+
         layers: [
           mapLayer,
           vectorLayer
         ],
         target: 'map',
+        logo: false,
         view: new ol.View({
           projection: projection,
           center: ol.extent.getCenter(extent),
@@ -368,7 +369,11 @@ function spot_add() {
 }
 
 
-
+map.on("click", function(e) {
+    map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
+       spot_add()
+    })
+});
      
         
 
