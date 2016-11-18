@@ -299,7 +299,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
            ?>
             
-           var <?php echo($donnees['id']);?> = new ol.Feature({
+           var <?php echo("a".$donnees['id']);?> = new ol.Feature({
         geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
 
       });
@@ -330,7 +330,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
            ?>
                                 
-       <?php echo($donnees['id']);?>.setStyle(new ol.style.Style({
+       <?php echo("a".$donnees['id']);?>.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
           color: [200, 230, 230],
           src: 'cross.png'
