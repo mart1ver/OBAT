@@ -92,7 +92,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
       </select>
     <div id="map" class="map" id="popup" ></div>
       <body>
-    <div id="map" class="map" "></div>
+    <div id="map" class="map" ></div>
    
     
       
