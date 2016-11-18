@@ -284,36 +284,95 @@ var mousePositionControl = new ol.control.MousePosition({
         extent: extent
       });
 
-// ,php while1
-      var rome = new ol.Feature({
-        geometry: new ol.geom.Point([200, 200]),
+// ,php while1 placement des spots
+
+<?php 
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM spots WHERE id_folio = :id_folio ");
+    $req->execute(array('id_folio' => $_GET["fid"]));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+            
+           var <?php echo($donnees['id']);?> = new ol.Feature({
+        geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
 
       });
 
-          var paris = new ol.Feature({
-        geometry: new ol.geom.Point([200, 500]),
+               
 
-      });
-
-// ,php while2
+ <?php };
+ $req->closeCursor(); // Termine le traitement de la requête ?>
 
 
-       rome.setStyle(new ol.style.Style({
+
+      
+
+
+// ,php while2 , atributs des spots
+
+
+<?php 
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM spots WHERE id_folio = :id_folio ");
+    $req->execute(array('id_folio' => $_GET["fid"]));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+                                
+       <?php echo($donnees['id']);?>.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
           color: [200, 230, 230],
           src: 'cross.png'
         }))
       }));
-     
-       paris.setStyle(new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: [113, 140, 0],
-          src: 'dot.png'
-        }))
-      }));
-// ,php while3
+
+
+
+
+
+ <?php };
+ $req->closeCursor(); // Termine le traitement de la requête ?>
+
+      
+// ,php while3 
+
+
+
+
+<?php 
+
+var $features = "";
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM spots WHERE id_folio = :id_folio ");
+    $req->execute(array('id_folio' => $_GET["fid"]));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+   $features = $donnees['id'].$features;",";
+ };
+ $req->closeCursor(); // Termine le traitement de la requête ?>
+
+
+
+
+
+
       var vectorSource = new ol.source.Vector({
-        features: [rome,paris]
+        features: [<?php echo($features) ?>]
         // ,projection: projection
       });
 
