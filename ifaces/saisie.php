@@ -352,7 +352,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
 <?php 
 
-var $features = "";
+ $features = "";
             // On recupère tout le contenu de la table chantiers
            
              $req = $bdd->prepare("SELECT * FROM spots WHERE id_folio = :id_folio ");
