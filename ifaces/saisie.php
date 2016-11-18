@@ -362,7 +362,7 @@ var mousePositionControl = new ol.control.MousePosition({
            // On affiche chaque entree une à une
            while ($donnees = $req->fetch())
            {
-   $features = "a".$donnees['id'].$features.",";
+   $features = "a".$donnees['id'].",".$features;
  };
  $req->closeCursor(); // Termine le traitement de la requête ?>
 
