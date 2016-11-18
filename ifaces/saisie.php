@@ -427,10 +427,10 @@ function spot_add() {
   $('#myModal').modal();
 }
 
-$(map.getViewport()).on("click", function(e) {
-   map.forEachFeatureAtPixel(map.getEventPixel(e), function (feature, layer) {
+$(map.getViewport()).on("dblclick", function(e) {
+
         spot_add()
-    });
+   
 });
 
       
