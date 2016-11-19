@@ -339,7 +339,7 @@ FROM corps, spots, materiaux
 WHERE corps.id = materiaux.id_corp
 AND objets.id = spots.id_objets
 AND spots.id = :id_spot");
-    $req2->execute(array('id_spot' => $donnees['id_objets']));
+    $req2->execute(array('id_spot' => $donnees['id']));
     
  
            // On affiche chaque entree une à une
@@ -360,7 +360,7 @@ FROM corps, spots, objets
 WHERE corps.id = objets.id_corp
 AND objets.id = spots.id_objets
 AND spots.id = :id_spot");
-    $req2->execute(array('id_spot' => $donnees['id_objets']));
+    $req2->execute(array('id_spot' => $donnees['id']));
     
  
            // On affiche chaque entree une à une
