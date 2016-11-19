@@ -81,17 +81,12 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 
 
-<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poser des points
-<input type="checkbox" id="pose" name="pose" checked>
-</label>
+
 </p> <div id="mouse-position"></div></div>
     
-      <select id="type"style="display: none;">
-        <option value="Point">Poser les points</option>
-        <option value="None">None</option>
-      </select>
-    <div id="map" class="map" id="popup" ></div>
-      <body>
+     
+   
+    
     <div id="map" class="map" ></div>
    
     
@@ -111,6 +106,10 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
         <form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/saisie_post.php" method="post">
    <script type="text/javascript">
+
+document.getElementById(mouse-position).style.visibility = "hidden";
+
+   
 $(function(){
     $(".chzn-select").chosen({
     disable_search_threshold: 10,
