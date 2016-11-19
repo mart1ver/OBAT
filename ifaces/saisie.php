@@ -338,7 +338,7 @@ var mousePositionControl = new ol.control.MousePosition({
              $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
 FROM corps, spots, materiaux
 WHERE corps.id = materiaux.id_corp
-AND objets.id = spots.id_objets
+AND materiaux.id = spots.id_materiaux
 AND spots.id = :id_spot");
     $req2->execute(array('id_spot' => $donnees['id']));
     
