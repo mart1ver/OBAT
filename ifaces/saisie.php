@@ -332,7 +332,51 @@ var mousePositionControl = new ol.control.MousePosition({
                                 
        <?php echo("a".$donnees['id']);?>.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: [200, 230, 230],
+          color: '<?php if($donnees['id_objets'] == 0 ) {
+          
+             $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
+FROM corps, spots, materiaux
+WHERE corps.id = materiaux.id_corp
+AND objets.id = spots.id_objets
+AND spots.id = :id_spot");
+    $req2->execute(array('id_spot' => $donnees['id_objets']));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees2 = $req->fetch())
+           {
+php echo($donnees2['couleur']),
+
+      });
+
+               
+
+ };
+ $req2->closeCursor(); // Termine le traitement de la requête 
+          
+          }else{
+               $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
+FROM corps, spots, objets
+WHERE corps.id = objets.id_corp
+AND objets.id = spots.id_objets
+AND spots.id = :id_spot");
+    $req2->execute(array('id_spot' => $donnees['id_objets']));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees2 = $req->fetch())
+           {
+php echo($donnees2['couleur']),
+
+      });
+
+               
+
+ };
+ $req2->closeCursor(); // Termine le traitement de la requête 
+
+          };?>',
+
           src: '<?php if($donnees['id_objets'] == 0 ) {echo("../images/images/cross.png");}else{echo("../images/images/dot.png");};?>'
         }))
       }));
