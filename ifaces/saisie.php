@@ -345,7 +345,7 @@ AND spots.id = :id_spot");
            // On affiche chaque entree une à une
            while ($donnees2 = $req->fetch())
            {
-php echo($donnees2['couleur']),
+ echo($donnees2['couleur']);
 
       });
 
@@ -366,7 +366,7 @@ AND spots.id = :id_spot");
            // On affiche chaque entree une à une
            while ($donnees2 = $req->fetch())
            {
-php echo($donnees2['couleur']),
+echo($donnees2['couleur']);
 
       });
 
