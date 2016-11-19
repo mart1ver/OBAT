@@ -332,7 +332,8 @@ var mousePositionControl = new ol.control.MousePosition({
                                 
        <?php echo("a".$donnees['id']);?>.setStyle(new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: '<?php if($donnees['id_objets'] == 0 ) {
+          color: 
+          <?php if($donnees['id_objets'] == 0 ) {
           
              $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
 FROM corps, spots, materiaux
@@ -343,9 +344,9 @@ AND spots.id = :id_spot");
     
  
            // On affiche chaque entree une à une
-           while ($donnees2 = $req->fetch())
+           while ($donnees2 = $req2->fetch())
            {
- echo($donnees2['couleur']);
+ echo("'".$donnees2['couleur']."'");
 
      
 
@@ -364,9 +365,9 @@ AND spots.id = :id_spot");
     
  
            // On affiche chaque entree une à une
-           while ($donnees2 = $req->fetch())
+           while ($donnees2 = $req2->fetch())
            {
-echo($donnees2['couleur']);
+echo("'".$donnees2['couleur']."'");
 
      
 
@@ -375,7 +376,7 @@ echo($donnees2['couleur']);
  };
  $req2->closeCursor(); // Termine le traitement de la requête 
 
-          };?>',
+          };?>,
 
           src: '<?php if($donnees['id_objets'] == 0 ) {echo("../images/images/cross.png");}else{echo("../images/images/dot.png");};?>'
         }))
