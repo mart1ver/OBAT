@@ -107,9 +107,9 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/saisie_post.php" method="post">
    <script type="text/javascript">
 
-document.getElementById(mouse-position).style.visibility = "hidden";
+document.getElementById('mouse-position').style.visibility = "hidden";
 
-   
+
 $(function(){
     $(".chzn-select").chosen({
     disable_search_threshold: 10,
