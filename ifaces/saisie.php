@@ -347,7 +347,7 @@ AND spots.id = :id_spot");
            {
  echo($donnees2['couleur']);
 
-      });
+     
 
                
 
@@ -368,7 +368,7 @@ AND spots.id = :id_spot");
            {
 echo($donnees2['couleur']);
 
-      });
+     
 
                
 
