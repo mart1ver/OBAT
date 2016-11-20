@@ -91,8 +91,7 @@ $om = "o";
 
  <div id="mouse-position"></p></div></div>
  <div class="alert alert-info" role="alert">
-<p><b>Filter les spots sur ce folio:</b></p> </div>
-corps de metier:<select class="chzn-select" name="forma" onchange="location = this.value;">
+<p><b>Filter les spots sur ce folio:    corps de metier: <select class="chzn-select" name="forma" onchange="location = this.value;">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -111,8 +110,7 @@ corps de metier:<select class="chzn-select" name="forma" onchange="location = th
 <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"><?php echo($donnees['nom']);?></option>
  <?php }?>
 
-</select>    ,
-typo:<select class="chzn-select" name="forma" onchange="location = this.value;">
+</select>, typo:<select class="chzn-select" name="forma" onchange="location = this.value;">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -131,8 +129,7 @@ typo:<select class="chzn-select" name="forma" onchange="location = this.value;">
 <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"><?php echo($donnees['nom']);?></option>
  <?php }?>
 
-</select>
-,nature:<select class="chzn-select" name="forma" onchange="location = this.value;">
+</select>, nature: <select class="chzn-select" name="forma" onchange="location = this.value;">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -154,7 +151,7 @@ typo:<select class="chzn-select" name="forma" onchange="location = this.value;">
 
 </select> 
 ,objets/materiaux   
-     
+     </b></p> </div>
    
 <div id="map" class="map"><div id="popup"></div></div>
    
