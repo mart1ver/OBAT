@@ -108,7 +108,7 @@ $rom = $_GET["rom"];
            ?>
             
           
-<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"<?php if($donnees['id'] == $_GET["rcorps"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($donnees['id']);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&rom=0"<?php if($donnees['id'] == $_GET["rcorps"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
  <?php }?>
 
 </select>, typo:<select class="chzn-select" name="forma" onchange="location = this.value;">
@@ -127,7 +127,7 @@ $rom = $_GET["rom"];
            ?>
             
           
-<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"<?php if($donnees['id'] == $_GET["rtypo"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($donnees['id']);?>&rnature=<?php echo($_GET["rnature"]);?>&rom=0"<?php if($donnees['id'] == $_GET["rtypo"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
  <?php }?>
 
 </select>, nature: <select class="chzn-select" name="forma" onchange="location = this.value;">
@@ -146,7 +146,7 @@ $rom = $_GET["rom"];
            ?>
             
           
-               <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"<?php if($donnees['id'] == $_GET["rnature"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
+               <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($donnees['id']);?>&rom=0"<?php if($donnees['id'] == $_GET["rnature"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
 
  <?php }?>
 
