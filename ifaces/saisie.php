@@ -488,7 +488,7 @@ $(map.getViewport()).on("dblclick", function(e) {
       });
 
 var element = document.getElementById('popup');
-
+var previous = "";
       var popup = new ol.Overlay({
         element: element,
         positioning: 'bottom-center',
@@ -504,7 +504,7 @@ var element = document.getElementById('popup');
               return feature;
             });
         if (feature) {
-var previous = "";
+          
           var coordinates = feature.getGeometry().getCoordinates();
           popup.setPosition(coordinates);
           $(element).popover({
@@ -522,16 +522,7 @@ var previous = "";
         }
       });
 
-      // change mouse cursor when over marker
-      map.on('pointermove', function(e) {
-        if (e.dragging) {
-          $(element).popover('destroy');
-          return;
-        }
-        var pixel = map.getEventPixel(e.originalEvent);
-        var hit = map.hasFeatureAtPixel(pixel);
-        map.getTarget().style.cursor = hit ? 'pointer' : '';
-      });
+    
 
     </script>
   
