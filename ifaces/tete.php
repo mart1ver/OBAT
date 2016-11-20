@@ -127,7 +127,7 @@ echo($donnees2['fid']);
            {
 
 ?>
-            <li><a href="recherche.php.php?id=<?php echo $donnees['id']?>&fid=<?php 
+            <li><a href="recherche.php?id=<?php echo $donnees['id']?>&fid=<?php 
 
 
 
