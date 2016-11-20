@@ -80,7 +80,8 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 $rcorps = $_GET["rcorps"];
 $rtypo = $_GET["rtypo"];
 $rnature = $_GET["rnature"];
-$rom = $_GET["rom"];
+$ro = $_GET["ro"];
+$rm = $_GET["rm"];
 
 
 ?>
@@ -91,8 +92,8 @@ $rom = $_GET["rom"];
 
 
  <div id="mouse-position"></p></div></div>
- <div class="row" >
-<p><b>Filter les spots sur ce folio:    corps de metier: <select class="chzn-select" name="forma" onchange="location = this.value;">
+ <div class="row">
+<p><b>Filtrer les spots sur ce folio:    corps de metier: <select class="chzn-select" name="forma" onchange="location = this.value;">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -158,7 +159,65 @@ $rom = $_GET["rom"];
 <div id="map" class="map"><div id="popup"></div></div>
    
      <div class="alert alert-info" role="alert">
-<p>liste précise des spots:</p> </div>
+<p>liste précise des spots:</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Date de création</th>
+            <th>Nom</th>
+            <th>corp de metier</th>
+            <th>type d'objet ou de materiaux</th>
+            <th>note globale</th>
+            <th>visible</th>
+            <th></th>
+            
+          </tr>
+        </thead>
+        <tbody>
+        <?php 
+            // On recupère tout le contenu de la table affectations
+            $reponse = $bdd->query('SELECT * FROM typologies');
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $reponse->fetch())
+           {
+
+           ?>
+            <tr> 
+            <td><?php echo $donnees['id']?></td>
+            <td><?php echo $donnees['timestamp']?></td>
+            <td><?php echo $donnees['nom']?></td>
+            <td><?php echo $donnees['nom']?></td>
+            <td><?php echo $donnees['description']?></td>
+            <td><span class="badge" style="background-color:<?php echo$donnees['couleur']?>"><?php echo$donnees['couleur']?></span></td>
+
+
+<td>
+<form action="../moteur/typologie_visible.php" method="post">
+
+
+
+
+
+
+
+
+
+</div>
       
       <input id="precision" type="hidden" min="0" max="12" value="4"/>
     
