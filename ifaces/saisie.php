@@ -512,10 +512,10 @@ var previous = "";
             'html': true,
             'content': feature.get('name')
           });
-          previous.popover('destroy');
+          $(previous).popover('destroy');
           $(element).popover('show');
 
-previous = $(element);
+          previous = element;
         } else {
 
           $(element).popover('destroy');
