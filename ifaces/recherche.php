@@ -77,9 +77,9 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 <?php $req->closeCursor(); // Termine le traitement de la requête 
 $rcorps = "*";
-$typo = "*";
-$nature = "*";
-$om = "o";
+$rtypo = "*";
+$rnature = "*";
+$rom = "o";
 
 
 ?>
