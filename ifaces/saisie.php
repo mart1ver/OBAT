@@ -86,8 +86,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
     
      
    
-    
-    <div id="map" class="map" ></div>
+<div id="map" class="map"><div id="popup"></div></div>
    
     
       
@@ -300,6 +299,7 @@ var mousePositionControl = new ol.control.MousePosition({
             
            var <?php echo("a".$donnees['id']);?> = new ol.Feature({
         geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
+        name: '<?php echo($donnees['id']);?>'
 
       });
 
@@ -486,6 +486,48 @@ $(map.getViewport()).on("dblclick", function(e) {
         var format = ol.coordinate.createStringXY(event.target.valueAsNumber);
         mousePositionControl.setCoordinateFormat(format);
       });
+
+var element = document.getElementById('popup');
+
+      var popup = new ol.Overlay({
+        element: element,
+        positioning: 'bottom-center',
+        stopEvent: false,
+        offset: [0, -50]
+      });
+      map.addOverlay(popup);
+
+      // display popup on click
+      map.on('click', function(evt) {
+        var feature = map.forEachFeatureAtPixel(evt.pixel,
+            function(feature) {
+              return feature;
+            });
+        if (feature) {
+          var coordinates = feature.getGeometry().getCoordinates();
+          popup.setPosition(coordinates);
+          $(element).popover({
+            'placement': 'top',
+            'html': true,
+            'content': feature.get('name')
+          });
+          $(element).popover('show');
+        } else {
+          $(element).popover('destroy');
+        }
+      });
+
+      // change mouse cursor when over marker
+      map.on('pointermove', function(e) {
+        if (e.dragging) {
+          $(element).popover('destroy');
+          return;
+        }
+        var pixel = map.getEventPixel(e.originalEvent);
+        var hit = map.hasFeatureAtPixel(pixel);
+        map.getTarget().style.cursor = hit ? 'pointer' : '';
+      });
+      
     </script>
   
 
