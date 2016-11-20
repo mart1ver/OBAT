@@ -153,10 +153,6 @@ echo($donnees2['fid']);
 
 
 
-$rcorps = "*";
-$rtypo = "*";
-$rnature = "*";
-$rom = "o";
 
 
 
