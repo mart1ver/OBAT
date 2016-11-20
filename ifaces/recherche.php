@@ -83,12 +83,15 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 
  <div id="mouse-position"></p></div></div>
+ <div class="alert alert-info" role="alert">
+<p>filter les spots sur ce folio:</p> </div>
     
      
    
 <div id="map" class="map"><div id="popup"></div></div>
    
-    
+     <div class="alert alert-info" role="alert">
+<p>liste précise des spots:</p> </div>
       
       <input id="precision" type="hidden" min="0" max="12" value="4"/>
     
