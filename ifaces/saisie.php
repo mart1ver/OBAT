@@ -504,6 +504,7 @@ var element = document.getElementById('popup');
               return feature;
             });
         if (feature) {
+var previous = "";
           var coordinates = feature.getGeometry().getCoordinates();
           popup.setPosition(coordinates);
           $(element).popover({
@@ -511,8 +512,12 @@ var element = document.getElementById('popup');
             'html': true,
             'content': feature.get('name')
           });
+          previous.popover('destroy');
           $(element).popover('show');
+
+previous = $(element);
         } else {
+
           $(element).popover('destroy');
         }
       });
