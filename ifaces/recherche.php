@@ -91,7 +91,7 @@ $rom = $_GET["rom"];
 
 
  <div id="mouse-position"></p></div></div>
- <div class="alert alert-info" role="alert">
+ <div class="row" >
 <p><b>Filter les spots sur ce folio:    corps de metier: <select class="chzn-select" name="forma" onchange="location = this.value;">
 
 <?php 
