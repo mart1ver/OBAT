@@ -82,7 +82,7 @@ $rtypo = $_GET["rtypo"];
 $rnature = $_GET["rnature"];
 if($_GET["ro"] == 0)
 {
-$ro = 1000000000000  
+$ro = 1000000000000  ;
 }else
 {
 $ro = 0;
@@ -90,7 +90,7 @@ $ro = 0;
 
 if($_GET["rm"] == 0)
 {
-$ro = 1000000000000  
+$ro = 1000000000000;  
 }else
 {
 $ro = 0;
