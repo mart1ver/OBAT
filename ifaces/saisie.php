@@ -287,7 +287,7 @@ var mousePositionControl = new ol.control.MousePosition({
 <?php 
             // On recupère tout le contenu de la table chantiers
            
-             $req = $bdd->prepare("SELECT * FROM spots WHERE id_folio = :id_folio ");
+             $req = $bdd->prepare("SELECT corps.nom as nc, materiaux.nom as mc,spots.* FROM spots, materiaux,corps WHERE id_folio = :id_folio AND materiaux.id = spots.id_materiaux AND corps.id = materiaux.id_corp");
     $req->execute(array('id_folio' => $_GET["fid"]));
     
  
@@ -299,7 +299,7 @@ var mousePositionControl = new ol.control.MousePosition({
             
            var <?php echo("a".$donnees['id']);?> = new ol.Feature({
         geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
-        name: '<?php echo($donnees['id']);?>'
+        name: '<?php echo("Point N:".$donnees['id']." ,".$donnees['mc']." ,".$donnees['nc']);?>'
 
       });
 
@@ -488,7 +488,7 @@ $(map.getViewport()).on("dblclick", function(e) {
       });
 
 var element = document.getElementById('popup');
-var previous = "m";
+
       var popup = new ol.Overlay({
         element: element,
         positioning: 'bottom-center',
@@ -512,12 +512,10 @@ var previous = "m";
             'html': true,
             'content': feature.get('name')
           });
-if(previous !="m"){
-          $(previous).popover('destroy');
-}
+
           $(element).popover('show');
 
-          previous = element;
+        
         } else {
 
           $(element).popover('destroy');
