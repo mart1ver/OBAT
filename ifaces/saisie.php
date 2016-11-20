@@ -82,7 +82,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 
 
-</p> <div id="mouse-position"></div></div>
+ <div id="mouse-position"></p></div></div>
     
      
    
