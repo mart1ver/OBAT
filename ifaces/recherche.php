@@ -108,8 +108,7 @@ corps de metier:<select class="chzn-select" name="forma" onchange="location = th
            ?>
             
           
-                <option value="recherche.php?id=<?php echo $_GET["id"]?>&<?php fid  =$_GET["fid"]?>"><?php echo($donnees['nom']);?></option>
-
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"><?php echo($donnees['nom']);?></option>
  <?php }?>
 
 </select>    ,
@@ -129,8 +128,7 @@ typo:<select class="chzn-select" name="forma" onchange="location = this.value;">
            ?>
             
           
-                <option value="recherche.php?id=<?php echo $_GET["id"]?>&<?php fid  =$_GET["fid"]?>"><?php echo($donnees['nom']);?></option>
-
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"><?php echo($donnees['nom']);?></option>
  <?php }?>
 
 </select>
@@ -150,7 +148,7 @@ typo:<select class="chzn-select" name="forma" onchange="location = this.value;">
            ?>
             
           
-               <option value="recherche.php?id=<?php echo $_GET["id"]?>&<?php fid  =$_GET["fid"]?>"><?php echo($donnees['nom']);?></option>
+               <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"><?php echo($donnees['nom']);?></option>
 
  <?php }?>
 
