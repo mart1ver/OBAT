@@ -76,10 +76,11 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 </select> (<?php echo($_GET["id"]); ?>-<?php echo($_GET["fid"]); ?>)</b>
 
 <?php $req->closeCursor(); // Termine le traitement de la requête 
-$rcorps = "*";
-$rtypo = "*";
-$rnature = "*";
-$rom = "o";
+
+$rcorps = $_GET["rcorps"];
+$rtypo = $_GET["rtypo"];
+$rnature = $_GET["rnature"];
+$rom = $_GET["rom"];
 
 
 ?>
@@ -107,7 +108,7 @@ $rom = "o";
            ?>
             
           
-<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"><?php echo($donnees['nom']);?></option>
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"<?php if($donnees['id'] == $_GET["rcorps"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
  <?php }?>
 
 </select>, typo:<select class="chzn-select" name="forma" onchange="location = this.value;">
@@ -126,7 +127,7 @@ $rom = "o";
            ?>
             
           
-<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"><?php echo($donnees['nom']);?></option>
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"<?php if($donnees['id'] == $_GET["rtypo"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
  <?php }?>
 
 </select>, nature: <select class="chzn-select" name="forma" onchange="location = this.value;">
@@ -145,7 +146,7 @@ $rom = "o";
            ?>
             
           
-               <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"><?php echo($donnees['nom']);?></option>
+               <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>"<?php if($donnees['id'] == $_GET["rnature"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
 
  <?php }?>
 
