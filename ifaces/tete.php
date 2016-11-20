@@ -160,7 +160,7 @@ echo($donnees2['fid']);
 
 
 
-              ?>&rcorps=0&rtypo=0&rnature=0&rom=0">chantier <?php echo $donnees['id']?>, <?php echo $donnees['nom']?></a></li>
+              ?>&rcorps=0&rtypo=0&rnature=0&rm=0&ro=0">chantier <?php echo $donnees['id']?>, <?php echo $donnees['nom']?></a></li>
 
 <?php }
               $reponse->closeCursor(); // Termine le traitement de la requête
