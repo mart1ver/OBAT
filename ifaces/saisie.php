@@ -493,7 +493,7 @@ var element = document.getElementById('popup');
         element: element,
         positioning: 'bottom-center',
         stopEvent: false,
-        offset: [0, -50]
+        offset: [0, 0]
       });
       map.addOverlay(popup);
 
@@ -527,7 +527,7 @@ var element = document.getElementById('popup');
         var hit = map.hasFeatureAtPixel(pixel);
         map.getTarget().style.cursor = hit ? 'pointer' : '';
       });
-      
+
     </script>
   
 
