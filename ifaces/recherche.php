@@ -158,7 +158,7 @@ $rm = $_GET["rm"];
    
 <div id="map" class="map"><div id="popup"></div></div>
    
-     <div class="alert alert-info" role="alert">
+     <div >
 <p>liste précise des spots:</p> 
 
 
@@ -178,7 +178,7 @@ $rm = $_GET["rm"];
           <tr>
             <th>#</th>
             <th>Date de création</th>
-            <th>Nom</th>
+            <th>coordnées</th>
             <th>corp de metier</th>
             <th>type d'objet ou de materiaux</th>
             <th>note globale</th>
@@ -190,8 +190,9 @@ $rm = $_GET["rm"];
         <tbody>
         <?php 
             // On recupère tout le contenu de la table affectations
-            $reponse = $bdd->query('SELECT * FROM typologies');
- 
+            $reponse = $bdd->prepare('SELECT spots.* FROM spots 
+WHERE id_folio=1 AND (id_objets > 0 OR id_materiaux > 10 )');
+ $reponse->execute();
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())
            {
@@ -200,35 +201,14 @@ $rm = $_GET["rm"];
             <tr> 
             <td><?php echo $donnees['id']?></td>
             <td><?php echo $donnees['timestamp']?></td>
-            <td><?php echo $donnees['nom']?></td>
-            <td><?php echo $donnees['nom']?></td>
+            <td><?php echo $donnees['coordos']?></td>
+            <td><?php echo $donnees['coordos']?></td>
             <td><?php echo $donnees['description']?></td>
-            <td><span class="badge" style="background-color:<?php echo$donnees['couleur']?>"><?php echo$donnees['couleur']?></span></td>
+            <td></td>
 
 
 <td>
-<form action="../moteur/typologie_visible.php" method="post">
 
-<input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
-  <input type="hidden"name ="visible" id ="visible" value="<?php if ($donnees['visible'] == "oui") 
-{echo "non";}
-else 
-{echo "oui";}?>">
-<?php
-if ($donnees['visible'] == "oui") // SI on a pas de message d'erreur
-{?>
- <button  class="btn btn-info btn-sm " >
-  <?php
-}
-
-else // SINON 
-{?>
-   <button  class="btn btn-danger btn-sm " >
- <?php
-}
- echo $donnees['visible']?> 
-  </button>
-</form>
 </td>
 
 
@@ -236,7 +216,7 @@ else // SINON
 
 <td>
 
-<form action="modification_typologie.php" method="post">
+<form action="modification_spot.php" method="post">
 
 <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
 <input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>">
