@@ -75,7 +75,14 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 </select> (<?php echo($_GET["id"]); ?>-<?php echo($_GET["fid"]); ?>)</b>
 
-<?php $req->closeCursor(); // Termine le traitement de la requête ?>
+<?php $req->closeCursor(); // Termine le traitement de la requête 
+$rcorps = "*";
+$typo = "*";
+$nature = "*";
+$om = "o";
+
+
+?>
 
 
 
@@ -84,8 +91,71 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
  <div id="mouse-position"></p></div></div>
  <div class="alert alert-info" role="alert">
-<p>filter les spots sur ce folio:</p> </div>
+<p><b>Filter les spots sur ce folio:</b></p> </div>
+corps de metier:<select class="chzn-select" name="forma" onchange="location = this.value;">
+
+<?php 
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM corps ");
+    $req->execute();
     
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+            
+          
+                <option value="recherche.php?id=<?php echo $_GET["id"]?>&<?php fid  =$_GET["fid"]?>"><?php echo($donnees['nom']);?></option>
+
+ <?php }?>
+
+</select>    ,
+typo:<select class="chzn-select" name="forma" onchange="location = this.value;">
+
+<?php 
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM typologies ");
+    $req->execute();
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+            
+          
+                <option value="recherche.php?id=<?php echo $_GET["id"]?>&<?php fid  =$_GET["fid"]?>"><?php echo($donnees['nom']);?></option>
+
+ <?php }?>
+
+</select>
+,nature:<select class="chzn-select" name="forma" onchange="location = this.value;">
+
+<?php 
+            // On recupère tout le contenu de la table chantiers
+           
+             $req = $bdd->prepare("SELECT * FROM natures");
+    $req->execute();
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+            
+          
+               <option value="recherche.php?id=<?php echo $_GET["id"]?>&<?php fid  =$_GET["fid"]?>"><?php echo($donnees['nom']);?></option>
+
+ <?php }?>
+
+</select> 
+,objets/materiaux   
      
    
 <div id="map" class="map"><div id="popup"></div></div>
