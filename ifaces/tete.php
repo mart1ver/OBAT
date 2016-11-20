@@ -71,7 +71,41 @@ $(function(){
            {
 
 ?>
-            <li><a href="saisie.php?id=<?php echo $donnees['id']?>&fid=1">chantier <?php echo $donnees['id']?>, <?php echo $donnees['nom']?></a></li>
+            <li><a href="saisie.php?id=<?php echo $donnees['id']?>&fid=<?php 
+
+
+
+
+
+
+
+
+
+$req2 = $bdd->prepare("SELECT MIN(id) as fid FROM folios WHERE id_chantier = :id_chantier ");
+    $req2->execute(array('id_chantier' => $donnees['id']));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees2 = $req2->fetch())
+           {
+echo($donnees2['fid']);
+           }
+
+
+
+ $req2->closeCursor(); // Termine le traitement de la requête 
+
+
+
+
+
+
+
+
+
+
+
+              ?>">chantier <?php echo $donnees['id']?>, <?php echo $donnees['nom']?></a></li>
 
 <?php }
               $reponse->closeCursor(); // Termine le traitement de la requête
@@ -93,8 +127,7 @@ $(function(){
            {
 
 ?>
-            <li><a href="recherche.php.php?id=<?php echo $donnees['id']?>&fid=
-              <?php 
+            <li><a href="recherche.php.php?id=<?php echo $donnees['id']?>&fid=<?php 
 
 
 
