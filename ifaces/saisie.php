@@ -488,7 +488,7 @@ $(map.getViewport()).on("dblclick", function(e) {
       });
 
 var element = document.getElementById('popup');
-var previous = "";
+var previous = "m";
       var popup = new ol.Overlay({
         element: element,
         positioning: 'bottom-center',
@@ -512,7 +512,7 @@ var previous = "";
             'html': true,
             'content': feature.get('name')
           });
-if(previous){
+if(previous !="m"){
           $(previous).popover('destroy');
 }
           $(element).popover('show');
