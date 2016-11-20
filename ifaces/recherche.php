@@ -209,7 +209,72 @@ $rm = $_GET["rm"];
 <td>
 <form action="../moteur/typologie_visible.php" method="post">
 
+<input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
+  <input type="hidden"name ="visible" id ="visible" value="<?php if ($donnees['visible'] == "oui") 
+{echo "non";}
+else 
+{echo "oui";}?>">
+<?php
+if ($donnees['visible'] == "oui") // SI on a pas de message d'erreur
+{?>
+ <button  class="btn btn-info btn-sm " >
+  <?php
+}
 
+else // SINON 
+{?>
+   <button  class="btn btn-danger btn-sm " >
+ <?php
+}
+ echo $donnees['visible']?> 
+  </button>
+</form>
+</td>
+
+
+
+
+<td>
+
+<form action="modification_typologie.php" method="post">
+
+<input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
+<input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>">
+<input type="hidden" name ="description" id="description" value="<?php echo $donnees['description']?>">
+<input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($_POST['couleur'],1)?>">
+
+  <button  class="btn btn-warning btn-sm" >Modifier!</button>
+
+
+</form>
+
+
+
+</td>
+
+
+
+
+
+
+          </tr>
+           <?php }
+              $reponse->closeCursor(); // Termine le traitement de la requête
+                ?>
+       </tbody>
+        <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            
+          </tfoot>
+        
+      </table>
 
 
 
