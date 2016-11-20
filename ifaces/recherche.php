@@ -80,9 +80,21 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 $rcorps = $_GET["rcorps"];
 $rtypo = $_GET["rtypo"];
 $rnature = $_GET["rnature"];
-$ro = $_GET["ro"];
-$rm = $_GET["rm"];
+if($_GET["ro"] == 0)
+{
+$ro = 1000000000000  
+}else
+{
+$ro = 0;
+}
 
+if($_GET["rm"] == 0)
+{
+$ro = 1000000000000  
+}else
+{
+$ro = 0;
+}
 
 ?>
 
@@ -191,8 +203,8 @@ $rm = $_GET["rm"];
         <?php 
             // On recupère tout le contenu de la table affectations
             $reponse = $bdd->prepare('SELECT spots.* FROM spots 
-WHERE id_folio=1 AND (id_objets > 0 OR id_materiaux > 10 )');
- $reponse->execute();
+WHERE id_folio=1 AND (id_objets > :ro OR id_materiaux > :rm )');
+ $reponse->execute(array('ro' => $ro,'rm' => $rm));
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())
            {
