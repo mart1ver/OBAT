@@ -203,8 +203,8 @@ $rm = 0;
         <?php 
             // On recupère tout le contenu de la table affectations
             $reponse = $bdd->prepare('SELECT spots.* FROM spots 
-WHERE id_folio=1 AND (id_objets > :ro OR id_materiaux > :rm )');
- $reponse->execute(array('ro' => $ro,'rm' => $rm));
+WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
+ $reponse->execute(array('ro' => $ro,'rm' => $rm,'fid' => $_GET["fid"]));
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())
            {

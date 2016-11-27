@@ -73,28 +73,7 @@ require_once('../moteur/dbconfig.php');
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 </select>
-<label for="nature">nature: </label>
-  <select name="nature" id="nature">
 
-<?php 
-            // On recupère tout le contenu de la table chantiers
-           
-             $req = $bdd->prepare("SELECT * FROM natures ");
-    $req->execute(array());
-    
- 
-           // On affiche chaque entree une à une
-           while ($donnees = $req->fetch())
-           {
-
-           ?>
-            
-          
-                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
-
- <?php };
-  $req->closeCursor(); // Termine le traitement de la requête ?>
-</select>
 </div>
 </div>
   <div class="col-md-1"><br>
@@ -173,7 +152,6 @@ else // SINON
 
 <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
 <input type="hidden" name ="id_typologie" id="id" value="<?php echo $donnees['id_typologie']?>">
-<input type="hidden" name ="id_nature" id="id" value="<?php echo $donnees['id_nature']?>">
 <input type="hidden" name ="id_corp" id="id" value="<?php echo $donnees['id_corp']?>">
 <input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>">
 <input type="hidden" name ="description" id="description" value="<?php echo $donnees['description']?>">

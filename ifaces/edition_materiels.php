@@ -73,28 +73,6 @@ require_once('../moteur/dbconfig.php');
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 </select>
-<label for="nature">nature: </label>
-  <select name="nature" id="nature">
-
-<?php 
-            // On recupère tout le contenu de la table chantiers
-           
-             $req = $bdd->prepare("SELECT * FROM natures ");
-    $req->execute(array());
-    
- 
-           // On affiche chaque entree une à une
-           while ($donnees = $req->fetch())
-           {
-
-           ?>
-            
-          
-                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
-
- <?php };
-  $req->closeCursor(); // Termine le traitement de la requête ?>
-</select>
 </div>
 </div>
   <div class="col-md-1"><br>
