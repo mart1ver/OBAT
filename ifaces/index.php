@@ -28,7 +28,7 @@ Nombre de spots en base:
 <br>
 Nombre de corps de metiers en base:
 <?php        
-    $req = $bdd->prepare("SELECT COUNT(id) as count FROM spots");
+    $req = $bdd->prepare("SELECT COUNT(id) as count FROM corps");
     $req->execute();
     while ($donnees = $req->fetch())
     {echo(" ".$donnees['count']);};
