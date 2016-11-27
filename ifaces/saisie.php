@@ -526,9 +526,9 @@ var element = document.getElementById('popup');
             'html': true,
             'content': feature.get('name')
           });
-
+          $(prevelement).popover('destroy');
           $(element).popover('show');
-
+          var prevelement = document.getElementById('popup');
         
         } else {
 
