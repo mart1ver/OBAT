@@ -201,14 +201,8 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
             <td><?php echo $donnees['coordos']?></td>
             <td><?php echo $donnees['description']?></td>
             <td> note</td>
-            <td><form action="modification_spot.php" method="post">
-                <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
-                <input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>">
-                <input type="hidden" name ="description" id="description" value="<?php echo $donnees['description']?>">
-                <input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($_POST['couleur'],1)?>">
-                <button  class="btn btn-warning btn-sm" >Modifier!</button>
-                </form></td>
-          </tr>
+            <td><form action="modification_spot.php" method="post"><input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>"><input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>"><input type="hidden" name ="description" id="description" value="<?php echo $donnees['description']?>"><input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($_POST['couleur'],1)?>"><button  class="btn btn-warning btn-sm" >Modifier!</button></form></td>
+            </tr>
            <?php }
               $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
@@ -230,10 +224,10 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
            
                 <a href="#" id ="export" role='button'>exporter cette liste</a>
          
-
-<a href="#tete">
+<p align="right"><a href="#tete">
    <button>Carte</button>
-</a>
+</a></p>
+
 
 
 
