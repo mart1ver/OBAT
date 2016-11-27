@@ -104,19 +104,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
       <div class="modal-body">
 
         <form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/saisie_post.php" method="post">
-   <script type="text/javascript">
-
-//document.getElementById('mouse-position').style.visibility = "hidden";
-
-
-$(function(){
-    $(".chzn-select").chosen({
-    disable_search_threshold: 10,
-    no_results_text: "Oops, nothing found!"
-   
-  });
-});
-</script>
+  
 
         <input type="hidden" id="coordos" name="coordos"> 
         <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['id']); ?>"> 
@@ -151,7 +139,7 @@ $(function(){
 
 </select>
 
-<label for="objet">  &nbspObjets:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
+<label for="objet">  &nbspMateriels:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
 <option value="0" selected="selected">-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers

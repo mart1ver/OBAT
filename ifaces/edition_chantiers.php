@@ -22,7 +22,7 @@ $id = $_POST['id'];
 </form>
 <br><br>
 <a href="chantiers.php">
-<button name="anuler" class="btn btn">Anuler</button>
+<button name="annuler" class="btn btn">Annuler</button>
 </a>
 </div>
 <br><br>

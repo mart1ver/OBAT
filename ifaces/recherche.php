@@ -290,19 +290,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
       <div class="modal-body">
 
         <form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/saisie_post.php" method="post">
-   <script type="text/javascript">
 
-//document.getElementById('mouse-position').style.visibility = "hidden";
-
-
-$(function(){
-    $(".chzn-select").chosen({
-    disable_search_threshold: 10,
-    no_results_text: "Oops, nothing found!"
-   
-  });
-});
-</script>
 
         <input type="hidden" id="coordos" name="coordos"> 
         <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['id']); ?>"> 
