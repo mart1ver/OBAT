@@ -103,7 +103,7 @@ $rm = 0;
 
 
 
- <div id="mouse-position"></p></div></div>
+ <div id="mouse-position"></p></div>
  <div class="row">
  <div class="col-md-9 col-md-offset-1">
 
@@ -126,7 +126,7 @@ $rm = 0;
 <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($donnees['id']);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>"<?php if($donnees['id'] == $_GET["rcorps"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
  <?php }?>
 
-</select><br> Typologie:<select class="chzn-select" name="forma" onchange="location = this.value;">
+</select>, Typologies:<select class="chzn-select" name="forma" onchange="location = this.value;">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -146,7 +146,6 @@ $rm = 0;
  <?php }?>
 
 </select>
-<br>
 <label><input type="checkbox" id="objets" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php if($_GET["ro"] == "0"){echo("1");}else{echo("0");}; ?>&rm=<?php echo($_GET["rm"]);?>"<?php if($_GET["ro"] == "1" ){echo'checked';} ?>> Materiels</label>
 <label><input type="checkbox" id="materiaux" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php if($_GET["rm"] == "0"){echo("1");}else{echo("0");}; ?>"<?php if($_GET["rm"] == "1" ){echo'checked';} ?>> Materiaux</label>
      </b>
@@ -159,7 +158,7 @@ $rm = 0;
 </div>
 </div>
    
-
+</div>
 
 
 
