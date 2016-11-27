@@ -513,7 +513,8 @@ var element = document.getElementById('popup');
 
       // display popup on click
       map.on('click', function(evt) {
-         $(element).popover('destroy');
+         $(prevelement).popover('destroy');
+
         var feature = map.forEachFeatureAtPixel(evt.pixel,
             function(feature) {
               return feature;
@@ -529,7 +530,7 @@ var element = document.getElementById('popup');
           });
       
           $(element).popover('show');
-        
+        var prevelement = document.getElementById('popup');
         
         } else {
 
