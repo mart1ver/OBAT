@@ -502,7 +502,7 @@ $(map.getViewport()).on("dblclick", function(e) {
       });
 
 var element = document.getElementById('popup');
-var prevelement = '';
+
       var popup = new ol.Overlay({
         element: element,
         positioning: 'bottom-center',
@@ -513,6 +513,7 @@ var prevelement = '';
 
       // display popup on click
       map.on('click', function(evt) {
+         $(element).popover('destroy');
         var feature = map.forEachFeatureAtPixel(evt.pixel,
             function(feature) {
               return feature;
@@ -526,9 +527,9 @@ var prevelement = '';
             'html': true,
             'content': feature.get('name')
           });
-          $(prevelement).popover('destroy');
+      
           $(element).popover('show');
-          prevelement = document.getElementById('popup');
+        
         
         } else {
 
