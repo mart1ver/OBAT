@@ -51,11 +51,7 @@ include "tete.php" ;
 
 <br>
 <div class="alert alert-info" role="alert" id = "tete">
-  <p align="right">
 
-      <a href="#liste">
-   <button>Liste des spots</button>
-</a></p>
 <b>
 Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio: 
 <select class="chzn-select" name="forma" onchange="location = this.value;">
@@ -104,7 +100,11 @@ $rm = 0;
 ?>
 
 
+ <b align="right">
 
+      <a href="#liste">
+   <button>Liste des spots</button>
+</a></b>
 
 
 
