@@ -273,9 +273,9 @@ var mousePositionControl = new ol.control.MousePosition({
 // ,php while1 placement des spots
 
 <?php 
-            // On recupère tout le contenu de la table chantiers
+            // On recupère tout le contenu de la table chantiers 
            
-             $req = $bdd->prepare("SELECT * FROM spots WHERE id_folio = :id_folio ");
+             $req = $bdd->prepare("SELECT spots.id, spots.coordos, materiaux.nom  FROM spots, materiaux   WHERE id_folio = :id_folio AND  materiaux.id = spots.id_materiaux ORDER BY id");
     $req->execute(array('id_folio' => $_GET["fid"]));
     
  
@@ -287,7 +287,7 @@ var mousePositionControl = new ol.control.MousePosition({
             
            var <?php echo("a".$donnees['id']);?> = new ol.Feature({
         geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
-        name: '<?php echo("Point N:".$donnees['id']." ,");?>'
+        name: '<?php echo("Point N:".$donnees['id']." ,".$donnees['nom']);?>'
 
       });
 
@@ -296,6 +296,32 @@ var mousePositionControl = new ol.control.MousePosition({
  <?php };
  $req->closeCursor(); // Termine le traitement de la requête ?>
 
+
+
+
+<?php 
+            // On recupère tout le contenu de la table chantiers 
+           
+             $req = $bdd->prepare("SELECT spots.id, spots.coordos, objets.nom  FROM spots, objets   WHERE id_folio = :id_folio AND  objets.id = spots.id_objets ORDER BY id");
+    $req->execute(array('id_folio' => $_GET["fid"]));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+
+           ?>
+            
+           var <?php echo("a".$donnees['id']);?> = new ol.Feature({
+        geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
+        name: '<?php echo("Point N:".$donnees['id']." ,".$donnees['nom']);?>'
+
+      });
+
+               
+
+ <?php };
+ $req->closeCursor(); // Termine le traitement de la requête ?>
 
 
       
