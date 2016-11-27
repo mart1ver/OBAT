@@ -50,7 +50,7 @@ include "tete.php" ;
 
 
 <br>
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert" id = "tete">
 <p><b>
 Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio: 
 <select class="chzn-select" name="forma" onchange="location = this.value;">
@@ -149,7 +149,7 @@ $rm = 0;
      </b>
 
       <a href="#liste">
-   <button>Liste de spots</button>
+   <button>Liste des spots</button>
 </a></p> </div>
    
 <div id="map" class="map"><div id="popup"></div></div>
@@ -252,7 +252,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
 
 
 
-
+<a href="#tete">
+   <button>Carte</button>
+</a>
 
 
 
