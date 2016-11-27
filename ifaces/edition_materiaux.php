@@ -26,7 +26,7 @@ require_once('../moteur/dbconfig.php');
   <div class="row">
     <div class="col-md-7">
   <label for="corp">corp d'état: </label>
-<select name="corp" id="corp">
+<select class="chzn-select" name="corp" id="corp">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -52,7 +52,7 @@ require_once('../moteur/dbconfig.php');
 
 
 <label for="typologie">typologie: </label>
-<select name="typologie" id="typologie">
+<select  class="chzn-select" name="typologie" id="typologie">
 
 <?php 
             // On recupère tout le contenu de la table chantiers
