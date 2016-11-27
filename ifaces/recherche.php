@@ -276,7 +276,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
 <script type='text/javascript'>
         $(document).ready(function () {
 
-            console.log("HELLO")
+            
             function exportTableToCSV($table, filename) {
                 var $headers = $table.find('tr:has(th)')
                     ,$rows = $table.find('tr:has(td)')
@@ -348,7 +348,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
             // This must be a hyperlink
             $("#export").click(function (event) {
                 // var outputFile = 'export'
-                var outputFile = window.prompt("What do you want to name your output file (Note: This won't have any effect on Safari)") || 'export';
+                var outputFile = "obat-export"|| 'export';
                 outputFile = outputFile.replace('.csv','') + '.csv'
                  
                 // CSV
