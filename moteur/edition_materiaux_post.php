@@ -36,14 +36,13 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 // Insertion du post à l'aide d'une requête préparée
-$req = $bdd->prepare('INSERT INTO materiaux (nom,  couleur, description, visible, id_typologie, id_nature, id_corp) VALUES(?,?,?,?,?,?,?)');
-$req->execute(array($_POST['nom'],  $_POST['couleur'] , $_POST['description'], "oui", $_POST['typologie'], $_POST['nature'], $_POST['corp']));
+$req = $bdd->prepare('INSERT INTO materiaux (nom,  couleur, description, visible, id_typologie, id_corp) VALUES(?,?,?,?,?,?)');
+$req->execute(array($_POST['nom'],  $_POST['couleur'] , $_POST['description'], "oui", $_POST['typologie'], $_POST['corp']));
   $req->closeCursor();
 // Redirection du visiteur vers la page de gestion des affectation
 header('Location:../ifaces/edition_materiaux.php?msg=Materiau enregistrée avec succes!');
   /*
   echo($_POST['typologie']);
-  echo($_POST['nature']);
   echo($_POST['corp']);
     echo("--");
   echo($_POST['nom']);
