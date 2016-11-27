@@ -143,28 +143,8 @@ $rm = 0;
 <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($donnees['id']);?>&rnature=<?php echo($_GET["rnature"]);?>ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>"<?php if($donnees['id'] == $_GET["rtypo"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
  <?php }?>
 
-</select>, nature: <select class="chzn-select" name="forma" onchange="location = this.value;">
-
-<?php 
-            // On recupère tout le contenu de la table chantiers
-           
-             $req = $bdd->prepare("SELECT * FROM natures");
-    $req->execute();
-    
- 
-           // On affiche chaque entree une à une
-           while ($donnees = $req->fetch())
-           {
-
-           ?>
-            
-          
-               <option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($donnees['id']);?>ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>"<?php if($donnees['id'] == $_GET["rnature"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
-
- <?php }?>
-
-</select> 
-<label><input type="checkbox" id="objets" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php if($_GET["ro"] == "0"){echo("1");}else{echo("0");}; ?>&rm=<?php echo($_GET["rm"]);?>"<?php if($_GET["ro"] == "1" ){echo'checked';} ?>> Objets</label>
+</select>
+<label><input type="checkbox" id="objets" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php if($_GET["ro"] == "0"){echo("1");}else{echo("0");}; ?>&rm=<?php echo($_GET["rm"]);?>"<?php if($_GET["ro"] == "1" ){echo'checked';} ?>> Materiels</label>
 <label><input type="checkbox" id="materiaux" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php if($_GET["rm"] == "0"){echo("1");}else{echo("0");}; ?>"<?php if($_GET["rm"] == "1" ){echo'checked';} ?>> Materiaux</label>
      </b></p> </div>
    
