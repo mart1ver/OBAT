@@ -105,7 +105,7 @@ $rm = 0;
 
  <div id="mouse-position"></p></div></div>
  <div class="row">
- <div class="col-md-6 col-md-offset-3">
+ <div class="col-md-9 col-md-offset-1">
 
 <p><b>Filtrer les spots sur ce folio:    corps de metier: <select class="chzn-select" name="forma" onchange="location = this.value;">
 
