@@ -166,7 +166,7 @@ $rm = 0;
 <div id="map" class="map"><div id="popup"></div></div>
    
      <div id="liste" >
-<p>liste précise des spots:</p> 
+<h1>liste précise des spots:</h1> 
 
 
 
