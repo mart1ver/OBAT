@@ -166,7 +166,7 @@ $rm = 0;
 
 
 
-
+<div id="dvData">
 
 
       <table class="table">
@@ -249,7 +249,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
           </tfoot>
         
       </table>
-
+</div>
             <div class='button'>
                 <a href="#" id ="export" role='button'>Click On This Here Link To Export The Table Data into a CSV File
                 </a>
