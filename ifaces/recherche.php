@@ -100,11 +100,11 @@ $rm = 0;
 ?>
 
 
- <b align="right">
 
-      <a href="#liste">
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#liste">
    <button>Liste des spots</button>
-</a></b>
+</a>
 
 
 
