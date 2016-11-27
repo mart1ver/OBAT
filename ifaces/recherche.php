@@ -79,7 +79,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
 $rcorps = $_GET["rcorps"];
 $rtypo = $_GET["rtypo"];
-$rnature = $_GET["rnature"];
+
 if($_GET["ro"] == 0)
 {
 $ro = 1000000000000  ;
@@ -146,11 +146,15 @@ $rm = 0;
 </select>
 <label><input type="checkbox" id="objets" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php if($_GET["ro"] == "0"){echo("1");}else{echo("0");}; ?>&rm=<?php echo($_GET["rm"]);?>"<?php if($_GET["ro"] == "1" ){echo'checked';} ?>> Materiels</label>
 <label><input type="checkbox" id="materiaux" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php if($_GET["rm"] == "0"){echo("1");}else{echo("0");}; ?>"<?php if($_GET["rm"] == "1" ){echo'checked';} ?>> Materiaux</label>
-     </b></p> </div>
+     </b>
+
+      <a href="#liste">
+   <button>Liste de spots</button>
+</a></p> </div>
    
 <div id="map" class="map"><div id="popup"></div></div>
    
-     <div >
+     <div id="liste" >
 <p>liste précise des spots:</p> 
 
 
@@ -174,7 +178,7 @@ $rm = 0;
             <th>corp de metier</th>
             <th>type d'objet ou de materiaux</th>
             <th>note globale</th>
-            <th>visible</th>
+            
             <th></th>
             
           </tr>
@@ -196,12 +200,10 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
             <td><?php echo $donnees['coordos']?></td>
             <td><?php echo $donnees['coordos']?></td>
             <td><?php echo $donnees['description']?></td>
-            <td></td>
+            <td> note</td>
 
 
-<td>
 
-</td>
 
 
 
