@@ -502,7 +502,7 @@ $(map.getViewport()).on("dblclick", function(e) {
       });
 
 var element = document.getElementById('popup');
-
+var prevelement = '';
       var popup = new ol.Overlay({
         element: element,
         positioning: 'bottom-center',
@@ -528,7 +528,7 @@ var element = document.getElementById('popup');
           });
           $(prevelement).popover('destroy');
           $(element).popover('show');
-          var prevelement = document.getElementById('popup');
+          prevelement = document.getElementById('popup');
         
         } else {
 
