@@ -14,10 +14,10 @@ require_once('../moteur/dbconfig.php');
       <div class="panel-body">
         <div class="row">
         	<form action="../moteur/edition_objets_post.php" method="post">
-  <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="<?php echo $_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
-    <div class="col-md-2"><label for="description">Description:</label> <input type="text" value ="<?php echo $_GET['description']?>" name="description" id="description" class="form-control " required ></div>
+  <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="" name="nom" id="nom" class="form-control " required autofocus></div>
+    <div class="col-md-2"><label for="description">Description:</label> <input type="text" value ="" name="description" id="description" class="form-control " required ></div>
     
-  <div class="col-md-1"><label for="couleur">Couleur:</label> <input type="color"        value ="<?php echo "#".$_GET['couleur']?>" name="couleur" id="couleur" class="form-control " required ></div>
+  <div class="col-md-1"><label for="couleur">Couleur:</label> <input type="color"        value ="" name="couleur" id="couleur" class="form-control " required ></div>
 
   <br>
   </div>
@@ -93,6 +93,8 @@ require_once('../moteur/dbconfig.php');
             <th>Date de création</th>
             <th>Nom</th>
             <th>Description</th>
+            <th>Corps d'état</th>
+            <th>Typologie</th>
             <th>Couleur</th>
             <th>Visible</th>
             <th></th>
@@ -102,7 +104,18 @@ require_once('../moteur/dbconfig.php');
         <tbody>
         <?php 
             // On recupère tout le contenu de la table affectations
-            $reponse = $bdd->query('SELECT * FROM objets');
+/*
+SELECT objets.*, corps.nom as nomcorp ,typologies.nom as nomtypo 
+FROM objets,typologies,corps
+WHERE objets.id_corp = corps.id  
+AND objets.id_typologie = typologies.id
+
+*/
+
+            $reponse = $bdd->query('SELECT objets.*, corps.nom as nomcorp ,typologies.nom as nomtypo 
+FROM objets,typologies,corps
+WHERE objets.id_corp = corps.id  
+AND objets.id_typologie = typologies.id');
  
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())
@@ -114,6 +127,8 @@ require_once('../moteur/dbconfig.php');
             <td><?php echo $donnees['timestamp']?></td>
             <td><?php echo $donnees['nom']?></td>
             <td><?php echo $donnees['description']?></td>
+            <td><?php echo $donnees['nomcorp']?></td>
+            <td><?php echo $donnees['nomtypo']?></td>
             <td><span class="badge" style="background-color:<?php echo$donnees['couleur']?>"><?php echo$donnees['couleur']?></span></td>
 
 
@@ -155,7 +170,7 @@ else // SINON
 <input type="hidden" name ="id_corp" id="id" value="<?php echo $donnees['id_corp']?>">
 <input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>">
 <input type="hidden" name ="description" id="description" value="<?php echo $donnees['description']?>">
-<input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($_POST['couleur'],1)?>">
+<input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($donnees['couleur'],1)?>">
 
   <button  class="btn btn-warning btn-sm" >Modifier!</button>
 
