@@ -286,6 +286,24 @@ if($_GET['rtypo'] > 0 AND $_GET['rcorps'] == 0 ){
 
            <?php }}
 
+if($_GET['rtypo'] == 0 AND $_GET['rcorps'] > 0 ){
+  if($_GET['rcorps'] == $id_corp){
+ ?>
+            <tr> 
+            <td><?php echo $donnees['id']?></td>
+            <td><?php echo $donnees['timestamp']?></td>
+            <td><?php echo $donnees['coordos']?></td>
+            <td><?php echo ($nom)?></td>
+            <td><?php echo ($nom_typologie)?></td>
+            <td><?php echo ($nom_corps)?></td>
+            <td> note</td>
+            </tr>
+
+
+
+           <?php }}
+
+
          }
               $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
