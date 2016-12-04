@@ -50,7 +50,7 @@ $coef_stockage = $donnees2['coef_stockage'];
 
 
 
-    <button name="creer" class="btn btn-default">Créer!</button></div>
+    <button name="creer" class="btn btn-default">Enregistrer!</button></div>
 </form>
 
       </div>
