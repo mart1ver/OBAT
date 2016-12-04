@@ -270,7 +270,7 @@ if($_GET['rtypo'] == 0 AND $_GET['rcorps'] == 0 ){
 
 
 
-           <?php }}
+           <?php };}
               $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
        </tbody>
