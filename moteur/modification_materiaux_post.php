@@ -13,28 +13,32 @@
             die('Erreur : '.$e->getMessage());
             }
 // Insertion du post à l'aide d'une requête préparée
-$req = $bdd->prepare('UPDATE notes 
+$req = $bdd->prepare('UPDATE materiaux 
 
-    SET     id = 0, coef_qualite = :coef_qualite, 
-                      coef_depose = :coef_depose,
-                      coef_traitement = :coef_traitement, 
-                      coef_stockage = :coef_stockage 
+    SET               nom = :nom, 
+                      description = :description,
+                      couleur = :couleur,
+                      id_typologie = :id_typologie, 
+                      id_corp = :id_corp 
                       
                         
-                     WHERE id = 0
+                     WHERE id = :id
 
 
     ');
 $req->execute(array(
-    'coef_qualite' => $_POST['note1'], 
-    'coef_depose' => $_POST['note2'],
-    'coef_traitement' => $_POST['note3'], 
-    'coef_stockage' => $_POST['note4']));
+    'id' => $_POST['id'], 
+    'nom' => $_POST['nom'], 
+    'description' => $_POST['description'],
+    'couleur' => $_POST['couleur'], 
+    'id_typologie' => $_POST['id_typologie'], 
+    'id_corp' => $_POST['id_corp']));
 
 
 
   $req->closeCursor();
 
+ 
 // Redirection du visiteur vers la page de gestion des affectation
 header('Location:../ifaces/notes.php?msg=Coefs édités avec succes!');
  
