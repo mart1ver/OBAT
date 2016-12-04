@@ -253,7 +253,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                             }?>
             
 <?php 
-if($_GET['rtypo'] == 0 ){
+if($_GET['rtypo'] == 0 AND $_GET['rcorps'] == 0 ){
  ?>
             <tr> 
             <td><?php echo $donnees['id']?></td>
