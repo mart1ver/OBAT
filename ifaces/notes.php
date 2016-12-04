@@ -1,7 +1,7 @@
 <?php session_start(); 
 
 require_once('../moteur/dbconfig.php');
- include "tete.php" 
+ include "tete.php" ;
 //Oressource 2014, formulaire de référencement des conventions avec les partenaires de la structure
 //Simple formulaire de saisie , liste des conventions déjà référencées et possibilité de les cacher à l'utilisateur ou de modifier les données
 //
