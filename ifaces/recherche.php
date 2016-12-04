@@ -228,7 +228,7 @@ WHERE id=:id');
 
                                              $reponse2 = $bdd->prepare('SELECT objets.* FROM objets 
 WHERE id=:id');
- $reponse2->execute(array('id' => $donnees['objets']));
+ $reponse2->execute(array('id' => $donnees['id_objets']));
            // On affiche chaque entree une à une
            while ($donnees2 = $reponse2->fetch())
            {
