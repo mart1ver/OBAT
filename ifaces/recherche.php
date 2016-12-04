@@ -43,6 +43,30 @@ include "tete.php" ;
               $dimensions = getimagesize($fichier);
               $LONG = $dimensions[0];
               $LARG = $dimensions[1];
+
+
+
+              //on extrait les coefs (poids de chaque notes)
+ $req2 = $bdd->prepare("SELECT *  FROM notes  ");
+    $req2->execute();
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees2 = $req2->fetch())
+           {
+$coef_qualite = $donnees2['coef_qualite'];
+$coef_depose = $donnees2['coef_depose'];
+$coef_traitement = $donnees2['coef_traitement'];
+$coef_stockage = $donnees2['coef_stockage'];
+
+           }
+
+
+
+ $req2->closeCursor(); // Termine le traitement de la requête 
+
+
+?>
                 ?>
 
 
@@ -262,7 +286,11 @@ if($_GET['rtypo'] == 0 AND $_GET['rcorps'] == 0 ){
             <td><?php echo ($nom)?></td>
             <td><?php echo ($nom_typologie)?></td>
             <td><?php echo ($nom_corps)?></td>
-            <td> note</td>
+            <td><?php
+// noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
+            $noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
+            echo($noteg);
+            ?></td>
             </tr>
 
 
