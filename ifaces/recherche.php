@@ -250,16 +250,20 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                                          $nom_corps = $donnees3['nomcorps'];
                                                         }
                                                         $reponse3->closeCursor(); // Termine le traitement de la requête
-                            
-//le cas ou l'on ne filtre pas par typo ou par corps
-//if($_GET['rtypo'] == 0){   
-  //echo('<tr><td>'.$donnees['id'].'</td><td>'.$donnees['timestamp'].'</td><td>'.$donnees['coordos'].'</td><td>'.$nom.'</td><td>'.$nom_typologie.'</td><td>'.$nom_corps.'</td><td> note</td></tr>');
-        ?>
-                                               
-                                            
-
-
+                            }?>
             
+<?php 
+if($_GET['rtypo'] == 0 ){}
+ ?>
+            <tr> 
+            <td><?php echo $donnees['id']?></td>
+            <td><?php echo $donnees['timestamp']?></td>
+            <td><?php echo $donnees['coordos']?></td>
+            <td><?php echo ($nom)?></td>
+            <td><?php echo ($nom_typologie)?></td>
+            <td><?php echo ($nom_corps)?></td>
+            <td> note</td>
+            </tr>
 
 
 
@@ -692,3 +696,9 @@ var element = document.getElementById('popup');
   
 
 <?php include "pied.php";?>
+
+
+
+
+
+
