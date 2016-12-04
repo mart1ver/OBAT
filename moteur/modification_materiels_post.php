@@ -40,5 +40,5 @@ $req->execute(array(
 
  
 // Redirection du visiteur vers la page de gestion des affectation
-header('Location:../ifaces/edition_materiels.php?msg=typologie de materiel édité avec succes!');
+header('Location:../ifaces/edition_materiels.php?msg=Nature de materiel édité avec succes!');
  
