@@ -40,5 +40,5 @@ $req->execute(array(
 
  
 // Redirection du visiteur vers la page de gestion des affectation
-header('Location:../ifaces/notes.php?msg=Coefs édités avec succes!');
+header('Location:../ifaces/edition_materiaux.php?msg=Coefs édités avec succes!');
  
