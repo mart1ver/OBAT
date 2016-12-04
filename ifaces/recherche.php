@@ -70,7 +70,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
            ?>
             
           
-                <option value="recherche.php.php?id=<?php echo $_GET["id"]?>&fid=<?php echo($donnees['id'])?>" <?php if($donnees['id'] == $_GET["fid"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
+                <option value="recherche.php.php?id=<?php echo $_GET["id"]?>&fid=<?php echo($donnees['id'])?> &rcorps=<?php echo($donnees['id']);?>&rtypo=<?php echo($_GET["rtypo"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>" <?php if($donnees['id'] == $_GET["fid"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
 
  <?php }?>
 
@@ -128,7 +128,7 @@ $rm = 0;
            ?>
             
           
-<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($donnees['id']);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>"<?php if($donnees['id'] == $_GET["rcorps"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($donnees['id']);?>&rtypo=<?php echo($_GET["rtypo"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>"<?php if($donnees['id'] == $_GET["rcorps"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
  <?php }?>
 
 </select>, Typologies:<select class="chzn-select" name="forma" onchange="location = this.value;">
