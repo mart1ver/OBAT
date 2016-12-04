@@ -94,6 +94,8 @@ require_once('../moteur/dbconfig.php');
             <th>Date de création</th>
             <th>Nom</th>
             <th>Description</th>
+            <th>Corps d'état</th>
+            <th>Typologie</th>
             <th>Couleur</th>
             <th>Visible</th>
             <th></th>
@@ -103,7 +105,10 @@ require_once('../moteur/dbconfig.php');
         <tbody>
         <?php 
             // On recupère tout le contenu de la table affectations
-            $reponse = $bdd->query('SELECT * FROM materiaux');
+            $reponse = $bdd->query('SELECT materiaux.*, corps.nom as nomcorp ,typologies.nom as nomtypo 
+FROM materiaux,typologies,corps
+WHERE materiaux.id_corp = corps.id  
+AND materiaux.id_typologie = typologies.id');
  
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())
@@ -115,6 +120,8 @@ require_once('../moteur/dbconfig.php');
             <td><?php echo $donnees['timestamp']?></td>
             <td><?php echo $donnees['nom']?></td>
             <td><?php echo $donnees['description']?></td>
+            <td><?php echo $donnees['nomcorp']?></td>
+            <td><?php echo $donnees['nomtypo']?></td>
             <td><span class="badge" style="background-color:<?php echo$donnees['couleur']?>"><?php echo$donnees['couleur']?></span></td>
 
 
