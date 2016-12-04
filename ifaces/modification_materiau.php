@@ -43,7 +43,7 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option value="<?php echo($donnees['id']);?> <?php if($donnees['id'] == $_POST["corp"] ){echo'selected="selected"';} ?>"><?php echo($donnees['nom']);?></option>
+                <option value="<?php echo($donnees['id']);?> <?php if($donnees['id'] == $_POST["id_corp"] ){echo'selected="selected"';} ?>"><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
@@ -69,7 +69,7 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option value="<?php echo($donnees['id']);?>" <?php if($donnees['id'] == $_POST["typologie"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
+                <option value="<?php echo($donnees['id']);?>" <?php if($donnees['id'] == $_POST["id_typologie"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>

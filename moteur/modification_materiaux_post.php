@@ -31,8 +31,8 @@ $req->execute(array(
     'nom' => $_POST['nom'], 
     'description' => $_POST['description'],
     'couleur' => $_POST['couleur'], 
-    'id_typologie' => $_POST['id_typologie'], 
-    'id_corp' => $_POST['id_corp']));
+    'id_typologie' => $_POST['typologie'], 
+    'id_corp' => $_POST['corp']));
 
 
 
