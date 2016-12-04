@@ -253,7 +253,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                             }?>
             
 <?php 
-if($_GET['rtypo'] == 0 ){}
+if($_GET['rtypo'] == 0 ){
  ?>
             <tr> 
             <td><?php echo $donnees['id']?></td>
@@ -267,7 +267,7 @@ if($_GET['rtypo'] == 0 ){}
 
 
 
-           <?php }
+           <?php }}
               $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
        </tbody>
