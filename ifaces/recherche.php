@@ -264,7 +264,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
             <td><?php echo $donnees['coordos']?></td>
             <td><?php echo ($nom)?></td>
             <td><?php echo ($nom_typologie)?></td>
-            <td><?php echo ($nom_corp)?></td>
+            <td><?php echo ($nom_corps)?></td>
             <td> note</td>
             </tr>
            <?php }
