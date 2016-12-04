@@ -225,8 +225,8 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                        // On affiche chaque entree une à une
                        while ($donnees3 = $reponse3->fetch())
                        {
-                        $nom_typologie = $donnees3['nomtypo']
-                        $nom_corps = $donnees3['nomcorps']
+                        $nom_typologie = $donnees3['nomtypo'];
+                        $nom_corps = $donnees3['nomcorps'];
                        }
                        $reponse3->closeCursor(); // Termine le traitement de la requête
           
@@ -252,8 +252,8 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                                         // On affiche chaque entree une à une
                                                         while ($donnees3 = $reponse3->fetch())
                                                         {
-                                                         $nom_typologie = $donnees3['nomtypo']
-                                                                                           $nom_corps = $donnees3['nomcorps']
+                                                         $nom_typologie = $donnees3['nomtypo'];
+                                                         $nom_corps = $donnees3['nomcorps'];
                                                         }
                                                         $reponse3->closeCursor(); // Termine le traitement de la requête
 
