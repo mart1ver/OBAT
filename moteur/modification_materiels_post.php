@@ -13,7 +13,7 @@
             die('Erreur : '.$e->getMessage());
             }
 // Insertion du post à l'aide d'une requête préparée
-$req = $bdd->prepare('UPDATE materiaux 
+$req = $bdd->prepare('UPDATE objets 
 
     SET               nom = :nom, 
                       description = :description,
@@ -40,5 +40,5 @@ $req->execute(array(
 
  
 // Redirection du visiteur vers la page de gestion des affectation
-header('Location:../ifaces/edition_materiaux.php?msg=Typologie de materiau édités avec succes!');
+header('Location:../ifaces/edition_materiels.php?msg=typologie de materiel édité avec succes!');
  
