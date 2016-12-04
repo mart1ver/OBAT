@@ -40,5 +40,5 @@ $req->execute(array(
   echo $_POST['note3'];
   echo $_POST['note4'];
 // Redirection du visiteur vers la page de gestion des affectation
-//header('Location:../ifaces/notes.php?msg=Coefs édités avec succes!');
+header('Location:../ifaces/notes.php?msg=Coefs édités avec succes!');
  
