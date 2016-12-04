@@ -15,13 +15,13 @@
 // Insertion du post à l'aide d'une requête préparée
 $req = $bdd->prepare('UPDATE notes 
 
-    SET id = 0,     coef_qualité = :coef_qualité, 
+    SET      coef_qualité = :coef_qualité, 
                       coef_depose = :coef_depose,
                       coef_traitement = :coef_traitement, 
                       coef_stockage = :coef_stockage 
                       
                         
-                     
+                     WHERE id = 0
 
 
     ');
