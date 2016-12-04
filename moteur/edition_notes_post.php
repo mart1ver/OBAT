@@ -2,18 +2,7 @@
 
         
 
-$req->closeCursor(); // Termine le traitement de la requête
-                
-//martin vert
-// Connexion à la base de données
-try
-{
-include('dbconfig.php');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+
 // Insertion du post à l'aide d'une requête préparée
 $req = $bdd->prepare('UPDATE notes 
 
