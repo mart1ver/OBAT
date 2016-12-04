@@ -253,9 +253,10 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                             }?>
             
 <?php 
-if($_GET['rtypo'] == 0 ){}
- ?>
-            <tr> 
+//le cas ou l'on ne filtre pas par typo ou par corps
+if($_GET['rtypo'] == 0 AND $_GET['rcorps'] == 0 ){
+                                               ?>
+                                               <tr> 
             <td><?php echo $donnees['id']?></td>
             <td><?php echo $donnees['timestamp']?></td>
             <td><?php echo $donnees['coordos']?></td>
@@ -264,6 +265,65 @@ if($_GET['rtypo'] == 0 ){}
             <td><?php echo ($nom_corps)?></td>
             <td> note</td>
             </tr>
+                                               <?php}?>
+
+<?php 
+//le cas ou on filtre par typo uniquement
+if($_GET['rtypo'] > 0 AND $_GET['rcorps'] == 0 ){
+
+                                        if($_GET['rtypo'] == $id_typologie ){
+
+                                               ?>
+                                               <tr> 
+            <td><?php echo $donnees['id']?></td>
+            <td><?php echo $donnees['timestamp']?></td>
+            <td><?php echo $donnees['coordos']?></td>
+            <td><?php echo ($nom)?></td>
+            <td><?php echo ($nom_typologie)?></td>
+            <td><?php echo ($nom_corps)?></td>
+            <td> note</td>
+            </tr>
+                                               <?php}}?>                
+
+<?php 
+//le cas ou on filtre par corps de metier uniquement
+if($_GET['rtypo'] == 0 AND $_GET['rcorps'] > 0 ){
+
+                                        if($_GET['rcorps'] == $id_corps ){
+
+                                               ?>
+                                               <tr> 
+            <td><?php echo $donnees['id']?></td>
+            <td><?php echo $donnees['timestamp']?></td>
+            <td><?php echo $donnees['coordos']?></td>
+            <td><?php echo ($nom)?></td>
+            <td><?php echo ($nom_typologie)?></td>
+            <td><?php echo ($nom_corps)?></td>
+            <td> note</td>
+            </tr>
+                                               <?php}}?> 
+
+<?php 
+//le cas ou on filtre par corps de metier et typo
+if($_GET['rtypo'] == 0 AND $_GET['rcorps'] > 0 ){
+
+                                        if($_GET['rcorps'] == $id_corps AND $_GET['rtypo'] == $id_typologie){
+
+                                               ?>
+                                               <tr> 
+            <td><?php echo $donnees['id']?></td>
+            <td><?php echo $donnees['timestamp']?></td>
+            <td><?php echo $donnees['coordos']?></td>
+            <td><?php echo ($nom)?></td>
+            <td><?php echo ($nom_typologie)?></td>
+            <td><?php echo ($nom_corps)?></td>
+            <td> note</td>
+            </tr>
+                                               <?php}}?>                                                
+
+
+
+            
 
 
 
