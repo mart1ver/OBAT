@@ -189,10 +189,7 @@ $rm = 0;
             <th>type d'objet ou de materiaux</th>
             <th>typologie</th>
             <th>corp de metier</th>    
-            <th>note globale</th>
-            
-            <th></th>
-            
+            <th>note globale</th>        
           </tr>
         </thead>
         <tbody>
@@ -205,16 +202,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
            while ($donnees = $reponse->fetch())
            {
 
-           ?>
-            <tr> 
-            <td><?php echo $donnees['id']?></td>
-            <td><?php echo $donnees['timestamp']?></td>
-            <td><?php echo $donnees['coordos']?></td>
-
-
-            <td><?php 
+           
             //echo $donnees['id_objets'].$donnees['id_materiaux']
-            // On recupère tout le contenu de la table affectations
+           
             if($donnees['id_objets'] == 0){
             $reponse2 = $bdd->prepare('SELECT materiaux.* FROM materiaux 
             WHERE id=:id');
@@ -222,11 +212,25 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
             // On affiche chaque entree une à une
             while ($donnees2 = $reponse2->fetch())
             {
-            echo $donnees2['nom'];
+            $nom = $donnees2['nom'];
             $id_typologie = $donnees2['id_typologie'];
             $id_corp = $donnees2['id_corp'];
             }
             $reponse2->closeCursor(); // Termine le traitement de la requête
+                       //nom typo et corps
+                       $reponse3 = $bdd->prepare('SELECT typologies.nom as nomtypo , corps.nom as nomcorps
+                       FROM typologies, corps
+                       WHERE typologies.id = :idtypo AND corps.id = :idcorps');
+                       $reponse3->execute(array('idtypo' => $id_typologie,'idcorps' => $id_corp));
+                       // On affiche chaque entree une à une
+                       while ($donnees3 = $reponse3->fetch())
+                       {
+                        $nom_typologie = $donnees3['nomtypo']
+                        $nom_corps = $donnees3['nomcorps']
+                       }
+                       $reponse3->closeCursor(); // Termine le traitement de la requête
+          
+
                                           }else{
 
                                              $reponse2 = $bdd->prepare('SELECT objets.* FROM objets 
@@ -235,18 +239,33 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                              // On affiche chaque entree une à une
                                              while ($donnees2 = $reponse2->fetch())
                                              {
-                                             echo $donnees2['nom'];
+                                             $nom = $donnees2['nom'];
                                              $id_typologie = $donnees2['id_typologie'];
                                              $id_corp = $donnees2['id_corp'];
                                              } 
                                              $reponse2->closeCursor(); // Termine le traitement de la requête
+                                             //nom typo et corps
+                                                        $reponse3 = $bdd->prepare('SELECT typologies.nom as nomtypo , corps.nom as nomcorps
+                                                        FROM typologies, corps
+                                                        WHERE typologies.id = :idtypo AND corps.id = :idcorps');
+                                                        $reponse3->execute(array('idtypo' => $id_typologie,'idcorps' => $id_corp));
+                                                        // On affiche chaque entree une à une
+                                                        while ($donnees3 = $reponse3->fetch())
+                                                        {
+                                                         $nom_typologie = $donnees3['nomtypo']
+                                                                                           $nom_corps = $donnees3['nomcorps']
+                                                        }
+                                                        $reponse3->closeCursor(); // Termine le traitement de la requête
 
-                                                }?></td>
-
-            <td><?php echo ($id_typologie)?></td>
-            <td><?php echo ($id_corp)?></td>
+                                                }?>
+            <tr> 
+            <td><?php echo $donnees['id']?></td>
+            <td><?php echo $donnees['timestamp']?></td>
+            <td><?php echo $donnees['coordos']?></td>
+            <td><?php echo ($nom)?></td>
+            <td><?php echo ($nom_typologie)?></td>
+            <td><?php echo ($nom_corp)?></td>
             <td> note</td>
-            <td><form action="modification_spot.php" method="post"><input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>"><input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>"><input type="hidden" name ="description" id="description" value="<?php echo $donnees['description']?>"><input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($_POST['couleur'],1)?>"><button  class="btn btn-warning btn-sm" >Modifier!</button></form></td>
             </tr>
            <?php }
               $reponse->closeCursor(); // Termine le traitement de la requête
