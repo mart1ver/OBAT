@@ -14,7 +14,7 @@ require_once('../moteur/dbconfig.php');
            // On affiche chaque entree une à une
            while ($donnees2 = $req2->fetch())
            {
-$coef_qualité = $donnees2['coef_qualite'];
+$coef_qualite = $donnees2['coef_qualite'];
 $coef_depose = $donnees2['coef_depose'];
 $coef_traitement = $donnees2['coef_traitement'];
 $coef_stockage = $donnees2['coef_stockage'];
