@@ -250,9 +250,10 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                                          $nom_corps = $donnees3['nomcorps'];
                                                         }
                                                         $reponse3->closeCursor(); // Termine le traitement de la requête
-                            }?>
-            
-
+                            
+//le cas ou l'on ne filtre pas par typo ou par corps
+if($_GET['rtypo'] == 0 AND $_GET['rcorps'] == 0 ){
+                                               ?>
                                                <tr> 
             <td><?php echo $donnees['id']?></td>
             <td><?php echo $donnees['timestamp']?></td>
@@ -262,13 +263,14 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
             <td><?php echo ($nom_corps)?></td>
             <td> note</td>
             </tr>
-                                              
+                                            
+
 
             
 
 
 
-           <?php }
+           <?php }}
               $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
        </tbody>
