@@ -252,9 +252,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                                         $reponse3->closeCursor(); // Termine le traitement de la requête
                             
 //le cas ou l'on ne filtre pas par typo ou par corps
-if($_GET['rtypo'] == 0   
-  echo(   '<tr><td>'.$donnees['id'].'</td><td>'.$donnees['timestamp'].'</td><td>'.$donnees['coordos'].'</td><td>'.$nom.'</td><td>'.$nom_typologie.'</td><td>'.$nom_corps).'</td><td> note</td></tr>' )
-                                               ?>
+if($_GET['rtypo'] == 0){   
+  echo(   '<tr><td>'.$donnees['id'].'</td><td>'.$donnees['timestamp'].'</td><td>'.$donnees['coordos'].'</td><td>'.$nom.'</td><td>'.$nom_typologie.'</td><td>'.$nom_corps).'</td><td> note</td></tr>' );
+                        }?>
                                                
                                             
 
