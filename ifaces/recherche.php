@@ -113,7 +113,7 @@ $rm = 0;
  <div class="col-md-9 col-md-offset-1">
 
 <p><b>Filtrer les spots sur ce folio:  <br>  corps de metier: <select class="chzn-select" name="forma" onchange="location = this.value;">
-
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo('0');?>&rtypo=<?php echo($_GET["rtypo"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>"<?php if($donnees['id'] == $_GET["rcorps"] ){echo'selected="selected"';} ?>>-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
            
@@ -132,7 +132,7 @@ $rm = 0;
  <?php }?>
 
 </select>, Typologies:<select class="chzn-select" name="forma" onchange="location = this.value;">
-
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo('0');?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>"<?php if($donnees['id'] == $_GET["rtypo"] ){echo'selected="selected"';} ?>>-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
            
@@ -147,12 +147,12 @@ $rm = 0;
            ?>
             
           
-<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($donnees['id']);?>&rnature=<?php echo($_GET["rnature"]);?>ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>"<?php if($donnees['id'] == $_GET["rtypo"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
+<option value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($donnees['id']);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php echo($_GET["rm"]);?>"<?php if($donnees['id'] == $_GET["rtypo"] ){echo'selected="selected"';} ?>><?php echo($donnees['nom']);?></option>
  <?php }?>
 
 </select>
-<label><input type="checkbox" id="objets" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php if($_GET["ro"] == "0"){echo("1");}else{echo("0");}; ?>&rm=<?php echo($_GET["rm"]);?>"<?php if($_GET["ro"] == "1" ){echo'checked';} ?>> Materiels</label>
-<label><input type="checkbox" id="materiaux" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&rnature=<?php echo($_GET["rnature"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php if($_GET["rm"] == "0"){echo("1");}else{echo("0");}; ?>"<?php if($_GET["rm"] == "1" ){echo'checked';} ?>> Materiaux</label>
+<label><input type="checkbox" id="objets" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&ro=<?php if($_GET["ro"] == "0"){echo("1");}else{echo("0");}; ?>&rm=<?php echo($_GET["rm"]);?>"<?php if($_GET["ro"] == "1" ){echo'checked';} ?>> Materiels</label>
+<label><input type="checkbox" id="materiaux" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"];?>&fid=<?php echo($_GET["fid"]);?>&fid=<?php echo($_GET["fid"]);?>&rcorps=<?php echo($_GET["rcorps"]);?>&rtypo=<?php echo($_GET["rtypo"]);?>&ro=<?php echo($_GET["ro"]);?>&rm=<?php if($_GET["rm"] == "0"){echo("1");}else{echo("0");}; ?>"<?php if($_GET["rm"] == "1" ){echo'checked';} ?>> Materiaux</label>
      </b>
 </p> 
 
@@ -200,11 +200,8 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
  $reponse->execute(array('ro' => $ro,'rm' => $rm,'fid' => $_GET["fid"]));
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())
-           {
-
-           
+           {        
             //echo $donnees['id_objets'].$donnees['id_materiaux']
-           
             if($donnees['id_objets'] == 0){
             $reponse2 = $bdd->prepare('SELECT materiaux.* FROM materiaux 
             WHERE id=:id');
@@ -229,10 +226,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                         $nom_corps = $donnees3['nomcorps'];
                        }
                        $reponse3->closeCursor(); // Termine le traitement de la requête
-          
-
-                                          }else{
-
+                       }else{
                                              $reponse2 = $bdd->prepare('SELECT objets.* FROM objets 
                                              WHERE id=:id');
                                              $reponse2->execute(array('id' => $donnees['id_objets']));
@@ -256,8 +250,11 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                                          $nom_corps = $donnees3['nomcorps'];
                                                         }
                                                         $reponse3->closeCursor(); // Termine le traitement de la requête
-
-                                                }?>
+                            }?>
+            
+<?php 
+if($_GET['rtypo'] == 0 ){}
+ ?>
             <tr> 
             <td><?php echo $donnees['id']?></td>
             <td><?php echo $donnees['timestamp']?></td>
@@ -267,6 +264,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
             <td><?php echo ($nom_corps)?></td>
             <td> note</td>
             </tr>
+
+
+
            <?php }
               $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
