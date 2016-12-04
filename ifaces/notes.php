@@ -14,7 +14,7 @@ require_once('../moteur/dbconfig.php');
            // On affiche chaque entree une à une
            while ($donnees2 = $req2->fetch())
            {
-$coef_qualité = $donnees2['coef_qualité'];
+$coef_qualité = $donnees2['coef_qualite'];
 $coef_depose = $donnees2['coef_depose'];
 $coef_traitement = $donnees2['coef_traitement'];
 $coef_stockage = $donnees2['coef_stockage'];
@@ -35,7 +35,7 @@ $coef_stockage = $donnees2['coef_stockage'];
       <div class="panel-body">
         
           <form action="../moteur/edition_notes_post.php" method="post">
-  <div class="row"><label for="note1">Coef. qualité:</label> <input name="note1" id="note1" type="number" value ="<?php echo($coef_qualité)?>" required autofocus></div>
+  <div class="row"><label for="note1">Coef. qualité:</label> <input name="note1" id="note1" type="number" value ="<?php echo($coef_qualite)?>" required autofocus></div>
   <div class="row"><label for="note2">Coef. risque de dépose:</label> <input name="note2" id="note2" type="number" value ="<?php echo($coef_depose)?>" required ></div>
   <div class="row"><label for="note3">Coef. complexité de traitement:</label> <input name="note3" id="note3" type="number" value ="<?php echo($coef_traitement)?>" required ></div>
   <div class="row"><label for="note4">Coef. complexité conditionnement et stockage:</label> <input name="note4" id="note4" type="number" value ="<?php echo($coef_stockage)?>" required ></div> 
