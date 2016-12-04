@@ -122,7 +122,7 @@ AND materiaux.id_typologie = typologies.id');
             <td><?php echo $donnees['description']?></td>
             <td><?php echo $donnees['nomcorp']?></td>
             <td><?php echo $donnees['nomtypo']?></td>
-            <td><span class="badge" style="background-color:<?php echo$donnees['couleur']?>"><?php echo$donnees['couleur']?></span></td>
+            <td><span class="badge" style="background-color:<?php echo$donnees['couleur']?>"><?php echo $donnees['couleur']?></span></td>
 
 
 <td>
@@ -162,7 +162,7 @@ else // SINON
 <input type="hidden" name ="id_corp" id="id" value="<?php echo $donnees['id_corp']?>">
 <input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>">
 <input type="hidden" name ="description" id="description" value="<?php echo $donnees['description']?>">
-<input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($_POST['couleur'],1)?>">
+<input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($donnees['couleur'],1)?>">
 
   <button  class="btn btn-warning btn-sm" >Modifier!</button>
 
