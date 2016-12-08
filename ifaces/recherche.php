@@ -218,14 +218,14 @@ $rm = 0;
         </thead>
         <tbody>
         <?php 
-            // On recupère tout le contenu de la table affectations
+          
             $reponse = $bdd->prepare('SELECT spots.* FROM spots 
 WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
  $reponse->execute(array('ro' => $ro,'rm' => $rm,'fid' => $_GET["fid"]));
            // On affiche chaque entree une à une
            while ($donnees = $reponse->fetch())
            {        
-            //echo $donnees['id_objets'].$donnees['id_materiaux']
+           
             if($donnees['id_objets'] == 0){
             $reponse2 = $bdd->prepare('SELECT materiaux.* FROM materiaux 
             WHERE id=:id');
@@ -519,7 +519,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
 <?php 
             // On recupère tout les spots materiaux 
-           
+           if($_GET["rm"] == 1){
              $req = $bdd->prepare("SELECT spots.id, spots.coordos, materiaux.nom  FROM spots, materiaux   WHERE id_folio = :id_folio AND  materiaux.id = spots.id_materiaux ORDER BY id");
     $req->execute(array('id_folio' => $_GET["fid"]));
     
@@ -539,14 +539,18 @@ var mousePositionControl = new ol.control.MousePosition({
                
 
  <?php };
- $req->closeCursor(); // Termine le traitement de la requête ?>
+ $req->closeCursor(); // Termine le traitement de la requête
+ } ?>
+
+
+
 
 
 
 
 <?php 
             // On recupère tout les spots objets
-           
+           if($_GET["ro"] == 1){
              $req = $bdd->prepare("SELECT spots.id, spots.coordos, objets.nom  FROM spots, objets   WHERE id_folio = :id_folio AND  objets.id = spots.id_objets ORDER BY id");
     $req->execute(array('id_folio' => $_GET["fid"]));
     
@@ -566,7 +570,8 @@ var mousePositionControl = new ol.control.MousePosition({
                
 
  <?php };
- $req->closeCursor(); // Termine le traitement de la requête ?>
+ $req->closeCursor(); // Termine le traitement de la requête 
+}?>
 
 
       
