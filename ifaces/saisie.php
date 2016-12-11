@@ -138,6 +138,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 </select>
+<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 
 <label for="objet">  &nbspMateriels:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
 <option value="0" selected="selected">-</option>
@@ -160,7 +161,8 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
-</select><br>
+</select><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+<br>
         
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" ><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="1" ><br>
         <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0"  placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0"  placeholder="cm."><br><br>
