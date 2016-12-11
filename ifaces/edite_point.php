@@ -112,7 +112,7 @@ $photo = $donnees['photo'] ;
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 </select>
-<a href="edition_materiaux.php?saisie=2&cid=<?php echo($_GET['id']);?>&fid=<?php echo($_GET['fid']);?>">
+<a href="edition_materiaux.php?saisie=1&cid=<?php echo($_GET['id']);?>&fid=<?php echo($_GET['fid']);?>">
 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -138,7 +138,7 @@ $photo = $donnees['photo'] ;
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 
-<a href="edition_materiels.php?saisie=2&cid=<?php echo($_GET['id']);?>&fid=<?php echo($_GET['fid']);?>">
+<a href="edition_materiels.php?saisie=1&cid=<?php echo($_GET['id']);?>&fid=<?php echo($_GET['fid']);?>">
 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 </a>
 <br>
