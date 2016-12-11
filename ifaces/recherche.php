@@ -516,7 +516,7 @@ var mousePositionControl = new ol.control.MousePosition({
         extent: extent
       });
 
-// ,php while1 placement des spots
+// ,php while1 placement des spots si il doivent l'etre
 
 <?php 
             // On recupère tout les spots materiaux 
@@ -731,16 +731,6 @@ echo('color:'."'".$donnees2['couleur']."'");
       });
 
 
-function hideFeatures() {
-    var featurez = vectorSource.features;
-    for (var i = 0; i < featurez.length; i++) {
-        var featur = featurez[i];
-        if (!isVisible(featur)) {
-            featur.style.display = 'none';
-        }
-    }
-    vectorLayer.redraw();
-}
 
 
 
