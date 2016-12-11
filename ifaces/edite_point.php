@@ -190,7 +190,14 @@ $photo = $donnees['photo'] ;
 
 
 
+<!-- Standard button -->
+<button type="button" class="btn btn-warning">Modifier</button>
 
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-danger">Supprier</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-default">Annuler</button>
 
 
 

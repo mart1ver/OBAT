@@ -33,15 +33,7 @@ if (isset($_POST['materiaux'])) {
     $req->closeCursor();
 
 
-/*
-$test =  (array($_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c1'],$_POST['c2'],$_POST['c3'],$_POST['c4']));
-$arrlength = count($test);
 
-for($x = 0; $x < $arrlength; $x++) {
-    echo $test[$x];
-    echo "<br>";
-}
-*/
 
 
 
