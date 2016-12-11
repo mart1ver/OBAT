@@ -189,9 +189,6 @@ $photo = $donnees['photo'] ;
         <label for="remarques">Remarques:&nbsp</label><input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarques);?>" >
       
 
- <input id="pid" name ="pid"  type="hidden"  value="<?php echo($_GET['pid']); ?>">
-   <input id="cid" name ="cid"  type="hidden"  value="<?php echo($_GET['cid']); ?>">
-    <input id="fid" name ="fid"  type="hidden"  value="<?php echo($_GET['fid']); ?>">
 
 <br>
 <button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button><br>
@@ -200,6 +197,9 @@ $photo = $donnees['photo'] ;
 
 <form name="formsup" id="formsup" name="formsup" action="../moteur/supprime_point_post.php" method="post">
 
+ <input id="pid" name ="pid"  type="hidden"  value="<?php echo($_GET['pid']); ?>">
+   <input id="cid" name ="cid"  type="hidden"  value="<?php echo($_GET['cid']); ?>">
+    <input id="fid" name ="fid"  type="hidden"  value="<?php echo($_GET['fid']); ?>">
 <button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button><br>
 </form>
 
