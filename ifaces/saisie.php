@@ -138,7 +138,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 </select>
-<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <label for="objet">  &nbspMateriels:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
 <option value="0" selected="selected">-</option>
@@ -160,7 +160,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
-  
+
 
 </select><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 <br>
@@ -224,7 +224,12 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
         <script>
           $("#submitForm").on('click', function() {
-        $("#formspot").submit();
+            if(document.getElementById("materiaux") = 0){
+              if(document.getElementById("objet") = 0){}
+                else{$("#formspot").submit();}
+            }else{$("#formspot").submit();}
+
+        
     });
   </script>
       </div>
