@@ -186,17 +186,17 @@ $photo = $donnees['photo'] ;
 </div>
 <label for="fileToUpload">Photo:</label><br>
         <label for="remarques">Remarques:&nbsp</label><input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarques);?>" >
-      </form>
+      
 
 
 
-<!-- Standard button -->
+
 <button type="button" class="btn btn-warning">Modifier</button>
-
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-danger">Supprier</button>
-
-<!-- Indicates a successful or positive action -->
+</form>
+<form name="formsup" id="formsup" action="../moteur/supprime_point_post.php" method="post">
+  <input id="pid" type="hidden"  value="<?php echo($_GET['pid']); ?>">
+<button type="button" class="btn btn-danger">Supprimer</button>
+</post>
 <button type="button" class="btn btn-default">Annuler</button>
 
 
