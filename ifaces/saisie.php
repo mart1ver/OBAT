@@ -304,7 +304,7 @@ var mousePositionControl = new ol.control.MousePosition({
             
            var <?php echo("a".$donnees['id']);?> = new ol.Feature({
         geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
-        name: '<?php echo('<a href="edite_point.php?pid='.$donnees['id'].'">Éditer le point n°:'.$donnees['id']." ,".$donnees['nom']."</a>");?>'
+        name: '<?php echo('<a href="edite_point.php?pid='.$donnees['id'].'">Point n°:'.$donnees['id']." ,".$donnees['nom']."</a>");?>'
 
       });
 
@@ -331,7 +331,7 @@ var mousePositionControl = new ol.control.MousePosition({
             
            var <?php echo("a".$donnees['id']);?> = new ol.Feature({
         geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
-        name: '<?php echo('<a href="edite_point.php?pid='.$donnees['id'].'">Éditer le point n°:'.$donnees['id']." ,".$donnees['nom']."</a>");?>'
+        name: '<?php echo('<a href="edite_point.php?pid='.$donnees['id'].'">Point n°:'.$donnees['id']." ,".$donnees['nom']."</a>");?>'
 
       });
 
@@ -340,8 +340,6 @@ var mousePositionControl = new ol.control.MousePosition({
  <?php };
  $req->closeCursor(); // Termine le traitement de la requête ?>
 
-
-      
 
       
 
