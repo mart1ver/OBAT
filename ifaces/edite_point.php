@@ -43,6 +43,13 @@ $description = $donnees['description'] ;
 // on extrait le quantitatif
 $quantite = $donnees['quantite'] ;
 
+//on extrait les cotes en 3 variables
+            $pizza  = $donnees['encombrement'];
+            $pieces = explode("|", $pizza);
+            $lo = $pieces[0]; // lonuger
+            $la = $pieces[1]; // largeur
+            $ha = $pieces[2]; // hauteur
+            
           };
 
 
@@ -119,7 +126,7 @@ $quantite = $donnees['quantite'] ;
 <br>
         
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" value="<?php echo($description) ;?>"><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="<?php echo($quantite);?>" ><br>
-        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0"  placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0"  placeholder="cm."><br><br>
+        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  placeholder="cm." value="<?php echo($lo);?>" ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0"  placeholder="cm." value="<?php echo($la);?>"><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0"  placeholder="cm." value="<?php echo($ha);?>"><br><br>
         
 
 
