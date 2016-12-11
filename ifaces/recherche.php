@@ -732,7 +732,7 @@ echo('color:'."'".$donnees2['couleur']."'");
 
 
 function hideFeatures() {
-    var featurez = vectorLayer.features;
+    var featurez = vectorSource.features;
     for (var i = 0; i < featurez.length; i++) {
         var featur = featurez[i];
         if (!isVisible(featur)) {
