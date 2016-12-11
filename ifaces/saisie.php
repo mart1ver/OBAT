@@ -138,8 +138,9 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 </select>
+<a href="edition_materiaux.php?saisie=1">
 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+</a>
 <label for="objet">  &nbspMateriels:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
 <option value="0" selected="selected">-</option>
 <?php 
@@ -161,8 +162,9 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
-
+<a href="edition_materiels.php?saisie=1">
 </select><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</a>
 <br>
         
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" ><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="1" ><br>
