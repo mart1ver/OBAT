@@ -163,9 +163,11 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
+
+
+</select>
 <a href="edition_materiels.php?saisie=1">
-  
-</select><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 </a>
 <br>
         
