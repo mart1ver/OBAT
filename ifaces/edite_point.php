@@ -82,6 +82,7 @@ $photo = $donnees['photo'] ;
         <input type="hidden" id="coordos" name="coordos"> 
         <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['id']); ?>"> 
         <input type="hidden" id="fid" name="fid" value="<?php echo($_GET['fid']); ?>"> 
+        <input type="hidden" id="pid" name="pid" value="<?php echo($_GET['pid']); ?>"> 
         <label for="bat">localisation:&nbsp</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" value="<?php echo($bat);?>" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6" value="<?php echo($entree);?>"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" value="<?php echo($cage);?>"><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6" value="<?php echo($etage);?>"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6" value="<?php echo($numero);?>"><br>
         
 
@@ -188,7 +189,9 @@ $photo = $donnees['photo'] ;
         <label for="remarques">Remarques:&nbsp</label><input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarques);?>" >
       
 
-
+ <input id="pid" name ="pid"  type="hidden"  value="<?php echo($_GET['pid']); ?>">
+   <input id="cid" name ="cid"  type="hidden"  value="<?php echo($_GET['cid']); ?>">
+    <input id="fid" name ="fid"  type="hidden"  value="<?php echo($_GET['fid']); ?>">
 
 <br>
 <button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button><br>
@@ -196,9 +199,7 @@ $photo = $donnees['photo'] ;
 
 
 <form name="formsup" id="formsup" name="formsup" action="../moteur/supprime_point_post.php" method="post">
-  <input id="pid" name ="pid"  type="hidden"  value="<?php echo($_GET['pid']); ?>">
-   <input id="cid" name ="cid"  type="hidden"  value="<?php echo($_GET['cid']); ?>">
-    <input id="fid" name ="fid"  type="hidden"  value="<?php echo($_GET['fid']); ?>">
+
 <button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button><br>
 </form>
 
