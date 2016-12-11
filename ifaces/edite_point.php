@@ -76,7 +76,7 @@ $photo = $donnees['photo'] ;
 
 
 
-<form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/edite_point_post.php" method="post">
+<form name="formspot" id="formspot"  action="../moteur/edite_point_post.php" method="post">
   
 
         <input type="hidden" id="coordos" name="coordos"> 
