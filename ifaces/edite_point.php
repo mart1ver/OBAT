@@ -137,7 +137,7 @@ $photo = $donnees['photo'] ;
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
-
+</select>
 <a href="edition_materiels.php?saisie=1&cid=<?php echo($_GET['id']);?>&fid=<?php echo($_GET['fid']);?>">
 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 </a>
