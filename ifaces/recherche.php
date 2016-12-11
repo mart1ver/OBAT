@@ -594,8 +594,9 @@ var mousePositionControl = new ol.control.MousePosition({
            ?>
                                 
        <?php echo("a".$donnees['id']);?>.setStyle(new ol.style.Style({
+        display: 'none',
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: 
+           
           <?php if($donnees['id_objets'] == 0 ) {
           
              $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
@@ -609,7 +610,7 @@ AND spots.id = :id_spot");
            // On affiche chaque entree une à une
            while ($donnees2 = $req2->fetch())
            {
- echo("'".$donnees2['couleur']."'");
+ echo('color:'."'".$donnees2['couleur']."'");
 
      
 
@@ -630,7 +631,7 @@ AND spots.id = :id_spot");
            // On affiche chaque entree une à une
            while ($donnees2 = $req2->fetch())
            {
-echo("'".$donnees2['couleur']."'");
+echo('color:'."'".$donnees2['couleur']."'");
 
      
 
