@@ -489,6 +489,7 @@ if($_GET['rtypo'] == 0 AND $_GET['rcorps'] > 0 ){
 
 
 <script>
+
     
 
 
@@ -730,7 +731,16 @@ echo('color:'."'".$donnees2['couleur']."'");
       });
 
 
-
+function hideFeatures() {
+    var featurez = vectorLayer.features;
+    for (var i = 0; i < featurez.length; i++) {
+        var featur = featurez[i];
+        if (!isVisible(featur)) {
+            featur.style.display = 'none';
+        }
+    }
+    vectorLayer.redraw();
+}
 
 
 
