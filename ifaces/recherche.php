@@ -519,7 +519,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
 <?php 
             // On recupère tout les spots materiaux 
-           if($_GET["rm"] == 1){
+           
              $req = $bdd->prepare("SELECT spots.id, spots.coordos, materiaux.nom  FROM spots, materiaux   WHERE id_folio = :id_folio AND  materiaux.id = spots.id_materiaux ORDER BY id");
     $req->execute(array('id_folio' => $_GET["fid"]));
     
@@ -540,7 +540,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
  <?php };
  $req->closeCursor(); // Termine le traitement de la requête
- } ?>
+ ?>
 
 
 
@@ -550,7 +550,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
 <?php 
             // On recupère tout les spots objets
-           if($_GET["ro"] == 1){
+         
              $req = $bdd->prepare("SELECT spots.id, spots.coordos, objets.nom  FROM spots, objets   WHERE id_folio = :id_folio AND  objets.id = spots.id_objets ORDER BY id");
     $req->execute(array('id_folio' => $_GET["fid"]));
     
@@ -571,7 +571,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
  <?php };
  $req->closeCursor(); // Termine le traitement de la requête 
-}?>
+?>
 
 
       
@@ -594,8 +594,9 @@ var mousePositionControl = new ol.control.MousePosition({
            ?>
                                 
        <?php echo("a".$donnees['id']);?>.setStyle(new ol.style.Style({
+        display: 'none',
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          color: 
+           
           <?php if($donnees['id_objets'] == 0 ) {
           
              $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
@@ -609,7 +610,7 @@ AND spots.id = :id_spot");
            // On affiche chaque entree une à une
            while ($donnees2 = $req2->fetch())
            {
- echo("'".$donnees2['couleur']."'");
+ echo('color:'."'".$donnees2['couleur']."'");
 
      
 
@@ -630,7 +631,7 @@ AND spots.id = :id_spot");
            // On affiche chaque entree une à une
            while ($donnees2 = $req2->fetch())
            {
-echo("'".$donnees2['couleur']."'");
+echo('color:'."'".$donnees2['couleur']."'");
 
      
 
