@@ -14,10 +14,10 @@ require_once('../moteur/dbconfig.php');
       <div class="panel-body">
         <div class="row">
         	<form action="../moteur/edition_typologies_post.php" method="post">
-  <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="<?php echo $_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
-    <div class="col-md-2"><label for="description">Description:</label> <input type="text" value ="<?php echo $_GET['description']?>" name="description" id="description" class="form-control " required ></div>
+  <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="" name="nom" id="nom" class="form-control " required autofocus></div>
+    <div class="col-md-2"><label for="description">Description:</label> <input type="text" value ="" name="description" id="description" class="form-control " required ></div>
     
-  <div class="col-md-1"><label for="couleur">Couleur:</label> <input type="color"        value ="<?php echo "#".$_GET['couleur']?>" name="couleur" id="couleur" class="form-control " required ></div>
+  <div class="col-md-1"><label for="couleur">Couleur:</label> <input type="color"        value ="" name="couleur" id="couleur" class="form-control " required ></div>
   <div class="col-md-1"><br><button name="creer" class="btn btn-default">Créer!</button></div>
 </form>
 </div>
@@ -89,7 +89,7 @@ else // SINON
 <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
 <input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>">
 <input type="hidden" name ="description" id="description" value="<?php echo $donnees['description']?>">
-<input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($_POST['couleur'],1)?>">
+<input type="hidden" name ="couleur" id="couleur" value="<?php echo substr($donnees['couleur'],1)?>">
 
   <button  class="btn btn-warning btn-sm" >Modifier!</button>
 

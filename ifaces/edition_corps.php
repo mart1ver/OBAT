@@ -14,10 +14,10 @@ require_once('../moteur/dbconfig.php');
       <div class="panel-body">
         <div class="row">
         	<form action="../moteur/edition_corps_post.php" method="post">
-  <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="<?php echo $_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
-    <div class="col-md-2"><label for="description">Description:</label> <input type="text" value ="<?php echo $_GET['description']?>" name="description" id="description" class="form-control " required ></div>
+  <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="" name="nom" id="nom" class="form-control " required autofocus></div>
+    <div class="col-md-2"><label for="description">Description:</label> <input type="text" value ="" name="description" id="description" class="form-control " required ></div>
     
-  <div class="col-md-1"><label for="couleur">Couleur:</label> <input type="color"        value ="<?php echo "#".$_GET['couleur']?>" name="couleur" id="couleur" class="form-control " required ></div>
+  <div class="col-md-1"><label for="couleur">Couleur:</label> <input type="color"        value ="" name="couleur" id="couleur" class="form-control " required ></div>
   <div class="col-md-1"><br><button name="creer" class="btn btn-default">Créer!</button></div>
 </form>
 </div>
