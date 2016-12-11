@@ -67,7 +67,7 @@ $coef_stockage = $donnees2['coef_stockage'];
 
 
 ?>
-                ?>
+                
 
 
 
