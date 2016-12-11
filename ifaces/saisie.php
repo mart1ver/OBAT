@@ -160,6 +160,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
+  
 
 </select><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 <br>
