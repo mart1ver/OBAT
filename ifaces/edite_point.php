@@ -196,7 +196,8 @@ $photo = $donnees['photo'] ;
 
 
 <form name="formsup" id="formsup" name="formsup" action="../moteur/supprime_point_post.php" method="post">
-  <input id="pid" name ="pid" type="hidden"  value="<?php echo($_GET['pid']); ?>">
+  <input id="pid" name ="pid"  type="hidden"  value="<?php echo($_GET['pid']); ?>">
+  
 <button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button><br>
 </form>
 
