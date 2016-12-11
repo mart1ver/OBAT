@@ -56,9 +56,9 @@ $complexite_stockage = $donnees['complexite_stockage'] ;
 $qualite = $donnees['qualite'] ;   
 
 //on extrait les 4 commentaires et la remarque 
-$comm_risque_depose = $donnees['risque_depose'] ;
-$comm_complexite_traitement = $donnees['complexite_traitement'] ;
-$comm_complexite_stockage = $donnees['complexite_stockage'] ;
+$comm_risque_depose = $donnees['comm_risque_depose'] ;
+$comm_complexite_traitement = $donnees['comm_complexite_traitement'] ;
+$comm_complexite_stockage = $donnees['comm_complexite_stockage'] ;
 $comm_qualite = $donnees['comm_qualite'] ;  
 $remarque = $donnees['remarque'] ;
 // on extrait le chemin de la photo
