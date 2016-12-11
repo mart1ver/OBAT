@@ -47,6 +47,7 @@ header('Location:../ifaces/saisie.php?id='.$_POST['cid'].'&fid='.$_POST['fid']);
   }
 
     else{
+      
 header('Location:../ifaces/edition_materiaux.php?msg=Materiau enregistrée avec succes!');
 }
   /*
