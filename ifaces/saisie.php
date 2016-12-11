@@ -343,8 +343,6 @@ var mousePositionControl = new ol.control.MousePosition({
 
       
 
-      
-
 
 // ,php while2 , atributs des spots
 
