@@ -17,7 +17,7 @@ $req = $bdd->prepare('UPDATE typologies
 
     SET               nom = :nom, 
                       description = :description,
-                      couleur = :couleur,
+                      couleur = :couleur
                       
                       
                         
