@@ -29,7 +29,7 @@ $req->execute(array(
     'id' => $_POST['id'], 
     'nom' => $_POST['nom'], 
     'description' => $_POST['description'],
-    'couleur' => $_POST['couleur'], 
+    'couleur' => $_POST['couleur']));
     
 
 
