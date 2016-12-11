@@ -15,7 +15,7 @@ require_once('../moteur/dbconfig.php');
         <div class="row">
         	<form action="../moteur/edition_objets_post.php" method="post">
              <input type="hidden" id="saisie" name="saisie" value="<?php echo($_GET['saisie']); ?>">
-            <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['id']); ?>"> 
+            <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['cid']); ?>"> 
         <input type="hidden" id="fid" name="fid" value="<?php echo($_GET['fid']); ?>"> 
   <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="" name="nom" id="nom" class="form-control " required autofocus></div>
     <div class="col-md-2"><label for="description">Description:</label> <input type="text" value ="" name="description" id="description" class="form-control " required ></div>
