@@ -595,9 +595,9 @@ var mousePositionControl = new ol.control.MousePosition({
            ?>
                                 
        <?php echo("a".$donnees['id']);?>.setStyle(new ol.style.Style({
-          display: 'none',
+          
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-           
+             display: 'none',
           <?php if($donnees['id_objets'] == 0 ) {
           
              $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
