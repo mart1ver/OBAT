@@ -304,7 +304,7 @@ var mousePositionControl = new ol.control.MousePosition({
             
            var <?php echo("a".$donnees['id']);?> = new ol.Feature({
         geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
-        name: '<?php echo("Point N:".$donnees['id']." ,".$donnees['nom']);?>'
+        name: '<?php echo('<a href="edite_point.php?pid='.$donnees['id'].'">Éditer le point n°:'.$donnees['id']." ,".$donnees['nom']."</a>");?>'
 
       });
 
