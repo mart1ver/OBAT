@@ -224,9 +224,17 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
         <script>
           $("#submitForm").on('click', function() {
-            if(document.getElementById("materiaux") == 0){
-              if(document.getElementById("objet") ==0){}
-                else{$("#formspot").submit();}
+
+            if(document.getElementById("materiaux").value == 0){
+
+              if(document.getElementById("objet").value == 0){}
+
+                else{$("#formspot").submit();
+
+            }
+
+
+
             }else{$("#formspot").submit();}
 
         
