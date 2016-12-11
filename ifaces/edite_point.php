@@ -25,7 +25,7 @@ require_once('../moteur/dbconfig.php');
            // On affiche chaque entree une à une
            while ($donnees = $req->fetch())
            {
-            //on extrait la localisation en 5 variables
+//on extrait la localisation en 5 variables
             $pizza  = $donnees['bat_entree_cage_etage_numero'];
             $pieces = explode("|", $pizza);
             $bat = $pieces[0]; // bat
@@ -33,6 +33,12 @@ require_once('../moteur/dbconfig.php');
             $cage = $pieces[2]; // cage
             $etage =  $pieces[3]; // etage
             $numero = $pieces[4]; // numero
+
+//on extrait le type de materiau et de materiel
+
+$id_objets = $donnees['id_objets'];
+$id_materiaux = $donnees['id_materiaux'] ;
+
           };
 
 
@@ -60,7 +66,7 @@ require_once('../moteur/dbconfig.php');
         
 
         <label for="materiaux">Matériaux:&nbsp </label><select name="materiaux" id="materiaux"  onchange="document.getElementById('objet').disabled = true; document.getElementById('objet').value = '';"> 
-<option value="0" selected="selected">-</option>
+<option value="0" >-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
            
@@ -75,7 +81,7 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
+                <option value="<?php echo($donnees['id']);?>" <?php if ($donnees['id'] == $id_materiaux){echo('selected');}  ?> ><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
@@ -84,7 +90,7 @@ require_once('../moteur/dbconfig.php');
 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <label for="objet">  &nbspMateriels:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
-<option value="0" selected="selected">-</option>
+<option value="0" >-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
            
@@ -99,7 +105,7 @@ require_once('../moteur/dbconfig.php');
            ?>
             
           
-                <option value="<?php echo($donnees['id']);?>"><?php echo($donnees['nom']);?></option>
+                <option value="<?php echo($donnees['id']);?>" <?php if ($donnees['id'] == $id_objets){echo('selected');}  ?> ><?php echo($donnees['nom']);?></option>
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
