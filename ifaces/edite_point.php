@@ -2,13 +2,11 @@
 
 require_once('../moteur/dbconfig.php');
  include "tete.php" 
-//Oressource 2014, formulaire de référencement des conventions avec les partenaires de la structure
-//Simple formulaire de saisie , liste des conventions déjà référencées et possibilité de les cacher à l'utilisateur ou de modifier les données
-//
+
 ?>
 
     <div class="container">
-        <h1>Modification du pont N°:</h1> 
+        <h1>Modification du pont N°:<?php echo($_GET['pid']); ?></h1> 
          <div class="panel-heading">Vous vous apretez à éditer ou supprimer un point</div>
         
       <div class="panel-body">
@@ -17,7 +15,24 @@ require_once('../moteur/dbconfig.php');
 
 
 
+<?php 
+            // On recupère les infos concernant ce point:
+           
+             $req = $bdd->prepare("SELECT * FROM spots WHERE id = :id ");
+    $req->execute(array('id' => $_GET["pid"]));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
 
+           ?>
+            
+          
+               <?php echo($donnees['id']);?>
+
+ <?php };
+  $req->closeCursor(); // Termine le traitement de la requête ?>
 
 
 
