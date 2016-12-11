@@ -197,7 +197,7 @@ $photo = $donnees['photo'] ;
   <input id="pid" type="hidden"  value="<?php echo($_GET['pid']); ?>">
 <button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button><br>
 </post>
-<button type="button" class="btn btn-default">Annuler</button>
+<button type="button" class="btn btn-default" onclick="history.go(-1);">Annuler</button>
 
 
 
