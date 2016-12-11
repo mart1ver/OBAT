@@ -225,7 +225,7 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <script>
           $("#submitForm").on('click', function() {
             if(document.getElementById("materiaux") == 0){
-              if(document.getElementById("objet") = =0){}
+              if(document.getElementById("objet") ==0){}
                 else{$("#formspot").submit();}
             }else{$("#formspot").submit();}
 
