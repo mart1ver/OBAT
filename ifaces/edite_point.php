@@ -112,7 +112,9 @@ $photo = $donnees['photo'] ;
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 </select>
-<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="edition_materiaux.php?saisie=2&cid=<?php echo($_GET['id']);?>&fid=<?php echo($_GET['fid']);?>">
+<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <label for="objet">  &nbspMateriels:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
 <option value="0" >-</option>
@@ -136,7 +138,9 @@ $photo = $donnees['photo'] ;
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 
-</select><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+<a href="edition_materiels.php?saisie=2&cid=<?php echo($_GET['id']);?>&fid=<?php echo($_GET['fid']);?>">
+<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</a>
 <br>
         
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" value="<?php echo($description) ;?>"><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="<?php echo($quantite);?>" ><br>
