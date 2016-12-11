@@ -39,7 +39,14 @@ $req = $bdd->prepare('INSERT INTO objets (nom,  couleur, description, visible, i
 $req->execute(array($_POST['nom'],  $_POST['couleur'] , $_POST['description'], "oui", $_POST['typologie'], $_POST['corp']));
   $req->closeCursor();
 // Redirection du visiteur vers la page de gestion des affectation
+  if($_POST['saisie'] == 1)
+  {
+header('Location:../ifaces/saisie.php?id='.$_POST['cid'].'&fid='.$_POST['fid']);
+  }
+
+    else{
 header('Location:../ifaces/edition_materiels.php?msg=Objet enregistrée avec succes!');
+}
   /*
   echo($_POST['typologie']);
   echo($_POST['corp']);
