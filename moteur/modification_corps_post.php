@@ -17,7 +17,7 @@ $req = $bdd->prepare('UPDATE corps
 
     SET               nom = :nom, 
                       description = :description,
-                      couleur = :couleur,
+                      couleur = :couleur
                       
                       
                         
