@@ -25,13 +25,18 @@ require_once('../moteur/dbconfig.php');
            // On affiche chaque entree une à une
            while ($donnees = $req->fetch())
            {
+            //on extrait la localisation en 5 variables
+            $pizza  = $donnees['bat_entree_cage_etage_numero'];
+            $pieces = explode("|", $pizza);
+            $bat = $pieces[0]; // bat
+            $entree = $pieces[1]; // entree
+            $cage = $pieces[2]; // cage
+            $etage =  $pieces[3]; // etage
+            $numero = $pieces[4]; // numero
+          };
 
-           ?>
-            
-          
-               <?php echo($donnees['id']);?>
 
- <?php };
+
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 
@@ -41,13 +46,13 @@ require_once('../moteur/dbconfig.php');
 
 
 
-<form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/saisie_post.php" method="post">
+<form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/edite_point_post.php" method="post">
   
 
         <input type="hidden" id="coordos" name="coordos"> 
         <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['id']); ?>"> 
         <input type="hidden" id="fid" name="fid" value="<?php echo($_GET['fid']); ?>"> 
-        <label for="bat">localisation:&nbsp</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" ><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6"><br>
+        <label for="bat">localisation:&nbsp</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" value="<?php echo($bat);?>" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6" value="<?php echo($entree);?>"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" value="<?php echo($cage);?>"><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6" value="<?php echo($etage);?>"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6" value="<?php echo($numero);?>"><br>
         
 
 
