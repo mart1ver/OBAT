@@ -190,7 +190,7 @@ $photo = $donnees['photo'] ;
 
 
 
-
+<br>
 <button type="button" class="btn btn-warning">Modifier</button>
 </form>
 <form name="formsup" id="formsup" action="../moteur/supprime_point_post.php" method="post">
