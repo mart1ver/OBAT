@@ -8,9 +8,9 @@ require_once('../moteur/dbconfig.php');
 ?>
 
     <div class="container">
-        <h1>Gestion de la liste des typologies</h1> 
-         <div class="panel-heading">Gérez ici votre liste des typologies.</div>
-         <p>Permet de différencier les materiaux et materiels au moment des recherches </p>
+        <h1>Modification du pont N°:</h1> 
+         <div class="panel-heading">Vous vous apretez à éditer ou supprimer un point</div>
+        
       <div class="panel-body">
         <div class="row">
           
