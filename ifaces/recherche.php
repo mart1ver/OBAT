@@ -562,7 +562,7 @@ var mousePositionControl = new ol.control.MousePosition({
            ?>
             
            var <?php echo("a".$donnees['id']);?> = new ol.Feature({
-            display: 'none',
+
         geometry: new ol.geom.Point([<?php echo($donnees['coordos']);?>]),
         name: '<?php echo("Point N:".$donnees['id']." ,".$donnees['nom']);?>'
 
@@ -595,7 +595,7 @@ var mousePositionControl = new ol.control.MousePosition({
            ?>
                                 
        <?php echo("a".$donnees['id']);?>.setStyle(new ol.style.Style({
-
+          display: 'none',
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
            
           <?php if($donnees['id_objets'] == 0 ) {
