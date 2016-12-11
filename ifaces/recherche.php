@@ -519,7 +519,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
 <?php 
             // On recupère tout les spots materiaux 
-           if($_GET["rm"] == 1){
+           
              $req = $bdd->prepare("SELECT spots.id, spots.coordos, materiaux.nom  FROM spots, materiaux   WHERE id_folio = :id_folio AND  materiaux.id = spots.id_materiaux ORDER BY id");
     $req->execute(array('id_folio' => $_GET["fid"]));
     
@@ -540,7 +540,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
  <?php };
  $req->closeCursor(); // Termine le traitement de la requête
- } ?>
+ ?>
 
 
 
@@ -550,7 +550,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
 <?php 
             // On recupère tout les spots objets
-           if($_GET["ro"] == 1){
+         
              $req = $bdd->prepare("SELECT spots.id, spots.coordos, objets.nom  FROM spots, objets   WHERE id_folio = :id_folio AND  objets.id = spots.id_objets ORDER BY id");
     $req->execute(array('id_folio' => $_GET["fid"]));
     
@@ -571,7 +571,7 @@ var mousePositionControl = new ol.control.MousePosition({
 
  <?php };
  $req->closeCursor(); // Termine le traitement de la requête 
-}?>
+?>
 
 
       
