@@ -44,7 +44,7 @@
     $req->closeCursor();
 
 // Redirection du visiteur vers la page de gestion des affectation
-    header('Location:../ifaces/chantiers.php?msg=Chantier ajouté avec succes!');
+    header('Location:../ifaces/chantiers.php?msg=Chantier ajouté avec succes!&nom=&adresse=&commentaire=');
   }
 
 ?>
