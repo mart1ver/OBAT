@@ -177,7 +177,7 @@ echo($donnees2['fid']);
                 <li><a href="edition_corps.php">Corps d'état</a></li>
                 <li><a href="edition_typologies.php">Typologies</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="chantiers.php">Éditer les chantiers</a></li>
+                <li><a href="chantiers.php?nom=&adresse=&commentaire=">Éditer les chantiers</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="notes.php">Éditer le calcul des notes</a></li>
               </ul>
