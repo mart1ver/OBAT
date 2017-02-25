@@ -62,7 +62,7 @@ UPDATE spots
 
 SET
 
-id_folio,coordos = :fid, 
+id_folio = :fid, 
 bat_entree_cage_etage_numero = :becen, 
 id_materiaux :id_materiaux, 
 id_objets = :id_objets,
@@ -84,7 +84,7 @@ comm_qualite = :comm_qualite
 
 
     $req->execute(array(
-      'visible' => $_POST['fid'],
+      'id' => $_POST['fid'],
       
       'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,
        'id_materiaux' => $materiaux,
