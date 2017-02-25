@@ -61,8 +61,6 @@ comm_qualite = :comm_qualite
 UPDATE spots 
 
 SET
-
- 
 bat_entree_cage_etage_numero = :becen, 
 id_materiaux = :id_materiaux, 
 id_objets = :id_objets,
@@ -79,12 +77,12 @@ comm_complexite_traitement = :comm_complexite_traitement,
 comm_complexite_stockage = :comm_complexite_stockage,
 comm_qualite = :comm_qualite,
 
-  WHERE  id =:id;
+  WHERE  id =:pid;
     ');
 
 
     $req->execute(array(
-      'id' => $_POST['pid'],
+      'pid' => $_POST['pid'],
       'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,
       'id_materiaux' => $materiaux,
       'id_objets' => $objet,
@@ -100,7 +98,7 @@ comm_qualite = :comm_qualite,
        'comm_complexite_traitement' => $_POST['c3'],
        'comm_complexite_stockage' => $_POST['c4'],
        'comm_qualite' => $_POST['c1']));
-   
+    echo $req;
    $req->closeCursor();
 
 
@@ -109,7 +107,7 @@ comm_qualite = :comm_qualite,
 */
 
 // Redirection du visiteur vers la page de saisie
- header( "Location:../ifaces/saisie.php?id=".$_POST['cid']."&fid=".$_POST['fid']);
+// header( "Location:../ifaces/saisie.php?id=".$_POST['cid']."&fid=".$_POST['fid']);
   
 
 ?>
