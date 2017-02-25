@@ -64,7 +64,7 @@ SET
 
  
 bat_entree_cage_etage_numero = :becen, 
-id_materiaux :id_materiaux, 
+id_materiaux = :id_materiaux, 
 id_objets = :id_objets,
 description = :description,
 quantite = :quantite ,
