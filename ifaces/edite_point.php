@@ -190,7 +190,8 @@ $photo = $donnees['photo'] ;
 </div>
 </div>
 <label for="fileToUpload">Photo:</label> <?php echo($photo)?><br>
-        <label for="remarques">Remarques:&nbsp</label><input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarques);?>" >
+        <label for="remarques">Remarques:&nbsp</label>
+        <input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" >
       
 
 
