@@ -80,7 +80,7 @@ $photo = $donnees['photo'] ;
   
 
         <input type="hidden" id="coordos" name="coordos"> 
-        <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['id']); ?>"> 
+        <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['cid']); ?>"> 
         <input type="hidden" id="fid" name="fid" value="<?php echo($_GET['fid']); ?>"> 
         <input type="hidden" id="pid" name="pid" value="<?php echo($_GET['pid']); ?>"> 
         <label for="bat">localisation:&nbsp</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" value="<?php echo($bat);?>" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6" value="<?php echo($entree);?>"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" value="<?php echo($cage);?>"><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6" value="<?php echo($etage);?>"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6" value="<?php echo($numero);?>"><br>
