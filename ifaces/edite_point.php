@@ -249,7 +249,24 @@ $photo = $donnees['photo'] ;
   </div>
   </div>
     </div><!-- /.container -->
-   
+   <script>
+    function updatenote_qualite(slideAmount) {
+        var label_qualite = document.getElementById("label_qualite");
+        label_qualite.innerHTML = slideAmount;
+    }
+function updatenote_risque(slideAmount) {
+        var label_risque = document.getElementById("label_risque");
+        label_risque.innerHTML = slideAmount;
+    }
+    function updatenote_traitement(slideAmount) {
+        var label_traitement = document.getElementById("label_traitement");
+        label_traitement.innerHTML = slideAmount;
+    }
+    function updatenote_stockage(slideAmount) {
+        var label_stockage = document.getElementById("label_stockage");
+        label_stockage.innerHTML = slideAmount;
+    }
+    </script> 
 <?php include "pied.php"; 
 
 ?>
