@@ -80,7 +80,7 @@ comm_qualite = :comm_qualite,
   WHERE  id =:pid;
     ');
 
-
+echo $req;
     $req->execute(array(
       'pid' => $_POST['pid'],
       'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,
@@ -98,7 +98,7 @@ comm_qualite = :comm_qualite,
        'comm_complexite_traitement' => $_POST['c3'],
        'comm_complexite_stockage' => $_POST['c4'],
        'comm_qualite' => $_POST['c1']));
-    echo $req;
+    
    $req->closeCursor();
 
 
