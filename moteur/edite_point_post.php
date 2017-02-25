@@ -77,10 +77,10 @@ comm_complexite_traitement = :comm_complexite_traitement,
 comm_complexite_stockage = :comm_complexite_stockage,
 comm_qualite = :comm_qualite,
 
-  WHERE  id =:pid;
-    ');
+  WHERE  id =:pid ');
 
-echo $req;
+
+
     $req->execute(array(
       'pid' => $_POST['pid'],
       'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,
@@ -101,6 +101,17 @@ echo $req;
     
    $req->closeCursor();
 
+echo $_POST['pid'];
+echo $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'];
+echo $_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'] ;
+echo $objet ;
+echo $_POST['description'] ;
+echo $_POST['quantite'] ;
+echo $materiaux ;
+echo $materiaux ;
+echo $materiaux ;
+echo $materiaux ;
+echo $materiaux ;
 
 /*
 'visible' => $_POST['visible']
