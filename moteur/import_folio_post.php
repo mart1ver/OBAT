@@ -65,7 +65,7 @@ if ($uploadOk == 0) {
 
 
     } else {
-        echo ("Erreur d'ulpoad, désolé .".$_FILES["fileToUpload"]["name"]);
+        echo ("Erreur d'ulpoad, désolé .".$_FILES["fileToUpload"]["tmp_name"]." ".$target_file);
     }
 }
 
