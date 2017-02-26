@@ -1,6 +1,6 @@
 <?php
 $target_dir = "../images/folios/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
@@ -60,12 +60,12 @@ if ($uploadOk == 0) {
     $req->closeCursor();
 
 // Redirection du visiteur vers la page de gestion des affectation
-    header('Location:../ifaces/chantiers.php?msg=Folio ajouté avec succes!');
+    header('Location:../ifaces/chantiers.php?msg=Folio ajouté avec succes!' );
 
 
 
     } else {
-        echo "Erreur d'ulpoad, désolé .";
+        echo ("Erreur d'ulpoad, désolé .".$_FILES["fileToUpload"]["name"]);
     }
 }
 
