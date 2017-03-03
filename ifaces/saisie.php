@@ -50,7 +50,7 @@ include "tete.php" ;
 
 
 <br>
-<div class="alert alert-info" role="alert">
+<div class="alert alert-warning" role="alert">
 <p><b>
 Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio: 
 <select class="chzn-select" name="forma" onchange="location = this.value;">
