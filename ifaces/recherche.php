@@ -67,12 +67,6 @@ $coef_stockage = $donnees2['coef_stockage'];
 
 
 ?>
-                
-
-
-
-
-
 <br>
 <div class="alert alert-info" role="alert" id = "tete">
 
@@ -209,11 +203,12 @@ $rm = 0;
           <tr>
             <th>#</th>
             <th>Date de création</th>
-            <th>coordnées</th>
-            <th>type d'objet ou de materiaux</th>
-            <th>typologie</th>
-            <th>corp de metier</th>    
-            <th>note globale</th>        
+            <th>Coordnées</th>
+            <th>Type d'objet ou de materiaux</th>
+            <th>Typologie</th>
+            <th>Corp de metier</th>    
+            <th>Note globale</th> 
+            <th>Voir fiche</th>        
           </tr>
         </thead>
         <tbody>
@@ -307,7 +302,11 @@ if($_GET['rtypo'] > 0 AND $_GET['rcorps'] == 0 ){
             <td><?php echo ($nom)?></td>
             <td><?php echo ($nom_typologie)?></td>
             <td><?php echo ($nom_corps)?></td>
-            <td> note</td>
+            <td> <?php
+// noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
+            $noteg = (($donnees['qualite']*$coef_qualite)+((5-$donnees['risque_depose'])*$coef_depose)+((5-$donnees['complexite_traitement'])*$coef_traitement)+((5-$donnees['complexite_stockage'])*$coef_stockage))/($coef_qualite+$coef_depose+$coef_traitement+$coef_stockage);
+            echo(round($noteg,3));
+            ?></td>
             </tr>
 
 
@@ -324,7 +323,11 @@ if($_GET['rtypo'] == 0 AND $_GET['rcorps'] > 0 ){
             <td><?php echo ($nom)?></td>
             <td><?php echo ($nom_typologie)?></td>
             <td><?php echo ($nom_corps)?></td>
-            <td> note</td>
+            <td> <?php
+// noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
+            $noteg = (($donnees['qualite']*$coef_qualite)+((5-$donnees['risque_depose'])*$coef_depose)+((5-$donnees['complexite_traitement'])*$coef_traitement)+((5-$donnees['complexite_stockage'])*$coef_stockage))/($coef_qualite+$coef_depose+$coef_traitement+$coef_stockage);
+            echo(round($noteg,3));
+            ?></td>
             </tr>
 
 
@@ -341,7 +344,11 @@ if($_GET['rtypo'] == 0 AND $_GET['rcorps'] > 0 ){
             <td><?php echo ($nom)?></td>
             <td><?php echo ($nom_typologie)?></td>
             <td><?php echo ($nom_corps)?></td>
-            <td> note</td>
+            <td> <?php
+// noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
+            $noteg = (($donnees['qualite']*$coef_qualite)+((5-$donnees['risque_depose'])*$coef_depose)+((5-$donnees['complexite_traitement'])*$coef_traitement)+((5-$donnees['complexite_stockage'])*$coef_stockage))/($coef_qualite+$coef_depose+$coef_traitement+$coef_stockage);
+            echo(round($noteg,3));
+            ?></td>
             </tr>
 
 
@@ -355,6 +362,7 @@ if($_GET['rtypo'] == 0 AND $_GET['rcorps'] > 0 ){
        </tbody>
         <tfoot>
           <tr>
+            <th></th>
             <th></th>
             <th></th>
             <th></th>
