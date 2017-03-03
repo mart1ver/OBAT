@@ -286,6 +286,9 @@ if($_GET['rtypo'] == 0 AND $_GET['rcorps'] == 0 ){
             $noteg = (($donnees['qualite']*$coef_qualite)+((5-$donnees['risque_depose'])*$coef_depose)+((5-$donnees['complexite_traitement'])*$coef_traitement)+((5-$donnees['complexite_stockage'])*$coef_stockage))/($coef_qualite+$coef_depose+$coef_traitement+$coef_stockage);
             echo(round($noteg,3));
             ?></td>
+            <td><button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+</button></td>
             </tr>
 
 
@@ -307,6 +310,9 @@ if($_GET['rtypo'] > 0 AND $_GET['rcorps'] == 0 ){
             $noteg = (($donnees['qualite']*$coef_qualite)+((5-$donnees['risque_depose'])*$coef_depose)+((5-$donnees['complexite_traitement'])*$coef_traitement)+((5-$donnees['complexite_stockage'])*$coef_stockage))/($coef_qualite+$coef_depose+$coef_traitement+$coef_stockage);
             echo(round($noteg,3));
             ?></td>
+            <td><button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+</button></td>
             </tr>
 
 
@@ -328,6 +334,9 @@ if($_GET['rtypo'] == 0 AND $_GET['rcorps'] > 0 ){
             $noteg = (($donnees['qualite']*$coef_qualite)+((5-$donnees['risque_depose'])*$coef_depose)+((5-$donnees['complexite_traitement'])*$coef_traitement)+((5-$donnees['complexite_stockage'])*$coef_stockage))/($coef_qualite+$coef_depose+$coef_traitement+$coef_stockage);
             echo(round($noteg,3));
             ?></td>
+            <td><button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+</button></td>
             </tr>
 
 
@@ -349,6 +358,9 @@ if($_GET['rtypo'] == 0 AND $_GET['rcorps'] > 0 ){
             $noteg = (($donnees['qualite']*$coef_qualite)+((5-$donnees['risque_depose'])*$coef_depose)+((5-$donnees['complexite_traitement'])*$coef_traitement)+((5-$donnees['complexite_stockage'])*$coef_stockage))/($coef_qualite+$coef_depose+$coef_traitement+$coef_stockage);
             echo(round($noteg,3));
             ?></td>
+            <td><button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+</button></td>
             </tr>
 
 
