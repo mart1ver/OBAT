@@ -210,7 +210,7 @@ $photo = $donnees['photo'] ;
 
 <br>
 
-<button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button><br>
+<button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button>&nbsp
 </form>
 
 
@@ -219,7 +219,7 @@ $photo = $donnees['photo'] ;
  <input id="pid" name ="pid"  type="hidden"  value="<?php echo($_GET['pid']); ?>">
    <input id="cid" name ="cid"  type="hidden"  value="<?php echo($_GET['cid']); ?>">
     <input id="fid" name ="fid"  type="hidden"  value="<?php echo($_GET['fid']); ?>">
-<button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button><br>
+<button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button>&nbsp
 </form>
 
 
