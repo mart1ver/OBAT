@@ -159,6 +159,7 @@ $req->execute(array('pid' => $_POST['pid'],'becen' => $_POST['bat']."|".$_POST['
     
     
    $req->closeCursor();
+   $message = 'update avec image !';
 
             }
             else
@@ -241,6 +242,7 @@ $req->execute(array('pid' => $_POST['pid'],'becen' => $_POST['bat']."|".$_POST['
     
     
    $req->closeCursor();
+    $message = 'update sans image !';
   }
 }
 
