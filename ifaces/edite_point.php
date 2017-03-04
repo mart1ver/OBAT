@@ -193,11 +193,15 @@ $photo = $donnees['photo'] ;
 <div class="row">
 <div class="col-md-6">
   <label for="remarques">Remarques:&nbsp</label>
-        <input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" >
+        <input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" ><br>
+        <label for="fichier">Photo:</label><input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+            <input name="fichier" type="file" id="fichier_a_uploader"
+            accept="image/*"  
+            /><br>
 </div>
 <div class="col-md-5">
-<label for="fichier">Photo:</label> 
- <a href="../images/images/<?php echo($photo)?>"><img src="../images/images/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> </a> 
+<label for="photo">Photo:</label> 
+ <a href="../images/images/<?php echo($photo)?>"><img name="photo "id="photo" src="../images/images/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> </a> 
  </div>
          
       
