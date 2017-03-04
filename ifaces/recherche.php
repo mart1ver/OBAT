@@ -205,10 +205,10 @@ $req2->closeCursor(); // Termine le traitement de la requête
                 <tr>
                     <th>#</th>
                     <th>Date de création</th>
-                    <th>Coordnées</th>
+                    <th>Coordonées</th>
                     <th>Type d'objet ou de materiaux</th>
                     <th>Typologie</th>
-                    <th>Corp de metier</th>    
+                    <th>Corps de metier</th>    
                     <th>Note globale</th> 
                     <th></th>        
                 </tr>
@@ -281,10 +281,13 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                             <td><?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
+
                 echo(round($noteg, 3));
                         ?></td>
                             <td>
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                               <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
+                                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                               </a> 
                             </td>
                         </tr>
         <?php
@@ -305,7 +308,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                 echo(round($noteg, 3));
                 ?></td>
                                 <td>
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                   <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
+                                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                               </a> 
                                 </td>
                             </tr>
             <?php
@@ -327,7 +332,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                 echo(round($noteg, 3));
                 ?></td>
                                 <td>
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                  <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
+                                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                               </a> 
                                 </td>
                             </tr>
             <?php
@@ -349,7 +356,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                 echo(round($noteg, 3));
                 ?></td>
                                 <td>
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
+                                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                               </a> 
                                 </td>
                             </tr>
 
