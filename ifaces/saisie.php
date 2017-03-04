@@ -1,7 +1,7 @@
 <?php session_start(); 
 
 require_once('../moteur/dbconfig.php');
-
+require_once('../moteur/uploadPhotoConfig.php');
 include "tete.php" ;
 // on extrait le nom du chantier
            
@@ -217,7 +217,10 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 </div>
 </div>
 </div>
-<label for="fileToUpload">Photo:</label><input name="fileToUpload" id="fileToUpload" type="file"  ><br>
+<label for="fichier">Photo:</label><input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+            <input name="fichier" type="file" id="fichier_a_uploader"
+            accept="image/*"  
+            /><br>
         <label for="remarques">Remarques:&nbsp</label><input name="remarques"  id="remarques" type="text" size="50" >
       </form>
       </div>
