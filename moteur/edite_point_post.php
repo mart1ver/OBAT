@@ -150,7 +150,7 @@ comm_risque_depose = :comm_risque_depose,
 comm_complexite_traitement = :comm_complexite_traitement,
 comm_complexite_stockage = :comm_complexite_stockage,
 comm_qualite = :comm_qualite,
-remarque = :remarque
+remarque = :remarque,
 photo = :photo
 WHERE  id = :pid ');
 
