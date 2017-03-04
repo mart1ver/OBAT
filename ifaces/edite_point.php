@@ -189,7 +189,7 @@ $photo = $donnees['photo'] ;
 </div>
 </div>
 </div>
-<label for="fileToUpload">Photo:</label> <?php echo($photo)?><br>
+<label for="fileToUpload">Photo:</label>  <img src="../images/images/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> <br>
         <label for="remarques">Remarques:&nbsp</label>
         <input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" >
       
