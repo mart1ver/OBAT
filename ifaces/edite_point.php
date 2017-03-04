@@ -76,7 +76,7 @@ $photo = $donnees['photo'] ;
 
 
 
-<form name="formspot" id="formspot"  action="../moteur/edite_point_post.php" method="post">
+<form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/edite_point_post.php" method="post">
   
 
         <input type="hidden" id="coordos" name="coordos"> 
@@ -201,7 +201,7 @@ $photo = $donnees['photo'] ;
 </div>
 <div class="col-md-5">
 <label for="photo">Photo:</label> 
- <a href="../images/images/<?php echo($photo)?>"><img name="photo "id="photo" src="../images/images/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> </a> 
+ <a href="../images/images/<?php echo($photo)?>"><img name="photo"id="photo" src="../images/images/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> </a> 
  </div>
          
       
