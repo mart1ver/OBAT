@@ -189,15 +189,23 @@ $photo = $donnees['photo'] ;
 </div>
 </div>
 </div>
+
+<div class="row">
+<div class="col-md-6">
+  <label for="remarques">Remarques:&nbsp</label>
+        <input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" >
+</div>
+<div class="col-md-5">
 <label for="fichier">Photo:</label> 
  <a href="../images/images/<?php echo($photo)?>"><img src="../images/images/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> </a> 
- <br>
-        <label for="remarques">Remarques:&nbsp</label>
-        <input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" >
+ </div>
+         
       
 
+</div>
 
 <br>
+
 <button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button><br>
 </form>
 
