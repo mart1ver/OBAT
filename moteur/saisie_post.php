@@ -208,7 +208,7 @@ if (isset($_POST['materiaux'])) {
 
 
 // Redirection du visiteur vers la page de saisie
- header( "Location:../ifaces/saisie.php?id=".$_POST['cid']."&fid=".$_POST['fid']."&msg="$message);
+ header( "Location:../ifaces/saisie.php?id=".$_POST['cid']."&fid=".$_POST['fid']."&msg=".$message);
 
 
           
