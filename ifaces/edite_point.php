@@ -193,11 +193,15 @@ $photo = $donnees['photo'] ;
 <div class="row">
 <div class="col-md-6">
   <label for="remarques">Remarques:&nbsp</label>
-        <input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" >
+        <input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" ><br>
+        <label for="fichier">Photo:</label><input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+            <input name="fichier" type="file" id="fichier_a_uploader"
+            accept="image/*"  
+            /><br>
 </div>
 <div class="col-md-5">
-<label for="fichier">Photo:</label> 
- <a href="../images/images/<?php echo($photo)?>"><img src="../images/images/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> </a> 
+<label for="photo">Photo:</label> 
+ <a href="../images/images/<?php echo($photo)?>"><img name="photo "id="photo" src="../images/images/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> </a> 
  </div>
          
       
@@ -206,7 +210,7 @@ $photo = $donnees['photo'] ;
 
 <br>
 
-<button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button><br>
+<button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button>&nbsp
 </form>
 
 
@@ -215,7 +219,7 @@ $photo = $donnees['photo'] ;
  <input id="pid" name ="pid"  type="hidden"  value="<?php echo($_GET['pid']); ?>">
    <input id="cid" name ="cid"  type="hidden"  value="<?php echo($_GET['cid']); ?>">
     <input id="fid" name ="fid"  type="hidden"  value="<?php echo($_GET['fid']); ?>">
-<button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button><br>
+<button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button>&nbsp
 </form>
 
 
