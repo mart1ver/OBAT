@@ -6,7 +6,7 @@ require_once('../moteur/dbconfig.php');
 ?>
 
     <div class="container">
-        <h1>Modification du point N°:<?php echo($_GET['pid']); ?></h1> 
+        <h1>Visualisation du point N°:<?php echo($_GET['pid']); ?></h1> 
          <div class="panel-heading">Vous vous apretez à éditer ou supprimer un point</div>
         
       <div class="panel-body">
@@ -83,14 +83,14 @@ $photo = $donnees['photo'] ;
         <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['cid']); ?>"> 
         <input type="hidden" id="fid" name="fid" value="<?php echo($_GET['fid']); ?>"> 
         <input type="hidden" id="pid" name="pid" value="<?php echo($_GET['pid']); ?>"> 
-        <label for="bat">localisation:&nbsp</label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" value="<?php echo($bat);?>" ><input type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6" value="<?php echo($entree);?>"><input type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" value="<?php echo($cage);?>"><input type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6" value="<?php echo($etage);?>"><input type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6" value="<?php echo($numero);?>"><br>
+        <label for="bat">localisation:&nbsp</label><input disabled type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" value="<?php echo($bat);?>" ><input disabled type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6" value="<?php echo($entree);?>"><input disabled type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" value="<?php echo($cage);?>"><input  disabled type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6" value="<?php echo($etage);?>"><input disabled type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6" value="<?php echo($numero);?>"><br>
         
 
 
 
         
 
-        <label for="materiaux">Matériaux:&nbsp </label><select name="materiaux" id="materiaux"  onchange="document.getElementById('objet').disabled = true; document.getElementById('objet').value = '';"> 
+        <label for="materiaux">Matériaux:&nbsp </label><select disabled name="materiaux" id="materiaux"  onchange="document.getElementById('objet').disabled = true; document.getElementById('objet').value = '';"> 
 <option value="0" >-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -112,11 +112,9 @@ $photo = $donnees['photo'] ;
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 </select>
-<a href="edition_materiaux.php?saisie=1&cid=<?php echo($_GET['id']);?>&fid=<?php echo($_GET['fid']);?>">
-<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<label for="objet">  &nbspMateriels:&nbsp </label><select name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
+<label for="objet">  &nbspMateriels:&nbsp </label><select disabled name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
 <option value="0" >-</option>
 <?php 
             // On recupère tout le contenu de la table chantiers
@@ -138,13 +136,10 @@ $photo = $donnees['photo'] ;
   $req->closeCursor(); // Termine le traitement de la requête ?>
 
 </select>
-<a href="edition_materiels.php?saisie=1&cid=<?php echo($_GET['id']);?>&fid=<?php echo($_GET['fid']);?>">
-<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-</a>
 <br>
         
-        <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" value="<?php echo($description) ;?>"><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="<?php echo($quantite);?>" ><br>
-        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  placeholder="cm." value="<?php echo($lo);?>" ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0"  placeholder="cm." value="<?php echo($la);?>"><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0"  placeholder="cm." value="<?php echo($ha);?>"><br><br>
+        <label for="description">Description:&nbsp</label><input disabled name="description" id="description" type="text" size="35" value="<?php echo($description) ;?>"><label for="quantite">&nbspQuantité:&nbsp</label><input disabled name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="<?php echo($quantite);?>" ><br>
+        <label for="longueur">Longueur:&nbsp</label><input disabled type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  placeholder="cm." value="<?php echo($lo);?>" ><label for="largeur">&nbspLargeur:&nbsp</label><input disabled type="number" name="largeur" id="largeur" style="width: 50Px;" min="0"  placeholder="cm." value="<?php echo($la);?>"><label for="hauteur"> &nbspHauteur:&nbsp</label><input disabled type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0"  placeholder="cm." value="<?php echo($ha);?>"><br><br>
         
 
 
@@ -156,7 +151,7 @@ $photo = $donnees['photo'] ;
   <div class="col-md-11">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="qualite">Qualité:</label> <input  type="range"  style="width: 150px;display: inline;"  name="qualite" id="qualite" value="<?php echo($qualite);?>" min="0" max="5" onchange="updatenote_qualite(this.value)"><b>&nbsp<font name="label_qualite" id="label_qualite" size="4"><?php echo($qualite);?></font><font size="4">/5</font></b><br><label for="c2">commentaire:&nbsp</label><input name="c1" id="c1" type="text" value="<?php echo($comm_qualite);?>" ><br>
+        <label for="qualite">Qualité:</label> <input disabled type="range"  style="width: 150px;display: inline;"  name="qualite" id="qualite" value="<?php echo($qualite);?>" min="0" max="5" onchange="updatenote_qualite(this.value)"><b>&nbsp<font name="label_qualite" id="label_qualite" size="4"><?php echo($qualite);?></font><font size="4">/5</font></b><br><label for="c2">commentaire:&nbsp</label><input disabled name="c1" id="c1" type="text" value="<?php echo($comm_qualite);?>" ><br>
  </div>
 </div>
 </div>
@@ -166,7 +161,7 @@ $photo = $donnees['photo'] ;
   <div class="col-md-11">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="risque">Risque dépose: </label> <input type="range" style="width: 150px;display: inline;" name="risque" id="risque" value="<?php echo($risque_depose);?>" min="0" max="5" onchange="updatenote_risque(this.value)"><b>&nbsp<font name="label_risque" id="label_risque" size="4"><?php echo($risque_depose);?></font><font size="4">/5</font></b><br><label for="c2">commentaire:&nbsp</label><input type="text" name="c2" id="c2" value="<?php echo($comm_risque_depose);?>" ><br>
+        <label for="risque">Risque dépose: </label> <input disabled type="range" style="width: 150px;display: inline;" name="risque" id="risque" value="<?php echo($risque_depose);?>" min="0" max="5" onchange="updatenote_risque(this.value)"><b>&nbsp<font name="label_risque" id="label_risque" size="4"><?php echo($risque_depose);?></font><font size="4">/5</font></b><br><label for="c2">commentaire:&nbsp</label><input disabled type="text" name="c2" id="c2" value="<?php echo($comm_risque_depose);?>" ><br>
  </div>
 </div>  
 </div>
@@ -175,7 +170,7 @@ $photo = $donnees['photo'] ;
   <div class="col-md-11">
 <div class="panel panel-default">
   <div class="panel-body">
-        <label for="traitement">Compléxité traitement: </label><input type="range" style="width: 150px;display: inline;" name="traitement"  id="traitement" value="<?php echo($complexite_traitement);?>" min="0" max="5" onchange="updatenote_traitement(this.value)"><b>&nbsp<font name="label_traitement" id="label_traitement" size="4"><?php echo($complexite_traitement);?></font><font size="4">/5</font></b><br><label for="c3">commentaire:&nbsp</label><input type="text" name="c3" id="c3" value="<?php echo($comm_complexite_traitement);?>" ><br>
+        <label for="traitement">Compléxité traitement: </label><input disabled type="range" style="width: 150px;display: inline;" name="traitement"  id="traitement" value="<?php echo($complexite_traitement);?>" min="0" max="5" onchange="updatenote_traitement(this.value)"><b>&nbsp<font name="label_traitement" id="label_traitement" size="4"><?php echo($complexite_traitement);?></font><font size="4">/5</font></b><br><label for="c3">commentaire:&nbsp</label><input disabled type="text" name="c3" id="c3" value="<?php echo($comm_complexite_traitement);?>" ><br>
  </div>
 </div>
    </div>
@@ -184,7 +179,7 @@ $photo = $donnees['photo'] ;
   <div class="col-md-11">
 <div class="panel panel-default">
   <div class="panel-body">
-    <label for="stockage">Compléxité conditionnement et stockage: </label> <input type="range" style="width: 150px;display: inline;" name="stockage" id="stockage" value="<?php echo($complexite_stockage);?>" min="0" max="5" onchange="updatenote_stockage(this.value)"><b>&nbsp<font name="label_stockage" id="label_stockage" size="4"><?php echo($complexite_stockage);?></font><font size="4">/5</font></b><br><label for="c4">commentaire:&nbsp</label><input type="text" name="c4" id="c4" value="<?php echo($comm_complexite_stockage);?>" ><br>
+    <label for="stockage">Compléxité conditionnement et stockage: </label> <input disabled type="range" style="width: 150px;display: inline;" name="stockage" id="stockage" value="<?php echo($complexite_stockage);?>" min="0" max="5" onchange="updatenote_stockage(this.value)"><b>&nbsp<font name="label_stockage" id="label_stockage" size="4"><?php echo($complexite_stockage);?></font><font size="4">/5</font></b><br><label for="c4">commentaire:&nbsp</label><input disabled type="text" name="c4" id="c4" value="<?php echo($comm_complexite_stockage);?>" ><br>
   </div>
 </div>
 </div>
@@ -193,11 +188,8 @@ $photo = $donnees['photo'] ;
 <div class="row">
 <div class="col-md-6">
   <label for="remarques">Remarques:&nbsp</label>
-        <input name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" ><br>
-        <label for="fichier">Photo:</label><input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
-            <input name="fichier" type="file" id="fichier_a_uploader"
-            accept="image/*"  
-            /><br>
+        <input disabled name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" ><br>
+       <br>
 </div>
 <div class="col-md-5">
 <label for="photo">Photo:</label> 

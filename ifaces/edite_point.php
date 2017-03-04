@@ -199,8 +199,7 @@ $photo = $donnees['photo'] ;
             accept="image/*"  
             /><br>
 </div>
-<div class="col-md-5">
-<label for="photo">Photo:</label> 
+<div class="col-md-5"> 
  <a href="../images/images/<?php echo($photo)?>"><img name="photo"id="photo" src="../images/images/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> </a> 
  </div>
          
