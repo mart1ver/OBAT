@@ -174,7 +174,7 @@ if (isset($_POST['materiaux'])) {
   }
   else
   {
-    // Sino on inserre le point sans image..
+    // Sinon on inserre le point sans image..
    // Connexion à la base de données
             try
 {
