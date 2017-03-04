@@ -119,7 +119,7 @@ if(!empty($_POST))
 
 // Insertion du post à l'aide d'une requête préparée
     $req = $bdd->prepare('INSERT INTO folios (nom, id_chantier, commentaire, nom_fichier) VALUES(?, ?, ?, ?)');
-    $req->execute(array($_POST['nom'], $_POST['id'] , $_POST['commentaire'], TARGET.$nomImage));
+    $req->execute(array($_POST['nom'], $_POST['id'] , $_POST['commentaire'], $nomImage));
     $req->closeCursor();
 
             }
