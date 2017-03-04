@@ -1,6 +1,7 @@
 <?php session_start(); 
 
 require_once('../moteur/dbconfig.php');
+require_once('../moteur/uploadFolioConfig.php');
 $id = $_POST['id'];
 //Vérification des autorisations de l'utilisateur et des variables de session requisent pour l'affichage de cette page:
     include "tete.php"; ?>
@@ -50,9 +51,11 @@ $id = $_POST['id'];
     <label for="nom">Nom:</label><input type="text"  name="nom" id="nom" class="form-control " required autofocus>
   <label for="commentaire">Commentaire:</label><input type="text" name="commentaire" id="commentaire" class="form-control " required >
   <!-- MAX_FILE_SIZE doit précéder le champ input de type file -->
-  <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
+  <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
   <!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->
-  <label for="userfile">Folios:</label> <input name="fileToUpload" id="fileToUpload" type="file" required />
+  <label for="fichier">Folios:</label> <input name="fichier" type="file" id="fichier_a_uploader"
+            accept="image/*"  required
+            />
   
 
 
