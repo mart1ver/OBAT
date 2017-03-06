@@ -57,8 +57,8 @@
 // Constantes
 define('TARGET', '../images/photos/');    // Repertoire cible
 define('MAX_SIZE', 1000000);    // Taille max en octets du fichier
-define('WIDTH_MAX', 2000);    // Largeur max de l'image en pixels
-define('HEIGHT_MAX', 2000);    // Hauteur max de l'image en pixels
+define('WIDTH_MAX', 4200);    // Largeur max de l'image en pixels
+define('HEIGHT_MAX', 4200);    // Hauteur max de l'image en pixels
  
 // Tableaux de donnees
 $tabExt = array('jpg','gif','png','jpeg');    // Extensions autorisees
