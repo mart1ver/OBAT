@@ -45,8 +45,9 @@ if (!$resultat)
 {
 	$req->closeCursor();
 	// il faut encore verifier les acces visu...
-    header ('location:../ifaces/login.php?err=Mauvais identifiant ou mot de passe !');
-
+    //header ('location:../ifaces/login.php?err=Mauvais identifiant ou mot de passe !');
+ echo $_POST['login'];
+ echo $_POST['pass']
 }
 else
 {
