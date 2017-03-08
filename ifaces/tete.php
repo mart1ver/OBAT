@@ -49,7 +49,7 @@ $(function(){
     <!-- Fixed navbar -->
     <?php 
 // on affiche la navbar que pour le root
-    if($_SESSION['user'] === "root";){
+    if($_SESSION['user'] === "root"){
      ?>
     
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-right">
