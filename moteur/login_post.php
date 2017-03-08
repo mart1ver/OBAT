@@ -70,7 +70,7 @@ else{
 
 $_SESSION['user'] ="pasroot";
 $req->closeCursor();
-    header ('location:../index.php');
+    header ('location:../ifaces/recherche.php');
 }
 
 
