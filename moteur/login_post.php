@@ -37,7 +37,7 @@ $req->closeCursor();
 $req = $bdd->prepare('SELECT * FROM config WHERE login_root = :login_root AND mdp_root = :mdp_root');
 $req->execute(array(
     'login_root' => $_POST['login'],
-    'mdp_root' => $_POST['pass'];
+    'mdp_root' => $_POST['pass']));
     
 $resultat = $req->fetch();
  
