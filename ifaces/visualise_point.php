@@ -197,12 +197,12 @@ $photo = $donnees['photo'] ;
 <div class="row">
 <div class="col-md-6">
   <label for="remarques">Remarques:&nbsp</label>
-        <input disabled name="remarques"  id="remarques" type="text" size="50" value="<?php echo($remarque);?>" ><br>
+        <p id="remarques" name="remarques"><?php echo($remarque);?></p><br>
        <br>
 </div>
 <div class="col-md-5">
 <label for="photo">Photo:</label> 
- <a href="../images/photos/<?php echo($photo)?>"><img name="photo"id="photo" src="../images/photos/<?php echo($photo)?>" alt="Pas de photo pour cet objet" height="80" width="100"> </a> 
+ <a href="../images/photos/<?php echo($photo)?>"><img name="photo"id="photo" src="../images/photos/<?php echo($photo)?>"  height="80" width="100"> </a> 
  </div>
          
       
