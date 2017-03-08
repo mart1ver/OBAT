@@ -180,6 +180,7 @@ echo($donnees2['fid']);
                 <li><a href="chantiers.php?nom=&adresse=&commentaire=">Éditer les chantiers</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="notes.php">Éditer le calcul des notes</a></li>
+                 <li><a href="passadmin.php">Éditer les identifiants administrateur</a></li>
               </ul>
             </li>
           </ul>
