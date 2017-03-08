@@ -203,8 +203,10 @@ $photo = $donnees['photo'] ;
        <br>
 </div>
 <div class="col-md-5">
+<?php if($photo == ''){}else{ ?>
 <label for="photo">Photo:</label> 
  <a href="../images/photos/<?php echo($photo)?>"><img name="photo"id="photo" src="../images/photos/<?php echo($photo)?>"  height="80" width="100"> </a> 
+<?php }?>
  </div>
          
       
