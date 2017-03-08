@@ -73,7 +73,7 @@ $_SESSION['user'] ="pasroot";
 
 $req2 = $bdd->prepare('SELECT MIN(id) FROM folios WHERE id_chantier = :id_chantier');
 $req2->execute(array(
-    'id_chantier' => $resultat['id'],
+    'id_chantier' => $resultat['id']));
     
     
 $resultat2 = $req2->fetch();
