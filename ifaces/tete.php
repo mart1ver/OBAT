@@ -193,7 +193,7 @@ echo($donnees2['fid']);
         </div><!--/.nav-collapse -->
       </div><!--/.container -->
     </nav>
-    <?php }else{if($_SESSION['user'] === "pasroot";){
+    <?php }else{if($_SESSION['user'] === "pasroot"){
 
 
       //ici le code pour 'pasroot'
