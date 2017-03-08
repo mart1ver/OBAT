@@ -70,7 +70,18 @@ else{
 
 $_SESSION['user'] ="pasroot";
 //on détermine ll'id du premier folio de ce chantier
-    header ('location:../ifaces/recherche.php?id='.$resultat['id'].'&fid=1&rcorps=0&rtypo=0&rm=1&ro=1');
+
+$req2 = $bdd->prepare('SELECT MIN(id) FROM folios WHERE id_chantier = :id_chantier');
+$req2->execute(array(
+    'id_chantier' => $resultat['id'],
+    
+    
+$resultat2 = $req2->fetch();
+
+//SELECT MIN(id) FROM folios WHERE id_chantier = 2   MIN(id)
+
+
+    header ('location:../ifaces/recherche.php?id='.$resultat['id'].'&fid='.$resultat2['MIN(id)'].'&rcorps=0&rtypo=0&rm=1&ro=1');
     $req->closeCursor();
 }
 
