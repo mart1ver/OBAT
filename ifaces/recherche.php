@@ -112,11 +112,11 @@ $req2->closeCursor(); // Termine le traitement de la requête
 
 
 
-    <div id="mouse-position"></div>
+    <div id="mouse-position" hidden></div>
     <div class="row">
         <div class="col-md-9 col-md-offset-1">
 
-            <p><b>Filtrer les spots sur ce folio:  <br>  corps de metier: <select class="chzn-select" name="forma" onchange="location = this.value;">
+            <p><b>Filtrer les spots sur ce folio: corps de metier: <select class="chzn-select" name="forma" onchange="location = this.value;">
                         <option value="recherche.php?id=<?php echo $_GET["id"]; ?>&fid=<?php echo($_GET["fid"]); ?>&rcorps=<?php echo('0'); ?>&rtypo=<?php echo($_GET["rtypo"]); ?>&ro=<?php echo($_GET["ro"]); ?>&rm=<?php echo($_GET["rm"]); ?>"<?php
                                 if ($donnees['id'] == $_GET["rcorps"]) {
                                     echo'selected="selected"';
@@ -140,31 +140,6 @@ $req2->closeCursor(); // Termine le traitement de la requête
                         }
                                     ?>><?php echo($donnees['nom']); ?></option>
                                 <?php } ?>
-
-                    </select>, Typologies:<select class="chzn-select" name="forma" onchange="location = this.value;">
-                        <option value="recherche.php?id=<?php echo $_GET["id"]; ?>&fid=<?php echo($_GET["fid"]); ?>&rcorps=<?php echo($_GET["rcorps"]); ?>&rtypo=<?php echo('0'); ?>&ro=<?php echo($_GET["ro"]); ?>&rm=<?php echo($_GET["rm"]); ?>"<?php
-                                if ($donnees['id'] == $_GET["rtypo"]) {
-                                    echo'selected="selected"';
-                                }
-                                ?>>-</option>
-                                <?php
-                                // On recupère tout le contenu de la table chantiers
-
-                                $req = $bdd->prepare("SELECT * FROM typologies ");
-                                $req->execute();
-
-
-                                // On affiche chaque entree une à une
-                                while ($donnees = $req->fetch()) {
-                                    ?>
-
-
-                            <option value="recherche.php?id=<?php echo $_GET["id"]; ?>&fid=<?php echo($_GET["fid"]); ?>&rcorps=<?php echo($_GET["rcorps"]); ?>&rtypo=<?php echo($donnees['id']); ?>&ro=<?php echo($_GET["ro"]); ?>&rm=<?php echo($_GET["rm"]); ?>"<?php
-                            if ($donnees['id'] == $_GET["rtypo"]) {
-                                echo'selected="selected"';
-                            }
-                            ?>><?php echo($donnees['nom']); ?></option>
-                        <?php } ?>
 
                     </select>
                     <label><input type="checkbox" id="objets" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"]; ?>&fid=<?php echo($_GET["fid"]); ?>&fid=<?php echo($_GET["fid"]); ?>&rcorps=<?php echo($_GET["rcorps"]); ?>&rtypo=<?php echo($_GET["rtypo"]); ?>&ro=<?php
