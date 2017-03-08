@@ -7,8 +7,8 @@ require_once('../moteur/dbconfig.php');
 
     <div class="container">
         <h1>Visualisation du point N°:<?php echo($_GET['pid']); ?></h1> 
-         <div class="panel-heading">Vous vous apretez à éditer ou supprimer un point</div>
-        
+         <div class="panel-heading"></div>
+        <div class="col-md-7">
       <div class="panel-body">
         <div class="row">
           
@@ -83,6 +83,8 @@ $photo = $donnees['photo'] ;
         <input type="hidden" id="cid" name="cid" value="<?php echo($_GET['cid']); ?>"> 
         <input type="hidden" id="fid" name="fid" value="<?php echo($_GET['fid']); ?>"> 
         <input type="hidden" id="pid" name="pid" value="<?php echo($_GET['pid']); ?>"> 
+        <div class="panel panel-default">
+  <div class="panel-body">
         <label for="bat">localisation:&nbsp</label><input disabled type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" value="<?php echo($bat);?>" ><input disabled type="text" name="entree" id="entree" placeholder="Entrée" maxlength="6" size="6" value="<?php echo($entree);?>"><input disabled type="text" name="cage" id="cage" placeholder="Cage" maxlength="6" size="6" value="<?php echo($cage);?>"><input  disabled type="text" name="etage" id="etage" placeholder="Étage" maxlength="6" size="6" value="<?php echo($etage);?>"><input disabled type="text" name="numero" id="numero" placeholder="Numéro" maxlength="6" size="6" value="<?php echo($numero);?>"><br>
         
 
@@ -146,13 +148,13 @@ $photo = $donnees['photo'] ;
         <br>
         
 
-
+</div></div></div>
 
 
 
 
 <div class="row">
-  <div class="col-md-11">
+  <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
         <label for="qualite">Qualité:</label> <input disabled type="range"  style="width: 150px;display: inline;"  name="qualite" id="qualite" value="<?php echo($qualite);?>" min="0" max="5" onchange="updatenote_qualite(this.value)"><b>&nbsp<font name="label_qualite" id="label_qualite" size="4"><?php echo($qualite);?></font><font size="4">/5</font></b><br>
@@ -164,7 +166,7 @@ $photo = $donnees['photo'] ;
 </div>
 
 <div class="row">
-  <div class="col-md-11">
+  <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
         <label for="risque">Risque dépose: </label> <input disabled type="range" style="width: 150px;display: inline;" name="risque" id="risque" value="<?php echo($risque_depose);?>" min="0" max="5" onchange="updatenote_risque(this.value)"><b>&nbsp<font name="label_risque" id="label_risque" size="4"><?php echo($risque_depose);?></font><font size="4">/5</font></b><br>
@@ -174,7 +176,7 @@ $photo = $donnees['photo'] ;
 </div>
 </div>
 <div class="row">
-  <div class="col-md-11">
+  <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
         <label for="traitement">Compléxité traitement: </label><input disabled type="range" style="width: 150px;display: inline;" name="traitement"  id="traitement" value="<?php echo($complexite_traitement);?>" min="0" max="5" onchange="updatenote_traitement(this.value)"><b>&nbsp<font name="label_traitement" id="label_traitement" size="4"><?php echo($complexite_traitement);?></font><font size="4">/5</font></b><br>
@@ -184,7 +186,7 @@ $photo = $donnees['photo'] ;
    </div>
 </div>     
 <div class="row">
-  <div class="col-md-11">
+  <div class="col-md-7">
 <div class="panel panel-default">
   <div class="panel-body">
     <label for="stockage">Compléxité conditionnement et stockage: </label> <input disabled type="range" style="width: 150px;display: inline;" name="stockage" id="stockage" value="<?php echo($complexite_stockage);?>" min="0" max="5" onchange="updatenote_stockage(this.value)"><b>&nbsp<font name="label_stockage" id="label_stockage" size="4"><?php echo($complexite_stockage);?></font><font size="4">/5</font></b><br>
