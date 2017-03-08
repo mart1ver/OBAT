@@ -63,7 +63,7 @@ if (isset($_GET['msg'])) echo "<br><div class='alert alert-success alert-dismiss
             <h4>Bienvenue.</h4>
             <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="Identifiant" />
             </br>
-            <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="Mot de pasee" />
+            <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="Mot de pasee" />
             </br>
             <div class="wrapper">
             <span class="group-btn">     
