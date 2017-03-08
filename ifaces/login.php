@@ -68,7 +68,7 @@ if (isset($_GET['msg'])) echo "<br><div class='alert alert-success alert-dismiss
             </br>
             <div class="wrapper">
             <span class="group-btn">     
-                <button name="login" class="btn btn-primary btn-md">login</button>
+                <button name="go" class="btn btn-primary btn-md">login</button>
 
             </span>
             </form>
