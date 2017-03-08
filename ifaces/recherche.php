@@ -519,7 +519,7 @@ while ($donnees = $req->fetch()) {
     ?>
 
     <?php echo("a" . $donnees['id']); ?>.setStyle(new ol.style.Style({
-            visibility: 'hidden',
+            opacity : 0,
             image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
 
     <?php
