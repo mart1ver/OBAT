@@ -139,9 +139,9 @@ $photo = $donnees['photo'] ;
 <br>
         
         <label for="description">Description:&nbsp</label><p id="description" name="description"><?php echo($description) ;?></p>
-        <label>Longueur:&nbsp><?php echo($lo);?></label
+        <label>Longueur:&nbsp><?php echo($lo);?></label>
         <label>&nbspLargeur:&nbsp<?php echo($la);?></label>
-        <label> &nbspHauteur:&nbsp<?php echo($ha);?></label>
+        <label>&nbspHauteur:&nbsp<?php echo($ha);?></label>
 <label for="quantite">&nbspQuantité:&nbsp</label><input disabled name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="<?php echo($quantite);?>" ><br>
         <br><br>
         
