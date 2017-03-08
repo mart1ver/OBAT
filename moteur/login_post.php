@@ -44,14 +44,41 @@ $resultat = $req->fetch();
 if (!$resultat)
 {
 	$req->closeCursor();
+
+
+	// Vérification des identifiants pour les non root
+$req = $bdd->prepare('SELECT * FROM chantiers WHERE login = :login AND pass = :pass');
+$req->execute(array(
+    'login' => $_POST['login'],
+    'pass' => $_POST['pass']));
+    
+$resultat = $req->fetch();
+ 
+if (!$resultat)
+{
+	$_SESSION['user'] ="none";
+	$req->closeCursor();
+
+
 	// il faut encore verifier les acces visu...
    header ('location:../ifaces/login.php?err=Mauvais identifiant ou mot de passe !');
- //echo $_POST['login'];
- //echo $_POST['pass'];
+
+
+
+}
+else{
+
+$_SESSION['user'] ="pasroot";
+$req->closeCursor();
+    header ('location:../index.php');
+}
+
+
+
 }
 else
 {
-$_SESSION['root'] ="oui";
+$_SESSION['user'] ="root";
 $req->closeCursor();
     header ('location:../index.php');
 }

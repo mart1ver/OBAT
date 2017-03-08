@@ -1,9 +1,10 @@
 
-
+<?php session_start(); 
+require_once('../moteur/dbconfig.php'); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
-<?php require_once('../moteur/dbconfig.php'); ?>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,6 +47,11 @@ $(function(){
   <body>
 
     <!-- Fixed navbar -->
+    <?php 
+// on affiche la navbar que pour le root
+    if($_SESSION['user'] === "root";){
+     ?>
+    
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-right">
       <div class="container">
         <div class="navbar-header">
@@ -187,6 +193,15 @@ echo($donnees2['fid']);
         </div><!--/.nav-collapse -->
       </div><!--/.container -->
     </nav>
+    <?php }else{if($_SESSION['user'] === "pasroot";){
+
+
+      //ici le code pour 'pasroot'
+    }else { header ('location:../moteur/destroy.php');}
+
+
+
+      }?>
  
 <br><br>
 <?php
