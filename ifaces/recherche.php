@@ -542,7 +542,7 @@ AND spots.id = :id_spot");
                    };
         $req2->closeCursor(); // Termine le traitement de la requête 
     } else {
-        $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
+        $req2 = $bdd->prepare("SELECT spots.id, corps.couleur ,corps.id AS corps
 FROM corps, spots, objets
 WHERE corps.id = objets.id_corp
 AND objets.id = spots.id_objets
