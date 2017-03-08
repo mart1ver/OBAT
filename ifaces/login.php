@@ -61,7 +61,7 @@ if (isset($_GET['msg'])) echo "<br><div class='alert alert-success alert-dismiss
         <div class="col-md-offset-4 col-md-3">
             <div class="form-login">
             <h4>Bienvenue.</h4>
-            <form action="../moteur/modification_chantier_post.php" method="post">
+            <form action="../moteur/login_post.php" method="post">
             <input type="text" id="login" name="login" class="form-control input-sm chat-input" placeholder="Identifiant" />
             </br>
             <input type="password" id="pass" name="pass" class="form-control input-sm chat-input" placeholder="Mot de pasee" />
