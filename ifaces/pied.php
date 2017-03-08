@@ -1,7 +1,8 @@
 
 <div class="container">
   <footer>
-        <p class="text-left">Obat. 2016</p>
+        <p class="text-right">Obat. 2016</p>
+        <p class="text-left"> <a href="../moteur/destroy.php">Déconection</a> </p>
     
 </footer> 
 </div>  
