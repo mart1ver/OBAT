@@ -536,7 +536,7 @@ AND spots.id = :id_spot");
 
         // On affiche chaque entree une à une
         while ($donnees2 = $req2->fetch()) {
-            if($rcorps =! $donnees2['corps']){echo('opacity : 0 ,' );};
+            if($rcorps == $donnees2['corps']){}else{echo('opacity : 0 ,' );};
             if($rm > 0){echo('opacity : 0 ,' );};
             echo('color:' . "'" . $donnees2['couleur'] . "'");
                    };
@@ -552,7 +552,7 @@ AND spots.id = :id_spot");
 
         // On affiche chaque entree une à une
         while ($donnees2 = $req2->fetch()) {
-            if($rcorps =! $donnees2['corps']){echo('opacity : 0 ,' );};
+            if($rcorps == $donnees2['corps']){}else{echo('opacity : 0 ,' );};
             if($ro > 0){echo('opacity : 0 ,' );};
             echo('color:' . "'" . $donnees2['couleur'] . "'");
         };
