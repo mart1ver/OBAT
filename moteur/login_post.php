@@ -69,8 +69,9 @@ if (!$resultat)
 else{
 
 $_SESSION['user'] ="pasroot";
-$req->closeCursor();
-    header ('location:../ifaces/recherche.php');
+//on détermine ll'id du premier folio de ce chantier
+    header ('location:../ifaces/recherche.php?id='.$resultat['id'].'&fid=1&rcorps=0&rtypo=0&rm=1&ro=1');
+    $req->closeCursor();
 }
 
 
