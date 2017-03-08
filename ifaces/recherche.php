@@ -551,6 +551,7 @@ AND spots.id = :id_spot");
 
         // On affiche chaque entree une à une
         while ($donnees2 = $req2->fetch()) {
+            if($ro > 0){echo('opacity : 0 ,' );};
             echo('color:' . "'" . $donnees2['couleur'] . "'");
         };
         $req2->closeCursor(); // Termine le traitement de la requête 
