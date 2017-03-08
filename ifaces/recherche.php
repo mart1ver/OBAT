@@ -180,9 +180,9 @@ $req2->closeCursor(); // Termine le traitement de la requête
                 <tr>
                     <th>#</th>
                     <th>Date de création</th>
-                    <th>Coordonées</th>
+                    
                     <th>Type d'objet ou de materiaux</th>
-                    <th>Typologie</th>
+                    
                     <th>Corps de metier</th>    
                     <th>Note globale</th> 
                     <th></th>        
@@ -249,9 +249,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                         <tr> 
                             <td><?php echo $donnees['id'] ?></td>
                             <td><?php echo $donnees['timestamp'] ?></td>
-                            <td><?php echo $donnees['coordos'] ?></td>
+                            
                             <td><?php echo ($nom) ?></td>
-                            <td><?php echo ($nom_typologie) ?></td>
+                            
                             <td><?php echo ($nom_corps) ?></td>
                             <td><?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
@@ -273,9 +273,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                             <tr> 
                                 <td><?php echo $donnees['id'] ?></td>
                                 <td><?php echo $donnees['timestamp'] ?></td>
-                                <td><?php echo $donnees['coordos'] ?></td>
+                                
                                 <td><?php echo ($nom) ?></td>
-                                <td><?php echo ($nom_typologie) ?></td>
+                                
                                 <td><?php echo ($nom_corps) ?></td>
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
@@ -297,9 +297,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                             <tr> 
                                 <td><?php echo $donnees['id'] ?></td>
                                 <td><?php echo $donnees['timestamp'] ?></td>
-                                <td><?php echo $donnees['coordos'] ?></td>
+                                
                                 <td><?php echo ($nom) ?></td>
-                                <td><?php echo ($nom_typologie) ?></td>
+                                
                                 <td><?php echo ($nom_corps) ?></td>
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
@@ -321,9 +321,9 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                             <tr> 
                                 <td><?php echo $donnees['id'] ?></td>
                                 <td><?php echo $donnees['timestamp'] ?></td>
-                                <td><?php echo $donnees['coordos'] ?></td>
+                                
                                 <td><?php echo ($nom) ?></td>
-                                <td><?php echo ($nom_typologie) ?></td>
+                                
                                 <td><?php echo ($nom_corps) ?></td>
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
@@ -351,8 +351,8 @@ $reponse->closeCursor(); // Termine le traitement de la requête
                     <th></th>
                     <th></th>
                     <th></th>
-                    <th></th>
-                    <th></th>
+                    
+                   
                     <th></th>
                     <th></th>
                     <th></th>
