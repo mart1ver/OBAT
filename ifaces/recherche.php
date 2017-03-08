@@ -521,7 +521,7 @@ while ($donnees = $req->fetch()) {
     <?php echo("a" . $donnees['id']); ?>.setStyle(new ol.style.Style({
            
             image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-                
+
 
     <?php
     if ($donnees['id_objets'] == 0) {
@@ -536,8 +536,10 @@ AND spots.id = :id_spot");
 
         // On affiche chaque entree une à une
         while ($donnees2 = $req2->fetch()) {
+            echo('opacity : 0 ,' );
+
             echo('color:' . "'" . $donnees2['couleur'] . "'");
-        };
+                   };
         $req2->closeCursor(); // Termine le traitement de la requête 
     } else {
         $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
