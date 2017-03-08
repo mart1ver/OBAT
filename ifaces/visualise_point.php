@@ -154,7 +154,7 @@ $photo = $donnees['photo'] ;
 
 
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
         <label for="qualite">Qualité:</label> <input disabled type="range"  style="width: 150px;display: inline;"  name="qualite" id="qualite" value="<?php echo($qualite);?>" min="0" max="5" onchange="updatenote_qualite(this.value)"><b>&nbsp<font name="label_qualite" id="label_qualite" size="4"><?php echo($qualite);?></font><font size="4">/5</font></b><br>
@@ -166,7 +166,7 @@ $photo = $donnees['photo'] ;
 </div>
 
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
         <label for="risque">Risque dépose: </label> <input disabled type="range" style="width: 150px;display: inline;" name="risque" id="risque" value="<?php echo($risque_depose);?>" min="0" max="5" onchange="updatenote_risque(this.value)"><b>&nbsp<font name="label_risque" id="label_risque" size="4"><?php echo($risque_depose);?></font><font size="4">/5</font></b><br>
@@ -176,7 +176,7 @@ $photo = $donnees['photo'] ;
 </div>
 </div>
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
         <label for="traitement">Compléxité traitement: </label><input disabled type="range" style="width: 150px;display: inline;" name="traitement"  id="traitement" value="<?php echo($complexite_traitement);?>" min="0" max="5" onchange="updatenote_traitement(this.value)"><b>&nbsp<font name="label_traitement" id="label_traitement" size="4"><?php echo($complexite_traitement);?></font><font size="4">/5</font></b><br>
@@ -186,7 +186,7 @@ $photo = $donnees['photo'] ;
    </div>
 </div>     
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
     <label for="stockage">Compléxité conditionnement et stockage: </label> <input disabled type="range" style="width: 150px;display: inline;" name="stockage" id="stockage" value="<?php echo($complexite_stockage);?>" min="0" max="5" onchange="updatenote_stockage(this.value)"><b>&nbsp<font name="label_stockage" id="label_stockage" size="4"><?php echo($complexite_stockage);?></font><font size="4">/5</font></b><br>
