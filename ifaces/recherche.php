@@ -526,7 +526,7 @@ while ($donnees = $req->fetch()) {
     <?php
     if ($donnees['id_objets'] == 0) {
 
-        $req2 = $bdd->prepare("SELECT spots.id, corps.couleur
+        $req2 = $bdd->prepare("SELECT spots.id, corps.couleur,corps.id AS corps
 FROM corps, spots, materiaux
 WHERE corps.id = materiaux.id_corp
 AND materiaux.id = spots.id_materiaux
@@ -536,6 +536,7 @@ AND spots.id = :id_spot");
 
         // On affiche chaque entree une à une
         while ($donnees2 = $req2->fetch()) {
+            if($rcorps =! $donnees2['corps']){echo('opacity : 0 ,' );};
             if($rm > 0){echo('opacity : 0 ,' );};
             echo('color:' . "'" . $donnees2['couleur'] . "'");
                    };
@@ -551,6 +552,7 @@ AND spots.id = :id_spot");
 
         // On affiche chaque entree une à une
         while ($donnees2 = $req2->fetch()) {
+            if($rcorps =! $donnees2['corps']){echo('opacity : 0 ,' );};
             if($ro > 0){echo('opacity : 0 ,' );};
             echo('color:' . "'" . $donnees2['couleur'] . "'");
         };
