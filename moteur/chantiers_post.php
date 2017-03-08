@@ -39,8 +39,8 @@
 // mot de passe crypté md5 
 
 // Insertion du post à l'aide d'une requête préparée
-    $req = $bdd->prepare('INSERT INTO chantiers (nom, adresse, commentaire, visible) VALUES(?, ?, ?, ?)');
-    $req->execute(array($_POST['nom'], $_POST['adresse'] , $_POST['commentaire'], "oui"));
+    $req = $bdd->prepare('INSERT INTO chantiers (nom, adresse, commentaire, visible, login, pass) VALUES(?, ?, ?, ?,?,?)');
+    $req->execute(array($_POST['nom'], $_POST['adresse'] , $_POST['commentaire'], "oui", $_POST['idclient'], $_POST['mdpclient']));
     $req->closeCursor();
 
 // Redirection du visiteur vers la page de gestion des affectation

@@ -17,9 +17,15 @@ include "tete.php" ?>
     <div class="col-md-4"><label for="adresse">Adresse:</label> <input type="text" value ="<?php echo $_GET['adresse']?>" name="adresse" id="adresse" class="form-control " required ></div>
     <div class="col-md-2"><label for="commentaire">commentaire:</label> <input type="text" value ="<?php echo $_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required ></div>
   
-  <div class="col-md-1"><br><button name="creer" class="btn btn-default">Créer!</button></div>
-</form>
+ 
 </div>
+<div class="row">
+  <div class="col-md-3"><label for="nom">Identifiant client:</label> <input type="text"                 value ="<?php echo $_GET['idclient']?>" name="idclient" id="idclient" class="form-control " required ></div>
+    <div class="col-md-4"><label for="adresse">Mot de passe client:</label> <input type="text" value ="<?php echo $_GET['mdpclient']?>" name="mdpclient" id="mdpclient" class="form-control " required ></div>
+
+</div>
+ <div class="col-md-1 col-md-offset-9"><br><button name="creer" class="btn btn-default">Créer!</button></div>
+</form>
       </div>
       <!-- Table -->
       <table class="table">
@@ -71,6 +77,8 @@ include "tete.php" ?>
 <form action="../moteur/chantier_visible.php" method="post">
 
   <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
+  <input type="hidden" name ="idclient" id="idclient" value="<?php echo $donnees['login']?>">
+  <input type="hidden" name ="mdpclient" id="mdpclient" value="<?php echo $donnees['pass']?>">
   <input type="hidden"name ="visible" id ="visible" value="<?php if ($donnees['visible'] == "oui") 
 {echo "non";}
 else 
