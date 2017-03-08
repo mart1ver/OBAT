@@ -521,7 +521,7 @@ while ($donnees = $req->fetch()) {
     <?php echo("a" . $donnees['id']); ?>.setStyle(new ol.style.Style({
            
             image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-                 opacity : 0,
+                
 
     <?php
     if ($donnees['id_objets'] == 0) {
