@@ -77,8 +77,7 @@ include "tete.php" ?>
 <form action="../moteur/chantier_visible.php" method="post">
 
   <input type="hidden" name ="id" id="id" value="<?php echo $donnees['id']?>">
-  <input type="hidden" name ="idclient" id="idclient" value="<?php echo $donnees['login']?>">
-  <input type="hidden" name ="mdpclient" id="mdpclient" value="<?php echo $donnees['pass']?>">
+  
   <input type="hidden"name ="visible" id ="visible" value="<?php if ($donnees['visible'] == "oui") 
 {echo "non";}
 else 
@@ -112,6 +111,8 @@ else // SINON
 <input type="hidden" name ="nom" id="nom" value="<?php echo $donnees['nom']?>">
 <input type="hidden" name ="adresse" id="adresse" value="<?php echo $donnees['adresse']?>">
 <input type="hidden" name ="commentaire" id="commentaire" value="<?php echo $donnees['commentaire']?>">
+<input type="hidden" name ="idclient" id="idclient" value="<?php echo $donnees['login']?>">
+  <input type="hidden" name ="mdpclient" id="mdpclient" value="<?php echo $donnees['pass']?>">
   <button  class="btn btn-warning btn-sm" >Modifier</button>
 
 
