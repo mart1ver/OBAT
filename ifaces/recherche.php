@@ -700,7 +700,7 @@ $req->closeCursor(); // Termine le traitement de la requête
             var coordinates = <?php echo('a'.$_GET["pid"]); ?>.getGeometry().getCoordinates();
             
             popup.setPosition(coordinates);
-             popup.setOffset([-50, -70]);
+             popup.setOffset([-52, -73]);
 
             $(element).popover({
 
