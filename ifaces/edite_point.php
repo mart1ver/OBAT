@@ -208,25 +208,18 @@ $photo = $donnees['photo'] ;
 </div>
 
 <br>
-<div class="btn-group" role="group" >
-<button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button>&nbsp
+<div class="btn-toolbar" role="group" >
+<button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button>
 </form>
-
-
 <form name="formsup" id="formsup" name="formsup" action="../moteur/supprime_point_post.php" method="post">
 
  <input id="pid" name ="pid"  type="hidden"  value="<?php echo($_GET['pid']); ?>">
    <input id="cid" name ="cid"  type="hidden"  value="<?php echo($_GET['cid']); ?>">
     <input id="fid" name ="fid"  type="hidden"  value="<?php echo($_GET['fid']); ?>">
-<button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button>&nbsp
+<button type="button" class="btn btn-danger" id ="suppoint" >Supprimer</button>
 </form>
-
-
 <button type="button" class="btn btn-default" onclick="history.go(-1);">Annuler</button>
-
-
 </div>
-
         <script>
           $("#submitForm").on('click', function() {
 
