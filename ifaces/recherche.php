@@ -164,7 +164,14 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                       echo'checked';
                                   }
                                   ?>> Materiaux,</label><br>
-                                  <form action="/recherche.php?toto=tt" method="get">
+                                  <form action="recherche.php?toto=tt" method="get">
+                                  <input type="hidden" name="id" value="<?php echo($_GET["id"]) ?>"/> 
+                                  <input type="hidden" name="fid" value="<?php echo($_GET["fid"]) ?>" /> 
+                                  <input type="hidden" name="rcorps" value="<?php echo($_GET["rcorps"]) ?>" /> 
+                                  <input type="hidden" name="rtypo" value="<?php echo($_GET["rtypo"]) ?>" /> 
+                                  <input type="hidden" name="rm" value="<?php echo($_GET["rm"]) ?>" /> 
+                                  <input type="hidden" name="ro" value="<?php echo($_GET["ro"]) ?>" /> 
+
                                   <label>Numero de fiche: </label><input type="text" name="pid" id="pid" placeholder="#" maxlength="6" size="6"  >
                                   &nbsp
 
