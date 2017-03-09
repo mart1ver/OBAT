@@ -685,7 +685,7 @@ $req->closeCursor(); // Termine le traitement de la requête
                     return feature;
                 });
         if (feature) {
-              $(element).popover('destroy');
+             
               element = document.getElementById('popup');
             var coordinates = feature.getGeometry().getCoordinates();
             popup.setPosition(coordinates);
