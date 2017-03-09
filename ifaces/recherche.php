@@ -163,12 +163,11 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                   if ($_GET["rm"] == "1") {
                                       echo'checked';
                                   }
-                                  ?>> Materiaux,</label>
-                                  <label>Numero de fiche: </label><input type="text" name="bat" id="bat" placeholder="#" maxlength="6" size="6"  >
-                                  <label>Bâtiment: </label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" >
-                                  <label>N° d'appartement: </label><input type="text" name="bat" id="bat" placeholder="N°." maxlength="6" size="6"  >
+                                  ?>> Materiaux,</label><br>
+                                  <label>Numero de fiche: </label><input type="text" name="nume" id="nume" placeholder="#" maxlength="6" size="6"  >
                                   &nbsp
-                                  <button type="button" class="btn btn-danger" id ="go" >GO!</button>
+                                  <button type="button" class="btn btn-danger" id ="go" 
+                                  >GO!</button>
                 </b>
             </p> 
 
