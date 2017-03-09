@@ -679,13 +679,14 @@ $req->closeCursor(); // Termine le traitement de la requête
 
     // display popup on click
     map.on('click', function (evt) {
-        $(element).popover('destroy');
+
         var feature = map.forEachFeatureAtPixel(evt.pixel,
                 function (feature) {
                     return feature;
                 });
         if (feature) {
-              
+              $(element).popover('destroy');
+              element = document.getElementById('popup');
             var coordinates = feature.getGeometry().getCoordinates();
             popup.setPosition(coordinates);
             $(element).popover({
