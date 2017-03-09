@@ -152,7 +152,7 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                   if ($_GET["ro"] == "1") {
                                       echo'checked';
                                   }
-                                  ?>> Materiels</label>
+                                  ?>> Materiels,</label>
                     <label><input type="checkbox" id="materiaux" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"]; ?>&fid=<?php echo($_GET["fid"]); ?>&fid=<?php echo($_GET["fid"]); ?>&rcorps=<?php echo($_GET["rcorps"]); ?>&rtypo=<?php echo($_GET["rtypo"]); ?>&ro=<?php echo($_GET["ro"]); ?>&rm=<?php
                                   if ($_GET["rm"] == "0") {
                                       echo("1");
@@ -163,7 +163,10 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                   if ($_GET["rm"] == "1") {
                                       echo'checked';
                                   }
-                                  ?>> Materiaux</label>
+                                  ?>> Materiaux,</label>
+                                  <label>Numero de fiche: </label>
+                                  <label>Bâtiment: </label>
+                                  <label>Appartement: </label>
                 </b>
             </p> 
 
