@@ -682,7 +682,7 @@ $req->closeCursor(); // Termine le traitement de la requête
 
     // display popup on click
     map.on('click', function (evt) {
-
+        console.log(evt);
         var feature = map.forEachFeatureAtPixel(evt.pixel,
                 function (feature) {
                     return feature;
