@@ -166,7 +166,7 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                   ?>> Materiaux,</label><br>
                                   <label>Numero de fiche: </label><input type="text" name="nume" id="nume" placeholder="#" maxlength="6" size="6"  >
                                   &nbsp
-                                  <button type="button" class="btn btn-danger" id ="go" 
+                                  <button type="button" class="btn btn-danger" id ="go" name="go" 
                                   >GO!</button>
                 </b>
             </p> 
@@ -711,7 +711,28 @@ $req->closeCursor(); // Termine le traitement de la requête
         }
     });
 
+// display popup sur click numero fiche
+    go.on('click', function (evt) {
+        console.log(evt);
 
+      
+                 
+               
+             
+            var coordinates = a15.getGeometry().getCoordinates();
+            popup.setPosition(coordinates);
+
+            $(element).popover({
+                'placement': 'top',
+                'html': true,
+                'content': feature.get('name')
+            });
+
+            $(element).popover('show');
+      
+
+        
+    });
 
 </script>
 
