@@ -27,6 +27,8 @@ require_once('../moteur/dbconfig.php'); ?>
 
 <script src="../js/ol.js" type="text/javascript"></script>
 <script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/FileSaver.js"></script>
+<script src="../js/tableexport.js"></script>
 <script src="../js/chosen.jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function(){
