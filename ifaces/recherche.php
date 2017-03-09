@@ -684,7 +684,7 @@ $req->closeCursor(); // Termine le traitement de la requête
 
 
    
-            var coordinates = a15.getCoordinates();
+            var coordinates = a15.getGeometry().getCoordinates();
             popup.setPosition(coordinates);
 
             $(element).popover({
