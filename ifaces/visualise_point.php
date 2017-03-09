@@ -219,10 +219,10 @@ $photo = $donnees['photo'] ;
 
 
 <button type="button" class="btn btn-default" onclick="history.go(-1);">Retour</button>
-
+<?php if($_SESSION['user'] === "root"){?>
 <button type="button" class="btn btn-danger" onclick="location = '<?php echo('edite_point.php?pid='.$_GET["pid"].'&cid='.$_GET["cid"].'&fid='.$_GET["fid"]);?>'";>edier fiche</button>
 
-
+<?php } ?>
 
 
       </div>
