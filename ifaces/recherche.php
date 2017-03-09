@@ -164,9 +164,9 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                       echo'checked';
                                   }
                                   ?>> Materiaux,</label>
-                                  <label>Numero de fiche: </label>
-                                  <label>Bâtiment: </label>
-                                  <label>Appartement: </label>
+                                  <label>Numero de fiche: </label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6"  >
+                                  <label>Bâtiment: </label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6" >
+                                  <label>N° d'appartement: </label><input type="text" name="bat" id="bat" placeholder="Bat." maxlength="6" size="6"  >
                 </b>
             </p> 
 
@@ -702,11 +702,7 @@ $req->closeCursor(); // Termine le traitement de la requête
             });
 
             $(element).popover('show');
-   $(element).popover({
-                'placement': 'top',
-                'html': true,
-                'content':''
-            });
+      
 
         } else {
 
