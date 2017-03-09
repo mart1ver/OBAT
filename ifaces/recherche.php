@@ -685,9 +685,12 @@ $req->closeCursor(); // Termine le traitement de la requête
 
    
             var coordinates = a641.getGeometry().getCoordinates();
+            
             popup.setPosition(coordinates);
+             popup.setOffset([100, 0]);
 
             $(element).popover({
+
                 'placement': 'top',
                 'html': true,
                 'content': a641.get('name')
