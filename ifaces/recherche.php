@@ -167,7 +167,17 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                   <label>Numero de fiche: </label><input type="text" name="nume" id="nume" placeholder="#" maxlength="6" size="6"  >
                                   &nbsp
                                   <button type="button" class="btn btn-danger" id ="go" name="go" 
-                                  onclick=" var coordinates = a15.getGeometry().getCoordinates();
+                                  onclick=" 
+var element = document.getElementById('popup');
+
+    var popup = new ol.Overlay({
+        element: element,
+        positioning: 'bottom-center',
+        stopEvent: false,
+        offset: [0, 0]
+    });
+    map.addOverlay(popup);
+                                  var coordinates = a15.getGeometry().getCoordinates();
             popup.setPosition(coordinates);
 
             $(element).popover({
