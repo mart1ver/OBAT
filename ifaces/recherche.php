@@ -194,7 +194,7 @@ $req2->closeCursor(); // Termine le traitement de la requête
 <div id="liste" >
     <h1>liste précise des spots:</h1> 
     <div id="dvData">
-        <table class="table">
+        <table class="table" id="table" name="table">
             <thead>
                 <tr>
                     <th>#</th>
@@ -742,6 +742,24 @@ $req->closeCursor(); // Termine le traitement de la requête
             $(element).popover('destroy');
         }
     });
+
+
+
+
+
+$("table").tableExport({
+    headings: true,                    // (Boolean), display table headings (th/td elements) in the <thead>
+    footers: true,                     // (Boolean), display table footers (th/td elements) in the <tfoot>
+    formats: ["xls", "csv", "txt"],    // (String[]), filetypes for the export
+    fileName: "id",                    // (id, String), filename for the downloaded file
+    bootstrap: true,                   // (Boolean), style buttons using bootstrap
+    position: "bottom"                 // (top, bottom), position of the caption element relative to table
+    ignoreRows: null,                  // (Number, Number[]), row indices to exclude from the exported file
+    ignoreCols: null                   // (Number, Number[]), column indices to exclude from the exported file
+    ignoreCSS: ".tableexport-ignore"   // (selector, selector[]), selector(s) to exclude from the exported file
+});
+
+
 
 
 
