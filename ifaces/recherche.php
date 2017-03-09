@@ -684,7 +684,7 @@ $req->closeCursor(); // Termine le traitement de la requête
 
 
    
-            var coordinates = a641.getGeometry().getCoordinates();
+            var coordinates = <?php echo('a'.$_GET["pid"]); ?>.getGeometry().getCoordinates();
             
             popup.setPosition(coordinates);
              popup.setOffset([-44, -100]);
@@ -693,7 +693,7 @@ $req->closeCursor(); // Termine le traitement de la requête
 
                 'placement': 'top',
                 'html': true,
-                'content': a641.get('name')
+                'content': <?php echo('a'.$_GET["pid"]); ?>.get('name')
             });
 
             $(element).popover('show');
