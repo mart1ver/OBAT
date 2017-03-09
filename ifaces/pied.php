@@ -2,7 +2,7 @@
 <div class="container">
   <footer>
         <p class="text-right">Obat. 2016</p>
-        <p class="text-left"> <a href="../moteur/destroy.php">Déconection</a> </p>
+        <p class="text-left"> <a href="../moteur/destroy.php">déconnexion</a> </p>
     
 </footer> 
 </div>  
