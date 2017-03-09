@@ -166,9 +166,15 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                   ?>> Materiaux,</label><br>
                                   <label>Numero de fiche: </label><input type="text" name="nume" id="nume" placeholder="#" maxlength="6" size="6"  >
                                   &nbsp
-                                  <button type="button" class="btn btn-danger" id ="go" name="go" 
 
+
+<form action="http://google.com">
+   <button type="button" class="btn btn-danger" id ="go" name="go" 
+                                     
                                   >GO!</button>
+</form>
+
+                                  
                 </b>
             </p> 
 
