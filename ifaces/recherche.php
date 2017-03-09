@@ -750,8 +750,8 @@ $req->closeCursor(); // Termine le traitement de la requête
 $("table").tableExport({
     headings: true,                    // (Boolean), display table headings (th/td elements) in the <thead>
     footers: true,                     // (Boolean), display table footers (th/td elements) in the <tfoot>
-    formats: ["xls", "csv", "txt"],    // (String[]), filetypes for the export
-    fileName: "id",                    // (id, String), filename for the downloaded file
+    formats: ["xls", "csv"],    // (String[]), filetypes for the export
+    fileName: "Export OBAT",                    // (id, String), filename for the downloaded file
     bootstrap: true,                   // (Boolean), style buttons using bootstrap
     position: "bottom",                 // (top, bottom), position of the caption element relative to table
     ignoreRows: null,                  // (Number, Number[]), row indices to exclude from the exported file
