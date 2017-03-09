@@ -7,7 +7,7 @@ require_once('../moteur/dbconfig.php');
 
     <div class="container">
         <h1>Visualisation du point N°:<?php echo($_GET['pid']); ?></h1> 
-         <div class="panel-heading"></div>
+       
         <div class="col-md-7">
       <div class="panel-body">
         <div class="row">
