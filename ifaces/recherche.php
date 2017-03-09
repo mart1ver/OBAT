@@ -164,15 +164,15 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                       echo'checked';
                                   }
                                   ?>> Materiaux,</label><br>
-                                  <label>Numero de fiche: </label><input type="text" name="nume" id="nume" placeholder="#" maxlength="6" size="6"  >
+                                  <form action="/recherche.php?toto=tt" method="get">
+                                  <label>Numero de fiche: </label><input type="text" name="pid" id="pid" placeholder="#" maxlength="6" size="6"  >
                                   &nbsp
 
 
-<form action="http://google.com">
-   <button type="button" class="btn btn-danger" id ="go" name="go" 
-                                     
-                                  >GO!</button>
-</form>
+
+   <button>GO!</button>
+   </form>
+
 
                                   
                 </b>
