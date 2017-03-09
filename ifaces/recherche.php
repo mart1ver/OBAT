@@ -167,6 +167,16 @@ $req2->closeCursor(); // Termine le traitement de la requête
                                   <label>Numero de fiche: </label><input type="text" name="nume" id="nume" placeholder="#" maxlength="6" size="6"  >
                                   &nbsp
                                   <button type="button" class="btn btn-danger" id ="go" name="go" 
+                                  onclick=" var coordinates = a15.getGeometry().getCoordinates();
+            popup.setPosition(coordinates);
+
+            $(element).popover({
+                'placement': 'top',
+                'html': true,
+                'content': a15.get('name')
+            });
+
+            $(a15).popover('show');"
                                   >GO!</button>
                 </b>
             </p> 
@@ -658,7 +668,7 @@ $req->closeCursor(); // Termine le traitement de la requête
     });
 
 
-var go = document.getElementById('go');
+
 
 
 
@@ -711,28 +721,7 @@ var go = document.getElementById('go');
         }
     });
 
-// display popup sur click numero fiche
-    go.on('click', function (evt) {
-        console.log(evt);
 
-      
-                 
-               
-             
-            var coordinates = a15.getGeometry().getCoordinates();
-            popup.setPosition(coordinates);
-
-            $(element).popover({
-                'placement': 'top',
-                'html': true,
-                'content': feature.get('name')
-            });
-
-            $(element).popover('show');
-      
-
-        
-    });
 
 </script>
 
