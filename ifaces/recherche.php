@@ -699,7 +699,7 @@ $req->closeCursor(); // Termine le traitement de la requête
                 'html': true,
                 'content': feature.get('name')
             });
-            feature = "";
+            feature = false;
             $(element).popover('show');
 
 
