@@ -696,7 +696,7 @@ $req->closeCursor(); // Termine le traitement de la requête
     map.addOverlay(popup);
 
 
-   <?php if($_GET["pid"] < 0){?>
+   <?php if(intval($_GET["pid"]) > 0){?>
             var coordinates = <?php echo('a'.$_GET["pid"]); ?>.getGeometry().getCoordinates();
             
             popup.setPosition(coordinates);
