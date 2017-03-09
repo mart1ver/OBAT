@@ -726,7 +726,7 @@ $req->closeCursor(); // Termine le traitement de la requête
              
             var coordinates = feature.getGeometry().getCoordinates();
             popup.setPosition(coordinates);
- popup.setOffset([0, 0]);
+ popup.setOffset([0, 10]);
             $(element).popover({
                 'placement': 'top',
                 'html': true,
