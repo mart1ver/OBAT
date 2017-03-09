@@ -683,14 +683,15 @@ $req->closeCursor(); // Termine le traitement de la requête
     // display popup on click
     map.on('click', function (evt) {
         console.log(evt);
-        $(element).popover('hide');
+
         var feature = map.forEachFeatureAtPixel(evt.pixel,
                 function (feature) {
                     return feature;
                 });
         if (feature) {
-            
+               document.getElementById('popup').innerHTML = '';
               element = document.getElementById('popup');
+
             var coordinates = feature.getGeometry().getCoordinates();
             popup.setPosition(coordinates);
 
