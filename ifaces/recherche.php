@@ -380,7 +380,7 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 
         </table>
     </div>
-    <a href="#" id ="export" role='button'>exporter cette liste</a>
+    <
     <p align="right"><a href="#tete">
             <button>Carte</button>
         </a></p>

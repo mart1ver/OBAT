@@ -22,6 +22,7 @@ require_once('../moteur/dbconfig.php'); ?>
     <!-- Bootstrap theme -->
     <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/chosen.css">
+    <link rel="stylesheet" href="../css/tableexport.css">
      <link rel="stylesheet" href="../css/ol.css" type="text/css">
 
 
