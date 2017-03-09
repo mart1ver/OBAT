@@ -690,11 +690,7 @@ $req->closeCursor(); // Termine le traitement de la requête
                 });
         if (feature) {
                  
-                  $(element).popover({
-                'placement': 'top',
-                'html': true,
-                'content':''
-            });
+               
              
             var coordinates = feature.getGeometry().getCoordinates();
             popup.setPosition(coordinates);
@@ -706,7 +702,11 @@ $req->closeCursor(); // Termine le traitement de la requête
             });
 
             $(element).popover('show');
-
+   $(element).popover({
+                'placement': 'top',
+                'html': true,
+                'content':''
+            });
 
         } else {
 
