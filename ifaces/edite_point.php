@@ -209,7 +209,7 @@ $photo = $donnees['photo'] ;
 
 <br>
 <div class="btn-toolbar" role="group" >
-<button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button>
+<button type="button" id ="submitForm" name ="submitForm" class="btn btn-warning">Modifier</button>&nbsp
 </form>
 <form name="formsup" id="formsup" name="formsup" action="../moteur/supprime_point_post.php" method="post">
 
