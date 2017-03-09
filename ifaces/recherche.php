@@ -658,7 +658,7 @@ $req->closeCursor(); // Termine le traitement de la requête
     });
 
 
-
+var go = document.getElementById('go');
 
 
 
