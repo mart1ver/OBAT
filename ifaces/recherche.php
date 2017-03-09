@@ -689,8 +689,7 @@ $req->closeCursor(); // Termine le traitement de la requête
                     return feature;
                 });
         if (feature) {
-               document.getElementById('popup').innerHTML = '';
-              element = document.getElementById('popup');
+               
 
             var coordinates = feature.getGeometry().getCoordinates();
             popup.setPosition(coordinates);
@@ -700,7 +699,7 @@ $req->closeCursor(); // Termine le traitement de la requête
                 'html': true,
                 'content': feature.get('name')
             });
-
+            feature = "";
             $(element).popover('show');
 
 
