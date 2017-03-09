@@ -690,7 +690,7 @@ $req->closeCursor(); // Termine le traitement de la requête
             $(element).popover({
                 'placement': 'top',
                 'html': true,
-                'content': feature.get('name')
+                'content': a15.get('name')
             });
 
             $(element).popover('show');
