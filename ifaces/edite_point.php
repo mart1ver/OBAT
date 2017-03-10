@@ -33,7 +33,8 @@ require_once('../moteur/dbconfig.php');
             $cage = $pieces[2]; // cage
             $etage =  $pieces[3]; // etage
             $numero = $pieces[4]; // numero
-
+            //on extrait la definition morphodimmentionelle de l'objet de la fiche
+$definition = $donnees['definition'];  
 //on extrait le type de materiau et de materiel
 
 $id_objets = $donnees['id_objets'];
@@ -144,8 +145,18 @@ $photo = $donnees['photo'] ;
 <br>
         
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" value="<?php echo($description) ;?>"><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="<?php echo($quantite);?>" ><br>
-        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($lo);?>" ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($la);?>"><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($ha);?>"><br>
+        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($lo);?>" ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($la);?>"><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($ha);?>">
+        <div class="panel panel-default">
+  <div class="panel-body">
+        <label for="definition">l'objet sera definit par:</label><br>
+<input type="radio" name="definition" value="0"<?phpif($definition === 0){echo(' checked');};?> ><label for="definition"> sa quantité uniquement</label>
+  <input type="radio" name="definition" value="1"<?phpif($definition === 1){echo(' checked');};?>><label for="definition"> son volume(l*L*ep)</label><br>
+  <input type="radio" name="definition" value="2"<?phpif($definition === 2){echo(' checked');};?>><label for="definition"> par sa longueur(L)</label>
+  <input type="radio" name="definition" value="3"<?phpif($definition === 3){echo(' checked');};?>><label for="definition"> sa surface (l*L)</label>
+        <br>
         
+
+</div></div>
 
 
 
