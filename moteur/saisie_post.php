@@ -67,6 +67,11 @@ $infosImg = array();
 $extension = '';
 $message = '';
 $nomImage = '';
+
+//on prépare les trois varables de destination
+              if(intval($_POST['destination1']) === 1){$reempl = 1;}else{$reempl = 0;};
+              if(intval($_POST['destination2']) === 1){$reutil = 1;}else{$reutil = 0;};
+              if(intval($_POST['destination3']) === 1){$recy = 1;}else{$recy = 0;};
  
 /************************************************************
  * Creation du repertoire cible si inexistant
@@ -114,10 +119,7 @@ if(!empty($_POST))
               //puisque l'upload est réussi on effectura ici l'insert du point dans la base de données avec un nom de photo
                // Connexion à la base de données
 
-//on prépare les trois varables de destination
-              if(intval($_POST['destination1']) === 1){$reempl = 1;}else{$reempl = 0;};
-              if(intval($_POST['destination2']) === 1){$reutil = 1;}else{$reutil = 0;};
-              if(intval($_POST['destination3']) === 1){$recy = 1;}else{$recy = 0;};
+
 
            // Connexion à la base de données
 
