@@ -278,8 +278,12 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
 //string number_format ( float $number , int $decimals = 3 , string $dec_point = "," , string $thousands_sep = "." )
-               echo(string number_format ( $number , $decimals = 3 ,  "," , "." ));
+               echo(number_format ( $number , $decimals = 3 ,  "," , "." ));
                         ?></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                             <td>
                                <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -301,9 +305,13 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
-             echo(string number_format ( $number , $decimals = 3 ,  "," , "." ));
+             echo(number_format ( $number , $decimals = 3 ,  "," , "." ));
                 ?></td>
                                 <td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                                    <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                </a> 
@@ -325,9 +333,13 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
-               echo(string number_format ( $number , $decimals = 3 ,  "," , "." ));
+               echo(number_format ( $number , $decimals = 3 ,  "," , "." ));
                 ?></td>
                                 <td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                                   <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                </a> 
@@ -349,8 +361,12 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
-               echo(string number_format ( $number , $decimals = 3 ,  "," , "." ));
+               echo(sumber_format( $number , $decimals = 3 ,  "," , "" ));
                 ?></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                                 <td>
                                     <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
