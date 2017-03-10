@@ -202,10 +202,12 @@ $req2->closeCursor(); // Termine le traitement de la requête
                     <th>Type d'objet ou de materiaux</th>
                     <th>Corps de metier</th>    
                     <th>Note globale</th>
+                    <th>quantité</th>
+                    <th>Encombrement</th>
                     <th>Réemployable?</th>
                     <th>Réutilisable?</th>
                     <th>Recyclable?</th>
-                    <th>Encombrement</th>
+                    
                     <th></th>        
                 </tr>
             </thead>
@@ -294,10 +296,12 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
 //string number_format ( float $number , int $decimals = 3 , string $dec_point = "," , string $thousands_sep = "." )
                echo(number_format ( $noteg ,  3 ,  "," , "." ));
                         ?></td>
+                        <td><?php echo($msg_definition);?></td>
+                        <td></td>
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php echo($msg_definition);?></td>
+                        
                             <td>
                                <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -321,12 +325,14 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
              echo(number_format ( $noteg , 3 ,  "," , "." ));
                 ?></td>
-                                <td>
+                                
+                                <td><?php echo($msg_definition);?></td>
+                                <td></td>
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php echo($msg_definition);?></td>
-                                   <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
+                        
+                                   <td><a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                </a> 
                                 </td>
@@ -349,12 +355,14 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
                echo(number_format ( $noteg , 3 ,  "," , "." ));
                 ?></td>
-                                <td>
+                 <td><?php echo($msg_definition);?></td>
+                                <td></td>
+                                
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php echo($msg_definition);?></td>
-                                  <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
+                     
+                                  <td><a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                </a> 
                                 </td>
@@ -377,10 +385,12 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
                echo(sumber_format( $number , 3 ,  "," , " " ));
                 ?></td>
+                 <td><?php echo($msg_definition);?></td>
+                                <td></td>
                        <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php echo($msg_definition);?></td>
+                        
                                 <td>
                                     <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
