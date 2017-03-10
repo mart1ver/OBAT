@@ -71,9 +71,9 @@ $photo = $donnees['photo'] ;
   $req->closeCursor(); // Termine le traitement de la requête 
 
 if($definition === 0){};
-if($definition === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' metres cubes'};
-if($definition === 2){$msg_definition = "Longueur: ".$lo.' cm lineaires'};
-if($definition === 3){$msg_definition = "Surface: ".(($lo*$la*$ha/10000). ' metres carés'}; 
+if($definition === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' metres cubes';};
+if($definition === 2){$msg_definition = "Longueur: ".$lo.' cm lineaires';};
+if($definition === 3){$msg_definition = "Surface: ".(($lo*$la*$ha/10000). ' metres carés';}; 
 
 ?>
 
