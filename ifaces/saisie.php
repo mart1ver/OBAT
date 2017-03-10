@@ -178,9 +178,9 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
         <div class="panel panel-default">
   <div class="panel-body">
         <label for="definition">l'objet sera definit par:</label><br>
-<input type="radio" name="definition" value="0" ><label for="definition"> sa quantité uniquement</label>
+<input type="radio" name="definition" value="0" ><label for="definition"> sa quantité uniquement</label><br>
   <input type="radio" name="definition" value="1"><label for="definition"> son volume(l*L*ep)</label><br>
-  <input type="radio" name="definition" value="2"><label for="definition"> par sa longueur(L)</label>
+  <input type="radio" name="definition" value="2"><label for="definition"> par sa longueur(L)</label><br>
   <input type="radio" name="definition" value="3"><label for="definition"> sa surface (l*L)</label>
         <br>
         
