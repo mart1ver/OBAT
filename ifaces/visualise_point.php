@@ -160,9 +160,9 @@ $req->closeCursor();
   $req->closeCursor(); // Termine le traitement de la requête ?>
 <?php 
 // on détermine le corps de métier pour le materiaux de cette fiche
-  $req = $bdd->prepare("SELECT spots.id, corps.nom  FROM corps, spots, materiaux  WHERE 
-materiaux.id = spots.id_materiaux AND 
-corps.id = materiaux.id_corp 
+  $req = $bdd->prepare("SELECT spots.id, corps.nom  FROM corps, spots, objets  WHERE 
+objets.id = spots.id_materiaux AND 
+corps.id = objets.id_corp 
 AND spots.id = :id");
     $req->execute(array('id' => $_GET["pid"]));
     
@@ -176,7 +176,7 @@ $req->closeCursor();
 ?>
 </select>
 <br>
-         <label>Corps de métier:&nbsp<?php echo($nomcorpsobj.$nomcorpsmat);?></label>
+         <label>Corps de métier:&nbsp<?php echo($nomcorpsobj.$nomcorpsmat);?></label><br>
         <label for="description">Description:&nbsp</label><p id="description" name="description"><?php echo($description) ;?></p>
         <label>Longueur:&nbsp<?php echo($lo);?></label>
         <label>&nbspLargeur:&nbsp<?php echo($la);?></label>
