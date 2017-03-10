@@ -148,12 +148,12 @@ $photo = $donnees['photo'] ;
         <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($lo);?>" ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($la);?>"><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($ha);?>">
         <div class="panel panel-default">
   <div class="panel-body">
-        <label for="definition">l'objet sera definit par:</label><br>
-<input type="radio" name="definition" value="0"<?phpif($definition === 0){echo(' checked');};?> ><label for="definition"> sa quantité uniquement</label>
-  <input type="radio" name="definition" value="1"<?phpif($definition === 1){echo(' checked');};?>><label for="definition"> son volume(l*L*ep)</label><br>
-  <input type="radio" name="definition" value="2"<?phpif($definition === 2){echo(' checked');};?>><label for="definition"> par sa longueur(L)</label>
-  <input type="radio" name="definition" value="3"<?phpif($definition === 3){echo(' checked');};?>><label for="definition"> sa surface (l*L)</label>
-        <br>
+        <label for="definition">l'objet est definit par:</label><br>
+<input type="radio" name="definition" value="0"<?php if($definition === 0){echo(' checked');}; ?> ><label for="definition"> sa quantité uniquement</label>
+  <input type="radio" name="definition" value="1"<?php if($definition === 1){echo(' checked');}; ?>><label for="definition"> son volume(l*L*ep)</label><br>
+  <input type="radio" name="definition" value="2"<?php if($definition === 2){echo(' checked');}; ?>><label for="definition"> par sa longueur(L)</label>
+  <input type="radio" name="definition" value="3"<?php if($definition === 3){echo(' checked');}; ?>><label for="definition"> sa surface (l*L)</label>
+        <br> 
         
 
 </div></div>
