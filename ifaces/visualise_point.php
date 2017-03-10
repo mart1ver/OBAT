@@ -72,7 +72,7 @@ $photo = $donnees['photo'] ;
 
 if(intval($definition) === 0){};
 if(intval($definition) === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' mètres cubes';};
-if(intval($definition) === 2){$msg_definition = "Longueur: ".$lo/100.' mètres linéaires';};
+if(intval($definition) === 2){$msg_definition = "Longueur: ".($lo/100).' mètres linéaires';};
 if(intval($definition) === 3){$msg_definition = "Surface: ".(($lo*$la*$ha)/10000). ' mètres carés';};
   ?>
 
