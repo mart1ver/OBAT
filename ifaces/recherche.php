@@ -361,7 +361,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
-               echo(sumber_format( $number , $decimals = 3 ,  "," , "" ));
+               echo(sumber_format( $number , 3 ,  "," , "" ));
                 ?></td>
                         <td></td>
                         <td></td>
