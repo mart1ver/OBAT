@@ -110,15 +110,37 @@ $photo = $donnees['photo'] ;
           
                 <option value="<?php echo($donnees['id']);?>" <?php if ($donnees['id'] == $id_materiaux){echo('selected');}  ?> ><?php echo($donnees['nom']);?></option>
 
- <?php };
-  $req->closeCursor(); // Termine le traitement de la requête ?>
 
+ <?php 
+
+
+};
+  $req->closeCursor(); // Termine le traitement de la requête ?>
+<?php 
+// on détermine le corps de métier pour le materiaux de cette fiche
+  $req = $bdd->prepare("SELECT spots.id, corps.nom  FROM corps, spots, materiaux  WHERE 
+materiaux.id = spots.id_materiaux AND 
+corps.id = materiaux.id_corp 
+AND spots.id = :id");
+    $req->execute(array('id' => $_GET["pid"]));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+$nomcorpsmat = $donnees['nom'];
+          }
+$req->closeCursor();
+?>
 </select>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <label for="objet">  &nbspMateriels:&nbsp </label><select disabled name="objet" id="objet" onchange="document.getElementById('materiaux').disabled = true; document.getElementById('materiaux').value = '';">
-<option value="0" >-</option>
-<?php 
+<option value="0" >-</option><br>
+
+
+
+<?php
             // On recupère tout le contenu de la table chantiers
            
              $req = $bdd->prepare("SELECT * FROM objets WHERE visible = 'oui' ");
@@ -136,10 +158,25 @@ $photo = $donnees['photo'] ;
 
  <?php };
   $req->closeCursor(); // Termine le traitement de la requête ?>
-
+<?php 
+// on détermine le corps de métier pour le materiaux de cette fiche
+  $req = $bdd->prepare("SELECT spots.id, corps.nom  FROM corps, spots, materiaux  WHERE 
+materiaux.id = spots.id_materiaux AND 
+corps.id = materiaux.id_corp 
+AND spots.id = :id");
+    $req->execute(array('id' => $_GET["pid"]));
+    
+ 
+           // On affiche chaque entree une à une
+           while ($donnees = $req->fetch())
+           {
+$nomcorpsobj = $donnees['nom'];
+          }
+$req->closeCursor();
+?>
 </select>
 <br>
-        
+         <label>Corps de métier:&nbsp<?php echo($nomcorpsobj.$nomcorpsmat);?></label>
         <label for="description">Description:&nbsp</label><p id="description" name="description"><?php echo($description) ;?></p>
         <label>Longueur:&nbsp<?php echo($lo);?></label>
         <label>&nbspLargeur:&nbsp<?php echo($la);?></label>
