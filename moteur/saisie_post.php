@@ -137,8 +137,8 @@ if (isset($_POST['materiaux'])) {
 
 
 // Insertion du post à l'aide d'une requête préparée
-    $req = $bdd->prepare('INSERT INTO spots (id_folio,coordos, bat_entree_cage_etage_numero, id_materiaux, id_objets,description,quantite,encombrement,qualite,risque_depose,complexite_traitement,complexite_stockage,remarque,comm_risque_depose,   comm_complexite_traitement,comm_complexite_stockage,comm_qualite,photo) VALUES(?,?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)');
-    $req->execute(array($_POST['fid'],$_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c2'],$_POST['c3'],$_POST['c4'],$_POST['c1'],$nomImage));
+    $req = $bdd->prepare('INSERT INTO spots (id_folio,coordos, bat_entree_cage_etage_numero, id_materiaux, id_objets,description,quantite,encombrement,qualite,risque_depose,complexite_traitement,complexite_stockage,remarque,comm_risque_depose,   comm_complexite_traitement,comm_complexite_stockage,comm_qualite,photo,definition) VALUES(?,?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)');
+    $req->execute(array($_POST['fid'],$_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c2'],$_POST['c3'],$_POST['c4'],$_POST['c1'],$nomImage,$_POST['definition']));
    
     $req->closeCursor();
 
@@ -199,8 +199,8 @@ if (isset($_POST['materiaux'])) {
 
 
 // Insertion du post à l'aide d'une requête préparée
-    $req = $bdd->prepare('INSERT INTO spots (id_folio,coordos, bat_entree_cage_etage_numero, id_materiaux, id_objets,description,quantite,encombrement,qualite,risque_depose,complexite_traitement,complexite_stockage,remarque,comm_risque_depose,   comm_complexite_traitement,comm_complexite_stockage,comm_qualite) VALUES(?,?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)');
-    $req->execute(array($_POST['fid'],$_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c2'],$_POST['c3'],$_POST['c4'],$_POST['c1']));
+    $req = $bdd->prepare('INSERT INTO spots (id_folio,coordos, bat_entree_cage_etage_numero, id_materiaux, id_objets,description,quantite,encombrement,qualite,risque_depose,complexite_traitement,complexite_stockage,remarque,comm_risque_depose,   comm_complexite_traitement,comm_complexite_stockage,comm_qualite,definition) VALUES(?,?,?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)');
+    $req->execute(array($_POST['fid'],$_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c2'],$_POST['c3'],$_POST['c4'],$_POST['c1'],$_POST['definition']));
    
     $req->closeCursor();
   }
