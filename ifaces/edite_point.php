@@ -145,7 +145,7 @@ $photo = $donnees['photo'] ;
 <br>
         
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" value="<?php echo($description) ;?>"><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="<?php echo($quantite);?>" ><br>
-        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($lo);?>" ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($la);?>"><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($ha);?>">
+        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($lo);?>" ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($la);?>"><label for="hauteur"> &nbspÉpaisseur/Hauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 80Px;" min="0"  placeholder="cm." value="<?php echo($ha);?>">
         <div class="panel panel-default">
   <div class="panel-body">
         <label for="definition">l'objet est definit par:</label><br>
