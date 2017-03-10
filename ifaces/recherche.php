@@ -199,11 +199,13 @@ $req2->closeCursor(); // Termine le traitement de la requête
                 <tr>
                     <th>#</th>
                     <th>Date de création</th>
-                    
                     <th>Type d'objet ou de materiaux</th>
-                    
                     <th>Corps de metier</th>    
-                    <th>Note globale</th> 
+                    <th>Note globale</th>
+                    <th>Réemployable?</th>
+                    <th>Réutilisable?</th>
+                    <th>Recyclable?</th>
+                    <th>Encombrement</th>
                     <th></th>        
                 </tr>
             </thead>
@@ -370,8 +372,10 @@ $reponse->closeCursor(); // Termine le traitement de la requête
                     <th></th>
                     <th></th>
                     <th></th>
-                    
-                   
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -380,7 +384,7 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 
         </table>
     </div>
-    <
+    
     <p align="right"><a href="#tete">
             <button>Carte</button>
         </a></p>
