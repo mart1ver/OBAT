@@ -217,6 +217,14 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                 // On affiche chaque entree une à une
                 while ($donnees = $reponse->fetch()) {
 
+
+if(intval($donnees['definition']) === 0){};
+if(intval($donnees['definition']) === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' mètres cubes';};
+if(intval($donnees['definition']) === 2){$msg_definition = "Longueur: ".($lo/100).' mètres linéaires';};
+if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la*$ha)/10000). ' mètres carrés';};
+
+
+
                     if ($donnees['id_objets'] == 0) {
                         $reponse2 = $bdd->prepare('SELECT materiaux.* FROM materiaux 
             WHERE id=:id');
@@ -283,7 +291,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td></td>
+                        <td><?php echo($msg_definition);?></td>
                             <td>
                                <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -311,7 +319,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td></td>
+                        <td><?php echo($msg_definition);?></td>
                                    <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                </a> 
@@ -339,7 +347,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td></td>
+                        <td><?php echo($msg_definition);?></td>
                                   <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                </a> 
@@ -366,7 +374,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                        <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td></td>
+                        <td><?php echo($msg_definition);?></td>
                                 <td>
                                     <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
