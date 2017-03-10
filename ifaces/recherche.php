@@ -281,8 +281,8 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                echo(number_format ( $noteg ,  3 ,  "," , "." ));
                         ?></td>
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['reutl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><<?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
+                        <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
+                        <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td></td>
                             <td>
                                <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
@@ -309,8 +309,8 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                 ?></td>
                                 <td>
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['reutl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><<?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
+                        <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
+                        <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td></td>
                                    <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -337,8 +337,8 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                 ?></td>
                                 <td>
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['reutl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><<?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
+                        <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
+                        <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td></td>
                                   <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -364,8 +364,8 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                echo(sumber_format( $number , 3 ,  "," , " " ));
                 ?></td>
                        <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['reutl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><<?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
+                        <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
+                        <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td></td>
                                 <td>
                                     <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
