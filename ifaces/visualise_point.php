@@ -206,9 +206,9 @@ $req->closeCursor();
         <div class="panel panel-default">
   <div class="panel-body">
         <label for="destination">déstination de l'objet:</label><br>
-<input type="checkbox" name="destination1" value="1" disabled <?php if(intval($reempl) === 1 ){echo(" checked");};?> ><label for="destination1">Réemploi,</label><br>
-  <input type="checkbox" name="destination2" value="1" disabled <?php if(intval($reutil) === 1 ){echo(" checked");};?> ><label for="destination2">Réutilisation,</label><br>
-  <input type="checkbox" name="destination3" value="1" disabled <?php if(intval($recy) === 1 ){echo(" checked");};?> ><label for="destination3">Recyclage</label>
+<input type="checkbox" name="destination1" value="1" disabled <?php if(intval($isreempl) === 1 ){echo(" checked");};?> ><label for="destination1">Réemploi,</label><br>
+  <input type="checkbox" name="destination2" value="1" disabled <?php if(intval($isreutil) === 1 ){echo(" checked");};?> ><label for="destination2">Réutilisation,</label><br>
+  <input type="checkbox" name="destination3" value="1" disabled <?php if(intval($isrecy) === 1 ){echo(" checked");};?> ><label for="destination3">Recyclage</label>
  
         <br>
         
