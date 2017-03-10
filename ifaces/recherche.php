@@ -217,7 +217,13 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                 // On affiche chaque entree une à une
                 while ($donnees = $reponse->fetch()) {
 
-
+//on extrait les cotes en 3 variables
+            $pizza  = $donnees['encombrement'];
+            $pieces = explode("|", $pizza);
+            $lo = $pieces[0]; // lonuger
+            $la = $pieces[1]; // largeur
+            $ha = $pieces[2]; // hauteur/epaisseur
+            
 if(intval($donnees['definition']) === 0){};
 if(intval($donnees['definition']) === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' mètres cubes';};
 if(intval($donnees['definition']) === 2){$msg_definition = "Longueur: ".($lo/100).' mètres linéaires';};
