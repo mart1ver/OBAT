@@ -172,7 +172,13 @@ Chantier N° <?php echo($_GET["id"]); ?>: <?php echo($nom_chantier); ?>  , Folio
 <br>
         
         <label for="description">Description:&nbsp</label><input  name="description" id="description" type="text" size="35" ><label for="quantite">&nbspQuantité:&nbsp</label><input name="quantite" style="width: 50Px;" id="quantite" type="number" min="1" value="1" ><br>
-        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0"  placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0"  placeholder="cm."><br><br>
+        <label for="longueur">Longueur:&nbsp</label><input type="number" name="longueur" id="longueur" style="width: 50Px;" min="0"  placeholder="cm." ><label for="largeur">&nbspLargeur:&nbsp</label><input type="number" name="largeur" id="largeur" style="width: 50Px;" min="0"  placeholder="cm."><label for="hauteur"> &nbspHauteur:&nbsp</label><input type="number"  name="hauteur" id="hauteur" style="width: 50Px;" min="0"  placeholder="cm."><br>
+        l'objet sera definit par:
+<input type="radio" name="definition" value="0" ><label for="definition"> sa surface au sol(Ll)</label>
+  <input type="radio" name="definition" value="1"><label for="definition"> son volume(lLh)</label>
+  <input type="radio" name="definition" value="2"><label for="definition"> par sa longueur(L)</label>
+  <input type="radio" name="definition" value="3"><label for="definition"> sa surface verticale(lh)</label>
+        <br>
         
 
 
