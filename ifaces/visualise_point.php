@@ -34,7 +34,11 @@ require_once('../moteur/dbconfig.php');
             $etage =  $pieces[3]; // etage
             $numero = $pieces[4]; // numero
 // on extrait la definition
-$definition = $donnees['definition'];            
+$definition = $donnees['definition'];
+//on extrait les trois destination
+           $isreempl = $donnees['reempl'];
+           $isreutil = $donnees['reutil'];
+           $isrecy = $donnees['recy']; 
 //on extrait le type de materiau et de materiel
 
 $id_objets = $donnees['id_objets'];
@@ -74,6 +78,8 @@ if(intval($definition) === 0){};
 if(intval($definition) === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' mètres cubes';};
 if(intval($definition) === 2){$msg_definition = "Longueur: ".($lo/100).' mètres linéaires';};
 if(intval($definition) === 3){$msg_definition = "Surface: ".(($lo*$la*$ha)/10000). ' mètres carés';};
+
+
   ?>
 
 
@@ -179,6 +185,14 @@ $req->closeCursor();
 </select>
 <br>
          <label>Corps de métier:&nbsp<?php echo($nomcorpsobj.$nomcorpsmat);?></label><br>
+
+         <div class="row">
+
+
+<div class="col-md-6">
+        <div class="panel panel-default">
+  <div class="panel-body">
+
         <label for="description">Description:&nbsp</label><p id="description" name="description"><?php echo($description) ;?></p>
         <label>Longueur:&nbsp<?php echo($lo);?></label>
         <label>&nbspLargeur:&nbsp<?php echo($la);?></label>
@@ -187,7 +201,24 @@ $req->closeCursor();
 <label >&nbspQuantité:&nbsp<?php echo($quantite);?></label>
         
         
+</div></div></div>
+<div class="col-md-5">
+        <div class="panel panel-default">
+  <div class="panel-body">
+        <label for="destination">déstination de l'objet:</label><br>
+<input type="checkbox" name="destination1" value="1" disabled <?php if($reempl === 1 ){echo(" checked")};?> ><label for="destination1">Réemploi,</label><br>
+  <input type="checkbox" name="destination2" value="1" disabled <?php if($reutil === 1 ){echo(" checked")};?> ><label for="destination2">Réutilisation,</label><br>
+  <input type="checkbox" name="destination3" value="1" disabled <?php if($recy === 1 ){echo(" checked")};?> ><label for="destination3">Recyclage</label>
+ 
+        <br>
+        
 
+</div></div>
+
+</div>
+
+
+</div>
 </div></div></div>
 
 
