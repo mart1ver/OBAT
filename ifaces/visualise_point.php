@@ -77,7 +77,7 @@ $photo = $donnees['photo'] ;
 if(intval($definition) === 0){};
 if(intval($definition) === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' mètres cubes';};
 if(intval($definition) === 2){$msg_definition = "Longueur: ".($lo/100).' mètres linéaires';};
-if(intval($definition) === 3){$msg_definition = "Surface: ".(($lo*$la*$ha)/10000). ' mètres carés';};
+if(intval($definition) === 3){$msg_definition = "Surface: ".(($lo*$la*$ha)/10000). ' mètres carrés';};
 
 
   ?>
@@ -205,7 +205,7 @@ $req->closeCursor();
 <div class="col-md-5">
         <div class="panel panel-default">
   <div class="panel-body">
-        <label for="destination">déstination de l'objet:</label><br>
+        <label for="destination">Déstination de l'objet:</label><br>
 <input type="checkbox" name="destination1" value="1" disabled <?php if(intval($isreempl) === 1 ){echo(" checked");};?> ><label for="destination1">Réemploi,</label><br>
   <input type="checkbox" name="destination2" value="1" disabled <?php if(intval($isreutil) === 1 ){echo(" checked");};?> ><label for="destination2">Réutilisation,</label><br>
   <input type="checkbox" name="destination3" value="1" disabled <?php if(intval($isrecy) === 1 ){echo(" checked");};?> ><label for="destination3">Recyclage</label>
