@@ -69,9 +69,9 @@ $message = '';
 $nomImage = '';
 
 //on prépare les trois varables de destination
-              if(intval($_POST['destination1']) === 1){$reempl = 1;}else{$reempl = 0;};
-              if(intval($_POST['destination2']) === 1){$reutil = 1;}else{$reutil = 0;};
-              if(intval($_POST['destination3']) === 1){$recy = 1;}else{$recy = 0;};
+              if(intval($_POST['destination1']) === 1){$reempl = "1";}else{$reempl = "0";};
+              if(intval($_POST['destination2']) === 1){$reutil = "1";}else{$reutil = "0";};
+              if(intval($_POST['destination3']) === 1){$recy = "1";}else{$recy = "0";};
  
 /************************************************************
  * Creation du repertoire cible si inexistant
@@ -149,7 +149,29 @@ if (isset($_POST['materiaux'])) {
 
 
 // Insertion du post à l'aide d'une requête préparée
-    $req = $bdd->prepare('INSERT INTO spots (id_folio,coordos, bat_entree_cage_etage_numero, id_materiaux, id_objets,description,quantite,encombrement,qualite,risque_depose,complexite_traitement,complexite_stockage,remarque,comm_risque_depose,   comm_complexite_traitement,comm_complexite_stockage,comm_qualite,photo,definition,reempl,reutil,recy) VALUES(?,?, ?, ?,?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)');
+    $req = $bdd->prepare('INSERT INTO spots (
+       id_folio,
+       coordos, 
+       bat_entree_cage_etage_numero, 
+       id_materiaux,
+       id_objets,
+       description,
+       quantite,
+       encombrement,
+       qualite,
+       risque_depose,
+       complexite_traitement,
+       complexite_stockage,
+       remarque,
+       comm_risque_depose,   
+       comm_complexite_traitement,
+       comm_complexite_stockage,
+       comm_qualite,
+       photo,
+       definition,
+       reempl,
+       reutil,
+       recy) VALUES(?,?, ?, ?,?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)');
     $req->execute(array($_POST['fid'],$_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c2'],$_POST['c3'],$_POST['c4'],$_POST['c1'],$nomImage,$_POST['definition'],$reempl,$reutil,$recy));
    
     $req->closeCursor();
