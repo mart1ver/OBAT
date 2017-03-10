@@ -296,8 +296,9 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
 //string number_format ( float $number , int $decimals = 3 , string $dec_point = "," , string $thousands_sep = "." )
                echo(number_format ( $noteg ,  3 ,  "," , "." ));
                         ?></td>
+                            <td><?php echo $donnees['quantite'] ?></td>
                         <td><?php echo($msg_definition);?></td>
-                        <td></td>
+                      
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
@@ -325,9 +326,9 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
              echo(number_format ( $noteg , 3 ,  "," , "." ));
                 ?></td>
-                                
+                                <td><?php echo $donnees['quantite'] ?></td>
                                 <td><?php echo($msg_definition);?></td>
-                                <td></td>
+                                
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
@@ -355,8 +356,10 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
                echo(number_format ( $noteg , 3 ,  "," , "." ));
                 ?></td>
+
+                    <td><?php echo $donnees['quantite'] ?></td>
                  <td><?php echo($msg_definition);?></td>
-                                <td></td>
+                           
                                 
                         <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
@@ -385,8 +388,9 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                 $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
                echo(sumber_format( $number , 3 ,  "," , " " ));
                 ?></td>
+                    <td><?php echo $donnees['quantite'] ?></td>
                  <td><?php echo($msg_definition);?></td>
-                                <td></td>
+                               
                        <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
                         <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
