@@ -33,7 +33,8 @@ require_once('../moteur/dbconfig.php');
             $cage = $pieces[2]; // cage
             $etage =  $pieces[3]; // etage
             $numero = $pieces[4]; // numero
-
+// on extrait la definition
+$definition = $donnees['definition'];            
 //on extrait le type de materiau et de materiel
 
 $id_objets = $donnees['id_objets'];
@@ -48,7 +49,7 @@ $quantite = $donnees['quantite'] ;
             $pieces = explode("|", $pizza);
             $lo = $pieces[0]; // lonuger
             $la = $pieces[1]; // largeur
-            $ha = $pieces[2]; // hauteur
+            $ha = $pieces[2]; // hauteur/epaisseur
 //on extrait les notes , 4 variables      
 $risque_depose = $donnees['risque_depose'] ;
 $complexite_traitement = $donnees['complexite_traitement'] ;
@@ -67,7 +68,14 @@ $photo = $donnees['photo'] ;
 
 
 
-  $req->closeCursor(); // Termine le traitement de la requête ?>
+  $req->closeCursor(); // Termine le traitement de la requête 
+
+if($definition === 0){};
+if($definition === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' metres cubes'};
+if($definition === 2){$msg_definition = "Longueur: ".$lo.' cm lineaires'};
+if($definition === 3){$msg_definition = "Surface: ".(($lo*$la*$ha/10000). ' metres carés'}; 
+
+?>
 
 
 
@@ -76,7 +84,6 @@ $photo = $donnees['photo'] ;
 
 
 
-<form name="formspot" id="formspot" enctype="multipart/form-data" action="../moteur/edite_point_post.php" method="post">
   
 
         <input type="hidden" id="coordos" name="coordos"> 
@@ -181,6 +188,7 @@ $req->closeCursor();
         <label>Longueur:&nbsp<?php echo($lo);?></label>
         <label>&nbspLargeur:&nbsp<?php echo($la);?></label>
         <label>&nbspHauteur:&nbsp<?php echo($ha);?></label><br>
+        <label>&nbsp<?php echo($msg_definition);?></label><br>
 <label >&nbspQuantité:&nbsp<?php echo($quantite);?></label>
         
         
