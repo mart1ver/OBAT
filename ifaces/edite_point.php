@@ -149,10 +149,10 @@ $photo = $donnees['photo'] ;
         <div class="panel panel-default">
   <div class="panel-body">
         <label for="definition">l'objet est definit par:</label><br>
-<input type="radio" name="definition" value="0"<?php if($definition === 0){echo(' checked');}; ?> ><label for="definition"> sa quantité uniquement</label>
-  <input type="radio" name="definition" value="1"<?php if($definition === 1){echo(' checked');}; ?>><label for="definition"> son volume(l*L*ep)</label><br>
-  <input type="radio" name="definition" value="2"<?php if($definition === 2){echo(' checked');}; ?>><label for="definition"> par sa longueur(L)</label>
-  <input type="radio" name="definition" value="3"<?php if($definition === 3){echo(' checked');}; ?>><label for="definition"> sa surface (l*L)</label>
+<input type="radio" name="definition" value="0"<?php if(intval($definition) === 0){echo(' checked');}; ?> ><label for="definition"> sa quantité uniquement</label>
+  <input type="radio" name="definition" value="1"<?php if(intval($definition) === 1){echo(' checked');}; ?>><label for="definition"> son volume(l*L*ep)</label><br>
+  <input type="radio" name="definition" value="2"<?php if(intval($definition) === 2){echo(' checked');}; ?>><label for="definition"> par sa longueur(L)</label>
+  <input type="radio" name="definition" value="3"<?php if(intval($definition) === 3){echo(' checked');}; ?>><label for="definition"> sa surface (l*L)</label>
         <br> 
         
 
