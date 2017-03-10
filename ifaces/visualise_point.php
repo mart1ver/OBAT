@@ -183,7 +183,7 @@ $req->closeCursor();
         <label>Longueur:&nbsp<?php echo($lo);?></label>
         <label>&nbspLargeur:&nbsp<?php echo($la);?></label>
         <label>&nbspHauteur:&nbsp<?php echo($ha);?></label><br>
-        <label>&nbsp<?php echo($msg_definition.'essai');?></label><br>
+        <label>&nbsp<?php echo($msg_definition);?></label><br>
 <label >&nbspQuantité:&nbsp<?php echo($quantite);?></label>
         
         
