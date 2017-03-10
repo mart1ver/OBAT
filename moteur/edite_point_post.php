@@ -152,10 +152,13 @@ comm_complexite_stockage = :comm_complexite_stockage,
 comm_qualite = :comm_qualite,
 remarque = :remarque,
 definition = :definition,
+reutil = :reutil,
+reempl = :reempl,
+recy = :recy,
 photo = :photo
 WHERE  id = :pid ');
 
-$req->execute(array('pid' => $_POST['pid'],'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,'id_materiaux' => $materiaux,'id_objets' => $objet,'description' => $_POST['description'],'quantite' => $_POST['quantite'],'encombrement' => $_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],'qualite' => $_POST['qualite'],'risque_depose' => $_POST['risque'],'complexite_traitement' => $_POST['traitement'],'complexite_stockage' => $_POST['stockage'],'remarque' => $_POST['remarques'],'comm_risque_depose' => $_POST['c2'],'comm_complexite_traitement' => $_POST['c3'],'comm_complexite_stockage' => $_POST['c4'],'comm_qualite' => $_POST['c1'],'remarque' => $_POST['remarques'],'definition' => $_POST['definition'],'photo' => $nomImage));
+$req->execute(array('pid' => $_POST['pid'],'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,'id_materiaux' => $materiaux,'id_objets' => $objet,'description' => $_POST['description'],'quantite' => $_POST['quantite'],'encombrement' => $_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],'qualite' => $_POST['qualite'],'risque_depose' => $_POST['risque'],'complexite_traitement' => $_POST['traitement'],'complexite_stockage' => $_POST['stockage'],'remarque' => $_POST['remarques'],'comm_risque_depose' => $_POST['c2'],'comm_complexite_traitement' => $_POST['c3'],'comm_complexite_stockage' => $_POST['c4'],'comm_qualite' => $_POST['c1'],'remarque' => $_POST['remarques'],'definition' => $_POST['definition'],'photo' => $nomImage,'reutil' => $_POST['destination2'],'reempl' => $_POST['destination1'],'recy' => $_POST['destination3'] ));
 
     
     
@@ -236,10 +239,13 @@ comm_complexite_traitement = :comm_complexite_traitement,
 comm_complexite_stockage = :comm_complexite_stockage,
 comm_qualite = :comm_qualite,
 definition = :definition,
+reutil = :reutil,
+reempl = :reempl,
+recy = :recy,
 remarque = :remarque
 WHERE  id = :pid ');
 
-$req->execute(array('pid' => $_POST['pid'],'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,'id_materiaux' => $materiaux,'id_objets' => $objet,'description' => $_POST['description'],'quantite' => $_POST['quantite'],'encombrement' => $_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],'qualite' => $_POST['qualite'],'risque_depose' => $_POST['risque'],'complexite_traitement' => $_POST['traitement'],'complexite_stockage' => $_POST['stockage'],'remarque' => $_POST['remarques'],'comm_risque_depose' => $_POST['c2'],'comm_complexite_traitement' => $_POST['c3'],'comm_complexite_stockage' => $_POST['c4'],'comm_qualite' => $_POST['c1'],'definition' => $_POST['definition'],'remarque' => $_POST['remarques']));
+$req->execute(array('pid' => $_POST['pid'],'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,'id_materiaux' => $materiaux,'id_objets' => $objet,'description' => $_POST['description'],'quantite' => $_POST['quantite'],'encombrement' => $_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],'qualite' => $_POST['qualite'],'risque_depose' => $_POST['risque'],'complexite_traitement' => $_POST['traitement'],'complexite_stockage' => $_POST['stockage'],'remarque' => $_POST['remarques'],'comm_risque_depose' => $_POST['c2'],'comm_complexite_traitement' => $_POST['c3'],'comm_complexite_stockage' => $_POST['c4'],'comm_qualite' => $_POST['c1'],'definition' => $_POST['definition'],'remarque' => $_POST['remarques'],'reutil' => $_POST['destination2'],'reempl' => $_POST['destination1'],'recy' => $_POST['destination3']));
 
     
     
