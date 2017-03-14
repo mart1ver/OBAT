@@ -229,7 +229,7 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
 if(intval($donnees['definition']) === 0){$msg_definition = "-";};
 if(intval($donnees['definition']) === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' mètres cubes';};
 if(intval($donnees['definition']) === 2){$msg_definition = "Longueur: ".($lo/100).' mètres linéaires';};
-if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la*$ha)/10000). ' mètres carrés';};
+if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la)/10000). ' mètres carrés';};
 
 
 
