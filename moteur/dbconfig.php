@@ -3,7 +3,9 @@
 $host='localhost';
 $base='obat';
 $user='root';
-$pass='lsdtmearbt=root0';
+
+$pass='lsdtmearbt';
+
 // Configuration interne de Obat
 try {
 	$bdd = new PDO("mysql:host=$host;dbname=$base;charset=utf8", $user, $pass);
