@@ -73,6 +73,129 @@ $nomImage = '';
               if(intval($_POST['destination2']) === 1){$reutil = "1";}else{$reutil = "0";};
               if(intval($_POST['destination3']) === 1){$recy = "1";}else{$recy = "0";};
  
+
+
+ $cid = 0;
+if (isset($_POST['cid'])) {
+   $cid = $_POST['cid'];
+}
+
+
+ $coordos = "";
+if (isset($_POST['coordos'])) {
+   $coordos = $_POST['coordos'];
+}
+
+ $fid = 0;
+if (isset($_POST['fid'])) {
+   $fid = $_POST['fid'];
+}
+
+$bat = "";
+if (isset($_POST['bat'])) {
+   $bat = $_POST['bat'];
+}
+
+$entree = "";
+if (isset($_POST['entree'])) {
+   $entree = $_POST['entree'];
+}
+
+$cage = "";
+if (isset($_POST['cage'])) {
+   $cage = $_POST['cage'];
+}
+
+$etage = "";
+if (isset($_POST['etage'])) {
+   $etage = $_POST['etage'];
+}
+
+$numero = "";
+if (isset($_POST['numero'])) {
+   $numero = $_POST['numero'];
+}
+
+$description = "";
+if (isset($_POST['description'])) {
+   $description = $_POST['description'];
+}
+
+$quantite = 0;
+if (isset($_POST['quantite'])) {
+   $quantite = $_POST['quantite'];
+}
+
+$longueur = "";
+if (isset($_POST['longueur'])) {
+   $longueur = $_POST['longueur'];
+}
+
+$largeur = "";
+if (isset($_POST['largeur'])) {
+   $largeur = $_POST['largeur'];
+}
+
+$hauteur = "";
+if (isset($_POST['hauteur'])) {
+   $hauteur = $_POST['hauteur'];
+}
+
+$qualite = 0;
+if (isset($_POST['qualite'])) {
+   $qualite = $_POST['qualite'];
+}
+
+$stockage = 0;
+if (isset($_POST['stockage'])) {
+   $stockage = $_POST['stockage'];
+}
+
+$traitement = 0;
+if (isset($_POST['traitement'])) {
+   $traitement = $_POST['traitement'];
+}
+
+$risque = 0;
+if (isset($_POST['risque'])) {
+   $risque = $_POST['risque'];
+}
+
+$c2 = "";
+if (isset($_POST['c2'])) {
+   $c2 = $_POST['c2'];
+}
+
+$c3 = "";
+if (isset($_POST['c3'])) {
+   $c3 = $_POST['c3'];
+}
+
+$c4 = "";
+if (isset($_POST['c4'])) {
+   $c4 = $_POST['c4'];
+}
+
+$c1 = "";
+if (isset($_POST['c1'])) {
+   $c1 = $_POST['c1'];
+}
+
+$stockage = "";
+if (isset($_POST['stockage'])) {
+   $stockage = $_POST['stockage'];
+}
+
+$remarques = "";
+if (isset($_POST['remarques'])) {
+   $remarques = $_POST['remarques'];
+}
+
+$definition = 0;
+if (isset($_POST['definition'])) {
+   $definition = $_POST['definition'];
+}
+
 /************************************************************
  * Creation du repertoire cible si inexistant
  *************************************************************/
@@ -172,7 +295,7 @@ if (isset($_POST['materiaux'])) {
        reempl,
        reutil,
        recy) VALUES(?,?, ?, ?,?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)');
-    $req->execute(array($_POST['fid'],$_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c2'],$_POST['c3'],$_POST['c4'],$_POST['c1'],$nomImage,$_POST['definition'],$reempl,$reutil,$recy));
+    $req->execute(array($fid,$coordos, $bat."|".$entree."|".$cage."|".$etage."|".$numero , $materiaux,$objet,$description,$quantite,$longueur."|".$largeur."|".$hauteur,$qualite,$risque,$traitement,$stockage,$remarques,$c2,$c3,$c4,$c1,$nomImage,$definition,$reempl,$reutil,$recy));
    
     $req->closeCursor();
 
@@ -253,15 +376,16 @@ if (isset($_POST['materiaux'])) {
       reempl,
       reutil,
       recy) VALUES(?,?,?,?,?,?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)');
-    $req->execute(array($_POST['fid'],$_POST['coordos'], $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] , $materiaux,$objet,$_POST['description'],$_POST['quantite'],$_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],$_POST['qualite'],$_POST['risque'],$_POST['traitement'],$_POST['stockage'],$_POST['remarques'],$_POST['c2'],$_POST['c3'],$_POST['c4'],$_POST['c1'],$_POST['definition'],$reempl,$reutil,$recy));
+    $req->execute(array($fid,$coordos, $bat."|".$entree."|".$cage."|".$etage."|".$numero , $materiaux,$objet,$description,$quantite,$longueur."|".$largeur."|".$hauteur,$qualite,$risque,$traitement, $stockage,$remarques,$c2,$c3,$c4,$c1,$definition,$reempl,$reutil,$recy));
    
     $req->closeCursor();
+     $message = 'ajout de spot sans image !';
   }
 }
 
 
 // Redirection du visiteur vers la page de saisie
- header( "Location:../ifaces/saisie.php?id=".$_POST['cid']."&fid=".$_POST['fid']."&uploadDebug=".$message);
+ header( "Location:../ifaces/saisie.php?id=".$cid."&fid=".$fid."&uploadDebug=".$message);
 
 
           
