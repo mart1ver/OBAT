@@ -64,6 +64,130 @@ $infosImg = array();
 $extension = '';
 $message = '';
 $nomImage = '';
+
+//on prépare les trois varables de destination
+              if(intval($_POST['destination1']) === 1){$reempl = "1";}else{$reempl = "0";};
+              if(intval($_POST['destination2']) === 1){$reutil = "1";}else{$reutil = "0";};
+              if(intval($_POST['destination3']) === 1){$recy = "1";}else{$recy = "0";};
+
+$pid = 0;
+if (isset($_POST['pid'])) {
+   $pid = $_POST['pid'];
+}
+
+$bat = "";
+if (isset($_POST['bat'])) {
+   $bat = $_POST['bat'];
+}
+
+$entree = "";
+if (isset($_POST['entree'])) {
+   $entree = $_POST['entree'];
+}
+
+$cage = "";
+if (isset($_POST['cage'])) {
+   $cage = $_POST['cage'];
+}
+
+$etage = "";
+if (isset($_POST['etage'])) {
+   $etage = $_POST['etage'];
+}
+
+$numero = "";
+if (isset($_POST['numero'])) {
+   $numero = $_POST['numero'];
+}
+
+$description = "";
+if (isset($_POST['description'])) {
+   $description = $_POST['description'];
+}
+
+$quantite = 0;
+if (isset($_POST['quantite'])) {
+   $quantite = $_POST['quantite'];
+}
+
+$longueur = "";
+if (isset($_POST['longueur'])) {
+   $longueur = $_POST['longueur'];
+}
+
+$largeur = "";
+if (isset($_POST['largeur'])) {
+   $largeur = $_POST['largeur'];
+}
+
+$hauteur = "";
+if (isset($_POST['hauteur'])) {
+   $hauteur = $_POST['hauteur'];
+}
+
+$qualite = 0;
+if (isset($_POST['qualite'])) {
+   $qualite = $_POST['qualite'];
+}
+
+$stockage = 0;
+if (isset($_POST['stockage'])) {
+   $stockage = $_POST['stockage'];
+}
+
+$traitement = 0;
+if (isset($_POST['traitement'])) {
+   $traitement = $_POST['traitement'];
+}
+
+$risque = 0;
+if (isset($_POST['risque'])) {
+   $risque = $_POST['risque'];
+}
+
+$c2 = "";
+if (isset($_POST['c2'])) {
+   $c2 = $_POST['c2'];
+}
+
+$c3 = "";
+if (isset($_POST['c3'])) {
+   $c3 = $_POST['c3'];
+}
+
+$c4 = "";
+if (isset($_POST['c4'])) {
+   $c4 = $_POST['c4'];
+}
+
+$c1 = "";
+if (isset($_POST['c1'])) {
+   $c1 = $_POST['c1'];
+}
+
+$stockage = "";
+if (isset($_POST['stockage'])) {
+   $stockage = $_POST['stockage'];
+}
+
+$remarques = "";
+if (isset($_POST['remarques'])) {
+   $remarques = $_POST['remarques'];
+}
+
+$definition = 0;
+if (isset($_POST['definition'])) {
+   $definition = $_POST['definition'];
+}
+
+
+
+
+
+
+
+
+
  
 /************************************************************
  * Creation du repertoire cible si inexistant
@@ -121,7 +245,7 @@ if(!empty($_POST))
 }
  
 // Insertion du post à l'aide d'une requête préparée
-// mot de passe crypté md5 
+
 $objet = 0;
 if (isset($_POST['objet'])) {
    $objet = $_POST['objet'];
@@ -158,7 +282,7 @@ recy = :recy,
 photo = :photo
 WHERE  id = :pid ');
 
-$req->execute(array('pid' => $_POST['pid'],'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,'id_materiaux' => $materiaux,'id_objets' => $objet,'description' => $_POST['description'],'quantite' => $_POST['quantite'],'encombrement' => $_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],'qualite' => $_POST['qualite'],'risque_depose' => $_POST['risque'],'complexite_traitement' => $_POST['traitement'],'complexite_stockage' => $_POST['stockage'],'remarque' => $_POST['remarques'],'comm_risque_depose' => $_POST['c2'],'comm_complexite_traitement' => $_POST['c3'],'comm_complexite_stockage' => $_POST['c4'],'comm_qualite' => $_POST['c1'],'remarque' => $_POST['remarques'],'definition' => $_POST['definition'],'photo' => $nomImage,'reutil' => $_POST['destination2'],'reempl' => $_POST['destination1'],'recy' => $_POST['destination3'] ));
+$req->execute(array('pid' => $pid,'becen' => $bat."|".$entree."|".$cage."|".$etage."|".$numero ,'id_materiaux' => $materiaux,'id_objets' => $objet,'description' => $description,'quantite' => $quantite,'encombrement' => $longueur."|".$largeur."|".$hauteur,'qualite' => $qualite,'risque_depose' => $risque,'complexite_traitement' => $traitement,'complexite_stockage' => $stockage,'remarque' => $remarques,'comm_risque_depose' => $c2,'comm_complexite_traitement' => $c3,'comm_complexite_stockage' => $c4,'comm_qualite' => $c1,'definition' => $definition,'photo' => $nomImage,'reutil' => $reutil,'reempl' => $reempl,'recy' => $recy ));
 
     
     
@@ -245,7 +369,7 @@ recy = :recy,
 remarque = :remarque
 WHERE  id = :pid ');
 
-$req->execute(array('pid' => $_POST['pid'],'becen' => $_POST['bat']."|".$_POST['entree']."|".$_POST['cage']."|".$_POST['etage']."|".$_POST['numero'] ,'id_materiaux' => $materiaux,'id_objets' => $objet,'description' => $_POST['description'],'quantite' => $_POST['quantite'],'encombrement' => $_POST['longueur']."|".$_POST['largeur']."|".$_POST['hauteur'],'qualite' => $_POST['qualite'],'risque_depose' => $_POST['risque'],'complexite_traitement' => $_POST['traitement'],'complexite_stockage' => $_POST['stockage'],'remarque' => $_POST['remarques'],'comm_risque_depose' => $_POST['c2'],'comm_complexite_traitement' => $_POST['c3'],'comm_complexite_stockage' => $_POST['c4'],'comm_qualite' => $_POST['c1'],'definition' => $_POST['definition'],'remarque' => $_POST['remarques'],'reutil' => $_POST['destination2'],'reempl' => $_POST['destination1'],'recy' => $_POST['destination3']));
+$req->execute(array('pid' => $pid,'becen' => $bat."|".$entree."|".$cage."|".$etage."|".$numero ,'id_materiaux' => $materiaux,'id_objets' => $objet,'description' => $description,'quantite' => $quantite,'encombrement' => $longueur."|".$largeur."|".$hauteur,'qualite' => $qualite,'risque_depose' => $risque,'complexite_traitement' => $traitement,'complexite_stockage' => $stockage,'remarque' => $remarques,'comm_risque_depose' => $c2,'comm_complexite_traitement' => $c3,'comm_complexite_stockage' => $c4,'comm_qualite' => $c1,'definition' => $definition,'reutil' => $reutil,'reempl' => $reempl,'recy' => $recy));
 
     
     
