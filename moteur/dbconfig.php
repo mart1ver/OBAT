@@ -2,9 +2,9 @@
 // Changer ces valeurs selon votre configuration de systeme de base de donnée.
 $host='localhost';
 $base='obat';
-$user='root';
+$user='obat';
 
-$pass='lsdtmearbt';
+$pass='obat';
 
 // Configuration interne de Obat
 try {
