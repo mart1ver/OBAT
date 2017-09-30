@@ -1,32 +1,32 @@
 
 <div class="container">
-  <footer>
+    <footer>
         <p class="text-right">Obat. 2016-2017</p>
         <p class="text-left"> <a href="../moteur/destroy.php">déconnexion</a> </p>
-    
-</footer> 
+
+    </footer> 
 </div>  
- <script type="text/javascript">
+<script type="text/javascript">
 
 //document.getElementById('mouse-position').style.visibility = "hidden";
 
 
-$(function(){
-    $(".chzn-select").chosen({
-    disable_search_threshold: 10,
-    no_results_text: "Oops, nothing found!"
-   
-  });
-});
+    $(function () {
+        $(".chzn-select").chosen({
+            disable_search_threshold: 10,
+            no_results_text: "Oops, nothing found!"
+
+        });
+    });
 </script>
 
 
 <script>
-$('#myModal').on('shown.bs.modal', function () {
-  $('.chzn-select', this).chosen();
-});
+    $('#myModal').on('shown.bs.modal', function () {
+        $('.chzn-select', this).chosen();
+    });
 </script>
-  </body>
+</body>
 </html>
 
 
