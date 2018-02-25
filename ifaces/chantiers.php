@@ -14,7 +14,7 @@ include "tete.php"
 
     <div class="panel-body">
         <div class="row">
-<<<<<<< HEAD
+
         	<form action="../moteur/chantiers_post.php" method="post">
   <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="<?php echo $_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
     <div class="col-md-4"><label for="adresse">Adresse:</label> <input type="text" value ="<?php echo $_GET['adresse']?>" name="adresse" id="adresse" class="form-control " required ></div>
@@ -25,18 +25,7 @@ include "tete.php"
 <div class="row">
   <div class="col-md-3"><label for="nom">Identifiant client:</label> <input type="text"                 value ="" name="idclient" id="idclient" class="form-control " required ></div>
     <div class="col-md-4"><label for="adresse">Mot de passe client:</label> <input type="text" value ="" name="mdpclient" id="mdpclient" class="form-control " required ></div>
-=======
-            <form action="../moteur/chantiers_post.php" method="post">
-                <div class="col-md-3"><label for="nom">Nom:</label> <input type="text"                 value ="<?php echo $_GET['nom'] ?>" name="nom" id="nom" class="form-control " required autofocus></div>
-                <div class="col-md-4"><label for="adresse">Adresse:</label> <input type="text" value ="<?php echo $_GET['adresse'] ?>" name="adresse" id="adresse" class="form-control " required ></div>
-                <div class="col-md-2"><label for="commentaire">commentaire:</label> <input type="text" value ="<?php echo $_GET['commentaire'] ?>" name="commentaire" id="commentaire" class="form-control " required ></div>
->>>>>>> 8653ea94f20a19f6a78fa94d4f2b26c9712703bc
 
-
-        </div>
-        <div class="row">
-            <div class="col-md-3"><label for="nom">Identifiant client:</label> <input type="text"                 value ="<?php echo $_GET['idclient'] ?>" name="idclient" id="idclient" class="form-control " required ></div>
-            <div class="col-md-4"><label for="adresse">Mot de passe client:</label> <input type="text" value ="<?php echo $_GET['mdpclient'] ?>" name="mdpclient" id="mdpclient" class="form-control " required ></div>
 
         </div>
         <div class="col-md-1 col-md-offset-9"><br><button name="creer" class="btn btn-default">Créer!</button></div>
