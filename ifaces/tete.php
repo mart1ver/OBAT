@@ -1,7 +1,9 @@
 
-<?php session_start();
-require_once('../moteur/dbconfig.php');
-?>
+
+<?php
+// session_start(); 
+require_once('../moteur/dbconfig.php'); ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
