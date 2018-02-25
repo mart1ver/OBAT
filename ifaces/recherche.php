@@ -80,7 +80,7 @@ $req2->closeCursor(); // Termine le traitement de la requête
                 }
                 ?>><?php echo($donnees['nom']); ?></option>
 
-<?php } ?>
+            <?php } ?>
 
         </select> (<?php echo($_GET["id"]); ?>-<?php echo($_GET["fid"]); ?>)</b>
 
@@ -112,10 +112,10 @@ $req2->closeCursor(); // Termine le traitement de la requête
 
             <p><b>Filtrer les spots sur ce folio: corps de metier: <select class="chzn-select" name="forma" onchange="location = this.value;">
                         <option value="recherche.php?id=<?php echo $_GET["id"]; ?>&fid=<?php echo($_GET["fid"]); ?>&rcorps=<?php echo('0'); ?>&rtypo=<?php echo($_GET["rtypo"]); ?>&ro=<?php echo($_GET["ro"]); ?>&rm=<?php echo($_GET["rm"]); ?>"<?php
-                                if ($donnees['id'] == $_GET["rcorps"]) {
-                                    echo'selected="selected"';
-                                }
-                                ?>>-</option>
+                        if ($donnees['id'] == $_GET["rcorps"]) {
+                            echo'selected="selected"';
+                        }
+                        ?>>-</option>
                                 <?php
 // On recupère tout le contenu de la table chantiers
 
@@ -129,64 +129,64 @@ $req2->closeCursor(); // Termine le traitement de la requête
 
 
                             <option value="recherche.php?id=<?php echo $_GET["id"]; ?>&fid=<?php echo($_GET["fid"]); ?>&rcorps=<?php echo($donnees['id']); ?>&rtypo=<?php echo($_GET["rtypo"]); ?>&ro=<?php echo($_GET["ro"]); ?>&rm=<?php echo($_GET["rm"]); ?>"<?php
-                        if ($donnees['id'] == $_GET["rcorps"]) {
-                            echo'selected="selected"';
-                        }
-                                    ?>><?php echo($donnees['nom']); ?></option>
+                            if ($donnees['id'] == $_GET["rcorps"]) {
+                                echo'selected="selected"';
+                            }
+                            ?>><?php echo($donnees['nom']); ?></option>
                                 <?php } ?>
 
                     </select>
                     <label><input type="checkbox" id="objets" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"]; ?>&fid=<?php echo($_GET["fid"]); ?>&fid=<?php echo($_GET["fid"]); ?>&rcorps=<?php echo($_GET["rcorps"]); ?>&rtypo=<?php echo($_GET["rtypo"]); ?>&ro=<?php
-                                  if ($_GET["ro"] == "0") {
-                                      echo("1");
-                                  } else {
-                                      echo("0");
-                                  };
-                                  ?>&rm=<?php echo($_GET["rm"]); ?>"<?php
+                        if ($_GET["ro"] == "0") {
+                            echo("1");
+                        } else {
+                            echo("0");
+                        };
+                        ?>&rm=<?php echo($_GET["rm"]); ?>"<?php
                                   if ($_GET["ro"] == "1") {
                                       echo'checked';
                                   }
                                   ?>> Materiels,</label>
                     <label><input type="checkbox" id="materiaux" onchange="location = this.value;" value="recherche.php?id=<?php echo $_GET["id"]; ?>&fid=<?php echo($_GET["fid"]); ?>&fid=<?php echo($_GET["fid"]); ?>&rcorps=<?php echo($_GET["rcorps"]); ?>&rtypo=<?php echo($_GET["rtypo"]); ?>&ro=<?php echo($_GET["ro"]); ?>&rm=<?php
-                                  if ($_GET["rm"] == "0") {
-                                      echo("1");
-                                  } else {
-                                      echo("0");
-                                  };
-                                  ?>"<?php
+                        if ($_GET["rm"] == "0") {
+                            echo("1");
+                        } else {
+                            echo("0");
+                        };
+                        ?>"<?php
                                   if ($_GET["rm"] == "1") {
                                       echo'checked';
                                   }
                                   ?>> Materiaux,</label><br>
-                                  <form action="recherche.php?toto=tt" method="get">
-                                  <input type="hidden" name="id" value="<?php echo($_GET["id"]) ?>"/> 
-                                  <input type="hidden" name="fid" value="<?php echo($_GET["fid"]) ?>" /> 
-                                  <input type="hidden" name="rcorps" value="<?php echo($_GET["rcorps"]) ?>" /> 
-                                  <input type="hidden" name="rtypo" value="<?php echo($_GET["rtypo"]) ?>" /> 
-                                  <input type="hidden" name="rm" value="<?php echo($_GET["rm"]) ?>" /> 
-                                  <input type="hidden" name="ro" value="<?php echo($_GET["ro"]) ?>" /> 
+                    <form action="recherche.php?toto=tt" method="get">
+                        <input type="hidden" name="id" value="<?php echo($_GET["id"]) ?>"/> 
+                        <input type="hidden" name="fid" value="<?php echo($_GET["fid"]) ?>" /> 
+                        <input type="hidden" name="rcorps" value="<?php echo($_GET["rcorps"]) ?>" /> 
+                        <input type="hidden" name="rtypo" value="<?php echo($_GET["rtypo"]) ?>" /> 
+                        <input type="hidden" name="rm" value="<?php echo($_GET["rm"]) ?>" /> 
+                        <input type="hidden" name="ro" value="<?php echo($_GET["ro"]) ?>" /> 
 
-                                  <label>Numero de fiche: </label><input type="text" name="pid" id="pid" placeholder="#" maxlength="6" size="6"  >
-                                  &nbsp
-
-
-
-   <button>GO!</button>
-   </form>
+                        <label>Numero de fiche: </label><input type="text" name="pid" id="pid" placeholder="#" maxlength="6" size="6"  >
+                        &nbsp
 
 
-                                  
+
+                        <button>GO!</button>
+                    </form>
+
+
+
                 </b>
             </p> 
 
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#liste">
-        <button>Liste des fiches</button>
-    </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#liste">
+            <button>Liste des fiches</button>
+        </a>
     </div>
 
 </div>
@@ -207,7 +207,7 @@ $req2->closeCursor(); // Termine le traitement de la requête
                     <th>Réemployable?</th>
                     <th>Réutilisable?</th>
                     <th>Recyclable?</th>
-                    
+
                     <th></th>        
                 </tr>
             </thead>
@@ -220,16 +220,24 @@ WHERE id_folio=:fid AND (id_objets > :ro OR id_materiaux > :rm )');
                 while ($donnees = $reponse->fetch()) {
 
 //on extrait les cotes en 3 variables
-            $pizza  = $donnees['encombrement'];
-            $pieces = explode("|", $pizza);
-            $lo = $pieces[0]; // lonuger
-            $la = $pieces[1]; // largeur
-            $ha = $pieces[2]; // hauteur/epaisseur
+                    $pizza = $donnees['encombrement'];
+                    $pieces = explode("|", $pizza);
+                    $lo = $pieces[0]; // lonuger
+                    $la = $pieces[1]; // largeur
+                    $ha = $pieces[2]; // hauteur/epaisseur
 
-if(intval($donnees['definition']) === 0){$msg_definition = "-";};
-if(intval($donnees['definition']) === 1){$msg_definition = "Volume: ".(($lo*$la*$ha)/1000000).' mètres cubes';};
-if(intval($donnees['definition']) === 2){$msg_definition = "Longueur: ".($lo/100).' mètres linéaires';};
-if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la)/10000). ' mètres carrés';};
+                    if (intval($donnees['definition']) === 0) {
+                        $msg_definition = "-";
+                    };
+                    if (intval($donnees['definition']) === 1) {
+                        $msg_definition = "Volume: " . (($lo * $la * $ha) / 1000000) . ' mètres cubes';
+                    };
+                    if (intval($donnees['definition']) === 2) {
+                        $msg_definition = "Longueur: " . ($lo / 100) . ' mètres linéaires';
+                    };
+                    if (intval($donnees['definition']) === 3) {
+                        $msg_definition = "Surface: " . (($lo * $la) / 10000) . ' mètres carrés';
+                    };
 
 
 
@@ -286,27 +294,45 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                         <tr> 
                             <td><?php echo $donnees['id'] ?></td>
                             <td><?php echo $donnees['timestamp'] ?></td>
-                            
+
                             <td><?php echo ($nom) ?></td>
-                            
+
                             <td><?php echo ($nom_corps) ?></td>
                             <td><?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
-                $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
+                                $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
 //string number_format ( float $number , int $decimals = 3 , string $dec_point = "," , string $thousands_sep = "." )
-               echo(number_format ( $noteg ,  3 ,  "," , "." ));
-                        ?></td>
+                                echo(number_format($noteg, 3, ",", "."));
+                                ?></td>
                             <td><?php echo $donnees['quantite'] ?></td>
-                        <td><?php echo($msg_definition);?></td>
-                      
-                        <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        
+                            <td><?php echo($msg_definition); ?></td>
+
+                            <td><?php
+                                if (intval($donnees['reempl']) === 1) {
+                                    echo "OUI";
+                                } else {
+                                    echo("-");
+                                };
+                                ?></td>
+                            <td><?php
+                                if (intval($donnees['reutil']) === 1) {
+                                    echo "OUI";
+                                } else {
+                                    echo("-");
+                                };
+                                ?></td>
+                            <td><?php
+                        if (intval($donnees['recy']) === 1) {
+                            echo "OUI";
+                        } else {
+                            echo("-");
+                        };
+                        ?></td>
+
                             <td>
-                               <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
-                                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                               </a> 
+                                <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"] ?>&fid=<?php echo $_GET["fid"] ?>">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </a> 
                             </td>
                         </tr>
         <?php
@@ -317,25 +343,43 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                             <tr> 
                                 <td><?php echo $donnees['id'] ?></td>
                                 <td><?php echo $donnees['timestamp'] ?></td>
-                                
+
                                 <td><?php echo ($nom) ?></td>
-                                
+
                                 <td><?php echo ($nom_corps) ?></td>
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
-                $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
-             echo(number_format ( $noteg , 3 ,  "," , "." ));
-                ?></td>
+                        $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
+                        echo(number_format($noteg, 3, ",", "."));
+            ?></td>
                                 <td><?php echo $donnees['quantite'] ?></td>
-                                <td><?php echo($msg_definition);?></td>
-                                
-                        <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        
-                                   <td><a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
-                                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                               </a> 
+                                <td><?php echo($msg_definition); ?></td>
+
+                                <td><?php
+                                    if (intval($donnees['reempl']) === 1) {
+                                        echo "OUI";
+                                    } else {
+                                        echo("-");
+                                    };
+                                    ?></td>
+                                <td><?php
+                                    if (intval($donnees['reutil']) === 1) {
+                                        echo "OUI";
+                                    } else {
+                                        echo("-");
+                                    };
+                                    ?></td>
+                                <td><?php
+                            if (intval($donnees['recy']) === 1) {
+                                echo "OUI";
+                            } else {
+                                echo("-");
+                            };
+                            ?></td>
+
+                                <td><a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"] ?>&fid=<?php echo $_GET["fid"] ?>">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </a> 
                                 </td>
                             </tr>
             <?php
@@ -347,27 +391,45 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                             <tr> 
                                 <td><?php echo $donnees['id'] ?></td>
                                 <td><?php echo $donnees['timestamp'] ?></td>
-                                
+
                                 <td><?php echo ($nom) ?></td>
-                                
+
                                 <td><?php echo ($nom_corps) ?></td>
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
-                $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
-               echo(number_format ( $noteg , 3 ,  "," , "." ));
+                                    $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
+                                    echo(number_format($noteg, 3, ",", "."));
+                                    ?></td>
+
+                                <td><?php echo $donnees['quantite'] ?></td>
+                                <td><?php echo($msg_definition); ?></td>
+
+
+                                <td><?php
+                                    if (intval($donnees['reempl']) === 1) {
+                                        echo "OUI";
+                                    } else {
+                                        echo("-");
+                                    };
+                                    ?></td>
+                                <td><?php
+                                    if (intval($donnees['reutil']) === 1) {
+                                        echo "OUI";
+                                    } else {
+                                        echo("-");
+                                    };
+                                    ?></td>
+                                <td><?php
+                if (intval($donnees['recy']) === 1) {
+                    echo "OUI";
+                } else {
+                    echo("-");
+                };
                 ?></td>
 
-                    <td><?php echo $donnees['quantite'] ?></td>
-                 <td><?php echo($msg_definition);?></td>
-                           
-                                
-                        <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                     
-                                  <td><a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
-                                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                               </a> 
+                                <td><a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"] ?>&fid=<?php echo $_GET["fid"] ?>">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </a> 
                                 </td>
                             </tr>
             <?php
@@ -379,26 +441,44 @@ if(intval($donnees['definition']) === 3){$msg_definition = "Surface: ".(($lo*$la
                             <tr> 
                                 <td><?php echo $donnees['id'] ?></td>
                                 <td><?php echo $donnees['timestamp'] ?></td>
-                                
+
                                 <td><?php echo ($nom) ?></td>
-                                
+
                                 <td><?php echo ($nom_corps) ?></td>
                                 <td> <?php
 // noteg = (($donnees['qualite']*$coef_qualite)+($donnees['risque_depose']*$coef_depose)+($donnees['complexite_traitement']*$coef_traitement)+($donnees['complexite_stockage']*$coef_stockage))/$coef_qualite+$coef_depose+$coef_traitement+$coef_stockage;
-                $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
-               echo(sumber_format( $number , 3 ,  "," , " " ));
+                                    $noteg = (($donnees['qualite'] * $coef_qualite) + ((5 - $donnees['risque_depose']) * $coef_depose) + ((5 - $donnees['complexite_traitement']) * $coef_traitement) + ((5 - $donnees['complexite_stockage']) * $coef_stockage)) / ($coef_qualite + $coef_depose + $coef_traitement + $coef_stockage);
+                                    echo(sumber_format($number, 3, ",", " "));
+                                    ?></td>
+                                <td><?php echo $donnees['quantite'] ?></td>
+                                <td><?php echo($msg_definition); ?></td>
+
+                                <td><?php
+                        if (intval($donnees['reempl']) === 1) {
+                            echo "OUI";
+                        } else {
+                            echo("-");
+                        };
+                        ?></td>
+                                <td><?php
+                            if (intval($donnees['reutil']) === 1) {
+                                echo "OUI";
+                            } else {
+                                echo("-");
+                            };
+                            ?></td>
+                                <td><?php
+                if (intval($donnees['recy']) === 1) {
+                    echo "OUI";
+                } else {
+                    echo("-");
+                };
                 ?></td>
-                    <td><?php echo $donnees['quantite'] ?></td>
-                 <td><?php echo($msg_definition);?></td>
-                               
-                       <td><?php if (intval($donnees['reempl']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['reutil']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        <td><?php if (intval($donnees['recy']) === 1){echo "OUI";}else{echo("-");};?></td>
-                        
+
                                 <td>
-                                    <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"]?>&fid=<?php echo $_GET["fid"]?>">
-                                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                               </a> 
+                                    <a href="visualise_point.php?pid=<?php echo $donnees['id'] ?>&cid=<?php echo $_GET["id"] ?>&fid=<?php echo $_GET["fid"] ?>">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </a> 
                                 </td>
                             </tr>
 
@@ -428,7 +508,7 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 
         </table>
     </div>
-    
+
     <p align="right"><a href="#tete">
             <button>Carte</button>
         </a></p>
@@ -538,7 +618,7 @@ while ($donnees = $req->fetch()) {
     ?>
         var <?php echo("a" . $donnees['id']); ?> = new ol.Feature({
             geometry: new ol.geom.Point([<?php echo($donnees['coordos']); ?>]),
-            name: '<?php echo('<a href="visualise_point.php?pid='.$donnees['id'].'&cid='.$_GET["id"].'&fid='.$_GET["fid"].'">Point n°:'.$donnees['id']." ,".$donnees['nom']."</a>");?>'
+            name: '<?php echo('<a href="visualise_point.php?pid=' . $donnees['id'] . '&cid=' . $_GET["id"] . '&fid=' . $_GET["fid"] . '">Point n°:' . $donnees['id'] . " ," . $donnees['nom'] . "</a>"); ?>'
 
         });
     <?php
@@ -559,7 +639,7 @@ while ($donnees = $req->fetch()) {
         var <?php echo("a" . $donnees['id']); ?> = new ol.Feature({
 
             geometry: new ol.geom.Point([<?php echo($donnees['coordos']); ?>]),
-            name: '<?php echo('<a href="visualise_point.php?pid='.$donnees['id'].'&cid='.$_GET["id"].'&fid='.$_GET["fid"].'">Point n°:'.$donnees['id']." ,".$donnees['nom']."</a>");?>'
+            name: '<?php echo('<a href="visualise_point.php?pid=' . $donnees['id'] . '&cid=' . $_GET["id"] . '&fid=' . $_GET["fid"] . '">Point n°:' . $donnees['id'] . " ," . $donnees['nom'] . "</a>"); ?>'
 
         });
     <?php
@@ -586,9 +666,8 @@ while ($donnees = $req->fetch()) {
     ?>
 
     <?php echo("a" . $donnees['id']); ?>.setStyle(new ol.style.Style({
-           
-            image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
 
+            image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
 
     <?php
     if ($donnees['id_objets'] == 0) {
@@ -603,10 +682,16 @@ AND spots.id = :id_spot");
 
         // On affiche chaque entree une à une
         while ($donnees2 = $req2->fetch()) {
-            if($rcorps == $donnees2['corps'] || $rcorps == 0 ){}else{echo('opacity : 0 ,' );};
-            if($rm > 0){echo('opacity : 0 ,' );};
+            if ($rcorps == $donnees2['corps'] || $rcorps == 0) {
+                
+            } else {
+                echo('opacity : 0 ,' );
+            };
+            if ($rm > 0) {
+                echo('opacity : 0 ,' );
+            };
             echo('color:' . "'" . $donnees2['couleur'] . "'");
-                   };
+        };
         $req2->closeCursor(); // Termine le traitement de la requête 
     } else {
         $req2 = $bdd->prepare("SELECT spots.id, corps.couleur ,corps.id AS corps
@@ -619,8 +704,14 @@ AND spots.id = :id_spot");
 
         // On affiche chaque entree une à une
         while ($donnees2 = $req2->fetch()) {
-            if($rcorps == $donnees2['corps'] || $rcorps == 0 ){}else{echo('opacity : 0 ,' );};
-            if($ro > 0){echo('opacity : 0 ,' );};
+            if ($rcorps == $donnees2['corps'] || $rcorps == 0) {
+                
+            } else {
+                echo('opacity : 0 ,' );
+            };
+            if ($ro > 0) {
+                echo('opacity : 0 ,' );
+            };
             echo('color:' . "'" . $donnees2['couleur'] . "'");
         };
         $req2->closeCursor(); // Termine le traitement de la requête 
@@ -641,7 +732,7 @@ AND spots.id = :id_spot");
 
 
 
-<?php
+    <?php
 };
 $req->closeCursor(); // Termine le traitement de la requête 
 ?>
@@ -745,20 +836,20 @@ $req->closeCursor(); // Termine le traitement de la requête
     map.addOverlay(popup);
 
 
-   <?php if(intval($_GET["pid"]) > 0){?>
-            var coordinates = <?php echo('a'.$_GET["pid"]); ?>.getGeometry().getCoordinates();
-            
-            popup.setPosition(coordinates);
-             popup.setOffset([-48, -73]);
+<?php if (intval($_GET["pid"]) > 0) { ?>
+        var coordinates = <?php echo('a' . $_GET["pid"]); ?>.getGeometry().getCoordinates();
 
-            $(element).popover({
+        popup.setPosition(coordinates);
+        popup.setOffset([-48, -73]);
 
-                'placement': 'top',
-                'html': true,
-                'content': <?php echo('a'.$_GET["pid"]); ?>.get('name')
-            });
+        $(element).popover({
 
-            $(element).popover('show');
+            'placement': 'top',
+            'html': true,
+            'content': <?php echo('a' . $_GET["pid"]); ?>.get('name')
+        });
+
+        $(element).popover('show');
 <?php } ?>
 
     // display popup on click
@@ -770,12 +861,12 @@ $req->closeCursor(); // Termine le traitement de la requête
                     return feature;
                 });
         if (feature) {
-                 
-               
-             
+
+
+
             var coordinates = feature.getGeometry().getCoordinates();
             popup.setPosition(coordinates);
- popup.setOffset([0, -10]);
+            popup.setOffset([0, -10]);
             $(element).popover({
                 'placement': 'top',
                 'html': true,
@@ -783,7 +874,7 @@ $req->closeCursor(); // Termine le traitement de la requête
             });
 
             $(element).popover('show');
-      
+
 
         } else {
 
@@ -795,17 +886,17 @@ $req->closeCursor(); // Termine le traitement de la requête
 
 
 
-$("table").tableExport({
-    headings: true,                    // (Boolean), display table headings (th/td elements) in the <thead>
-    footers: true,                     // (Boolean), display table footers (th/td elements) in the <tfoot>
-    formats: ["xls", "csv"],    // (String[]), filetypes for the export
-    fileName: "Export OBAT",                    // (id, String), filename for the downloaded file
-    bootstrap: true,                   // (Boolean), style buttons using bootstrap
-    position: "bottom",                 // (top, bottom), position of the caption element relative to table
-    ignoreRows: null,                  // (Number, Number[]), row indices to exclude from the exported file
-    ignoreCols: null,                   // (Number, Number[]), column indices to exclude from the exported file
-    ignoreCSS: ".tableexport-ignore"   // (selector, selector[]), selector(s) to exclude from the exported file
-});
+    $("table").tableExport({
+        headings: true, // (Boolean), display table headings (th/td elements) in the <thead>
+        footers: true, // (Boolean), display table footers (th/td elements) in the <tfoot>
+        formats: ["xls", "csv"], // (String[]), filetypes for the export
+        fileName: "Export OBAT", // (id, String), filename for the downloaded file
+        bootstrap: true, // (Boolean), style buttons using bootstrap
+        position: "bottom", // (top, bottom), position of the caption element relative to table
+        ignoreRows: null, // (Number, Number[]), row indices to exclude from the exported file
+        ignoreCols: null, // (Number, Number[]), column indices to exclude from the exported file
+        ignoreCSS: ".tableexport-ignore"   // (selector, selector[]), selector(s) to exclude from the exported file
+    });
 
 
 
