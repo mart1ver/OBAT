@@ -2,7 +2,7 @@
 
 // Changer ces valeurs selon votre configuration de systeme de base de donnée.
 $host = 'localhost';
-$base = 'obat';
+$base = 'obat-arketip';
 $user = 'obat';
 $pass = 'obat';
 // Configuration interne de Obat
