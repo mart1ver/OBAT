@@ -16,15 +16,15 @@ $id = $_POST['id'];
           <form action="../moteur/modification_chantier_post.php" method="post">
             <input type="hidden" name ="id" id="id" value="<?php echo $_POST['id']?>">
 
-  <div class="col-md-3"><label for="nom">Nom:</label><br><br> <input type="text" value ="<?php echo $_POST['nom'].$_GET['nom']?>" name="nom" id="nom" class="form-control " required autofocus></div>
-  <div class="col-md-2"><label for="adresse">Adresse:</label><br><br> <input type="text"       value ="<?php echo $_POST['adresse'].$_GET['adresse']?>" name="adresse" id="adresse" class="form-control " required ></div>
-  <div class="col-md-2"><label for="commentaire">Commentaire:</label><br><br> <input type="text" value ="<?php echo $_POST['commentaire'].$_GET['commentaire']?>" name="commentaire" id="commentaire" class="form-control " required ></div>
+  <div class="col-md-3"><label for="nom">Nom:</label><br><br> <input type="text"  value ="<?php echo $_POST['nom']?>"  name="nom" id="nom" class="form-control " required autofocus></div>
+  <div class="col-md-2"><label for="adresse">Adresse:</label><br><br> <input type="text"  value ="<?php echo $_POST['adresse']?>"   name="adresse" id="adresse" class="form-control " required ></div>
+  <div class="col-md-2"><label for="commentaire">Commentaire:</label><br><br> <input type="text"  value ="<?php echo $_POST['commentaire']?>"  name="commentaire" id="commentaire" class="form-control " required ></div>
   
 
 </div>
 <div class="row">
-  <div class="col-md-3"><label for="nom">Identifiant client:</label> <input type="text"                 value ="<?php echo $_POST['idclient'].$_GET['idclient']?>" name="idclient" id="idclient" class="form-control " required ></div>
-    <div class="col-md-4"><label for="adresse">Mot de passe client:</label> <input type="text" value ="<?php echo $_POST['mdpclient'].$_GET['mdpclient']?>" name="mdpclient" id="mdpclient" class="form-control " required ></div>
+  <div class="col-md-3"><label for="nom">Identifiant client:</label> <input type="text"     value ="<?php echo $_POST['idclient']?>"              name="idclient" id="idclient" class="form-control " required ></div>
+    <div class="col-md-4"><label for="adresse">Mot de passe client:</label> <input type="text"  value ="<?php echo $_POST['mdpclient']?>"  name="mdpclient" id="mdpclient" class="form-control " required ></div>
 
 </div>
  <div class="col-md-1"><br><br><button name="creer" class="btn btn-warning">Modifier</button></div>

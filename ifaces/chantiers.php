@@ -20,8 +20,8 @@ include "tete.php" ?>
  
 </div>
 <div class="row">
-  <div class="col-md-3"><label for="nom">Identifiant client:</label> <input type="text"                 value ="<?php echo $_GET['idclient']?>" name="idclient" id="idclient" class="form-control " required ></div>
-    <div class="col-md-4"><label for="adresse">Mot de passe client:</label> <input type="text" value ="<?php echo $_GET['mdpclient']?>" name="mdpclient" id="mdpclient" class="form-control " required ></div>
+  <div class="col-md-3"><label for="nom">Identifiant client:</label> <input type="text"                 value ="" name="idclient" id="idclient" class="form-control " required ></div>
+    <div class="col-md-4"><label for="adresse">Mot de passe client:</label> <input type="text" value ="" name="mdpclient" id="mdpclient" class="form-control " required ></div>
 
 </div>
  <div class="col-md-1 col-md-offset-9"><br><button name="creer" class="btn btn-default">Créer!</button></div>
