@@ -100,7 +100,7 @@ $coordos = "1.0000,1.0000";
 if (!empty($_POST['coordos'])) {
     $coordos = $_POST['coordos'];
 }else{
-$nocoordos = true}
+$nocoordos = true;}
 
 $fid = 0;
 if (isset($_POST['fid'])) {
