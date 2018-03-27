@@ -69,6 +69,7 @@ $infosImg = array();
 $extension = '';
 $message = '';
 $nomImage = '';
+$nocoordos = false;
 
 //on prépare les trois varables de destination
 if (intval($_POST['destination1']) === 1) {
@@ -98,7 +99,8 @@ if (isset($_POST['cid'])) {
 $coordos = "1.0000,1.0000";
 if (!empty($_POST['coordos'])) {
     $coordos = $_POST['coordos'];
-}
+}else{
+$nocoordos = true}
 
 $fid = 0;
 if (isset($_POST['fid'])) {
@@ -367,8 +369,10 @@ if (!empty($_POST)) {
     }
 }
 
-
+if($nocoordos = true){
+header("Location:../ifaces/saisie.php?id=" . $cid . "&fid=" . $fid . "&uploadDebug=" . $message."&msg= Le navigateur n'a pas renvoyé de coodonées pour ce point, il sera placé en bas à gauche de l'image ");  
+}else{
 // Redirection du visiteur vers la page de saisie
-header("Location:../ifaces/saisie.php?id=" . $cid . "&fid=" . $fid . "&uploadDebug=" . $message);
+header("Location:../ifaces/saisie.php?id=" . $cid . "&fid=" . $fid . "&uploadDebug=" . $message);}
 ?>
 
