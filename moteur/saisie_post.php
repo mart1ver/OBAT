@@ -96,7 +96,7 @@ if (isset($_POST['cid'])) {
 
 
 $coordos = "1.0000,1.0000";
-if (isset($_POST['coordos'])) {
+if (!empty($_POST['coordos'])) {
     $coordos = $_POST['coordos'];
 }
 
